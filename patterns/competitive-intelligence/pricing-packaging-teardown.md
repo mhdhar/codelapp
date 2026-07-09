@@ -19,7 +19,7 @@ You're redesigning your own pricing or packaging, or prepping a competitive pric
 
 ## The pattern
 ```text
-Visit the pricing pages of the competitors I list at the bottom of this prompt (2-4 max).
+Visit the pricing pages of the competitors I give you (2-4 max).
 
 For each one, extract:
 1. Tier structure: name, price, billing period (monthly/annual), and the exact metric each tier scales on (seats, usage, API calls, contacts, etc.)
@@ -34,7 +34,7 @@ Then compare across all competitors:
 
 Output as a per-competitor table first, then a 5-bullet synthesis. Only use what's stated on the page; mark anything unclear "Not public."
 
-Competitor pricing page URLs (2-4):
+Start by asking me for the competitor pricing page URLs (2-4), then wait for my reply before visiting anything.
 ```
 
 ## Real example output

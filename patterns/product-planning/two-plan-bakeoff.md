@@ -19,7 +19,7 @@ You're about to ask an agent to plan a feature and you know from experience it w
 
 ## The pattern
 ```text
-Before implementing the task I describe below the line, give me two rival plans.
+Before implementing the task I give you, give me two rival plans.
 
 PLAN A, the cheapest version: the smallest change that plausibly solves it. Files touched, steps, and what it deliberately ignores.
 PLAN B, the thorough version: what you'd build with a free week. Files touched, steps, and what it adds beyond A.
@@ -30,7 +30,7 @@ Then attack both. Read the codebase first if you need to:
 
 Finish with: which plan you'd pick today, and the single observable condition that would flip the choice (a number, an event, a support pattern). Then stop and wait for my pick. Don't start building.
 
-My task:
+Start by asking me to describe the task, then wait for my reply before drafting either plan.
 ```
 
 ## Real example output

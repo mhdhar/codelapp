@@ -19,7 +19,7 @@ You're about to hand an AI agent a real engineering task and want it to stop gue
 
 ## The pattern
 ```text
-Work the task at the end of this message using a strict six-step loop. Do not skip a step or merge steps.
+Work the task I give you using a strict six-step loop. Do not skip a step or merge steps.
 
 1. CLARIFY: Restate the ask in your own words. List any assumptions you're making. If anything is ambiguous, ask me before proceeding instead of guessing.
 2. CHECK: Read the existing code, config, and tests related to this task. Report what's already there before proposing changes. Do not assume something is missing until you've looked.
@@ -30,7 +30,7 @@ Work the task at the end of this message using a strict six-step loop. Do not sk
 
 Stop after step 6 and wait for my go-ahead before starting anything not in the original task.
 
-The task:
+First ask me for the task, then wait. Don't start the loop until you have it.
 ```
 
 ## Real example output

@@ -20,9 +20,9 @@ You wrote one solid long-form piece and need it to also work as a thread, a Link
 ## The pattern
 ```text
 Step 1: Extract the core argument.
-"Read the post I paste below and state its single core argument in one
-sentence, plus the 3 supporting points that prove it. Nothing else.
-Paste the post below this line:"
+"State the single core argument of my post in one sentence, plus the
+3 supporting points that prove it. Nothing else. First ask me to
+paste the post, then wait. Don't start until you have it."
 
 Step 2: Review the extraction. Correct it if the model picked a
 secondary point over the actual main argument.

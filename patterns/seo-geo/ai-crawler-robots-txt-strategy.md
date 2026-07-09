@@ -19,15 +19,12 @@ You're setting up or auditing robots.txt and don't know which AI crawlers to nam
 
 ## The pattern
 ```text
-I'm setting robots.txt rules for my site. Unless I say otherwise below,
+I'm setting robots.txt rules for my site. Unless I tell you otherwise,
 my goals are:
 - get cited in live AI answers (ChatGPT search, Perplexity, Claude,
   AI Overviews)
 - block bots that only scrape for LLM training data, not for answering
   live queries
-
-My current robots.txt is pasted below the line. If nothing is pasted,
-assume no robots.txt exists yet.
 
 For each of these AI-related crawlers, tell me whether to Allow or Disallow
 it, with one line of reasoning tied to my goals above:
@@ -45,11 +42,13 @@ it, with one line of reasoning tied to my goals above:
 
 Then output the complete robots.txt as a single code block: Allow rules
 first, then Disallow rules, with a one-line comment above each rule stating
-the decision's reason. Keep any existing non-AI rules from what I pasted
-(Googlebot, Bingbot, sitemap directive) unchanged.
+the decision's reason. Keep any existing non-AI rules (Googlebot, Bingbot,
+sitemap directive) unchanged.
 
-My goals (only if different from the defaults above):
-Paste your current robots.txt below this line:
+If you're running inside my site's codebase, read the current robots.txt
+yourself (site root or public/). Otherwise, first ask me in one message to
+paste my current robots.txt and state any goals that differ from the
+defaults above, then wait. If I say there's no robots.txt yet, start fresh.
 ```
 
 ## Real example output

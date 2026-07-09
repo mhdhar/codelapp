@@ -19,7 +19,7 @@ You're about to install a new library or wire up a new third-party service, and 
 
 ## The pattern
 ```text
-I'm considering a new dependency. It's named at the end of this message, along with the problem it solves. Run it through a decision checklist before I install anything.
+I'm considering a new dependency. Run it through a decision checklist before I install anything.
 
 1. Check what's already in the project (package.json / existing services) — is there something already installed that covers 80%+ of this need without adding a new dependency?
 2. If it's a well-known service category (auth, payments, email, file storage, error monitoring, etc.), name the 1-2 most common choices and note if any has first-class agent/CLI tooling that would make it faster to integrate and maintain than a lesser-known alternative.
@@ -27,14 +27,13 @@ I'm considering a new dependency. It's named at the end of this message, along w
 4. Give a clear go/no-go recommendation, and if go, the exact install command.
 5. If no-go, name the lighter alternative (an existing dependency, a small hand-rolled function, or "you don't need this yet").
 
-Library or service:
-Problem it solves:
+Start by asking me, in one message, which library or service I'm considering and what problem it solves. Wait for my answer before running the checklist.
 ```
 
 ## Real example output
 ```
-Library or service: lodash
-Problem it solves: need a deep object comparison for a diffing feature.
+> Library or service: lodash
+> Problem it solves: need a deep object comparison for a diffing feature.
 
 1. Checked package.json — no existing deep-equal utility. Node's built-in util.isDeepStrictEqual exists but isn't imported anywhere yet.
 

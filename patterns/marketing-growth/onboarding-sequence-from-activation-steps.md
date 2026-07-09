@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "beginner"
 est_time: "10 min"
 models: ["any"]
-summary: "Paste your actual activation funnel steps, get one nudge email per step, not a generic welcome series."
+summary: "Give it your actual activation funnel steps, get one nudge email per step, not a generic welcome series."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -19,7 +19,7 @@ You know the exact steps a user takes to reach "activated" in your product — y
 
 ## The pattern
 ```text
-Write an onboarding email sequence, one email per activation step, from the product and funnel I've filled in below the line at the end of this block.
+Write an onboarding email sequence, one email per activation step, from the product and funnel I give you.
 
 For each step except the final activation event, write one email triggered when the user has not completed that step within a sensible window (24 hours to a few days; state the window you chose in the trigger line):
 - Subject line under 50 characters, naming the specific step, not "getting started" or "don't forget."
@@ -31,9 +31,7 @@ Rules: no countdown timers, no "last chance," no "just checking in." Write like 
 
 Output as: Email N — Trigger — Subject — Body — CTA.
 
-Product, one-line description:
-Activation steps in order, ending with the event that defines an activated user:
-Biggest drop-off step ("unknown" if you don't know):
+Before writing anything, ask me for these in one message and wait: (1) the product in one line, (2) the activation steps in order, ending with the event that defines an activated user, (3) the biggest drop-off step (if I skip this, treat it as unknown and drop the P.S. rule).
 ```
 
 ## Real example output

@@ -19,7 +19,7 @@ You've identified a specific ICP segment and a real, sourced pain point — from
 
 ## The pattern
 ```text
-Write a 3-email cold outreach sequence from the ICP, pain point, and offer I've filled in below the line at the end of this block.
+Write a 3-email cold outreach sequence from the ICP, pain point, and offer I give you.
 
 Structure:
 Email 1 (Day 0): Open with an observation about their specific situation, not "hope this finds you well." End with one low-friction ask — a question they can answer in one line, not a meeting request.
@@ -32,9 +32,7 @@ Rules:
 - Subject line under 6 words, no clickbait.
 - If the pain point I gave you is too generic to write from ("companies struggle with growth"), tell me instead of writing generic copy anyway.
 
-ICP (role, company size/type, the tool or process they use today):
-Pain point (something you actually observed or heard, not a guess):
-Our offer in one sentence, plus a proof point with a real number if you have one ("no proof yet" if not):
+Start by asking me for these in one message, then wait: (1) the ICP (role, company size/type, the tool or process they use today), (2) the pain point, something I actually observed or heard, not a guess, (3) our offer in one sentence, plus a proof point with a real number, or "no proof yet" if there isn't one.
 ```
 
 ## Real example output

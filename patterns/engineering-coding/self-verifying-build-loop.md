@@ -19,9 +19,9 @@ You're asking an agent to write or change code and you don't want it to declare 
 
 ## The pattern
 ```text
-Implement the change described at the end of this message and do not stop until you have real passing evidence.
+Implement the change I give you and do not stop until you have real passing evidence.
 
-First, pick the verify command: the build, test, or repro command that proves this change works. Look in package.json scripts, the Makefile, or CI config. State the command you picked and why. If I name a command in my message, use mine instead.
+First, pick the verify command: the build, test, or repro command that proves this change works. Look in package.json scripts, the Makefile, or CI config. State the command you picked and why. If I name a command, use mine instead.
 
 Loop:
 1. Write or edit the code for the change.
@@ -33,7 +33,7 @@ Loop:
 
 Never report the change as done without pasting the final passing output. "Looks correct" is not evidence.
 
-The change to implement or fix:
+Before anything else, ask me in one message and wait: the change to implement or fix, plus a verify command if I have one in mind.
 ```
 
 ## Real example output

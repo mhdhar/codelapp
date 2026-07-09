@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "intermediate"
 est_time: "10 min"
 models: ["any"]
-summary: "Paste your JSON-LD plus the validator's error output, get back a corrected block."
+summary: "Give it your JSON-LD plus the validator's error output, get back a corrected block."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -19,9 +19,9 @@ Google's Rich Results Test, the Schema.org validator, or Search Console's Enhanc
 
 ## The pattern
 ```text
-Below the line are two things: the JSON-LD structured data currently live
-on one of my pages, then a line reading "VALIDATOR ERRORS:", then the
-exact error/warning output from the validator.
+One of my pages has live JSON-LD structured data that a validator is
+flagging. I'll give you the JSON-LD, then a line reading "VALIDATOR
+ERRORS:", then the exact error/warning output from the validator.
 
 Fix the schema:
 1. Go through each validator error/warning one at a time. State what it
@@ -39,9 +39,9 @@ Fix the schema:
 5. After the block, list which errors are now fully fixed versus which
    still need a real value from me before they'll pass.
 
-Page URL:
-Paste the JSON-LD, then "VALIDATOR ERRORS:", then the validator output,
-below this line:
+Start by asking me in one message for the page URL, the JSON-LD, and the
+validator output after a "VALIDATOR ERRORS:" line. Wait for my reply
+before fixing anything.
 ```
 
 ## Real example output

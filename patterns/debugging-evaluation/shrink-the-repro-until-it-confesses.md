@@ -19,8 +19,8 @@ A big test, script, or input file fails, and the failure could be caused by any 
 
 ## The pattern
 ```text
-I have a failing repro, named at the bottom of this message. Your goal
-is not to fix it yet. Your goal is to shrink it.
+I have a failing repro. Your goal is not to fix it yet. Your goal is
+to shrink it.
 
 Success criteria, all three must hold:
 - The reduced version still fails with the same failure signature (same
@@ -48,7 +48,8 @@ Method:
 Do not skip re-running after a cut because it "obviously" doesn't
 matter. Cheap runs are the whole method.
 
-The failing repro (test name, command, or file path):
+First, ask me for the failing repro (test name, command, or file path),
+then wait. Don't start cutting until you have it.
 ```
 
 ## Real example output

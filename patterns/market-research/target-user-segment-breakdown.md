@@ -19,10 +19,9 @@ You have a vague sense of who your product is for ("small business owners," "fre
 
 ## The pattern
 ```text
-Act as a user research analyst. My rough target audience and what the
-product does are in the two lines at the bottom of this message.
+Act as a user research analyst.
 
-Break this audience into 2-4 distinct segments (not invented personas with
+Break my target audience into 2-4 distinct segments (not invented personas with
 names, actual behavioral or situational groupings). For each segment, give:
 
 - WHO: what makes this segment distinct from the others (role, stage,
@@ -43,8 +42,8 @@ grounded evidence for a segment claim, say so plainly.
 End with which segment to target first and why, based on ease of reaching
 them versus size of need.
 
-My rough audience:
-What the product does:
+Start by asking me in one message for: (1) my rough audience, (2) what the
+product does. Wait for my reply before segmenting.
 ```
 
 ## Real example output

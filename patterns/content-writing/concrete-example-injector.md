@@ -19,14 +19,14 @@ A draft reads fine sentence by sentence but leaves no specific memory after read
 
 ## The pattern
 ```text
-Find every abstract or generic claim in the draft I paste below: a
-claim that could appear in almost any piece about almost any product
-without changing meaning (e.g. "this saves time," "customers love it,"
-"this scales well").
+Find every abstract or generic claim in my draft: a claim that could
+appear in almost any piece about almost any product without changing
+meaning (e.g. "this saves time," "customers love it," "this scales
+well").
 
 For each one:
 1. Quote the sentence.
-2. Check my source material below for a specific example, number, or
+2. Check my source material for a specific example, number, or
    anecdote that could replace or support it.
 3. If you find one, rewrite the sentence with that specific detail in.
 4. If you don't find one, leave the original sentence and add
@@ -36,12 +36,9 @@ For each one:
 Don't touch sentences that are already specific (named numbers, named
 people, named events). Only act on genuinely generic claims.
 
-Paste source material (real examples, data, quotes) after SOURCE and
-the draft after DRAFT.
-
-SOURCE:
-
-DRAFT:
+First ask me in one message for both: (1) the draft, (2) the source
+material (real examples, data, quotes). Then wait, don't start until
+you have both.
 ```
 
 ## Real example output

@@ -19,7 +19,7 @@ Your competitor battlecard was accurate the day it was written. Competitors repr
 
 ## The pattern
 ```text
-This is a recurring audit of my sales battlecard, pasted at the bottom of this prompt.
+This is a recurring audit of my sales battlecard.
 
 1. Extract every factual claim in the battlecard that could go stale: competitor prices, tier names, feature gaps ("they don't have X"), limits, integrations, quoted positioning. Number them. Skip claims about my own product.
 2. For each numbered claim, visit the competitor page that would prove or disprove it (pricing, features, changelog, docs). Check the claim against what the page says today.
@@ -31,7 +31,7 @@ This is a recurring audit of my sales battlecard, pasted at the bottom of this p
 
 Output the battlecard with each claim annotated inline, then one summary line: X verified / Y stale / Z unverifiable. If more than a third of claims are stale, say so bluntly at the top. A battlecard that is a third wrong is worse than none, because reps trust it.
 
-Paste the battlecard below this line:
+Start by asking me to paste the battlecard, then wait. Don't start until you have it.
 ```
 
 ## Real example output

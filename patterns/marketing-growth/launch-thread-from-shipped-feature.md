@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "beginner"
 est_time: "10 min"
 models: ["any"]
-summary: "Paste your changelog entry, get a structured hook-problem-solution-proof-CTA launch thread."
+summary: "Turn what you just shipped into a structured hook-problem-solution-proof-CTA launch thread."
 author: "codel"
 author_handle: ""
 date: "2026-07-08"
@@ -19,7 +19,7 @@ You shipped something real (a feature, a fix that unlocks a workflow, a new inte
 
 ## The pattern
 ```text
-Turn the shipped feature described below the line into a launch thread for X/Twitter.
+Turn the feature we just shipped into a launch thread for X/Twitter.
 
 Structure the thread as exactly 5 tweets:
 1. Hook: a specific, concrete claim or number. No generic excitement. Make someone stop scrolling.
@@ -34,9 +34,7 @@ Rules:
 - Write like a founder explaining it to a peer, not a press release.
 - Output as a numbered list, one tweet per line.
 
-What shipped, and who it's for:
-Before/after (what was painful, what's possible now):
-Link to send people to:
+First, find what shipped yourself if you can: if we're in the project repo, read the changelog entry or the last few commits to get the feature and who it's for. Then ask me in one message for what you still need, the before/after (what was painful, what's possible now) and the link to send people to, and wait for my reply before writing.
 ```
 
 ## Real example output

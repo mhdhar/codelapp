@@ -19,7 +19,7 @@ Ask ChatGPT or Perplexity what your company does and you get a stale, wrong, or 
 
 ## The pattern
 ```text
-Below the line I've pasted every place my organization describes itself,
+I'm going to give you every place my organization describes itself,
 each labeled with where it lives: homepage hero, about page, footer,
 Organization JSON-LD, llms.txt, and social bios (LinkedIn, X, GitHub,
 Crunchbase, whatever I have).
@@ -46,7 +46,8 @@ Work toward that:
 4. End with the checklist from the "done" definition above, marking what
    passes right now versus after I apply the edits.
 
-Paste each self-description below this line, labeled with its source:
+First ask me to paste the self-descriptions, each labeled with its source,
+all in one message. Wait until you have them before doing anything.
 ```
 
 ## Real example output

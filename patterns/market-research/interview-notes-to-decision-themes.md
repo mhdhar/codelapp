@@ -23,8 +23,6 @@ Act as a research synthesis analyst. I'm giving you raw customer interview
 notes in batches. I want a running theme list that gets more accurate as
 more batches come in, not longer.
 
-My first batch of notes is below the line at the end of this message.
-
 Each round, do the following:
 
 1. Extract every distinct claim, complaint, or need mentioned. Quote the
@@ -56,7 +54,8 @@ confidence and mention count, drop watch-list items that never became a
 theme, and write a 3-sentence decision-ready summary: what to build or fix
 first based on theme strength, and what's still too thin to act on.
 
-Paste your first batch of interview notes or transcript excerpts below this line:
+First ask me to paste my first batch of interview notes or transcript
+excerpts, then wait. Don't start until you have it.
 ```
 
 ## Real example output

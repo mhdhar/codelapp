@@ -24,14 +24,14 @@ Cull this project's backlog against its original goals.
 
 First, find the goals this project was scoped against: check the repo for a spec or PRD (docs/, README, anything named spec or prd). If none exists, stop and ask me for the goals before going further.
 
-Then take the backlog I paste below the line and, for each backlog item, classify:
+Then, for each backlog item, classify:
 - SERVES: which specific goal it directly advances (name it, don't say "improves the product")
 - ORPHAN: doesn't map to any goal, exists for another reason (say what reason, e.g., "someone asked for it," "seemed cool")
 - CONFLICTS: actively works against a goal (e.g., adds complexity to something the goals say to keep simple)
 
 Recommend: keep, cut, or defer for each ORPHAN and CONFLICT item. Don't touch SERVES items.
 
-Paste the current backlog below this line:
+Find the backlog the same way: check the repo for a tracker file (TODO.md, BACKLOG.md, an issues export). If there isn't one, ask me to paste the current backlog and wait for it before classifying anything.
 ```
 
 Step 2, protect sunk work:

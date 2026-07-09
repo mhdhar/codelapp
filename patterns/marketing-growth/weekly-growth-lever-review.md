@@ -19,8 +19,9 @@ It's the start of the week, you have last week's basic funnel numbers (visits, s
 
 ## The pattern
 ```text
-Step 1: Below the line at the end of this block, paste your funnel numbers for the last 2-4 weeks, one row per week:
-Week | Visits | Signups | your key action (activated, paid, retained, whatever it is; name it in the header)
+Step 1: Ask me to paste my funnel numbers for the last 2-4 weeks, one row per week:
+Week | Visits | Signups | my key action (activated, paid, retained, whatever it is; I'll name it in the header)
+Wait for my reply. Don't diagnose until you have the rows.
 
 Step 2: Diagnose, don't brainstorm:
 Look at this funnel data across the weeks given. Do not suggest generic growth tactics.
@@ -31,9 +32,7 @@ Look at this funnel data across the weeks given. Do not suggest generic growth t
 5. Propose exactly one concrete experiment to run against that stage next week, specific enough to start today.
 6. Name the one metric that will tell us by next week's review if it worked.
 
-Step 3: If the agent hedges or gives multiple levers, tell it: "Pick one. Which single stage, if fixed, moves the topline number the most?" and ask it to answer again.
-
-Paste your weekly funnel rows below this line:
+Step 3: Before you deliver the answer, check it. If it hedges or gives multiple levers, redo it against one question: which single stage, if fixed, moves the topline number the most? Pick one.
 ```
 
 ## Real example output

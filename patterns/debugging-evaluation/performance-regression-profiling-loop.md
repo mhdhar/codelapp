@@ -19,8 +19,7 @@ Something got slower and the AI's instinct is to rewrite the first loop or query
 
 ## The pattern
 ```text
-We have a performance regression. I describe what got slower at the
-bottom of this message.
+We have a performance regression.
 
 Follow this loop, do not skip the measurement steps:
 
@@ -46,7 +45,9 @@ Follow this loop, do not skip the measurement steps:
 7. Repeat until the measured number is back at or below the target, then
    report the full before/after comparison.
 
-What got slower (and the target, e.g. "GET /orders, ~600ms p50, was ~80ms"):
+Before step 1, ask me in one message what got slower and what the
+target is (e.g. "GET /orders, ~600ms p50, was ~80ms"), then wait. If I
+don't know the target, use "back to where it was before the regression."
 ```
 
 ## Real example output

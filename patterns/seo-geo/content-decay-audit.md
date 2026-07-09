@@ -19,10 +19,10 @@ Monthly or quarterly, when Search Console shows a set of pages trending down in 
 
 ## The pattern
 ```text
-Below the line is Search Console / analytics data for pages on my site,
-showing URL, clicks, impressions, and average position for the current
-period vs. the prior period of the same length. Treat the window as the
-last 90 days vs. the prior 90 unless the data says otherwise.
+I have Search Console / analytics data for pages on my site, showing URL,
+clicks, impressions, and average position for the current period vs. the
+prior period of the same length. Treat the window as the last 90 days vs.
+the prior 90 unless the data says otherwise.
 
 For each page showing a decline (clicks or position down at least 15%):
 1. Classify the likely decay cause using only the data given:
@@ -44,7 +44,8 @@ For each page showing a decline (clicks or position down at least 15%):
 4. Output a prioritized refresh list: URL | Decay type | Evidence | Clicks
    lost (absolute number) | Recommended action, sorted by clicks lost.
 
-Paste the traffic data below this line:
+First ask me to paste the traffic data, then wait. Don't start until you
+have it.
 ```
 
 ## Real example output

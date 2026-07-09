@@ -19,7 +19,7 @@ You're prepping for a sales call, a board update, or a roadmap decision and need
 
 ## The pattern
 ```text
-Visit the competitor site I name at the bottom of this prompt, plus its pricing, features, and product pages. Build a structured comparison from what you find.
+Visit the competitor site I give you, plus its pricing, features, and product pages. Build a structured comparison from what you find.
 
 Extract:
 1. Pricing tiers: name, price, billing period, what's included at each tier
@@ -31,7 +31,7 @@ Output as a markdown table with columns: Feature/Tier | Details | Source page (U
 
 Only include what's stated on the pages. Do not infer or guess capabilities. If a price or detail isn't public, mark it "Not public."
 
-Competitor URL:
+Start by asking me for the competitor's URL, then wait for my reply before visiting anything.
 ```
 
 ## Real example output

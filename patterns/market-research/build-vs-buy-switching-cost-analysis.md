@@ -19,9 +19,7 @@ You're deciding whether to build a tool in-house or adopt an entrenched incumben
 
 ## The pattern
 ```text
-Act as a build-vs-buy analyst. The situation is in the three lines at the
-bottom of this message: what we're deciding, the incumbent(s), and who
-makes the call.
+Act as a build-vs-buy analyst.
 
 Do the following:
 
@@ -58,9 +56,10 @@ Do not assume switching costs are low just because a new option looks
 superficially better. Do not claim an incumbent's moat is strong or weak
 without naming the specific mechanism behind that claim.
 
-What we're deciding (build in-house vs buy, or our product vs an incumbent):
-Incumbent(s):
-Who makes the call (e.g. a platform team already on the incumbent):
+Before you do anything, ask me for these in one message and wait: (1) what
+we're deciding (build in-house vs buy, or our product vs an incumbent),
+(2) the incumbent(s), (3) who makes the call (e.g. a platform team already
+on the incumbent).
 ```
 
 ## Real example output

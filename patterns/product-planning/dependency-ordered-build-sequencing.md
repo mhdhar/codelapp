@@ -20,7 +20,7 @@ You have an approved feature list or backlog and you're about to assign it to sp
 ## The pattern
 Step 1, map dependencies:
 ```text
-Map the dependencies in the feature list I paste below the line.
+Map the dependencies in the feature list I give you.
 
 For each feature, identify:
 1. What it depends on (other features on this list, or "none")
@@ -29,7 +29,7 @@ For each feature, identify:
 
 Then output a build order: leaves first, grouped by what unlocks the most downstream work, integration features last. Flag any circular dependency you find, that's a scoping bug, not something to sequence around.
 
-Paste the feature list below this line:
+Start by asking me for the feature list: either paste it or name the file in this repo that holds it. Wait for my reply before mapping anything.
 ```
 
 Step 2, once you've reviewed the order:

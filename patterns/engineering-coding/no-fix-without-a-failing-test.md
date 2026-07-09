@@ -19,7 +19,7 @@ You have a real bug report and the temptation is to let the agent jump straight 
 
 ## The pattern
 ```text
-There's a bug, described at the end of this message. Your goal is a fix proven by a test that failed before the fix and passes after it. Changing product code before you can reproduce the bug is not allowed.
+There's a bug. Your goal is a fix proven by a test that failed before the fix and passes after it. Changing product code before you can reproduce the bug is not allowed.
 
 1. Reproduce first: write the smallest test that captures the buggy behavior, using this project's existing test framework and style. Run it and paste the failing output. If you can't make it fail, stop. You haven't found the bug yet, and patching now would be guessing. Keep investigating until it fails for the reported reason.
 2. Only then fix the code. Make the smallest change that turns the test green.
@@ -28,12 +28,12 @@ There's a bug, described at the end of this message. Your goal is a fix proven b
 
 Done means: one new test that fails on the old code and passes on the new code, suite green, both shown in real output. Anything less is not done.
 
-The bug:
+Before you do anything, ask me in one message and wait: (1) the bug and how I see it, (2) how to run the tests, if it's not obvious. If I skip (2), find the test command yourself.
 ```
 
 ## Real example output
 ```
-The bug: CSV export drops the last row when the table has exactly one full page of results.
+> The bug: CSV export drops the last row when the table has exactly one full page of results.
 
 1. Repro test added to exportOrders.test.ts: "includes the final row when row count equals page size". Ran against current code:
    FAIL: expected 25 rows in CSV, got 24.

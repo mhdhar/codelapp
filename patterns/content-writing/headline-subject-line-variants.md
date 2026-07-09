@@ -32,12 +32,13 @@ Use these mechanisms, one headline per mechanism:
 For each headline, add one line on who it's optimized for (skimmer vs.
 committed reader) and what it risks (overpromising, vagueness, etc).
 
-Then rank all 5 for the platform I name below and say which one you'd
-actually ship and why. If I leave the platform blank, rank for a blog
-post title aimed at search traffic.
+Then rank all 5 for my platform and say which one you'd actually ship
+and why.
 
-Platform (e.g. cold email subject line, blog title for SEO):
-What the piece actually says, in 1-2 sentences:
+First ask me in one message for (1) what the piece actually says, in
+1-2 sentences, and (2) the platform (e.g. cold email subject line,
+blog title for SEO). Then wait. If I skip the platform, rank for a
+blog post title aimed at search traffic.
 ```
 
 ## Real example output

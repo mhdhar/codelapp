@@ -19,9 +19,10 @@ After publishing a batch of new content, or when a page with genuinely good cont
 
 ## The pattern
 ```text
-Below the line is a list of pages on my site with their topic and current
-outbound internal links (which other pages on the site they link to).
-Organic traffic per page is included where I have it.
+I need an internal linking analysis of my site. The input is a page
+inventory: each page with its topic and current outbound internal links
+(which other pages on the site it links to), plus organic traffic per
+page where I have it.
 
 Analyze internal linking:
 1. Identify orphan pages: pages that no other page links to. List them.
@@ -42,7 +43,9 @@ Analyze internal linking:
 Output the gap list sorted by page importance (use organic traffic if
 given in the data, otherwise use position in the site's primary nav).
 
-Paste the page and link inventory below this line:
+If you're running inside the site's codebase, build the inventory yourself
+from the routes, content files, and the links in them. Otherwise, first
+ask me to paste the page and link inventory, then wait for my reply.
 ```
 
 ## Real example output

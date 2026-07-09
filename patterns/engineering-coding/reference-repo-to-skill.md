@@ -19,7 +19,7 @@ You've found a well-built reference codebase in a domain you're about to build i
 
 ## The pattern
 ```text
-I want to turn a reference codebase into a reusable skill, not just borrow one snippet from it. The repo is at the end of this message.
+I want to turn a reference codebase into a reusable skill, not just borrow one snippet from it.
 
 1. Read through the reference repo's structure. Start by stating, in one line, what domain this repo is an example of (e.g. "multi-tenant billing" or "offline-first sync"). Infer it from the code and README; ask me only if you genuinely can't tell.
 2. Identify the 3-6 patterns that are actually reusable (not project-specific naming or business logic) — architectural choices, data modeling approaches, error-handling conventions, folder structure.
@@ -27,12 +27,12 @@ I want to turn a reference codebase into a reusable skill, not just borrow one s
 4. Generate a skill file (SKILL.md or equivalent) that captures these patterns, written so a fresh agent with no memory of this reference repo could apply them correctly. Save it to .claude/skills/ in the current project, unless I say I want it global (then use ~/.claude/skills/).
 5. Tell me which patterns you deliberately left out and why (e.g. too project-specific, tied to a proprietary service).
 
-Reference repo (path or URL):
+First ask me for the reference repo's path or URL, then wait. Don't start reading anything until you have it.
 ```
 
 ## Real example output
 ```
-Reference repo: ~/code/old-projects/fleet-tracker
+> Reference repo: ~/code/old-projects/fleet-tracker
 Domain (inferred): real-time location tracking with offline queue
 
 Patterns extracted:

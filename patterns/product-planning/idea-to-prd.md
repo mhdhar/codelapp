@@ -19,7 +19,7 @@ You have a feature idea in your head or a one-liner from a stakeholder, and you'
 
 ## The pattern
 ```text
-Write a PRD for the idea I paste below the line.
+Write a PRD for the idea I give you.
 
 Structure it exactly like this:
 
@@ -32,10 +32,9 @@ Structure it exactly like this:
    - P1 (should ship, degrades experience if missing)
    - P2 (nice to have, cut first under time pressure)
 
-Keep the whole thing under 500 words. If I don't name a target user below, or the idea is too vague to spec confidently, ask me clarifying questions first, don't guess and fill gaps silently.
+Keep the whole thing under 500 words. If the idea is too vague to spec confidently, ask me clarifying questions first, don't guess and fill gaps silently.
 
-My idea:
-Target user:
+Start by asking me in one message for (1) the idea and (2) the target user, then wait for my reply. If I skip the target user, ask before writing, don't invent one.
 ```
 
 ## Real example output

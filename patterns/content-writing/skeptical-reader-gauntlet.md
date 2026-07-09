@@ -19,8 +19,8 @@ The draft matters: a launch post, a position piece, an announcement people will 
 
 ## The pattern
 ```text
-Run the draft I paste below through a skeptical-reader loop until it
-survives a clean pass.
+Run my draft through a skeptical-reader loop until it survives a
+clean pass.
 
 1. Infer the most plausibly hostile reader for this piece: an expert in
    the topic, short on time, allergic to hype, inclined to disagree.
@@ -47,7 +47,8 @@ survives a clean pass.
 Show me each round's objection list as you go, not just the final
 draft.
 
-Paste the draft below this line:
+First ask me to paste the draft, then wait. Don't start until you
+have it.
 ```
 
 ## Real example output

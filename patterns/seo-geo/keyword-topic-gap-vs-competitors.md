@@ -19,9 +19,8 @@ You want a content roadmap driven by real gaps, not guesses. Use after pulling y
 
 ## The pattern
 ```text
-Below the line are two lists: the topics/pages I currently publish on my
-site, then the topics/pages my competitor(s) publish, labeled by
-competitor name.
+I have two lists: the topics/pages I currently publish on my site, and
+the topics/pages my competitor(s) publish, labeled by competitor name.
 
 Find the gap:
 1. List topics the competitor(s) cover that I have no page for at all,
@@ -40,8 +39,9 @@ Find the gap:
 5. Output a prioritized table: Topic | Covered by | Opportunity |
    Suggested page type (pillar/comparison/how-to/glossary).
 
-My topics:
-Competitor topics (label each competitor):
+Start by asking me for both lists in one message: my topics, then the
+competitor topics labeled by competitor name. Wait for my reply before
+analyzing anything.
 ```
 
 ## Real example output

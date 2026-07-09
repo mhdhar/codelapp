@@ -19,7 +19,7 @@ An A/B test has been running for a while, the dashboard shows the variant "up 8%
 
 ## The pattern
 ```text
-Give me a verdict on the A/B test data below the line. Exactly one of: SHIP, KILL, or KEEP RUNNING. Then make the case.
+Give me a verdict on my A/B test. Exactly one of: SHIP, KILL, or KEEP RUNNING. Then make the case.
 
 Your task:
 1. Compute conversion rate for control and variant, absolute and relative lift, and a 95% confidence interval on the difference. Show the arithmetic. Do not just assert "significant".
@@ -35,7 +35,7 @@ Your task:
 
 Do not hedge with "it depends". One verdict, stated first.
 
-Test data (intended split, days running so far, then per variant: visitors and conversions):
+Start by asking me in one message for the test data: intended split, days running so far, and visitors and conversions for each variant. Wait for my reply before computing anything.
 ```
 
 ## Real example output

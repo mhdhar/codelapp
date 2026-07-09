@@ -19,7 +19,7 @@ A competitor ships constantly and you only ever see one release note at a time, 
 
 ## The pattern
 ```text
-Visit the changelog or release notes page of the competitor I name at the bottom of this prompt. Read the last 6 months of entries, or the last 30 entries, whichever is more. Default to 6 months unless I say otherwise.
+Visit the changelog or release notes page of the competitor I give you. Read the last 6 months of entries, or the last 30 entries, whichever is more. Default to 6 months unless I say otherwise.
 
 Classify every entry into exactly one bucket:
 - CORE: deepens the existing product for existing users
@@ -33,7 +33,7 @@ Then:
 2. Name the 2-3 entries that don't fit their current public positioning. Off-positioning releases are usually the first public evidence of a strategy change.
 3. In three sentences, state where they're most likely headed over the next two quarters and which of my customer segments that puts at risk. Mark this as inference, not fact.
 
-Competitor changelog URL:
+Start by asking me for the competitor's changelog URL, then wait for my reply before doing anything.
 ```
 
 ## Real example output

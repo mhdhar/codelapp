@@ -19,9 +19,8 @@ A site audit turns up dozens or hundreds of pages missing meta descriptions, or 
 
 ## The pattern
 ```text
-Below the line is a list of pages on my site that need meta descriptions.
-Each row has: URL, page title, and a one-line summary of what the page
-covers.
+I have a list of pages on my site that need meta descriptions. Each row
+has: URL, page title, and a one-line summary of what the page covers.
 
 Write one meta description per page:
 - 140-155 characters, hard cap 160
@@ -37,7 +36,8 @@ Write one meta description per page:
 Output as a table: URL | Character count | Meta description. Flag any row
 where the character count exceeds 160 so I can trim it.
 
-Paste the page list below this line:
+First ask me to paste the page list, then wait. Don't write anything
+until you have it.
 ```
 
 ## Real example output

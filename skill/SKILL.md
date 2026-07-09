@@ -40,9 +40,11 @@ contract in `schema/pattern-schema.md`.
 1. Fetch `patterns.json` (or search it by category/format/tool) to find the
    best match for the user's job.
 2. Read the `## The pattern` block. It is self-contained by design — copy it
-   as-is into the current session. Patterns carry no bracket placeholders;
-   where one ends with labeled fill-in lines (e.g. `My site URL:`) or a paste
-   marker, complete those lines with real values from the user's context.
+   as-is into the current session. Patterns carry no bracket placeholders and
+   no fill-in lines; each block either discovers its inputs itself (from the
+   repo, git, the running app) or ends by asking the user for what it needs.
+   If you already know those answers from the user's context, answer the
+   ask yourself instead of re-asking the user.
 3. Do not paste `## When to use this`, `## Real example output`, or
    `## Why it works` into the working session — those are documentation for
    humans, not part of the pattern itself.

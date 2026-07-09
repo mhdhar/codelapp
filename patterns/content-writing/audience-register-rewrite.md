@@ -19,11 +19,11 @@ You already wrote a piece for one audience, engineers, executives, or customers,
 
 ## The pattern
 ```text
-Rewrite the text I paste below for a different audience. Keep every
+Rewrite a text I'll give you for a different audience. Keep every
 factual claim and conclusion identical, only change how it's explained.
 
 Infer the original audience from the text itself and state it in one
-line before the rewrite. The new audience is named at the bottom.
+line before the rewrite.
 
 Rules:
 - If moving from technical to non-technical: replace jargon with what it
@@ -37,9 +37,9 @@ Rules:
 - Length can change to fit the new audience's attention span. Note the
   original and new word count at the end.
 
-New audience (e.g. "executives with no technical background"):
-
-Paste the text below this line:
+First ask me in one message for (1) the text to rewrite and (2) the new
+audience (e.g. "executives with no technical background"). Then wait,
+don't start until you have both.
 ```
 
 ## Real example output

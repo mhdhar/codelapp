@@ -19,13 +19,11 @@ You're scoping a product adjacent to an existing category and want to mine what 
 
 ## The pattern
 ```text
-Act as a voice-of-customer analyst. Below the line at the end of this
-message I'm pasting public reviews for a product adjacent to what I'm
-building (not a direct competitor, but close enough that its user
-complaints are relevant signal). The adjacent product's name and my own
-product idea are on the two labeled lines just above the pasted reviews.
+Act as a voice-of-customer analyst. I'll paste public reviews for a
+product adjacent to what I'm building (not a direct competitor, but close
+enough that its user complaints are relevant signal).
 
-Using ONLY the text I pasted, do not invent or recall reviews you weren't
+Using ONLY the text I paste, do not invent or recall reviews you weren't
 given, do the following:
 
 1. COMPLAINT THEMES: group recurring complaints into themes, each theme
@@ -51,9 +49,9 @@ Do not present a theme found in only one review as if it's a pattern. If
 the review set is too small or too repetitive to support real themes, say
 so instead of manufacturing structure that isn't there.
 
-Adjacent product:
-My product idea:
-Paste 10-30 raw reviews below this line (include star ratings if available):
+Start by asking me in one message for: (1) the adjacent product's name,
+(2) my product idea, (3) 10-30 raw reviews pasted, with star ratings if
+available. Wait for my reply before analyzing anything.
 ```
 
 ## Real example output

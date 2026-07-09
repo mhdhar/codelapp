@@ -20,12 +20,13 @@ You recorded an interview, podcast segment, or customer call and have a raw tran
 ## The pattern
 ```text
 Step 1: Clean and segment.
-"I'll paste a raw interview transcript below, with filler words, false
+"Clean up a raw interview transcript for me: filler words, false
 starts, and timestamps. Remove filler ('um', 'you know', 'like' used as
 filler) and false starts. Keep every substantive answer intact. Break it
 into labeled topic segments based on what's actually being discussed,
 don't force it into the original question order if the conversation
-jumped around. Paste the transcript below this line:"
+jumped around. First ask me to paste the transcript, then wait. Don't
+start until you have it."
 
 Step 2: Review the segments. Reorder if a topic got split across two
 places in the raw conversation, or merge segments that are really one

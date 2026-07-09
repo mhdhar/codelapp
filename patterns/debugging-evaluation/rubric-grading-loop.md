@@ -22,8 +22,7 @@ You've finished a feature or PR built with AI help and want a consistent, repeat
 Grade the current changes against this rubric. Use the diff, not memory of
 what you intended to write.
 
-Default rubric (use this unless I paste my own criteria at the bottom of
-this message, in which case grade against mine instead):
+Default rubric:
 1. All new functions handle invalid or missing input, not just the happy path.
 2. No console.log, print statements, or debug leftovers in the diff.
 3. Tests exist and pass for every new code path.
@@ -44,7 +43,9 @@ If any item is FAIL, fix only that item, then re-run this entire rubric
 from item 1 on the updated diff. Repeat until every item is PASS. Do not
 skip re-grading items that already passed, a fix can break something else.
 
-My rubric (optional, replaces the default, one criterion per line):
+Before grading, ask me one question and wait: do I want my own rubric
+instead of the default? If I paste criteria (one per line), grade
+against those. If I say no or skip it, use the default and start.
 ```
 
 ## Real example output

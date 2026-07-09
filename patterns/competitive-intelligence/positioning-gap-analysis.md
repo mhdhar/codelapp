@@ -19,17 +19,16 @@ You're writing a landing page, pitch deck, or sales battlecard and need to know 
 
 ## The pattern
 ```text
-Visit each competitor URL I list at the bottom of this prompt and read their homepage, pricing, and features pages. Then:
+Visit each competitor URL I give you and read their homepage, pricing, and features pages. Then:
 
 1. List what every competitor in this set has in common (the table stakes, don't lead with these)
 2. List what each competitor is missing or underemphasizing, specifically
-3. Cross-reference those gaps against my product description below to find where I already have a real, verifiable advantage
+3. Cross-reference those gaps against my product description to find where I already have a real, verifiable advantage
 4. Rank the top 3 gaps by how likely they are to matter to a buyer choosing between these options, not just how different they sound
 
 For each of the top 3, write one sentence of messaging that states the gap as a customer benefit, not a feature brag. Flag anything where my product description doesn't give you enough to confirm the claim.
 
-My product (two or three lines on what it does and for whom):
-Competitor URLs:
+Before you visit anything, ask me in one message and wait: (1) my product, two or three lines on what it does and for whom, (2) the competitor URLs.
 ```
 
 ## Real example output

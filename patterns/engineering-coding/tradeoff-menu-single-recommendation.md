@@ -19,7 +19,7 @@ An agent keeps handing you 3-4 options with pros and cons and no actual opinion,
 
 ## The pattern
 ```text
-I need a decision, not a menu. The question is at the end of this message. If I list options there, treat those as the options on the table; if I don't, propose them yourself.
+I need a decision, not a menu. If I list options with my question, treat those as the options on the table; if I don't, propose them yourself.
 
 1. If there are more than 2 genuinely reasonable options, narrow it to the top 2 — discard options that are clearly worse on every axis.
 2. For each of the (at most 2) remaining options, state the single biggest tradeoff in one sentence, not a bullet list of pros and cons.
@@ -27,12 +27,12 @@ I need a decision, not a menu. The question is at the end of this message. If I 
 4. Give the one-sentence reason you'd pick it over the other, specific to my actual situation, not a generic "it depends."
 5. Do not say "both are valid" as a final answer. If it truly is a coin flip, say that explicitly and tell me what additional information would break the tie.
 
-The question:
+First ask me for the question, then wait. Don't answer until you have it.
 ```
 
 ## Real example output
 ```
-The question: Should the new notifications feature use WebSockets or polling?
+> The question: Should the new notifications feature use WebSockets or polling?
 
 Recommendation: polling, every 15 seconds.
 

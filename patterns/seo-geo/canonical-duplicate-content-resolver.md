@@ -19,11 +19,11 @@ Search Console shows multiple URLs on your site weakly ranking for the same quer
 
 ## The pattern
 ```text
-Below the line is a list of URLs on my site that may be duplicate or
-near-duplicate content. Each row has the URL, title, word count, a short
-content summary, and organic traffic where I have it.
+I have a list of URLs on my site that may be duplicate or near-duplicate
+content. Each row has the URL, title, word count, a short content summary,
+and organic traffic where I have it.
 
-Run this loop:
+Run this loop on that list:
 1. Cluster the URLs into groups that target the same search intent. State
    the shared intent for each cluster in one line.
 2. For each cluster with more than one URL, check for genuinely unique
@@ -45,7 +45,9 @@ Run this loop:
 
 Do not canonicalize a cluster until step 2 is complete for every URL in it.
 
-Paste the URL list below this line:
+First ask me to paste the URL list, then wait. If my rows are missing
+traffic numbers, skip the traffic rule in step 3 and decide on URL path
+and completeness instead.
 ```
 
 ## Real example output

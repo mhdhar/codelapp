@@ -19,9 +19,9 @@ An AI, or a fast-moving collaborator, wrote a draft based on your notes, an inte
 
 ## The pattern
 ```text
-Goal: every factual claim, number, quote, and named example in the
-draft I paste below is either traceable to the source notes or flagged.
-Zero unflagged unsourced claims when you're done.
+Goal: every factual claim, number, quote, and named example in my
+draft is either traceable to the source notes or flagged. Zero
+unflagged unsourced claims when you're done.
 
 Process:
 1. List every specific, checkable claim in the draft: statistics, dates,
@@ -38,12 +38,9 @@ Process:
 4. Output the corrected draft first, then the full claim list from step 2
    underneath it so I can see your work.
 
-Paste the notes, interview, or data after SOURCE NOTES and the draft
-to audit after DRAFT.
-
-SOURCE NOTES:
-
-DRAFT:
+Before you do anything, ask me in one message for both: (1) the source
+notes, interview, or data, (2) the draft to audit. Then wait until you
+have both.
 ```
 
 ## Real example output

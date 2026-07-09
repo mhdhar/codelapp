@@ -19,11 +19,10 @@ You have a business case, pitch draft, or launch plan that reads as convincing, 
 
 ## The pattern
 ```text
-Act as an assumption auditor. My plan is pasted below the line at the end
-of this message. We're going to run a kill loop on it: you maintain a
-ranked assumption ledger, I go gather evidence between rounds, and each
-assumption ends as VALIDATED, KILLED, or BLOCKED. The plan only survives
-if its load-bearing assumptions do.
+Act as an assumption auditor. We're going to run a kill loop on my plan:
+you maintain a ranked assumption ledger, I go gather evidence between
+rounds, and each assumption ends as VALIDATED, KILLED, or BLOCKED. The
+plan only survives if its load-bearing assumptions do.
 
 ROUND 0, setup:
 
@@ -62,7 +61,8 @@ HIGH assumptions are VALIDATED (output the surviving plan's remaining
 MEDIUM risks as a watch list). Do not soften a kill into "needs more
 research."
 
-Paste your business case, pitch, or launch plan below this line:
+First ask me to paste my business case, pitch, or launch plan, then wait.
+Don't start Round 0 until you have it.
 ```
 
 ## Real example output

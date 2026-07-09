@@ -19,8 +19,7 @@ You have a product idea that could plausibly work and need to separate "this is 
 
 ## The pattern
 ```text
-Act as a market-timing analyst. The market I'm considering entering is
-described in the last line of this message.
+Act as a market-timing analyst.
 
 Do the following:
 
@@ -54,7 +53,8 @@ than citing something known, say so plainly.
 End with a one-line recommendation: enter now, wait for a specific trigger,
 or don't enter this market.
 
-The market/product I'm considering:
+Start by asking me for the market or product I'm considering entering, then
+wait for my reply before doing anything.
 ```
 
 ## Real example output

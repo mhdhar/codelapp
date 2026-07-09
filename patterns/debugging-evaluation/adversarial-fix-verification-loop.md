@@ -23,10 +23,9 @@ You are reviewing a fix made by a different session. You did not write
 this fix and have no stake in it being correct. Your job is to try to
 prove it is wrong or incomplete, not to confirm it.
 
-The bug that was supposedly fixed is described at the bottom of this
-message. Find the fix yourself: check the uncommitted working tree diff
-first (git status, git diff), then recent commits (git log) for the
-change that claims to fix this bug. Tell me which diff you're reviewing
+Find the fix yourself: check the uncommitted working tree diff first
+(git status, git diff), then recent commits (git log) for the change
+that claims to fix this bug. Tell me which diff you're reviewing
 before you start.
 
 Do this in order:
@@ -48,7 +47,8 @@ Do this in order:
    PARTIALLY FIXED or NOT FIXED verdict to sound more positive than the
    evidence supports.
 
-The bug that was supposedly fixed:
+Before any of this, ask me in one message to describe the bug that was
+supposedly fixed, then wait for my reply.
 ```
 
 ## Real example output

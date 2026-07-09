@@ -19,8 +19,9 @@ You have month-over-month or week-over-week cohort retention data and retention 
 
 ## The pattern
 ```text
-Step 1: Below the line at the end of this block, paste your cohort retention table, one row per signup cohort, one column per period since signup:
+Step 1: Ask me to paste my cohort retention table, one row per signup cohort, one column per period since signup:
 Cohort | Period 0 | Period 1 | Period 2 | Period 3 | ...
+Wait for my reply. Don't diagnose until you have it.
 
 Step 2: Diagnose, don't brainstorm:
 1. Calculate the period-over-period drop-off rate for every cohort.
@@ -31,9 +32,7 @@ Step 2: Diagnose, don't brainstorm:
 6. Propose exactly one experiment specific enough to start today, tied to what plausibly changed around when the anomaly started (a shipped change, a pricing change, an onboarding edit).
 7. Name the one metric and target that tells us by next review if it worked.
 
-Step 3: If the agent hedges or lists multiple levers, say: "Pick one. Which single period, if fixed, saves the most users?" and ask it to answer again.
-
-Paste your cohort retention rows below this line:
+Step 3: Before you deliver the answer, check it. If it hedges or lists multiple levers, redo it against one question: which single period, if fixed, saves the most users? Pick one.
 ```
 
 ## Real example output

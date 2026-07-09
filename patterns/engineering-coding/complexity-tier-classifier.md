@@ -19,7 +19,7 @@ Right before scaffolding any new project or major feature, when you haven't cons
 
 ## The pattern
 ```text
-Classify what I'm about to build into a complexity tier before we scaffold anything. What I'm building, who it's for, and how long it lives are filled in at the end of this message.
+Classify what I'm about to build into a complexity tier before we scaffold anything.
 
 Tiers:
 - NANO: single file or single page, no backend, no auth, disposable.
@@ -33,16 +33,14 @@ Tiers:
 3. Recommend the minimum stack that fits the chosen tier — do not recommend infrastructure the tier doesn't need.
 4. State what would bump it up a tier later, so I know the upgrade trigger in advance.
 
-What I'm building:
-Expected users:
-Lifespan:
+Before classifying, ask me in one message and wait: (1) what I'm building, (2) expected users, (3) lifespan. If I skip (2) or (3), assume small and ongoing, and say so.
 ```
 
 ## Real example output
 ```
-What I'm building: a script that pulls weekly analytics numbers and posts them to Slack.
-Expected users: just me and 2 teammates who read the Slack message.
-Lifespan: ongoing, but nobody logs into it, it just runs.
+> What I'm building: a script that pulls weekly analytics numbers and posts them to Slack.
+> Expected users: just me and 2 teammates who read the Slack message.
+> Lifespan: ongoing, but nobody logs into it, it just runs.
 
 1. Tier: MICRO, not NANO — it's a single feature with no UI, but it needs to run on a schedule and hold a Slack webhook credential, which is more than a disposable one-off script.
 

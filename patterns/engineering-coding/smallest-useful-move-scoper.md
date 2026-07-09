@@ -19,7 +19,7 @@ A task arrives already bloated, like "redo the dashboard" or "clean up the auth 
 
 ## The pattern
 ```text
-The task at the end of this message is probably too big to do in one clean pass. Scope it down before writing code.
+The task I'm about to give you is probably too big to do in one clean pass. Scope it down before writing code.
 
 Loop:
 1. Break the task as given into an ordered list of slices, each one independently shippable (the codebase is in a working state after each slice, not mid-broken).
@@ -28,12 +28,12 @@ Loop:
 4. Execute only the chosen slice.
 5. When done, ask whether to continue to the next slice or stop here.
 
-The task as given:
+First ask me for the task, then wait. Don't start slicing until you have it.
 ```
 
 ## Real example output
 ```
-The task as given: "Clean up the auth system, it's a mess."
+> The task: "Clean up the auth system, it's a mess."
 
 1. Slices identified:
    a. Consolidate 3 different "is logged in" checks (middleware, a hook, and a raw cookie read) into one source of truth.

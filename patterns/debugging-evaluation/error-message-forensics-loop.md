@@ -19,9 +19,8 @@ You have a real error message or stack trace in hand and the AI's first move is 
 
 ## The pattern
 ```text
-The exact error output, unedited, is pasted at the bottom of this
-message. If I give a file path or command instead, read or run it
-yourself to get the raw output.
+Work from the exact error output, not from what this error type
+usually means.
 
 Before proposing any cause, do this in order and show your work at each step:
 
@@ -46,7 +45,9 @@ guessing which file it might be. Do not name a library, framework, or
 "common cause" for this error type until steps 1-4 are complete on the
 actual trace.
 
-Paste the full error / stack trace below this line:
+First, ask me to paste the full error / stack trace, unedited, then
+wait. If I give a file path or a command instead, read or run it
+yourself to get the raw output.
 ```
 
 ## Real example output

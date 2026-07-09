@@ -19,7 +19,7 @@ You have a pile of raw customer feedback — support transcripts, NPS comments, 
 
 ## The pattern
 ```text
-Below the line at the end of this block is raw customer feedback. It may include support chats, reviews, or messages, in any format.
+I have raw customer feedback for you to mine. It may include support chats, reviews, or messages, in any format.
 
 Scan it for lines that are genuine praise WITH a specific, concrete detail attached — a number, a before/after comparison, a named workflow or feature. Skip generic praise with nothing behind it ("love it," "great tool," "works well") — that's not usable as a testimonial.
 
@@ -31,7 +31,7 @@ For each usable line you find, output:
 
 If a quote is long, you may trim it for length, but mark the cut with an ellipsis and never add words that weren't there. Never merge words from two different people into one quote, even if they're making the same point.
 
-Paste the raw feedback below this line:
+First ask me to paste the raw feedback, then wait. Don't extract anything until you have it.
 ```
 
 ## Real example output

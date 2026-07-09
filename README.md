@@ -31,8 +31,11 @@ To contribute directly via pull request:
 1. Read `schema/pattern-schema.md` for the exact frontmatter contract.
 2. Copy the template from that doc into a new file at
    `patterns/<category>/<your-slug>.md`.
-3. Make sure the pattern block in `## The pattern` is self-contained: pasting
-   only that block into an AI tool should work with zero other context.
+3. Make sure the pattern block in `## The pattern` is pure paste-and-run:
+   pasting only that block into an AI tool and hitting enter should work with
+   zero other context, zero editing, and nothing appended. If the pattern
+   needs user input the agent can't discover itself, the block should end by
+   telling the agent to ask for it and wait.
 4. Open a PR. `codel-site`'s build validates every file and will fail loudly
    on a broken or duplicate-slug pattern.
 

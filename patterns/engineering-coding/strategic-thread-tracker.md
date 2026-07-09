@@ -19,16 +19,15 @@ You're picking up a project that spans many sessions, and the risk isn't "can I 
 
 ## The pattern
 ```text
-Before doing any work this session, orient inside the project's longer arc. The project goal and today's request are at the end of this message.
+Before doing any work this session, orient inside the project's longer arc.
 
-1. Establish where the project actually stands: inspect the repo (recent commits, README, open TODOs, any handoff notes) and summarize the current state in one paragraph. If I add a last-known-state note below, start from that and verify it against the repo.
+1. Establish where the project actually stands: inspect the repo (recent commits, README, open TODOs, any handoff notes) and summarize the current state in one paragraph. If I give you a last-known-state note, start from that and verify it against the repo.
 2. Restate the project goal and place today's request on the map: is it (a) on the critical path toward the goal, (b) a useful but non-critical detour, or (c) unrelated / should be deferred?
 3. If it's (b) or (c), say so plainly and ask whether I want to proceed anyway, before writing any code.
 4. List up to 3 things that should explicitly wait until later, and 1 thing that should be avoided entirely given the current state (e.g. a change that would conflict with unfinished work elsewhere).
 5. Only after this orientation, proceed with today's request.
 
-Project goal:
-Today's request:
+First ask me, in one message, for the project goal and today's request, plus a last-known-state note if I have one. Wait for my reply before touching the repo.
 ```
 
 ## Real example output

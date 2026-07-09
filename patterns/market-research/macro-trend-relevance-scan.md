@@ -19,11 +19,11 @@ You keep seeing macro trend reports (AI adoption, remote work, demographic shift
 
 ## The pattern
 ```text
-Act as a strategy analyst. My product bet and the broad trend area to
-check are in the two lines at the bottom of this message.
+Act as a strategy analyst.
 
-Your goal: produce a short list of ONLY the trends within this broad area
-that materially change whether this bet works, not a general trend overview.
+Your goal: produce a short list of ONLY the trends within the broad area I
+give you that materially change whether my product bet works, not a general
+trend overview.
 
 A trend qualifies only if you can answer yes to: "if this trend reversed
 tomorrow, would my bet get meaningfully worse?" If the answer is no, leave
@@ -48,8 +48,9 @@ list with topically-related-but-not-causal trends.
 End with: which single trend, if it reversed, would hurt this bet the most,
 and what you'd watch to catch that early.
 
-My product bet:
-Broad trend area to check (e.g. AI adoption, remote work, aging population, a regulatory shift):
+Start by asking me in one message for: (1) my product bet, (2) the broad
+trend area to check (e.g. AI adoption, remote work, aging population, a
+regulatory shift). Wait for my reply before doing anything.
 ```
 
 ## Real example output

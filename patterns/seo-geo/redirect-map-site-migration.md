@@ -19,10 +19,11 @@ You're changing URL structure, merging sites, or replatforming, and every old UR
 
 ## The pattern
 ```text
-Below the line are two lists: every old URL on my site, then a line
-reading "NEW URLS:", then every URL that will exist after the migration.
+I'm migrating my site and need a 301 redirect map. The input is two
+lists: every old URL on my site, then a line reading "NEW URLS:", then
+every URL that will exist after the migration.
 
-Build a 301 redirect map in this loop:
+Build the map in this loop:
 1. Match each old URL to the single best new URL by slug, path segments,
    and apparent topic. Tag each match HIGH, MEDIUM, or LOW confidence.
 2. Move every LOW match to a "needs human decision" list with your top 2
@@ -43,7 +44,8 @@ Build a 301 redirect map in this loop:
    (b) the needs-human list, (c) counts: total old URLs, HIGH, MEDIUM,
    needs-human, homepage-flagged.
 
-Paste the old URLs, then "NEW URLS:", then the new URLs, below this line:
+First ask me to paste the old URLs, then a line reading "NEW URLS:", then
+the new URLs, all in one message. Wait until you have both lists.
 ```
 
 ## Real example output

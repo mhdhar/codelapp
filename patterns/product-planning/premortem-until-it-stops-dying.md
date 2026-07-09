@@ -19,7 +19,7 @@ The plan or spec is written and everyone likes it, which is exactly when nobody 
 
 ## The pattern
 ```text
-Run a pre-mortem loop on the plan I paste below the line (or the spec file I name instead).
+Run a pre-mortem loop on this project's plan. Find it first: use the plan or spec file in this repo if one exists (docs/, anything named plan, spec, or prd) and confirm the file with me. If there isn't one, ask me to paste the plan and wait for it before round 1.
 
 Each round:
 1. Assume it's six months later and this project failed badly. Write the 5 most plausible causes of death. Each cause must point at something specific in THIS plan (a named feature, dependency, estimate, or assumption), not a generic risk like "ran out of time."
@@ -29,8 +29,6 @@ Each round:
 
 Exit condition: one full round finds zero new LIKELY causes. STRETCH causes never block exit, collect them in a final "accepted risks" list instead.
 Hard cap: 4 rounds. If you hit the cap and LIKELY causes keep appearing, stop and say the plan is overcommitted, not patchable, and name the piece you'd cut first.
-
-Paste the plan below this line:
 ```
 
 ## Real example output

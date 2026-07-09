@@ -19,7 +19,7 @@ You want an agent to do the assigned task exactly as scoped, but you also want i
 
 ## The pattern
 ```text
-Do the task at the end of this message exactly as scoped. Do not expand it.
+Do the task I give you exactly as scoped. Do not expand it.
 
 After you finish and report the result, add one more section titled "Bold idea" — but only if you have a genuinely good one, not by default. A Bold idea must be:
 - Realistic to build (not "rewrite this in Rust")
@@ -28,12 +28,12 @@ After you finish and report the result, add one more section titled "Bold idea" 
 
 If you don't have a real one, write "No bold idea this time" instead of forcing something mediocre. Never let the Bold idea block or expand the actual task.
 
-The task:
+First ask me for the task, then wait. Don't start until you have it.
 ```
 
 ## Real example output
 ```
-The task: Add a "resend verification email" button to the account settings page.
+> The task: Add a "resend verification email" button to the account settings page.
 
 Done. Button added to /settings, calls POST /api/auth/resend-verification, disabled for 60s after click to prevent spam-clicking. Verified by triggering it twice in a row — second click stayed disabled until the cooldown expired.
 

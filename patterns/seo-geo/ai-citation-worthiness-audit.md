@@ -19,8 +19,8 @@ Your page ranks and loads fine but never gets quoted in ChatGPT, Perplexity, or 
 
 ## The pattern
 ```text
-Below the line is the body copy of one page from my site. Audit it for
-AI citation-worthiness against the target query I give at the bottom:
+Audit the body copy of one page from my site for AI citation-worthiness
+against a target query:
 1. Go paragraph by paragraph. Mark each one CITABLE or GENERIC. CITABLE
    means it states a specific number, a named fact, a precise definition,
    or a concrete claim an answer engine could quote verbatim and be right.
@@ -40,8 +40,8 @@ AI citation-worthiness against the target query I give at the bottom:
 5. Give a citation-worthiness score out of 10 for the page as a whole, and
    the single biggest reason it's losing points.
 
-Target query:
-Paste the page copy below this line:
+Start by asking me in one message for (1) the target query and (2) the
+page's body copy pasted in. Wait for my reply before doing anything.
 ```
 
 ## Real example output

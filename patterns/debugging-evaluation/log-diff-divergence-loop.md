@@ -20,9 +20,7 @@ There's no clean stack trace, just two logs: one from a run that worked and one 
 ## The pattern
 ```text
 I have two logs for the same operation. One is from a working run, one
-is from a broken run. Both are pasted under labels at the bottom of this
-message. If I give file paths instead, read the logs from those files.
-Find exactly where they diverge.
+is from a broken run. Find exactly where they diverge.
 
 Do this:
 
@@ -48,9 +46,9 @@ Do this:
 Do not propose a fix based on the general area of the divergence alone,
 trace it to the specific condition first.
 
-WORKING LOG (paste below, or give a file path):
-
-BROKEN LOG (paste below, or give a file path):
+First, ask me for both logs in one message: the working log and the
+broken log, each pasted or given as a file path. If I give file paths,
+read them yourself. Wait until you have both before starting.
 ```
 
 ## Real example output

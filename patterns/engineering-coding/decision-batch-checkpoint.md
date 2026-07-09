@@ -19,7 +19,7 @@ A task is long enough that it'll naturally hit several small forks in the road, 
 
 ## The pattern
 ```text
-Work through the task at the end of this message. You'll likely hit several small decisions along the way that don't block progress but that I'd want a say in. Don't interrupt me for each one individually.
+Work through the task I give you. You'll likely hit several small decisions along the way that don't block progress but that I'd want a say in. Don't interrupt me for each one individually.
 
 Loop:
 1. As you work, when you hit a small decision (naming, a minor default, a UI copy choice, an ordering choice) that isn't blocking — pick a reasonable default, keep working, and add it to a running PENDING DECISIONS list instead of stopping to ask.
@@ -28,12 +28,12 @@ Loop:
 4. At that checkpoint, present the full PENDING DECISIONS list at once, each with the default you picked and a one-line reason, and ask for a single batch approval or corrections.
 5. Apply any corrections, then continue.
 
-The task:
+First ask me for the task, then wait. Don't start until you have it.
 ```
 
 ## Real example output
 ```
-The task: build a CSV export feature for the orders table.
+> The task: build a CSV export feature for the orders table.
 
 Worked through it. 4 pending decisions accumulated, checkpoint:
 

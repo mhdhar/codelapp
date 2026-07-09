@@ -19,8 +19,8 @@ You have a draft, AI-written or human-written, that reads bloated or generic. Yo
 
 ## The pattern
 ```text
-Edit the text I paste below for concision and voice. Do not change the
-meaning or remove any factual claim.
+Edit my text for concision and voice. Do not change the meaning or
+remove any factual claim.
 
 Cut:
 - Filler openers like "In today's world" or "It's important to note that"
@@ -38,7 +38,8 @@ Keep:
 
 Return the edited text only, then a one-line list of what you cut.
 
-Paste the text below this line:
+First ask me to paste the text, then wait. Don't start until you
+have it.
 ```
 
 ## Real example output

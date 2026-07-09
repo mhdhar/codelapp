@@ -19,8 +19,7 @@ You have a product idea and need a first-pass market size before pitching, prior
 
 ## The pattern
 ```text
-Act as a market sizing analyst. The product idea and target customer are
-in the two lines at the bottom of this message.
+Act as a market sizing analyst.
 
 Do the following:
 
@@ -46,8 +45,8 @@ Do the following:
 Do not present estimates as sourced facts. If you don't know a number,
 say so and estimate transparently rather than inventing precision.
 
-Product idea:
-Target customer:
+Start by asking me in one message for: (1) the product idea, (2) the target
+customer. Wait for my reply before sizing anything.
 ```
 
 ## Real example output

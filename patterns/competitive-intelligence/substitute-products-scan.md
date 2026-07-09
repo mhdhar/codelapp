@@ -19,7 +19,7 @@ Before a competitive brief or market-sizing conversation that only lists direct,
 
 ## The pattern
 ```text
-The problem my product solves and the target buyer are at the bottom of this prompt.
+This is a scan of every way my target buyer could be solving the problem my product solves.
 
 List every distinct way this buyer could be solving this problem today, in four tiers:
 1. Direct competitors: other named products built specifically to solve this problem
@@ -31,8 +31,7 @@ For each tier, name the specific substitute and, in one line, why a buyer might 
 
 End with which substitute is most likely my actual biggest competitor for this buyer, and why it's probably not the direct competitor I'd have named first.
 
-The problem my product solves:
-Target buyer:
+Before you do anything, ask me in one message and wait: (1) the problem my product solves, (2) the target buyer.
 ```
 
 ## Real example output

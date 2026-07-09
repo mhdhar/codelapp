@@ -20,11 +20,11 @@ A prospect sent you a brief or RFP and you need a first-draft proposal fast, wit
 ## The pattern
 ```text
 Step 1: Generate the skeleton.
-"Read the brief I paste below and outline a proposal with these
-sections: Problem Understanding, Approach, Scope, Timeline, Investment.
-For each section, write 2-3 bullet points of what should go there based
-on the brief. Do not write full prose yet. Paste the brief below this
-line:"
+"Outline a proposal from a client brief, with these sections: Problem
+Understanding, Approach, Scope, Timeline, Investment. For each section,
+write 2-3 bullet points of what should go there based on the brief. Do
+not write full prose yet. First ask me to paste the brief, then wait.
+Don't start until you have it."
 
 Step 2: Review the outline. Correct any misread requirements or add
 missing constraints (budget ceiling, hard deadline, must-have tech).

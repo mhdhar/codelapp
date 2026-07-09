@@ -19,7 +19,7 @@ You're about to type a scaffold command or open a fresh repo for a new project, 
 
 ## The pattern
 ```text
-Before I scaffold anything, force me to answer these four questions about the project idea I paste below the line:
+Before I scaffold anything, force me to answer these four questions about my project idea:
 
 1. One-line description: what does this do, in one sentence a stranger would understand.
 2. Target user: who specifically uses this first (not "everyone").
@@ -28,7 +28,7 @@ Before I scaffold anything, force me to answer these four questions about the pr
 
 Answer all four in under 150 words total. If you don't have enough information to answer any of them confidently, say which one and ask me directly, don't guess.
 
-My project idea:
+Start by asking me to describe the project idea, then wait for my reply.
 ```
 
 ## Real example output

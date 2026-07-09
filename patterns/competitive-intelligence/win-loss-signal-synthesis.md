@@ -19,7 +19,7 @@ You have a pile of unstructured feedback — review site quotes, Reddit threads,
 
 ## The pattern
 ```text
-My product and the competitor we lose to are named at the bottom of this prompt, followed by the raw signal: review quotes, Reddit thread excerpts, churn survey answers, and lost-deal call notes, with the source labeled on each quote.
+This is a synthesis of raw win/loss signal about my product and the competitor we lose to: review quotes, Reddit thread excerpts, churn survey answers, and lost-deal call notes, with the source labeled on each quote.
 
 From this raw signal:
 1. Cluster the complaints and comparisons into themes (e.g. price, missing feature, support quality, ease of setup, performance). Do not invent themes with no supporting quote.
@@ -30,9 +30,7 @@ From this raw signal:
 
 If a theme only has one source behind it, label it "single signal, not a pattern" instead of ranking it.
 
-My product:
-Competitor we lose to:
-Paste the raw signal below this line, labeling each quote's source (e.g. "G2 review, 2-star:", "Reddit:", "Churn survey:"):
+Before you do anything, ask me in one message and wait: (1) my product, (2) the competitor we lose to, (3) the raw signal, pasted in with each quote's source labeled (e.g. "G2 review, 2-star:", "Reddit:", "Churn survey:").
 ```
 
 ## Real example output

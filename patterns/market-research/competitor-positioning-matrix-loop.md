@@ -24,8 +24,6 @@ material one competitor at a time: homepage copy, pricing page text,
 tagline, whatever I can grab. You maintain ONE running positioning matrix
 across all rounds. It gets sharper each round, not longer.
 
-My first competitor's material is below the line at the end of this message.
-
 Each round, do the following:
 
 1. From the pasted material only, extract for this competitor:
@@ -58,11 +56,12 @@ After each round I'll paste the next competitor. When I say "map it":
    business, don't treat every gap as an opportunity.
 
 6. End with the single positioning line you'd test for my product and which
-   competitor's customers it would pull from first. My product is described
-   on the labeled line below.
+   competitor's customers it would pull from first, using the one-line
+   product description I gave you at the start.
 
-My product (one line, what it is and for whom):
-Paste the first competitor's homepage/pricing copy below this line:
+Start by asking me in one message for: (1) my product in one line, what it
+is and for whom, (2) the first competitor's homepage/pricing copy. Wait for
+my reply before building the first row.
 ```
 
 ## Real example output

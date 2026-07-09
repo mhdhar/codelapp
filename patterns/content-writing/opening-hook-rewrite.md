@@ -19,9 +19,9 @@ Your draft's first paragraph is warming up instead of starting: scene-setting, t
 
 ## The pattern
 ```text
-Look at the draft opening I paste below. Find the sentence where the
-actual point, tension, or specific claim first appears, not
-scene-setting or restating the topic.
+Look at my draft opening. Find the sentence where the actual point,
+tension, or specific claim first appears, not scene-setting or
+restating the topic.
 
 If that sentence isn't the first sentence:
 1. Show me which sentence it is and how many sentences come before it.
@@ -35,7 +35,8 @@ If that sentence isn't the first sentence:
 
 If the opening already leads with the point, say so and don't rewrite it.
 
-Paste the first paragraph below this line:
+First ask me to paste the first paragraph, then wait. Don't start
+until you have it.
 ```
 
 ## Real example output

@@ -19,7 +19,7 @@ You're building a battlecard, comparison page, or objection-handling doc against
 
 ## The pattern
 ```text
-Goal: build a ranked list of the real, recurring weaknesses of the competitor I name at the bottom of this prompt, backed by their own customers' words. Done means every listed weakness passes all three tests below. Anything that fails a test goes in a separate "heard once, unproven" list. Nothing gets quietly dropped and nothing gets quietly promoted.
+Goal: build a ranked list of the real, recurring weaknesses of the competitor I name, backed by their own customers' words. Done means every listed weakness passes all three tests below. Anything that fails a test goes in a separate "heard once, unproven" list. Nothing gets quietly dropped and nothing gets quietly promoted.
 
 Tests for a listed weakness:
 1. Recurrence: complained about by at least 3 distinct reviewers or commenters, not 1 loud one.
@@ -35,7 +35,7 @@ Output, ranked by recurrence count:
 
 Then the "heard once, unproven" list, one line each. End with the single weakness you'd lead with and why.
 
-Competitor name (plus URL if the name is ambiguous):
+Start by asking me for the competitor's name, plus their URL if the name is ambiguous, then wait for my reply before doing anything.
 ```
 
 ## Real example output

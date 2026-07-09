@@ -19,9 +19,10 @@ You (or an AI agent) already have a theory about what's causing a bug and are ab
 
 ## The pattern
 ```text
-At the bottom of this message I give you a bug and my current theory of
-its cause. If we already discussed the bug and a theory in this
-conversation, use those instead.
+If we already discussed a bug and a theory of its cause in this
+conversation, use those. If not, ask me in one message for both, (1)
+the bug and (2) my current theory of the cause, and wait for my reply
+before doing anything else.
 
 Before we act on this theory, list every assumption it depends on, even
 ones that seem obvious. For each assumption:
@@ -38,9 +39,6 @@ Then answer directly: does the theory still hold if every UNCONFIRMED
 assumption turns out false? If removing any one unconfirmed assumption
 breaks the theory, say which one is load-bearing and check that one
 first before writing any fix.
-
-The bug:
-My current theory of the cause:
 ```
 
 ## Real example output

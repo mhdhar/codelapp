@@ -19,10 +19,10 @@ Something is measurably slow (an endpoint, a query, a build step) and you want i
 
 ## The pattern
 ```text
-Make the slow thing described at the end of this message fast, against a measured budget, not by feel.
+Make the slow thing I point you at fast, against a measured budget, not by feel.
 
 1. BASELINE: Build a repeatable measurement: a timed script, a benchmark, or a timed request against the local server. Run it 5 times and report the median, not the best run. Paste the numbers.
-2. BUDGET: Propose a numeric target based on the baseline and what the operation is for (e.g. "p50 under 300ms for an interactive endpoint"). If I gave a target below, use mine. No optimizing until a budget is stated.
+2. BUDGET: Propose a numeric target based on the baseline and what the operation is for (e.g. "p50 under 300ms for an interactive endpoint"). If I gave a target, use mine. No optimizing until a budget is stated.
 3. PROFILE: Find where the time actually goes before changing anything. Name the top 1-2 costs with evidence: profiler output, EXPLAIN ANALYZE, timing logs. No changes on a hunch.
 
 Loop:
@@ -33,12 +33,12 @@ Loop:
 
 Finish with a table: each change, median before, median after, kept or reverted.
 
-The slow thing (and my target, if I have one):
+Start by asking me what's slow and whether I have a numeric target, then wait. If I give no target, propose one in step 2.
 ```
 
 ## Real example output
 ```
-The slow thing: GET /api/search takes over 3 seconds against the staging dataset.
+> The slow thing: GET /api/search takes over 3 seconds against the staging dataset. No target in mind.
 
 1. BASELINE: timed script, /api/search?q=invoice, 5 runs: 3,180 / 3,240 / 3,510 / 3,190 / 3,290ms. Median 3,240ms.
 2. BUDGET: interactive search box, proposing p50 under 300ms. No target given, so using 300ms.

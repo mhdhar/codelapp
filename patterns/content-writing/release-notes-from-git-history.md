@@ -61,4 +61,4 @@ Range: v1.8.0..HEAD, 47 commits.
 Step 3 flagged one entry: commit f20b115 says "add SSO support" but the diff only adds the config schema, no login flow. Moved from New to Internal.
 
 ## Why it works
-Git history is the one source that can't forget what shipped, and self-discovery of the range means nothing to fill in before pasting. The diff check in step 3 catches the classic failure: release notes written from commit messages inherit every exaggeration in them. Hash citations make each claim auditable in one click.
+Git history is the one source that can't forget what shipped, and self-discovery of the range means there's nothing to hand the agent before it starts. The diff check in step 3 catches the classic failure: release notes written from commit messages inherit every exaggeration in them. Hash citations make each claim auditable in one click.

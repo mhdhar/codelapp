@@ -20,7 +20,7 @@ You've given an agent a request with real gaps in it (unclear scope, unclear use
 ## The pattern
 Step 1, force the batch:
 ```text
-Don't start work on the request I paste below the line. First, list every question you'd need answered to do it confidently, grouped into:
+I have a request for you, but don't start work on it. When I give it to you, first list every question you'd need answered to do it confidently, grouped into:
 - Scope: what's in/out
 - Users: who this is for, who it explicitly isn't for
 - Constraints: technical, timeline, budget
@@ -28,7 +28,7 @@ Don't start work on the request I paste below the line. First, list every questi
 
 Only include questions you actually need answered, not ones you could reasonably assume. If a section has no real gaps, write "none" under it. Stop after the list, don't proceed until I answer.
 
-Paste the request below this line:
+Start by asking me to paste the request, then wait for it.
 ```
 
 Step 2, after you answer:

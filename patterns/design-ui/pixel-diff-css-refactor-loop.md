@@ -19,8 +19,7 @@ You need to restructure styling code without changing how anything looks: migrat
 
 ## The pattern
 ```text
-I want a styling refactor that changes ZERO pixels. The refactor is described on the
-last line of this prompt. Before you touch any code:
+I want a styling refactor that changes ZERO pixels. Before you touch any code:
 
 1. Baseline: start the dev server if it isn't running. Trace which routes import the
    files you're about to change, and screenshot every one of them at 375px and 1440px,
@@ -36,12 +35,13 @@ last line of this prompt. Before you touch any code:
 5. Every CHANGED pair is a regression. Find the cause in your code diff, fix it, and go
    back to step 3. Loop until every pair reads IDENTICAL.
 
-Rules: there are no acceptable visual changes unless I list exceptions in my next
-message. If you're convinced a change you introduced is actually a bug fix, stop and
-ask before keeping it. Anti-aliasing noise under a 0.1% pixel threshold may be ignored,
-but say so when you rely on it.
+Rules: there are no acceptable visual changes beyond the exceptions I approve. If
+you're convinced a change you introduced is actually a bug fix, stop and ask before
+keeping it. Anti-aliasing noise under a 0.1% pixel threshold may be ignored, but say
+so when you rely on it.
 
-The refactor I want:
+Before you do anything, ask me in one message and wait: (1) what refactor I want,
+(2) any visual exceptions I'll accept. If I give no exceptions, there are none.
 ```
 
 ## Real example output

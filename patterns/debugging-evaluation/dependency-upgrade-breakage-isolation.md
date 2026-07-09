@@ -19,8 +19,7 @@ You ran a bulk dependency update (`npm update`, `bundle update`, `pip install -U
 
 ## The pattern
 ```text
-A bulk dependency upgrade just broke something. I say what broke at the
-bottom of this message.
+A bulk dependency upgrade just broke something.
 
 Do this:
 
@@ -47,7 +46,9 @@ Do this:
    and whether the fix should be pinning the old version, upgrading our
    code to match the new API, or filing an upstream issue.
 
-What broke after the upgrade:
+First, ask me what broke after the upgrade and wait for my reply. If
+all I can say is "tests fail" or "the build fails," run the test suite
+and the build yourself and use the first failure as the symptom.
 ```
 
 ## Real example output

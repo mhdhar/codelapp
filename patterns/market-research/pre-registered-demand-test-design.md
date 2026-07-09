@@ -19,9 +19,7 @@ You're about to run a landing page, waitlist, or fake-door test for a product id
 
 ## The pattern
 ```text
-Act as an experiment designer. My product idea and the audience I can
-realistically reach this week are on the two labeled lines at the bottom
-of this message.
+Act as an experiment designer.
 
 Your goal: a one-page demand test plan I can run in 7 days or less, with
 pass/fail thresholds committed BEFORE launch. The plan is done when every
@@ -60,8 +58,9 @@ no "it depends" left anywhere.
 End with the plan as a checklist I can execute Monday morning, in order,
 with the three committed numbers at the top.
 
-My product idea:
-Audience I can reach this week (channel and rough size):
+Start by asking me in one message for: (1) my product idea, (2) the
+audience I can realistically reach this week, channel and rough size. Wait
+for my reply before designing anything.
 ```
 
 ## Real example output

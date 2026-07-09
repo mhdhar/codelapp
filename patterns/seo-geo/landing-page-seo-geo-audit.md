@@ -19,9 +19,7 @@ A landing page isn't ranking or isn't getting cited by AI answer engines, and yo
 
 ## The pattern
 ```text
-Audit a landing page in this repo for SEO and GEO readiness. The page
-path and target keyword are at the bottom. If I leave the path empty,
-find the site's primary landing page in this repo yourself. Read the
+Audit a landing page in this repo for SEO and GEO readiness. Read the
 actual file, don't guess.
 
 Check and report on each of these:
@@ -43,8 +41,9 @@ For each check, mark PASS or FAIL with the specific evidence (actual title
 text, actual H1 text, etc). Then output a prioritized fix list, ordered by
 impact, with the exact line or file to change for each fix.
 
-Page path in this repo:
-Target keyword:
+Before you start, ask me in one message for the page path in this repo
+and the target keyword, then wait. If I skip the path, find the site's
+primary landing page in this repo yourself.
 ```
 
 ## Real example output

@@ -19,8 +19,8 @@ You have a campaign idea in your head ("do something around back-to-school" or "
 
 ## The pattern
 ```text
-Step 1: Dump the raw idea.
-Below the line at the end of this block, paste everything you know, unfiltered, even if it's messy: the idea itself, why now, any constraints, budget or timeline if known.
+Step 1: Get the raw idea.
+Ask me to dump everything I know, unfiltered, even if it's messy: the idea itself, why now, any constraints, budget or timeline if known. One message, then wait for my reply before drafting anything.
 
 Step 2: Draft the brief.
 Turn my raw idea into a creative brief with these exact sections:
@@ -34,12 +34,10 @@ Turn my raw idea into a creative brief with these exact sections:
 Keep every section under 4 sentences. Flag any section where you had to guess instead of using something I told you by starting a line with "ASSUMPTION:" and stating what you assumed.
 
 Step 3: Review the ASSUMPTION flags.
-Read the brief back. For every ASSUMPTION line, either confirm it or correct it, then ask the agent to regenerate just that section.
+Show me the brief and ask me to confirm or correct every ASSUMPTION line. Regenerate just the sections I correct.
 
 Step 4: Hand off.
-Once no ASSUMPTION lines remain, the brief is ready to hand to a creative team or a content-generation agent as-is.
-
-Paste your raw idea and context below this line:
+Once no ASSUMPTION lines remain, tell me the brief is ready to hand to a creative team or a content-generation agent as-is.
 ```
 
 ## Real example output

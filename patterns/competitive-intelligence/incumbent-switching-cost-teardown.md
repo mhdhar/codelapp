@@ -19,7 +19,7 @@ You're trying to win customers off a specific, named incumbent and keep hearing 
 
 ## The pattern
 ```text
-The incumbent we're displacing and my product are named at the bottom of this prompt.
+This is a teardown of the switching costs around a specific incumbent we're displacing.
 
 Research the incumbent's public data export docs, API docs, integration marketplace, and contract/terms page if available. Then map switching cost across these categories:
 
@@ -31,8 +31,7 @@ Research the incumbent's public data export docs, API docs, integration marketpl
 
 For each category, classify the cost as "real" (structurally hard to avoid, e.g. a 12-month contract with a penalty) or "perceived" (sounds hard but is actually low-effort, e.g. a clean CSV export in one click). For every "real" cost, write one sentence on how my product or onboarding process should address it directly.
 
-Incumbent (name and URL):
-My product (one line):
+Before you research anything, ask me in one message and wait: (1) the incumbent's name and URL, (2) my product in one line.
 ```
 
 ## Real example output

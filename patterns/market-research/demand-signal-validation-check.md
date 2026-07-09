@@ -19,12 +19,11 @@ You have a product idea and want a cheap sanity check on real demand, using sign
 
 ## The pattern
 ```text
-Act as a demand-validation analyst. My product idea, target user, and raw
-signal data are below the line at the end of this message. The signal data
-covers three categories: SEARCH SIGNAL (search volume or trends), FORUM/
-COMMUNITY SIGNAL (threads and discussions), and EXISTING WORKAROUNDS (how
-people solve this today). Wherever I wrote "not checked yet," treat that
-category as unknown.
+Act as a demand-validation analyst. I'll give you my product idea, target
+user, and raw signal data in three categories: SEARCH SIGNAL (search volume
+or trends), FORUM/COMMUNITY SIGNAL (threads and discussions), and EXISTING
+WORKAROUNDS (how people solve this today). Wherever I write "not checked
+yet," treat that category as unknown.
 
 Do the following:
 
@@ -55,9 +54,9 @@ Do the following:
 Do not treat an absent signal as either a good or bad sign, mark unchecked
 things as "unknown," not as evidence either way.
 
-Product idea:
-Target user:
-Paste signal data below this line (label each SEARCH SIGNAL, FORUM/COMMUNITY SIGNAL, or EXISTING WORKAROUNDS; write "not checked yet" where you have nothing):
+Before you do anything, ask me for these in one message and wait: (1) the
+product idea, (2) the target user, (3) my signal data, labeled by category,
+with "not checked yet" wherever I have nothing.
 ```
 
 ## Real example output

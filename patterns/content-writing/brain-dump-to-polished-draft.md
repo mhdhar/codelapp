@@ -19,10 +19,7 @@ You have a wall of half-formed thoughts, bullet points, or a voice memo transcri
 
 ## The pattern
 ```text
-Turn my rough notes below into a polished draft. The content type and
-voice are at the bottom. If I leave either blank, infer the most natural
-choice from the notes themselves and say what you chose in one line
-before the draft.
+Turn my rough notes into a polished draft.
 
 Rules:
 - Keep every factual claim from my notes. Do not invent statistics, quotes, or examples.
@@ -34,9 +31,11 @@ Rules:
 
 Output the full draft only. No preamble, no explanation of what you did.
 
-Content type (e.g. blog post, landing page section):
-Voice (e.g. "direct, confident, no fluff, second person"):
-Paste your raw notes below this line:
+First ask me in one message for: (1) my raw notes, (2) the content type
+(e.g. blog post, landing page section), (3) the voice (e.g. "direct,
+confident, no fluff, second person"). Then wait. If I skip (2) or (3),
+infer the most natural choice from the notes themselves and say what
+you chose in one line before the draft.
 ```
 
 ## Real example output

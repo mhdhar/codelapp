@@ -20,13 +20,13 @@ Something broke somewhere between a known-good state and now, but nobody knows w
 ## The pattern
 ```text
 We have a regression. It is broken at HEAD unless I say otherwise. The
-repro command at the bottom of this message proves good vs. bad: it
-should exit 0 on good and non-zero on bad.
+repro command I give you proves good vs. bad: it should exit 0 on good
+and non-zero on bad.
 
 Do this:
 
-1. Establish the known-good ref. If I named one below, use it. If I left
-   it blank, find one yourself: step back through history by doubling
+1. Establish the known-good ref. If I named one, use it. If I didn't,
+   find one yourself: step back through history by doubling
    (HEAD~8, HEAD~16, HEAD~32, ...) running the repro command at each,
    until it passes.
 2. Confirm the repro command actually fails on the bad ref and passes on
@@ -46,8 +46,9 @@ Do this:
 8. Do not propose a fix for the regression yet unless I ask, the goal of
    this workflow is isolating the commit, not patching it.
 
-Repro command (exit 0 = good, non-zero = bad):
-Known good ref (tag or commit; leave blank and you find one):
+Before step 1, ask me in one message for: (1) the repro command, or a
+description of what broke so you can write one and show it to me, and
+(2) a known-good ref if I know one. Wait for my reply, then start.
 ```
 
 ## Real example output

@@ -19,9 +19,9 @@ A value comes out wrong at the end of a multi-step flow (handler to service to t
 
 ## The pattern
 ```text
-A value comes out wrong at the end of a data flow in this codebase. I
-describe the symptom at the bottom of this message. Find the exact step
-where it goes wrong by bisecting the pipeline with log probes.
+A value comes out wrong at the end of a data flow in this codebase.
+Find the exact step where it goes wrong by bisecting the pipeline with
+log probes.
 
 1. Trace the code path yourself, from the entry point to the place
    where the wrong value is observed. List it as an ordered chain of
@@ -47,7 +47,8 @@ where it goes wrong by bisecting the pipeline with log probes.
 
 Do not fix anything in this pass. Locate, prove, clean up, report.
 
-What comes out wrong (expected vs. actual, and where you can see it):
+First, ask me in one message what comes out wrong: expected vs. actual,
+and where I can see it. Wait for my reply before touching anything.
 ```
 
 ## Real example output

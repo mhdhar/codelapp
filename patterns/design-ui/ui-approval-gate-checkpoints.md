@@ -32,7 +32,8 @@ After each checkpoint, stop and ask "Approve to continue, or revise?" Do not pro
 Work out the affected pages and components yourself from my task description; that's
 part of Checkpoint 1.
 
-Task (the UI change I want):
+First, ask me to describe the UI change I want, then wait for my reply. Don't start
+Checkpoint 1 until you have it.
 ```
 
 ## Real example output

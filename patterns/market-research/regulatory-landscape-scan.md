@@ -19,9 +19,7 @@ You're about to launch a product in an industry with regulatory exposure (health
 
 ## The pattern
 ```text
-Act as a regulatory research analyst. The product I'm launching, its
-industry, and the geography are in the three lines at the bottom of this
-message.
+Act as a regulatory research analyst.
 
 Produce a regulatory landscape scan with these sections:
 
@@ -50,9 +48,9 @@ invent statute numbers or agency names.
 End with a prioritized list: which 3 items should be verified with a lawyer
 before launch, and why those three first.
 
-Product:
-Industry:
-Geography (country/state/region):
+Before you do anything, ask me for these in one message and wait: (1) the
+product I'm launching, (2) the industry, (3) the geography
+(country/state/region).
 ```
 
 ## Real example output

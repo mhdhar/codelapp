@@ -34,9 +34,9 @@ Each round:
 
 Loop without asking me anything until one headline passes all 5. Cap it at 6 rounds. If nothing passes by round 6, show the best scorer and name the one check it cannot pass without changing the actual offer, not the wording. When done, show the winner plus the two strongest runners-up from earlier rounds.
 
-Only use claims and numbers I give you below. If you need a number to pass check 4 and I gave none, use a falsifiable mechanism claim instead of inventing a stat.
+Only use claims and numbers I give you. If you need a number to pass check 4 and I gave none, use a falsifiable mechanism claim instead of inventing a stat.
 
-My current headline, plus one line on what the product does and any real numbers I can claim:
+First ask me in one message for my current headline, one line on what the product does, and any real numbers I can claim. Wait for my reply, then start round 1.
 ```
 
 ## Real example output

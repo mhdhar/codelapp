@@ -19,7 +19,7 @@ People are already posting organically about your product — tweets, reviews, c
 
 ## The pattern
 ```text
-This is a recurring weekly loop. Last week's queue state and this week's new raw mentions are filled in below the line at the end of this block.
+This is a recurring weekly loop over my product's organic mentions.
 
 For each new mention:
 1. Classify it: worth amplifying (specific praise, a real use case, a concrete before/after story) or noise (generic "nice tool," a complaint, spam). Drop the noise from the output entirely, don't list it.
@@ -28,8 +28,7 @@ For each new mention:
 4. Carry forward anything from last week's queue that's still unactioned, tagged "CARRIED OVER, N weeks". If something has been carried over 3+ weeks, flag it for a decision: act on it now or drop it.
 5. End with an updated queue split into two sections: Done This Week (what got actioned) and Pending (everything still open, ranked), so next week's run only has to process what's new.
 
-Last week's queue ("none, first run" if this is new):
-New raw mentions this week (links with quotes, review excerpts, screenshots-as-text, any format):
+Start by asking me in one message for: (1) last week's queue state, and (2) this week's new raw mentions (links with quotes, review excerpts, screenshots-as-text, any format). If I say this is the first run, start with an empty queue. Wait for my reply before triaging.
 ```
 
 ## Real example output
