@@ -20,7 +20,9 @@ You've got several worktrees or branches open at once (Conductor-style, one per 
 ## The pattern
 ```text
 I have multiple git worktrees/branches in flight and need a risk audit
-before I touch any of them. For the directory [WORKTREES_ROOT]:
+before I touch any of them. Audit every worktree this repo knows about
+(start from `git worktree list` here; if my worktrees live under a
+different root, I'll name that directory in my next message):
 
 1. List every worktree with `git worktree list`, and for each one:
    - Current branch name and whether it's tracking a remote.

@@ -19,11 +19,11 @@ Your site has thousands of URLs, sitemap.xml is one flat file with `priority=0.5
 
 ## The pattern
 ```text
-I'm restructuring the sitemap for [SITE_URL], which has approximately
-[URL_COUNT] URLs. Here is a sample export of my pages (URL, page type, last
-content update date, 90-day organic sessions):
-
-[PAGE_INVENTORY_CSV]
+I'm restructuring my site's sitemap. Below the line is a sample export of
+my pages (URL, page type, last content update date, 90-day organic
+sessions). Take the domain from the URLs in the export. The approximate
+total URL count is given at the bottom; if I leave it empty, treat the
+sample as representative and say so in your output.
 
 Do the following:
 1. Group the URLs into logical sitemap segments by page type (e.g.
@@ -42,6 +42,9 @@ Do the following:
 
 Use actual <lastmod> dates from the data provided. Do not use today's date
 as a placeholder for pages that haven't changed.
+
+Approximate total URL count:
+Paste the page inventory export below this line:
 ```
 
 ## Real example output

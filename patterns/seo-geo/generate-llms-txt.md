@@ -19,12 +19,13 @@ You want ChatGPT, Claude, Perplexity, and other answer engines to cite your site
 
 ## The pattern
 ```text
-I'm building an llms.txt file for my site at [SITE_URL]. This is a markdown file
-that gives AI crawlers a clean index of the site's most important pages.
+I'm building an llms.txt file for my site. This is a markdown file that
+gives AI crawlers a clean index of the site's most important pages.
 
-Here is a list of my key pages with their URLs and a short description of what
-each one covers:
-[PAGE_LIST]
+My key pages, with URLs and a short description each, are pasted below the
+line. If I paste nothing and you're running inside the site's codebase,
+build the page list yourself from the routes and content files, and take
+the site URL from the repo's config or sitemap.
 
 Generate an llms.txt file following this spec:
 - Start with an H1 with the site or product name
@@ -38,6 +39,8 @@ Generate an llms.txt file following this spec:
 
 Output the final file as a single markdown code block, ready to save as
 /llms.txt at my site root.
+
+Paste the page list below this line:
 ```
 
 ## Real example output

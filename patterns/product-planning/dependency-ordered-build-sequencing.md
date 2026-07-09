@@ -20,7 +20,7 @@ You have an approved feature list or backlog and you're about to assign it to sp
 ## The pattern
 Step 1, map dependencies:
 ```text
-Here's my feature list for [PROJECT NAME]: [FEATURE LIST].
+Map the dependencies in the feature list I paste below the line.
 
 For each feature, identify:
 1. What it depends on (other features on this list, or "none")
@@ -28,6 +28,8 @@ For each feature, identify:
 3. Whether it's a leaf (no dependencies, buildable immediately), composite (depends on other features here), or integration (touches multiple other features/systems)
 
 Then output a build order: leaves first, grouped by what unlocks the most downstream work, integration features last. Flag any circular dependency you find, that's a scoping bug, not something to sequence around.
+
+Paste the feature list below this line:
 ```
 
 Step 2, once you've reviewed the order:

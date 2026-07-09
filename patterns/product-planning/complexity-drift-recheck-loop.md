@@ -19,7 +19,7 @@ You gated a task at a fixed complexity tier before starting, but you're several 
 
 ## The pattern
 ```text
-We classified this task as [ORIGINAL TIER] with this scope: [ORIGINAL FILE/SCOPE LIST].
+We classified this task's complexity earlier in this session. Restate that classification now: the tier (TRIVIAL / MODERATE / COMPLEX) and the file/scope list we agreed on. If we never ran one, classify it now and show me before continuing.
 
 From now on, every time a new requirement, edge case, or "while we're at it" request comes up during this build, before touching it:
 

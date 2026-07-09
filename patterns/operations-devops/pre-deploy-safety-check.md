@@ -24,8 +24,10 @@ for each step. Stop and tell me if anything fails, do not deploy on a failure.
 
 1. Confirm the working branch and that `git status` is clean (everything
    intended for this deploy is committed).
-2. Run `git diff [BASE_BRANCH]...HEAD` and scan it for hardcoded API keys,
-   tokens, passwords, or connection strings. List any file where you find one.
+2. Find the repo's default branch (check `git remote show origin`), then
+   run `git diff` from that branch to HEAD (three-dot) and scan it for
+   hardcoded API keys, tokens, passwords, or connection strings. List any
+   file where you find one.
 3. Run the project's type check and build commands. Report errors verbatim,
    don't summarize them away.
 4. Run the test suite. Report pass/fail counts.

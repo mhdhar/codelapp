@@ -23,13 +23,13 @@ Whenever you make a decision in this session that a future session might reasona
 
 A decision qualifies if: it picked between two or more real alternatives, it would take more than a sentence to re-explain, or reversing it later would cost real rework.
 
-For each qualifying decision, append an entry to [DECISIONS LOG FILE, E.G. DECISIONS.md] in this format:
+For each qualifying decision, append an entry to DECISIONS.md at the repo root (create the file if it doesn't exist; if the repo already has a decisions log under another name, use that one). Each entry follows this shape:
 
-## [DATE] — [ONE-LINE DECISION TITLE]
-Chose: [WHAT WAS CHOSEN]
-Over: [WHAT WAS CONSIDERED AND REJECTED]
-Why: [THE ACTUAL REASON, TIED TO THIS PROJECT'S CONSTRAINTS, NOT A GENERIC BEST-PRACTICE STATEMENT]
-Reversible: [YES, EASILY / YES, WITH REWORK / NO, LOAD-BEARING]
+## <today's date> — <one-line decision title>
+Chose: <what was chosen>
+Over: <what was considered and rejected>
+Why: <the actual reason, tied to this project's constraints, not a generic best practice>
+Reversible: <one of: yes, easily / yes, with rework / no, load-bearing>
 
 At the end of the session, list every entry you added — don't just silently append, tell me what got logged.
 ```

@@ -19,7 +19,7 @@ You're building a new screen or feature from scratch and the codebase has no exi
 
 ## The pattern
 ```text
-Build [FEATURE/SCREEN NAME] using this order. Do not skip ahead to later stages before earlier ones are done and reviewed.
+Build the feature or screen named at the end of this message using this order. Do not skip ahead to later stages before earlier ones are done and reviewed.
 
 STAGE 1 — LEAF COMPONENTS: Identify the smallest, purely presentational pieces this screen needs (e.g. a badge, a stat card, an input with validation state). Build each with no data fetching and no business logic — hardcoded/mock props only. Show me each one before moving on.
 
@@ -34,6 +34,8 @@ STAGE 5 — STATE: Replace mock data with real local/client state (loading, erro
 STAGE 6 — API: Wire STATE to the real backend endpoint(s). Verify against a real request, not mock data, before calling this done.
 
 After each stage, tell me what you built and wait for a go-ahead before starting the next stage.
+
+The feature or screen to build:
 ```
 
 ## Real example output

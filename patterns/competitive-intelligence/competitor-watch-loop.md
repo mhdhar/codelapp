@@ -19,17 +19,17 @@ You want to track a competitor over time without re-reading their entire site ev
 
 ## The pattern
 ```text
-Visit [COMPETITOR_URL] (and its /pricing and /changelog pages if they exist). This is a recurring weekly check, not a first-time scan.
+Visit the competitor site I name at the bottom of this prompt (and its /pricing and /changelog pages if they exist). This is a recurring weekly check, not a first-time scan.
 
-Previous snapshot from last check:
-[PREVIOUS_SNAPSHOT]
-
-Compare the current state of the pages against that snapshot. Report only:
+Compare the current state of the pages against last week's snapshot, pasted at the bottom. If no snapshot is pasted, treat this as the first run: skip the diff and just produce the baseline snapshot. Report only:
 1. Anything new: new pricing tier, new feature, new page, new messaging
 2. Anything changed: price moved, a feature description changed, a plan was renamed or removed
 3. Anything removed: a feature, tier, or page that was there before and isn't now
 
 If nothing changed in a category, write "No change" for it, don't restate the old content. End with an updated snapshot block I can paste in next time, covering current pricing tiers and feature list in short bullet form.
+
+Competitor URL:
+Paste last week's snapshot below this line (leave blank on first run):
 ```
 
 ## Real example output

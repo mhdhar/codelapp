@@ -34,7 +34,10 @@ If ANY item fails, revise the actual code to fix it, then re-run this same check
 on the revised version. Repeat until all 6 items PASS. Show me the checklist result
 for each round, not just the final one.
 
-Component or page to audit: [FILE OR COMPONENT NAME]
+Audit the UI you built or changed most recently in this session. If I want a different
+target, I'll name the file or component on the line below.
+
+Component or page to audit (blank = what you just built):
 ```
 
 ## Real example output

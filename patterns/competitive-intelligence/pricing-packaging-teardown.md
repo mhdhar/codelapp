@@ -19,7 +19,7 @@ You're redesigning your own pricing or packaging, or prepping a competitive pric
 
 ## The pattern
 ```text
-Visit the pricing pages for these competitors: [COMPETITOR_URLS] (2-4 max).
+Visit the pricing pages of the competitors I list at the bottom of this prompt (2-4 max).
 
 For each one, extract:
 1. Tier structure: name, price, billing period (monthly/annual), and the exact metric each tier scales on (seats, usage, API calls, contacts, etc.)
@@ -33,6 +33,8 @@ Then compare across all competitors:
 - Where is there room for a packaging model none of them are using?
 
 Output as a per-competitor table first, then a 5-bullet synthesis. Only use what's stated on the page; mark anything unclear "Not public."
+
+Competitor pricing page URLs (2-4):
 ```
 
 ## Real example output

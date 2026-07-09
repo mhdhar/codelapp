@@ -19,9 +19,9 @@ You (or an AI agent) already have a theory about what's causing a bug and are ab
 
 ## The pattern
 ```text
-Bug: [BUG DESCRIPTION]
-Current theory of the cause: [YOUR CURRENT THEORY, e.g. "the timeout is
-too short for slow connections"]
+At the bottom of this message I give you a bug and my current theory of
+its cause. If we already discussed the bug and a theory in this
+conversation, use those instead.
 
 Before we act on this theory, list every assumption it depends on, even
 ones that seem obvious. For each assumption:
@@ -38,6 +38,9 @@ Then answer directly: does the theory still hold if every UNCONFIRMED
 assumption turns out false? If removing any one unconfirmed assumption
 breaks the theory, say which one is load-bearing and check that one
 first before writing any fix.
+
+The bug:
+My current theory of the cause:
 ```
 
 ## Real example output

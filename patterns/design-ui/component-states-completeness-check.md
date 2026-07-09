@@ -19,7 +19,8 @@ A component was built and tested once, in its happy-path default state, and ship
 
 ## The pattern
 ```text
-For [COMPONENT NAME], check whether it has an explicit, intentionally designed treatment for
+Take the interactive component you built or changed most recently (or the one I name in
+my next message) and check whether it has an explicit, intentionally designed treatment for
 every state in this list. "Explicit" means someone decided what it looks like — inheriting
 the browser default or silently falling through to the default state does not count.
 

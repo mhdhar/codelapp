@@ -19,7 +19,7 @@ Planning spans multiple sessions (a spec one day, tickets the next, architecture
 
 ## The pattern
 ```text
-For all planning work on [PROJECT NAME] from now on, keep an assumption ledger.
+For all planning work on this project from now on, keep an assumption ledger.
 
 Every time you make a judgment call I didn't explicitly specify (a default value, a "probably means," an inferred priority, a guessed constraint), add a row:
 - Assumption: what you assumed

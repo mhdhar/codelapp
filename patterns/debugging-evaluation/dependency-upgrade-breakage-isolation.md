@@ -19,19 +19,20 @@ You ran a bulk dependency update (`npm update`, `bundle update`, `pip install -U
 
 ## The pattern
 ```text
-After running [UPGRADE COMMAND, e.g. "npm update"], this broke: [WHAT
-BROKE, e.g. "npm run build fails" or "the /checkout page throws on load"].
-
-The lockfile diff shows these packages changed version: [LIST PACKAGES
-AND OLD -> NEW VERSIONS, or say "read the lockfile diff yourself"].
+A bulk dependency upgrade just broke something. I say what broke at the
+bottom of this message.
 
 Do this:
 
-1. If I didn't list the changed packages, read the lockfile diff
-   yourself and list every package whose version changed, old -> new.
-2. Revert all of them to their old versions, confirm [REPRO COMMAND]
-   passes again at the old versions. This confirms the regression is
-   actually in this upgrade and not something else.
+1. Read the lockfile diff yourself (git diff on the lockfile) and list
+   every package whose version changed, old -> new. If the lockfile
+   change is already committed, diff against the commit before the
+   upgrade.
+2. Turn what I said broke into a single repro command that exits
+   non-zero while broken (a test, a build, a curl check). Show me the
+   command. Then revert all the bumps to their old versions and confirm
+   the repro command passes at the old versions. This confirms the
+   regression is actually in this upgrade and not something else.
 3. Reintroduce the version bumps one package at a time, in the order
    they appear in the dependency tree (leaf/low-level packages first,
    since a low-level bump can be the real cause of a higher-level
@@ -45,6 +46,8 @@ Do this:
 6. Report: which package, which version range, which changelog entry,
    and whether the fix should be pinning the old version, upgrading our
    code to match the new API, or filing an upstream issue.
+
+What broke after the upgrade:
 ```
 
 ## Real example output

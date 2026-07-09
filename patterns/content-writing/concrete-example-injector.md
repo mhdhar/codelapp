@@ -19,9 +19,10 @@ A draft reads fine sentence by sentence but leaves no specific memory after read
 
 ## The pattern
 ```text
-Find every abstract or generic claim in this draft: a claim that could
-appear in almost any piece about almost any product without changing
-meaning (e.g. "this saves time," "customers love it," "this scales well").
+Find every abstract or generic claim in the draft I paste below: a
+claim that could appear in almost any piece about almost any product
+without changing meaning (e.g. "this saves time," "customers love it,"
+"this scales well").
 
 For each one:
 1. Quote the sentence.
@@ -29,25 +30,26 @@ For each one:
    anecdote that could replace or support it.
 3. If you find one, rewrite the sentence with that specific detail in.
 4. If you don't find one, leave the original sentence and add
-   [NEEDS EXAMPLE: what kind of detail would fix this] right after it.
+   (NEEDS EXAMPLE: what kind of detail would fix this) right after it.
    Do not invent an example that isn't in my source material.
 
 Don't touch sentences that are already specific (named numbers, named
 people, named events). Only act on genuinely generic claims.
 
-Source material (real examples, data, quotes to draw from):
-[PASTE YOUR NOTES, DATA, OR EXAMPLES]
+Paste source material (real examples, data, quotes) after SOURCE and
+the draft after DRAFT.
 
-Draft:
-[PASTE DRAFT]
+SOURCE:
+
+DRAFT:
 ```
 
 ## Real example output
 "This makes the whole review process much faster." → Source material has: "Sarah's team went from a 3-day average review turnaround to same-day." Rewrite: "This is what got Sarah's team from a 3-day average review turnaround to same-day."
 
-"Teams that adopt this see a real improvement in code quality." → No supporting detail found in source material. Left as-is, flagged: [NEEDS EXAMPLE: a before/after defect count, or a specific bug class this catches, would fix this]
+"Teams that adopt this see a real improvement in code quality." → No supporting detail found in source material. Left as-is, flagged: (NEEDS EXAMPLE: a before/after defect count, or a specific bug class this catches, would fix this)
 
 "The API responds in under 200ms for the search endpoint, even at 10k requests per second." → Untouched, already specific.
 
 ## Why it works
-Naming what makes a claim "abstract," interchangeable across any product, gives the model a real filter instead of a vibe check. Refusing to invent examples is what keeps this from just producing more convincing-sounding fabrication. The [NEEDS EXAMPLE] flag turns a hidden weakness into a visible todo you can actually go fill.
+Naming what makes a claim "abstract," interchangeable across any product, gives the model a real filter instead of a vibe check. Refusing to invent examples is what keeps this from just producing more convincing-sounding fabrication. The NEEDS EXAMPLE flag turns a hidden weakness into a visible todo you can actually go fill.

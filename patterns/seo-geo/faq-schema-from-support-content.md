@@ -19,10 +19,9 @@ You have real customer questions living in a help center export, Zendesk tickets
 
 ## The pattern
 ```text
-Here is raw support content for [PRODUCT_NAME]: a mix of help center
-articles, support ticket resolutions, and repeated customer questions.
-
-[RAW_SUPPORT_CONTENT]
+Below the line is raw support content for my product: a mix of help
+center articles, support ticket resolutions, and repeated customer
+questions. Take the product name from the content itself.
 
 Turn this into a publishable FAQ:
 1. Extract the distinct questions customers actually ask, in their own
@@ -39,6 +38,8 @@ Turn this into a publishable FAQ:
 6. Output two things: (a) the FAQ as plain markdown ready to publish on a
    page, (b) the matching FAQPage JSON-LD in a <script type="application/
    ld+json"> block, with mainEntity entries in the same order as (a).
+
+Paste the raw support content below this line:
 ```
 
 ## Real example output

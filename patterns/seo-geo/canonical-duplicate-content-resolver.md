@@ -19,10 +19,9 @@ Search Console shows multiple URLs on your site weakly ranking for the same quer
 
 ## The pattern
 ```text
-Here is a list of URLs on [SITE_URL] that may be duplicate or near-duplicate
-content, with their title, word count, and a short content summary:
-
-[URL_LIST]
+Below the line is a list of URLs on my site that may be duplicate or
+near-duplicate content. Each row has the URL, title, word count, a short
+content summary, and organic traffic where I have it.
 
 Run this loop:
 1. Cluster the URLs into groups that target the same search intent. State
@@ -45,6 +44,8 @@ Run this loop:
    before applying it.
 
 Do not canonicalize a cluster until step 2 is complete for every URL in it.
+
+Paste the URL list below this line:
 ```
 
 ## Real example output

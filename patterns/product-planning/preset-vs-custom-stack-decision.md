@@ -19,15 +19,18 @@ You're scoping a new build and reflexively reaching for a from-scratch stack, or
 
 ## The pattern
 ```text
-I'm scoping [PROJECT DESCRIPTION]. Decide whether to use a known-good preset/boilerplate or build custom architecture.
+I'm scoping the project I describe below the line. Decide whether to use a known-good preset/boilerplate or build custom architecture.
 
-1. List the preset(s) that plausibly fit this project's shape (name real ones you know, e.g., a SaaS starter kit, a CMS-plus-storefront combo, a chat-app scaffold — whatever matches [PROJECT DESCRIPTION]).
+1. List the preset(s) that plausibly fit this project's shape (name real ones you know, e.g., a SaaS starter kit, a CMS-plus-storefront combo, a chat-app scaffold — whatever matches the description).
 2. For the closest-fitting preset, list exactly what it gives you for free and what constraints it imposes (opinionated folder structure, locked-in auth provider, specific database, etc.).
-3. List the specific requirements in [PROJECT DESCRIPTION] that the preset can't satisfy, if any.
+3. List the specific requirements in my description that the preset can't satisfy, if any.
 4. Recommend preset or custom. If custom, the reason must name a concrete requirement the preset blocks, not a vague preference like "more control" or "cleaner code."
 5. If preset: name the exact scaffold command. If custom: list the 3-5 architecture decisions I still need to make before writing code.
 
-Target timeline: [ROUGH TIMELINE, e.g., "ship in 2 weeks" or "no deadline"].
+Assume no hard deadline unless I give a timeline below.
+
+My project:
+Timeline (optional):
 ```
 
 ## Real example output

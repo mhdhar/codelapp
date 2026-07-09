@@ -19,11 +19,12 @@ You know your UI is "worse" than some reference — a competitor, an inspiration
 
 ## The pattern
 ```text
-GOAL: Bring [YOUR SCREEN/COMPONENT] up to the visual quality of the reference screenshot,
-closing the specific, nameable gaps between them — not a random restyle.
+GOAL: Bring my screen up to the visual quality of the reference screenshot, closing the
+specific, nameable gaps between them — not a random restyle.
 
-Inputs: I'm attaching two screenshots — [SCREENSHOT A: your current UI] and
-[SCREENSHOT B: the reference]. Both show a similar type of screen/component.
+Inputs: I'm attaching two screenshots. The first (A) is my current UI; the second (B) is
+the reference. Both show a similar type of screen/component. Find the component(s) in
+this codebase that render screenshot A before you change anything.
 
 SUCCESS CRITERIA (do not stop until all are true):
 1. You've named at least 5 concrete, specific differences between A and B — not vague

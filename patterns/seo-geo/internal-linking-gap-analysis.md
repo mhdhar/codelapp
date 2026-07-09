@@ -19,10 +19,9 @@ After publishing a batch of new content, or when a page with genuinely good cont
 
 ## The pattern
 ```text
-Here is a list of pages on [SITE_URL] with their topic and current outbound
-internal links (which other pages on the site they link to):
-
-[PAGE_LINK_INVENTORY]
+Below the line is a list of pages on my site with their topic and current
+outbound internal links (which other pages on the site they link to).
+Organic traffic per page is included where I have it.
 
 Analyze internal linking:
 1. Identify orphan pages: pages that no other page links to. List them.
@@ -42,6 +41,8 @@ Analyze internal linking:
 
 Output the gap list sorted by page importance (use organic traffic if
 given in the data, otherwise use position in the site's primary nav).
+
+Paste the page and link inventory below this line:
 ```
 
 ## Real example output

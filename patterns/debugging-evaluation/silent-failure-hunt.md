@@ -19,9 +19,10 @@ You suspect bugs are getting silently eaten somewhere (a user reports something 
 
 ## The pattern
 ```text
-Scan [SCOPE, e.g. "src/services/" or the whole repo] for places where an
-error or failure is being silently swallowed instead of surfaced. Look
-specifically for:
+Scan this repo's application source for places where an error or failure
+is being silently swallowed instead of surfaced. Skip tests, vendored
+code, and generated files. If I name a narrower directory in my next
+message, scan only that. Look specifically for:
 
 - catch blocks that don't log, rethrow, or otherwise surface the error
   (empty catch, or a catch that only does something unrelated)

@@ -19,21 +19,23 @@ Your pricing page is live, conversion from that page is flat or you suspect peop
 
 ## The pattern
 ```text
-Step 1: Paste your current pricing page copy in full — headline, tier names and prices, feature bullets, any FAQ section.
-[PASTE PRICING PAGE COPY]
+Step 1: Below the "Pricing page copy:" label at the end of this block, paste your current pricing page copy in full — headline, tier names and prices, feature bullets, any FAQ section.
 
-Step 2: Paste 3-5 real objections you've actually heard, from sales calls, support tickets, or lost-deal notes. Don't let the agent invent these.
-[PASTE REAL OBJECTIONS, e.g. "too expensive vs [competitor]", "not sure my team will use all these seats", "what happens if we go over usage"]
+Step 2: Below the "Real objections:" label, paste 3-5 real objections you've actually heard, verbatim, from sales calls, support tickets, or lost-deal notes ("too expensive compared to what we use now", "not sure my team will use all these seats", "what happens if we go over usage"). Don't let the agent invent these.
 
-Step 3: Ask the agent to build this table, one row per objection:
+Step 3: Build this table, one row per objection:
 - Objection
 - Answered on the page? (Yes / Partially / No)
 - If Yes or Partially: quote the exact existing line that addresses it
 - If Partially or No: draft the exact replacement or added copy that would answer it, written in the buyer's language, matching the existing page's tone
 
-Step 4: Ask for one final line: which single unanswered objection is most likely costing the most conversions, ranked by how often it comes up, and why.
+Step 4: End with one final line: which single unanswered objection is most likely costing the most conversions, ranked by how often it comes up, and why.
 
 Rules: do not invent objections beyond what I gave you. Do not rewrite sections that already answer their objection. Keep suggested copy the same length or shorter than what it replaces.
+
+Pricing page copy:
+
+Real objections:
 ```
 
 ## Real example output

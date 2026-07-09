@@ -19,8 +19,10 @@ A real bug (not a typo, an actual incident or user-facing break) just got fixed 
 
 ## The pattern
 ```text
-We just fixed this bug: [BUG DESCRIPTION]
-The fix that was applied: [DIFF, PR LINK, OR SUMMARY OF THE CHANGE]
+We just fixed a bug. If this conversation contains the bug and the fix,
+use them. If not, find the fix yourself: check the uncommitted working
+tree diff first, then the most recent commits (git log), and confirm
+with me which change you're writing up before you start.
 
 Write a postmortem using the actual diff and any logs/tickets from this
 conversation, not a generic template filled with guesses. Structure:

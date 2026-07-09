@@ -19,8 +19,9 @@ You want a real accessibility pass on a shipped page or app, not a giant backlog
 
 ## The pattern
 ```text
-Run a full accessibility pass on [PAGE OR APP URL] against WCAG 2.2 AA. Do this in three
-passes and do not skip any:
+Run a full accessibility pass on this app against WCAG 2.2 AA. Start the local dev server
+if it isn't already running and audit every route; if I want a single page or a deployed
+URL instead, I'll say so in my next message. Do this in three passes and do not skip any:
 
 PASS 1 — Automated: run an axe-core (or equivalent) scan on every page/route and on every
 theme variant (light and dark, or any theming the app has). List every violation with its

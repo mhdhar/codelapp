@@ -20,7 +20,7 @@ You're about to hand an agent a task and you don't yet know if it's a 10-minute 
 ## The pattern
 Step 1, classify:
 ```text
-Before writing any code, classify this task's complexity: [TASK DESCRIPTION].
+Before writing any code, classify the complexity of the task I describe below the line.
 
 Pick one tier and justify it in 2-3 sentences:
 - TRIVIAL: single file, no new dependencies, no schema or API changes.
@@ -28,11 +28,13 @@ Pick one tier and justify it in 2-3 sentences:
 - COMPLEX: schema changes, new APIs, cross-cutting changes, or anything that breaks an existing contract.
 
 Then list exactly what you'd touch (files, schemas, APIs) for this tier. Do not write any implementation code yet. Stop and wait for my go-ahead.
+
+My task:
 ```
 
 Step 2, after you review the tier and file list, unblock it:
 ```text
-Approved. Proceed with the [TIER] plan you outlined for [TASK DESCRIPTION]. Stick to the files and scope you listed, if you discover you need to touch something outside that list, stop and tell me why before continuing.
+Approved. Proceed with the plan you outlined, at the tier you classified. Stick to the files and scope you listed, if you discover you need to touch something outside that list, stop and tell me why before continuing.
 ```
 
 ## Real example output

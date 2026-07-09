@@ -20,7 +20,7 @@ You typed a task in one line ("fix the flaky login test", "add rate limiting") a
 ## The pattern
 Step 1, expand the task:
 ```text
-Expand this one-line task into a brief before doing any work: [ONE-LINE TASK].
+Expand the one-line task I paste below into a brief before doing any work.
 
 Write:
 1. Restated goal, one sentence.
@@ -28,6 +28,8 @@ Write:
 3. Verify step: the exact command(s) or manual check you'll run to confirm each success criterion, before declaring this done.
 
 Then execute the task, and loop on your own verify step until every criterion passes. Report the final checklist with pass/fail for each item.
+
+My task:
 ```
 
 Step 2, if a criterion fails, don't ask for help immediately, just say:

@@ -19,12 +19,10 @@ You're setting a first price for a product in a category with no direct comps (n
 
 ## The pattern
 ```text
-Act as a pricing research analyst. I'm setting price for this product:
-
-[PRODUCT DESCRIPTION]
-
-Target customer: [WHO BUYS THIS]
-Closest comparable products/categories: [ADJACENT PRODUCTS, EVEN IF IMPERFECT COMPS]
+Act as a pricing research analyst. The product, target customer, and
+closest comparable products are in the three lines at the bottom of this
+message. If I leave the comps line empty, propose the adjacent categories
+yourself and say you did.
 
 Do the following:
 
@@ -55,6 +53,10 @@ say so and estimate transparently instead of inventing a number.
 
 End with the single price you'd start with for a v1 launch, and the specific
 signal that would make you revise it within 30 days.
+
+Product:
+Target customer:
+Closest comparable products (imperfect comps are fine, or leave empty):
 ```
 
 ## Real example output

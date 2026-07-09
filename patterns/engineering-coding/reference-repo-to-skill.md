@@ -19,22 +19,21 @@ You've found a well-built reference codebase in a domain you're about to build i
 
 ## The pattern
 ```text
-I want to turn this reference codebase into a reusable skill, not just borrow one snippet from it.
+I want to turn a reference codebase into a reusable skill, not just borrow one snippet from it. The repo is at the end of this message.
 
-REFERENCE REPO: [PATH OR URL]
-DOMAIN: [WHAT THIS REPO IS AN EXAMPLE OF, E.G. "multi-tenant billing" OR "offline-first sync"]
-
-1. Read through the reference repo's structure and identify the 3-6 patterns that are actually reusable (not project-specific naming or business logic) — architectural choices, data modeling approaches, error-handling conventions, folder structure.
-2. For each pattern, write: what it is, why it's done that way (infer from the code, don't guess wildly), and the minimal code shape someone would copy.
-3. Generate a skill file (SKILL.md or equivalent) that captures these patterns, written so a fresh agent with no memory of this reference repo could apply them correctly.
-4. Save it to [SKILLS DIRECTORY, E.G. .claude/skills/ OR ~/.claude/skills/].
+1. Read through the reference repo's structure. Start by stating, in one line, what domain this repo is an example of (e.g. "multi-tenant billing" or "offline-first sync"). Infer it from the code and README; ask me only if you genuinely can't tell.
+2. Identify the 3-6 patterns that are actually reusable (not project-specific naming or business logic) — architectural choices, data modeling approaches, error-handling conventions, folder structure.
+3. For each pattern, write: what it is, why it's done that way (infer from the code, don't guess wildly), and the minimal code shape someone would copy.
+4. Generate a skill file (SKILL.md or equivalent) that captures these patterns, written so a fresh agent with no memory of this reference repo could apply them correctly. Save it to .claude/skills/ in the current project, unless I say I want it global (then use ~/.claude/skills/).
 5. Tell me which patterns you deliberately left out and why (e.g. too project-specific, tied to a proprietary service).
+
+Reference repo (path or URL):
 ```
 
 ## Real example output
 ```
-REFERENCE REPO: ~/code/old-projects/fleet-tracker
-DOMAIN: real-time location tracking with offline queue
+Reference repo: ~/code/old-projects/fleet-tracker
+Domain (inferred): real-time location tracking with offline queue
 
 Patterns extracted:
 1. Offline-first write queue — writes go to a local IndexedDB table first, tagged with a client-generated UUID and synced status, then a background sync worker retries against the API. Reusable shape: writeQueue table schema + sync worker loop.

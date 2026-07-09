@@ -23,8 +23,11 @@ Before I deploy this, check whether I can actually roll it back if it goes
 wrong. Do not just check that the deploy is clean, check that undoing it
 is possible and fast.
 
-CHANGE BEING DEPLOYED: [WHAT'S SHIPPING — e.g. "new required env var
-STRIPE_WEBHOOK_SECRET" or "migration adding a NOT NULL column"]
+First, work out what's shipping: diff the current branch against the last
+deployed state (the latest deploy tag, or the default branch if that's
+what production tracks) and state the change in one line at the top of
+your report, e.g. "migration adding a NOT NULL column" or "new required
+env var STRIPE_WEBHOOK_SECRET". Then:
 
 1. Identify the last known-good deployment (tag, commit hash, or platform
    deployment ID) and confirm it still exists and is redeployable.
@@ -37,9 +40,9 @@ STRIPE_WEBHOOK_SECRET" or "migration adding a NOT NULL column"]
    flag, secret): confirm the OLD code path still works if that value is
    absent, or state plainly that rollback requires restoring the old config
    too, not just the old code.
-4. State the actual rollback command or platform action (e.g. "vercel
-   rollback [DEPLOYMENT_URL]", "kubectl rollout undo", "revert PR + redeploy")
-   and how long it takes in practice, not in theory.
+4. State the actual rollback command or platform action (e.g. `vercel
+   rollback` with the deployment ID from step 1, `kubectl rollout undo`,
+   "revert PR + redeploy") and how long it takes in practice, not in theory.
 5. Give a one-line verdict: SAFE TO DEPLOY (rollback is fast and complete),
    or ROLLBACK IS PARTIAL (name exactly what wouldn't be undone).
 ```

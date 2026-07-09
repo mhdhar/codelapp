@@ -19,8 +19,9 @@ You have a real error message or stack trace in hand and the AI's first move is 
 
 ## The pattern
 ```text
-Here is the exact error output, unedited:
-[PASTE FULL ERROR / STACK TRACE]
+The exact error output, unedited, is pasted at the bottom of this
+message. If I give a file path or command instead, read or run it
+yourself to get the raw output.
 
 Before proposing any cause, do this in order and show your work at each step:
 
@@ -43,7 +44,9 @@ Before proposing any cause, do this in order and show your work at each step:
 If a frame has no resolvable file:line, say so explicitly instead of
 guessing which file it might be. Do not name a library, framework, or
 "common cause" for this error type until steps 1-4 are complete on the
-actual trace above.
+actual trace.
+
+Paste the full error / stack trace below this line:
 ```
 
 ## Real example output

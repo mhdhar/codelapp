@@ -19,13 +19,7 @@ You have a fixed budget for next month or quarter, spend history across 2 or mor
 
 ## The pattern
 ```text
-Total budget: [$AMOUNT] for [PERIOD].
-
-Channel performance last period, one row per channel:
-Channel | Spend | Results (state the unit: leads, signups, customers) | Notes on data reliability
-[PASTE YOUR ROWS HERE]
-
-Constraints: [ANY MINIMUM SPEND PER CHANNEL, CONTRACTUAL COMMITMENTS, OR CHANNELS THAT CAN'T BE CUT]
+My total budget, period, constraints, and channel performance rows are filled in below the line at the end of this block. Each channel row is: Channel | Spend | Results (with the unit: leads, signups, customers) | Notes on data reliability.
 
 Your task:
 1. Calculate cost-per-result for every channel. If a channel's result count is too low to be statistically meaningful (fewer than ~30 results, or a channel with a known long lag like SEO), flag it as a data-confidence issue rather than treating it as equal-quality data.
@@ -35,6 +29,10 @@ Your task:
 5. Name the one metric and threshold that would prove this reallocation was right by the end of the period.
 
 Definition of done: a table of Channel -> New Budget -> Dollar Delta From Last Period that sums exactly to the total budget, plus one line of reasoning per channel, plus the one metric to check the decision against.
+
+Total budget and period:
+Constraints (minimum spends, commitments, channels that can't be cut; "none" if none):
+Channel rows, one per line:
 ```
 
 ## Real example output

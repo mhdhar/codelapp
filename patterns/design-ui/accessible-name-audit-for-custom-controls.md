@@ -19,7 +19,8 @@ You built a custom Select, Combobox, Toggle, or Tabs trigger (Base UI, Radix, He
 
 ## The pattern
 ```text
-Audit every custom interactive control in this codebase (or in [FILE OR DIRECTORY]) for a
+Audit every custom interactive control in this codebase (or the directory I name in my
+next message) for a
 real accessible name — not just visible text near it, but a name a screen reader announces
 when the control receives focus.
 
@@ -39,8 +40,8 @@ Button that wraps a div/span, etc.), check in this order:
    selected, the accessible name should still make sense, not go blank).
 
 For every FAIL, fix it by linking the existing visible `<Label>` to the trigger with
-`aria-labelledby="[LABEL_ID]"` (reuse the label's real id, don't invent a new one), or add
-`aria-label="[DESCRIPTIVE NAME]"` if there is no visible label element to reuse.
+`aria-labelledby` set to that label's real id (reuse it, don't invent a new one), or add
+an `aria-label` that names the control's purpose if there is no visible label to reuse.
 
 Output a table: component name, file path, PASS/FAIL, and the fix applied. Do not touch
 controls that already pass.

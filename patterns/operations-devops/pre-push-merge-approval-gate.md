@@ -28,8 +28,11 @@ following instead of running it:
 2. Summarize what's included: number of commits, files touched, and whether
    this branch has any known-incomplete or experimental work mixed in.
 3. Confirm local state is what you think it is: run `git status` and
-   `git log [BASE_BRANCH]..HEAD --oneline`, and show me both outputs.
-4. Ask a direct yes/no question: "OK to [ACTION] to [TARGET]? (yes/no)"
+   `git log --oneline` from the branch this merges into (the repo's
+   default branch unless this branch targets another) up to HEAD, and
+   show me both outputs.
+4. Ask a direct yes/no question that names the exact action and target,
+   like: "OK to push feature/rate-limit-headers to origin? (yes/no)"
 5. Do not run the push/merge command until I reply with an explicit yes.
    A message that only approves a different step, or says nothing about
    this specific action, is not approval.

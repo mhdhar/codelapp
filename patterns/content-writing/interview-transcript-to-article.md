@@ -20,26 +20,26 @@ You recorded an interview, podcast segment, or customer call and have a raw tran
 ## The pattern
 ```text
 Step 1: Clean and segment.
-"This is a raw interview transcript with filler words, false starts, and
-timestamps. Remove filler ('um', 'you know', 'like' used as filler) and
-false starts. Keep every substantive answer intact. Break it into
-labeled topic segments based on what's actually being discussed, don't
-force it into the original question order if the conversation jumped
-around. Transcript: [PASTE TRANSCRIPT]"
+"I'll paste a raw interview transcript below, with filler words, false
+starts, and timestamps. Remove filler ('um', 'you know', 'like' used as
+filler) and false starts. Keep every substantive answer intact. Break it
+into labeled topic segments based on what's actually being discussed,
+don't force it into the original question order if the conversation
+jumped around. Paste the transcript below this line:"
 
 Step 2: Review the segments. Reorder if a topic got split across two
 places in the raw conversation, or merge segments that are really one
 topic.
 
 Step 3: Draft in the chosen format.
-"Turn these segments into a [Q&A or narrative-style] article. If Q&A:
-keep the interviewee's actual words for answers, tighten questions to
-one clear line each. If narrative: write third person, use direct
-quotes only for the most striking lines, paraphrase connective material.
-Preserve the interviewee's actual opinions and specific examples
-exactly, don't soften or generalize them. Add a 2-sentence intro that
-sets up who they are and why this conversation matters. Segments:
-[PASTE FROM STEP 1]"
+"Turn the segments from step 1 into an article. Use Q&A format unless I
+say narrative. If Q&A: keep the interviewee's actual words for answers,
+tighten questions to one clear line each. If narrative: write third
+person, use direct quotes only for the most striking lines, paraphrase
+connective material. Preserve the interviewee's actual opinions and
+specific examples exactly, don't soften or generalize them. Add a
+2-sentence intro that sets up who they are and why this conversation
+matters."
 
 Step 4: Have the interviewee, or yourself against the recording, verify
 no quote was tightened into something they didn't actually say.

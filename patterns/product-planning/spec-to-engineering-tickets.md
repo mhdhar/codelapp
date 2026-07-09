@@ -20,15 +20,15 @@ The spec is approved and you're about to hand it to an agent or a teammate to bu
 ## The pattern
 Step 1, break it down:
 ```text
-Here's an approved spec: [PASTE SPEC].
-
-Break it into tickets. For each ticket:
+Break the approved spec into tickets. Use the spec file in this repo if I name one in my next message, otherwise use what I paste below the line. For each ticket:
 1. Title, one line, verb-first (e.g., "Add rate limit to login endpoint")
 2. Acceptance criteria: a checklist of testable conditions
 3. Size: S (under 2 hrs), M (half day), L (full day+) — if anything is L, say why it can't be split further
 4. Depends on: which other tickets, if any (by title)
 
 Flag any P0 requirement in the spec that doesn't map cleanly to a ticket, that's a gap in the spec, not something to silently interpret.
+
+Paste the spec below this line (or name the file instead):
 ```
 
 Step 2, once you've reviewed the tickets:

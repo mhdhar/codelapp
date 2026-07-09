@@ -19,9 +19,7 @@ You're handing off a task where the spec has gaps — a new feature, an API cont
 
 ## The pattern
 ```text
-Before writing any code for the task below, check it for ambiguity. Do not guess and proceed silently.
-
-TASK: [WHAT YOU WANT DONE]
+Before writing any code for the task at the end of this message, check it for ambiguity. Do not guess and proceed silently.
 
 1. Read the task and any related existing code.
 2. List every point that's genuinely ambiguous — split into:
@@ -29,11 +27,13 @@ TASK: [WHAT YOU WANT DONE]
    - NON-BLOCKING: you could reasonably pick a default, but state the default you'd pick and why, so I can correct it in one line if it's wrong.
 3. If there are zero BLOCKING items, say so and proceed with the NON-BLOCKING defaults stated.
 4. If there is at least one BLOCKING item, stop entirely. Do not write code, do not start on the unambiguous parts first. Ask your BLOCKING questions as a numbered list and wait.
+
+The task:
 ```
 
 ## Real example output
 ```
-TASK: "Add a way for admins to bulk-deactivate users."
+The task: "Add a way for admins to bulk-deactivate users."
 
 BLOCKING:
 1. "Deactivate" isn't defined anywhere in the codebase — is this a soft flag (is_active=false, user stays in DB, reversible) or does it also need to revoke active sessions/tokens immediately? These are very different implementations.

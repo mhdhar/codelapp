@@ -19,7 +19,7 @@ You're about to type a scaffold command or open a fresh repo for a new project, 
 
 ## The pattern
 ```text
-Before I scaffold anything, force me to answer these four questions about [PROJECT NAME/IDEA]:
+Before I scaffold anything, force me to answer these four questions about the project idea I paste below the line:
 
 1. One-line description: what does this do, in one sentence a stranger would understand.
 2. Target user: who specifically uses this first (not "everyone").
@@ -27,6 +27,8 @@ Before I scaffold anything, force me to answer these four questions about [PROJE
 4. SaaS shape: is this a conventional SaaS (auth + payments + admin dashboard + landing page), or does it need a non-standard architecture? If conventional, name the preset/boilerplate that already covers it instead of building from scratch.
 
 Answer all four in under 150 words total. If you don't have enough information to answer any of them confidently, say which one and ask me directly, don't guess.
+
+My project idea:
 ```
 
 ## Real example output

@@ -19,8 +19,8 @@ You're stopping mid-task, work isn't finished, and either you in a new session o
 
 ## The pattern
 ```text
-I'm stopping mid-task and need a handoff note so [WHO_PICKS_THIS_UP] can continue
-with zero re-explaining. Do the following:
+I'm stopping mid-task and need a handoff note so the next session or a
+teammate can pick this up cold, with zero re-explaining. Do the following:
 
 1. Run `git status` and `git branch --show-current`. Note the branch name and
    whether there are uncommitted changes.

@@ -23,9 +23,7 @@ Act as a research synthesis analyst. I'm giving you raw customer interview
 notes in batches. I want a running theme list that gets more accurate as
 more batches come in, not longer.
 
-Here is my first batch of interview notes:
-
-[PASTE INTERVIEW NOTES OR TRANSCRIPT EXCERPTS - ONE BATCH]
+My first batch of notes is below the line at the end of this message.
 
 Each round, do the following:
 
@@ -57,6 +55,8 @@ When I say "final round": output the finished theme list ranked by
 confidence and mention count, drop watch-list items that never became a
 theme, and write a 3-sentence decision-ready summary: what to build or fix
 first based on theme strength, and what's still too thin to act on.
+
+Paste your first batch of interview notes or transcript excerpts below this line:
 ```
 
 ## Real example output

@@ -20,16 +20,18 @@ The backlog has grown past what the original spec scoped, a few sprints in, and 
 ## The pattern
 Step 1, classify:
 ```text
-Here are the original goals this project was scoped against: [GOALS FROM SPEC].
+Cull this project's backlog against its original goals.
 
-Here's the current backlog: [BACKLOG LIST].
+First, find the goals this project was scoped against: check the repo for a spec or PRD (docs/, README, anything named spec or prd). If none exists, stop and ask me for the goals before going further.
 
-For each backlog item, classify:
+Then take the backlog I paste below the line and, for each backlog item, classify:
 - SERVES: which specific goal it directly advances (name it, don't say "improves the product")
 - ORPHAN: doesn't map to any goal, exists for another reason (say what reason, e.g., "someone asked for it," "seemed cool")
 - CONFLICTS: actively works against a goal (e.g., adds complexity to something the goals say to keep simple)
 
 Recommend: keep, cut, or defer for each ORPHAN and CONFLICT item. Don't touch SERVES items.
+
+Paste the current backlog below this line:
 ```
 
 Step 2, protect sunk work:

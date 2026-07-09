@@ -19,11 +19,10 @@ You have month-over-month or week-over-week cohort retention data and retention 
 
 ## The pattern
 ```text
-Step 1: Paste your cohort retention table, one row per signup cohort, one column per period since signup:
+Step 1: Below the line at the end of this block, paste your cohort retention table, one row per signup cohort, one column per period since signup:
 Cohort | Period 0 | Period 1 | Period 2 | Period 3 | ...
-[PASTE YOUR ROWS HERE]
 
-Step 2: Ask the agent to diagnose, not brainstorm:
+Step 2: Diagnose, don't brainstorm:
 1. Calculate the period-over-period drop-off rate for every cohort.
 2. Compare cohorts against each other, not just against time. Determine: is every cohort decaying at roughly the same shape (systemic, expected), or do recent cohorts drop off faster at the same point in their lifecycle than older cohorts did (something specific broke)?
 3. Identify the single period (e.g. "period 0 to period 1") and cohort range where the steepest, most anomalous drop is.
@@ -33,6 +32,8 @@ Step 2: Ask the agent to diagnose, not brainstorm:
 7. Name the one metric and target that tells us by next review if it worked.
 
 Step 3: If the agent hedges or lists multiple levers, say: "Pick one. Which single period, if fixed, saves the most users?" and ask it to answer again.
+
+Paste your cohort retention rows below this line:
 ```
 
 ## Real example output

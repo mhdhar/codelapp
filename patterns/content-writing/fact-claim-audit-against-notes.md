@@ -19,9 +19,9 @@ An AI, or a fast-moving collaborator, wrote a draft based on your notes, an inte
 
 ## The pattern
 ```text
-Goal: every factual claim, number, quote, and named example in the DRAFT
-below is either traceable to the SOURCE NOTES or flagged. Zero unflagged
-unsourced claims when you're done.
+Goal: every factual claim, number, quote, and named example in the
+draft I paste below is either traceable to the source notes or flagged.
+Zero unflagged unsourced claims when you're done.
 
 Process:
 1. List every specific, checkable claim in the draft: statistics, dates,
@@ -33,21 +33,22 @@ Process:
      draft states, show both versions
    - UNSOURCED: nothing in the notes supports this, it was invented
 3. For every SOFTENED or UNSOURCED claim, rewrite the draft sentence to
-   match what the notes actually support, or mark it [VERIFY: source] if
+   match what the notes actually support, or mark it (VERIFY: source) if
    you genuinely don't know and I need to check it myself.
 4. Output the corrected draft first, then the full claim list from step 2
    underneath it so I can see your work.
 
+Paste the notes, interview, or data after SOURCE NOTES and the draft
+to audit after DRAFT.
+
 SOURCE NOTES:
-[PASTE YOUR NOTES, INTERVIEW, OR DATA]
 
 DRAFT:
-[PASTE THE DRAFT TO AUDIT]
 ```
 
 ## Real example output
 - "Support tickets dropped 40% after the change" — UNSOURCED. Notes say "tickets went down noticeably" with no number. Rewrote to: "Support tickets dropped noticeably after the change."
-- "This is the same approach Stripe uses internally" — UNSOURCED. Not mentioned anywhere in the notes. Flagged [VERIFY: source] and removed the sentence pending a check.
+- "This is the same approach Stripe uses internally" — UNSOURCED. Not mentioned anywhere in the notes. Flagged (VERIFY: source) and removed the sentence pending a check.
 - "Three of our five biggest customers asked for this" — SOURCED. Notes: "Acme, Bolt, and Fenwick all filed this as a request last quarter."
 
 ## Why it works

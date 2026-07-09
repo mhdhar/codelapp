@@ -19,7 +19,8 @@ A bug is reported but the AI jumps straight to a fix without reproducing it. You
 
 ## The pattern
 ```text
-We have a bug: [BUG DESCRIPTION]
+We have a bug. I describe it at the bottom of this message. If this
+conversation already contains the bug report, use that instead.
 
 Follow this loop and do not skip steps:
 
@@ -41,6 +42,8 @@ Follow this loop and do not skip steps:
    output to prove the fix works.
 
 Do not guess. Do not propose a fix before completing step 3.
+
+The bug:
 ```
 
 ## Real example output

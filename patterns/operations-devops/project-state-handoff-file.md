@@ -38,8 +38,10 @@ Write these exact sections:
 7. Decisions log — append one line per session: date, decision made, and
    the one-sentence reason. Do not rewrite past entries.
 
-Project root: [PROJECT_ROOT]. If HANDOFF.md already exists, read it first,
-carry forward anything still true, and only update what's changed.
+Project root: the root of the repo we're working in (where .git lives),
+unless I name a different directory in my next message. If HANDOFF.md
+already exists there, read it first, carry forward anything still true,
+and only update what's changed.
 ```
 
 ## Real example output

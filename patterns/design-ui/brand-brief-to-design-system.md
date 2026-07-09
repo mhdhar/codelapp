@@ -19,13 +19,11 @@ You have a rough sense of the brand (a couple of colors, a tone, maybe a referen
 
 ## The pattern
 ```text
-Act as a design systems lead. I'm giving you a rough brand direction. Turn it into
-a concrete, codeable design system. Do not just describe it, output exact values.
-
-Brand direction:
-- Primary color or mood: [E.G. "deep forest green, trustworthy but not corporate"]
-- Reference sites or products for tone: [E.G. "Linear, Stripe docs"]
-- Personality in 3 words: [E.G. "precise, calm, a little unusual"]
+Act as a design systems lead. My rough brand direction is in the three fill-in lines
+at the bottom of this prompt. Turn it into a concrete, codeable design system. If I
+left any line blank, infer a defensible direction from the product itself (read the
+README and any existing UI) and say what you assumed. Do not just describe the system,
+output exact values.
 
 Output a single markdown file named DESIGN_SYSTEM.md with these exact sections:
 
@@ -40,6 +38,10 @@ Output a single markdown file named DESIGN_SYSTEM.md with these exact sections:
 
 After you generate it, tell me one place in the existing codebase where current
 styles violate this system, as a sanity check.
+
+Primary color or mood (e.g. deep forest green, trustworthy but not corporate):
+Reference sites or products for tone (e.g. Linear, Stripe docs):
+Personality in 3 words (e.g. precise, calm, a little unusual):
 ```
 
 ## Real example output

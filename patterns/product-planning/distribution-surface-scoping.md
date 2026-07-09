@@ -19,7 +19,7 @@ You're about to write a spec or start scoping a project that has any kind of API
 
 ## The pattern
 ```text
-Before scoping [PROJECT DESCRIPTION], decide its distribution surface.
+Before scoping this project, decide its distribution surface. First understand what the project is: read the README, spec, or repo structure if one exists. If there's no repo yet, use the description I paste below the line.
 
 1. Will anything outside the primary UI need to call this programmatically in the next 2 releases — another app, a script, or an AI agent/MCP client? Answer yes/no with your reasoning, don't default to "maybe, just in case."
 2. If yes: does an MCP server make sense as the distribution channel (i.e., would an AI agent plausibly want to call this directly), or is a plain REST/webhook API enough? Justify in one sentence.
@@ -31,6 +31,8 @@ Before scoping [PROJECT DESCRIPTION], decide its distribution surface.
 4. If no: state explicitly that the internal API stays private and unversioned for now, and name the trigger condition that would force a revisit (e.g., "revisit if a partner asks to integrate").
 
 Output as a short decision memo, under 200 words.
+
+Project description (only if there's no repo yet):
 ```
 
 ## Real example output

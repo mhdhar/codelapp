@@ -19,9 +19,8 @@ You have a page live with no structured data, and you want search engines and LL
 
 ## The pattern
 ```text
-Here is the content of a page at [PAGE_URL]:
-
-[PAGE_CONTENT]
+Below the line is the full content of one page from my site, starting
+with its URL.
 
 Generate valid JSON-LD structured data for this page:
 - Pick the single most accurate schema.org type for this content (Article,
@@ -34,6 +33,9 @@ Generate valid JSON-LD structured data for this page:
   paste into the page <head>
 - After the code block, list any required properties you could NOT fill in
   because the source content didn't include them, so I know what to add
+
+Page URL:
+Paste the page content below this line:
 ```
 
 ## Real example output

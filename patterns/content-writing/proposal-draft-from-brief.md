@@ -19,24 +19,25 @@ A prospect sent you a brief or RFP and you need a first-draft proposal fast, wit
 
 ## The pattern
 ```text
-Step 1: Paste the brief and generate the skeleton.
-"Read this brief and outline a proposal with these sections: Problem
-Understanding, Approach, Scope, Timeline, Investment. For each section,
-write 2-3 bullet points of what should go there based on the brief. Do
-not write full prose yet. Brief: [PASTE BRIEF]"
+Step 1: Generate the skeleton.
+"Read the brief I paste below and outline a proposal with these
+sections: Problem Understanding, Approach, Scope, Timeline, Investment.
+For each section, write 2-3 bullet points of what should go there based
+on the brief. Do not write full prose yet. Paste the brief below this
+line:"
 
 Step 2: Review the outline. Correct any misread requirements or add
 missing constraints (budget ceiling, hard deadline, must-have tech).
 
 Step 3: Expand to full draft.
-"Expand this outline into a full proposal draft. Problem Understanding
-should mirror the client's own language back to them, proving we
-listened. Approach should explain the 'how' in plain language, no
-jargon. Scope should be a bulleted list of concrete deliverables, not
-vague promises. Timeline should use relative phases (Phase 1, Phase 2)
-not fixed dates unless I gave you a start date. Leave [RATE] and
-[START DATE] as placeholders for me to fill in. Outline: [PASTE
-OUTLINE FROM STEP 1]"
+"Expand the outline from step 1 into a full proposal draft. Problem
+Understanding should mirror the client's own language back to them,
+proving we listened. Approach should explain the 'how' in plain
+language, no jargon. Scope should be a bulleted list of concrete
+deliverables, not vague promises. Timeline should use relative phases
+(Phase 1, Phase 2) not fixed dates unless I gave you a start date. For
+the rate and start date, write 'TODO: rate' and 'TODO: start date' so I
+can fill them in myself."
 
 Step 4: Read the draft against the original brief line by line.
 Confirm every stated requirement is addressed somewhere in Scope.

@@ -19,7 +19,8 @@ You have the right content in the wrong length: a post over the character cap, a
 
 ## The pattern
 ```text
-Cut this draft to exactly [WORD OR CHARACTER LIMIT], not "close to it."
+Cut the draft I paste below to exactly the limit I give at the bottom,
+not "close to it."
 
 Process:
 1. Rank every sentence in the draft by how much it would hurt to lose,
@@ -36,8 +37,8 @@ Process:
 5. Report the final word or character count, then list what you cut, one
    line each.
 
-Draft:
-[PASTE DRAFT]
+Limit (words or characters):
+Paste the draft below this line:
 ```
 
 ## Real example output

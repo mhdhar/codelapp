@@ -19,7 +19,8 @@ A component or page looks fine at the viewport widths you happened to test, but 
 
 ## The pattern
 ```text
-Stress-test [COMPONENT OR PAGE] for responsive and content-edge-case breakage. Do not just
+Stress-test the component or page I changed most recently (or the one I name in my next
+message) for responsive and content-edge-case breakage. Do not just
 resize the viewport and eyeball it — actively substitute adversarial content into every
 dynamic field and re-check at each breakpoint.
 

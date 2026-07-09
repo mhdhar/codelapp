@@ -19,12 +19,11 @@ You want an early read on what a competitor is building next, before it shows up
 
 ## The pattern
 ```text
-Visit [COMPETITOR_URL]/careers (and their LinkedIn or job board listing if linked). This is a recurring monthly check, not a first-time scan.
+Visit the careers page of the competitor I name at the bottom of this prompt (and their LinkedIn or job board listing if linked). This is a recurring monthly check, not a first-time scan.
 
-Previous snapshot of open roles from last check:
-[PREVIOUS_ROLE_SNAPSHOT]
+Compare current open roles against last month's snapshot, pasted at the bottom. If no snapshot is pasted, treat this as the first run: skip the diff and just build the baseline snapshot.
 
-Compare current open roles against that snapshot:
+Report:
 1. New roles: title, team/department if listed, and any specific technology, domain, or customer segment named in the description
 2. Closed/filled roles: roles that were open last time and are no longer listed (can mean filled, or deprioritized — say you can't tell which)
 3. Roles that changed: same title but the description's scope changed
@@ -32,6 +31,9 @@ Compare current open roles against that snapshot:
 For each new role, infer in one sentence what product or market bet it most likely supports (e.g. "Senior Engineer, Payments" → likely building or expanding a payments/billing feature). Mark inferences clearly as inferences, not facts. Ignore roles with no product signal (e.g. a generic "Account Executive" listing with no domain specified).
 
 End with an updated role snapshot in short bullet form, covering all currently open roles with a product signal, for me to paste in next month.
+
+Competitor careers page URL:
+Paste last month's role snapshot below this line (leave blank on first run):
 ```
 
 ## Real example output

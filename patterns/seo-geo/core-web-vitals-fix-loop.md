@@ -19,11 +19,10 @@ PageSpeed Insights or CrUX data shows a Core Web Vitals metric (LCP, INP, CLS) f
 
 ## The pattern
 ```text
-This page is failing Core Web Vitals: [PAGE_URL], metric [METRIC: LCP/INP/CLS],
-current value [CURRENT_VALUE], target [TARGET: LCP<2.5s / INP<200ms / CLS<0.1].
-
-Here is the relevant diagnostic data (PageSpeed Insights / CrUX report):
-[DIAGNOSTIC_DATA]
+A page served by this codebase is failing Core Web Vitals. The failing
+page, the metric, and its current value are at the bottom, along with the
+diagnostic data. Target the standard thresholds unless I say otherwise:
+LCP under 2.5s, INP under 200ms, CLS under 0.1.
 
 Work in this loop, in the actual codebase, do not guess:
 1. Identify the single largest contributor to the failing metric from the
@@ -43,6 +42,10 @@ Work in this loop, in the actual codebase, do not guess:
 
 Stop when the metric is under target or you've been through 3 iterations,
 whichever comes first. Report the before/after value at the end either way.
+
+Failing page URL:
+Failing metric and current value:
+Paste the PageSpeed Insights / CrUX diagnostic data below this line:
 ```
 
 ## Real example output

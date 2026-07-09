@@ -19,9 +19,7 @@ A task is fully done (not interrupted mid-way) and you need a decision-ready sum
 
 ## The pattern
 ```text
-The task below is complete. Before I decide what to do with it, give me a Finish Report in exactly this structure:
-
-TASK: [WHAT WAS SUPPOSED TO GET DONE]
+The task we've been working on in this session is complete. Before I decide what to do with it, give me a Finish Report in exactly this structure. Start by restating, in one line, what the task was supposed to get done.
 
 1. WHAT CHANGED: List the files touched and, in one line each, what changed in them.
 2. WHAT WAS VERIFIED: The exact command(s) you ran and their real output (not "should work"). If nothing was verified, say so explicitly — do not imply it was tested if it wasn't.
@@ -32,7 +30,7 @@ TASK: [WHAT WAS SUPPOSED TO GET DONE]
 
 ## Real example output
 ```
-TASK: Add pagination to GET /api/orders (previously returned all rows).
+The task: Add pagination to GET /api/orders (previously returned all rows).
 
 1. WHAT CHANGED:
    - routes/orders.ts: added `page` and `limit` query params, default limit 25, max 100.

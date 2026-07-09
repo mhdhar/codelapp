@@ -19,11 +19,7 @@ You have a pile of unstructured feedback — review site quotes, Reddit threads,
 
 ## The pattern
 ```text
-Product: [YOUR_PRODUCT]
-Competitor being lost to: [COMPETITOR_NAME]
-
-Raw signal (paste in review quotes, Reddit thread excerpts, churn survey answers, and lost-deal call notes, with the source labeled for each, e.g. "G2 review, 2-star:", "Reddit r/[subreddit]:", "Churn survey:"):
-[PASTE_RAW_SIGNAL]
+My product and the competitor we lose to are named at the bottom of this prompt, followed by the raw signal: review quotes, Reddit thread excerpts, churn survey answers, and lost-deal call notes, with the source labeled on each quote.
 
 From this raw signal:
 1. Cluster the complaints and comparisons into themes (e.g. price, missing feature, support quality, ease of setup, performance). Do not invent themes with no supporting quote.
@@ -33,6 +29,10 @@ From this raw signal:
 5. For the top 3 themes, write one sentence on whether this is a real product gap, a perception/messaging gap, or a sales-process gap, and say what evidence in the raw signal supports that call.
 
 If a theme only has one source behind it, label it "single signal, not a pattern" instead of ranking it.
+
+My product:
+Competitor we lose to:
+Paste the raw signal below this line, labeling each quote's source (e.g. "G2 review, 2-star:", "Reddit:", "Churn survey:"):
 ```
 
 ## Real example output

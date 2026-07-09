@@ -20,20 +20,20 @@ You've given an agent a request with real gaps in it (unclear scope, unclear use
 ## The pattern
 Step 1, force the batch:
 ```text
-Before doing any planning or writing on this: [REQUEST].
-
-Don't start. Instead, list every question you'd need answered to do this confidently, grouped into:
+Don't start work on the request I paste below the line. First, list every question you'd need answered to do it confidently, grouped into:
 - Scope: what's in/out
 - Users: who this is for, who it explicitly isn't for
 - Constraints: technical, timeline, budget
 - Success definition: how we'll know this worked
 
 Only include questions you actually need answered, not ones you could reasonably assume. If a section has no real gaps, write "none" under it. Stop after the list, don't proceed until I answer.
+
+Paste the request below this line:
 ```
 
 Step 2, after you answer:
 ```text
-Here are the answers: [ANSWERS]. Proceed with the original request using these as fixed constraints. If you hit a new ambiguity mid-work that changes scope, stop and ask rather than assuming, everything else you can decide yourself.
+I've answered your questions above. Proceed with the original request using my answers as fixed constraints. If you hit a new ambiguity mid-work that changes scope, stop and ask rather than assuming, everything else you can decide yourself.
 ```
 
 ## Real example output

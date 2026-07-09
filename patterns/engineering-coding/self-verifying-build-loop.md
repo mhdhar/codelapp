@@ -19,24 +19,27 @@ You're asking an agent to write or change code and you don't want it to declare 
 
 ## The pattern
 ```text
-Implement this change and do not stop until you have real passing evidence.
+Implement the change described at the end of this message and do not stop until you have real passing evidence.
 
-CHANGE: [WHAT TO IMPLEMENT OR FIX]
-BUILD/TEST COMMAND: [THE COMMAND THAT PROVES IT WORKS]
+First, pick the verify command: the build, test, or repro command that proves this change works. Look in package.json scripts, the Makefile, or CI config. State the command you picked and why. If I name a command in my message, use mine instead.
 
 Loop:
 1. Write or edit the code for the change.
-2. Run BUILD/TEST COMMAND. Paste the actual output, not a summary.
+2. Run the verify command. Paste the actual output, not a summary.
 3. If it fails: identify the root cause from the actual error message (not a guess). State the root cause in one sentence before touching code again.
 4. Fix only what the root cause requires. Do not make unrelated changes.
-5. Re-run BUILD/TEST COMMAND.
+5. Re-run the verify command.
 6. Repeat steps 3-5 until the command passes cleanly, or until you've tried 5 times, in which case stop and report what you tried and what's still failing.
 
 Never report the change as done without pasting the final passing output. "Looks correct" is not evidence.
+
+The change to implement or fix:
 ```
 
 ## Real example output
 ```
+Verify command: npm run build (runs tsc --noEmit then vite build per package.json; no test covers this path yet).
+
 Attempt 1: npm run build fails.
   TS2345: Argument of type 'string | undefined' is not assignable to type 'string' in src/lib/parseConfig.ts:42
   Root cause: config.env.API_KEY can be undefined at build time; function signature assumes it's always defined.

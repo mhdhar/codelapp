@@ -19,11 +19,10 @@ It's the start of the week, you have last week's basic funnel numbers (visits, s
 
 ## The pattern
 ```text
-Step 1: Paste your funnel numbers for the last 2-4 weeks, one row per week:
-Week | Visits | Signups | [KEY ACTION, e.g. activated / paid / retained]
-[PASTE YOUR ROWS HERE]
+Step 1: Below the line at the end of this block, paste your funnel numbers for the last 2-4 weeks, one row per week:
+Week | Visits | Signups | your key action (activated, paid, retained, whatever it is; name it in the header)
 
-Step 2: Ask the agent to diagnose, not brainstorm:
+Step 2: Diagnose, don't brainstorm:
 Look at this funnel data across the weeks given. Do not suggest generic growth tactics.
 1. Calculate the conversion rate between each stage for every week.
 2. Identify which single stage has the worst conversion rate relative to the others, or the sharpest week-over-week drop.
@@ -33,6 +32,8 @@ Look at this funnel data across the weeks given. Do not suggest generic growth t
 6. Name the one metric that will tell us by next week's review if it worked.
 
 Step 3: If the agent hedges or gives multiple levers, tell it: "Pick one. Which single stage, if fixed, moves the topline number the most?" and ask it to answer again.
+
+Paste your weekly funnel rows below this line:
 ```
 
 ## Real example output

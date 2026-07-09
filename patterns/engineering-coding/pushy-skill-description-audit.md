@@ -19,7 +19,7 @@ You've built skills, custom slash commands, or tool descriptions and suspect the
 
 ## The pattern
 ```text
-Audit every skill/tool description in [SKILLS DIRECTORY, E.G. .claude/skills/ OR .cursor/rules/] for undertriggering risk, and fix the weak ones.
+Find where this project keeps its skill/tool descriptions (.claude/skills/, .cursor/rules/, or equivalent; check the repo), tell me which directory you found, and audit every description in it for undertriggering risk, fixing the weak ones. If I name a directory in my next message, use that one instead.
 
 For each skill found, loop:
 1. Read its current description.

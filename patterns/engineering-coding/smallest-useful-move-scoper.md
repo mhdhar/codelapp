@@ -19,21 +19,21 @@ A task arrives already bloated, like "redo the dashboard" or "clean up the auth 
 
 ## The pattern
 ```text
-The task below is probably too big to do in one clean pass. Scope it down before writing code.
-
-TASK AS GIVEN: [THE ORIGINAL, POSSIBLY-TOO-BIG REQUEST]
+The task at the end of this message is probably too big to do in one clean pass. Scope it down before writing code.
 
 Loop:
-1. Break TASK AS GIVEN into an ordered list of slices, each one independently shippable (the codebase is in a working state after each slice, not mid-broken).
+1. Break the task as given into an ordered list of slices, each one independently shippable (the codebase is in a working state after each slice, not mid-broken).
 2. Identify the smallest slice that delivers real, visible value on its own — not necessarily the first thing listed, the smallest one that's actually useful by itself.
 3. State which slice you're doing now and list every other slice as explicitly deferred, with a one-line reason it's not in scope right now.
 4. Execute only the chosen slice.
 5. When done, ask whether to continue to the next slice or stop here.
+
+The task as given:
 ```
 
 ## Real example output
 ```
-TASK AS GIVEN: "Clean up the auth system, it's a mess."
+The task as given: "Clean up the auth system, it's a mess."
 
 1. Slices identified:
    a. Consolidate 3 different "is logged in" checks (middleware, a hook, and a raw cookie read) into one source of truth.

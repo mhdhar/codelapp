@@ -19,14 +19,9 @@ You want a content roadmap driven by real gaps, not guesses. Use after pulling y
 
 ## The pattern
 ```text
-Here is a list of topics/pages I currently publish on [MY_SITE], and a list
-of topics/pages published by competitor(s) [COMPETITOR_NAME(S)]:
-
-My topics:
-[MY_TOPIC_LIST]
-
-Competitor topics:
-[COMPETITOR_TOPIC_LIST]
+Below the line are two lists: the topics/pages I currently publish on my
+site, then the topics/pages my competitor(s) publish, labeled by
+competitor name.
 
 Find the gap:
 1. List topics the competitor(s) cover that I have no page for at all,
@@ -34,7 +29,7 @@ Find the gap:
 2. For each gap, note how many competitors cover it (if more than one was
    given) — topics covered by all competitors and not by me are higher
    priority than one competitor's one-off post.
-3. Exclude topics that are off-brand or out of scope for [MY_SITE] given
+3. Exclude topics that are off-brand or out of scope for my site given
    what I publish today. Use judgment, don't force every competitor topic
    into the list.
 4. For the top 8 gaps, estimate relative opportunity as High/Medium/Low
@@ -44,6 +39,9 @@ Find the gap:
    cover than to start a brand-new cluster).
 5. Output a prioritized table: Topic | Covered by | Opportunity |
    Suggested page type (pillar/comparison/how-to/glossary).
+
+My topics:
+Competitor topics (label each competitor):
 ```
 
 ## Real example output

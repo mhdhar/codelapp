@@ -19,9 +19,7 @@ You're about to hand an AI agent a real engineering task and want it to stop gue
 
 ## The pattern
 ```text
-Work this task using a strict six-step loop. Do not skip a step or merge steps.
-
-TASK: [WHAT YOU WANT DONE]
+Work the task at the end of this message using a strict six-step loop. Do not skip a step or merge steps.
 
 1. CLARIFY: Restate the ask in your own words. List any assumptions you're making. If anything is ambiguous, ask me before proceeding instead of guessing.
 2. CHECK: Read the existing code, config, and tests related to this task. Report what's already there before proposing changes. Do not assume something is missing until you've looked.
@@ -30,7 +28,9 @@ TASK: [WHAT YOU WANT DONE]
 5. VERIFY: Run the actual build, tests, or the specific failing case. Show me the real output. Do not say "this should work" without running it.
 6. RECOMMEND: State what you did in one line, what evidence proves it works, and the one next step (if any) I should take.
 
-Stop after step 6 and wait for my go-ahead before starting anything not in the original TASK.
+Stop after step 6 and wait for my go-ahead before starting anything not in the original task.
+
+The task:
 ```
 
 ## Real example output

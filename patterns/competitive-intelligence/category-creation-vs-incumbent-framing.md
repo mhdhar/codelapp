@@ -19,19 +19,19 @@ You're setting positioning strategy for a launch, rebrand, or new market entry a
 
 ## The pattern
 ```text
-My product: [PRODUCT_DESCRIPTION]
-Category leader (incumbent): [INCUMBENT_NAME_AND_URL]
-Other named competitors, if any: [OTHER_COMPETITOR_URLS]
-
-Goal: make a specific, defensible call on whether my positioning should frame against the incumbent by name (incumbent-framing) or define a new category the incumbent doesn't fit into (category-creation). Not both, not "it depends" — pick one and defend it.
+Goal: make a specific, defensible call on whether my positioning should frame against the incumbent by name (incumbent-framing) or define a new category the incumbent doesn't fit into (category-creation). Not both, not "it depends". Pick one and defend it. My product and competitors are listed at the bottom of this prompt. Visit the incumbent's site before deciding.
 
 Work through this:
 1. Is the incumbent's category label one that buyers already search for and understand? If yes, incumbent-framing has a distribution advantage. If the category label itself is vague or contested, category-creation may be needed just to be understood at all.
-2. Does my product's core differentiation fit inside the incumbent's category, just done better (faster, cheaper, more specific persona)? If yes, that favors incumbent-framing — "better than X" is a clear, low-effort claim. If my differentiation requires explaining a different mental model entirely, that favors category-creation.
+2. Does my product's core differentiation fit inside the incumbent's category, just done better (faster, cheaper, more specific persona)? If yes, that favors incumbent-framing: "better than X" is a clear, low-effort claim. If my differentiation requires explaining a different mental model entirely, that favors category-creation.
 3. What's the cost of each path: incumbent-framing risks being read as a commodity alternative and inviting direct comparison on the incumbent's home turf. Category-creation risks nobody searching for the new term and a much longer education cycle.
-4. Check the company stage and budget implied by [PRODUCT_DESCRIPTION]: category-creation usually needs sustained content/education investment; incumbent-framing can work with a single comparison page and paid search on the incumbent's name.
+4. Check the company stage and budget implied by my product description below: category-creation usually needs sustained content/education investment; incumbent-framing can work with a single comparison page and paid search on the incumbent's name.
 
 Recommend one path. State the recommendation in one sentence first, then the reasoning from steps 1-4, then the single biggest risk of the path NOT chosen that I should watch for even though I'm not taking it.
+
+My product (one or two lines):
+Category leader (name and URL):
+Other named competitors, if any:
 ```
 
 ## Real example output

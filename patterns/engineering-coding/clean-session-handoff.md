@@ -29,7 +29,7 @@ We're ending this session mid-task. Before we stop, do the following:
    - What's done so far
    - What's broken or incomplete right now
    - The exact next step to take, including file names
-5. Save that note as [HANDOFF FILE PATH, e.g. HANDOFF.md or a comment in the relevant file].
+5. Save that note as HANDOFF.md at the repo root, unless I name a different file or ask for it as a comment in the relevant file.
 6. Confirm the working tree is either clean or clearly annotated, and tell me if there's anything I need to decide before the next session starts.
 ```
 

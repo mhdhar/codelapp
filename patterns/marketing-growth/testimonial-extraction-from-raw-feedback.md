@@ -19,18 +19,19 @@ You have a pile of raw customer feedback — support transcripts, NPS comments, 
 
 ## The pattern
 ```text
-Here is raw customer feedback. It may include support chats, reviews, or messages, in any format:
-[PASTE RAW FEEDBACK DUMP]
+Below the line at the end of this block is raw customer feedback. It may include support chats, reviews, or messages, in any format.
 
 Scan it for lines that are genuine praise WITH a specific, concrete detail attached — a number, a before/after comparison, a named workflow or feature. Skip generic praise with nothing behind it ("love it," "great tool," "works well") — that's not usable as a testimonial.
 
 For each usable line you find, output:
 1. The exact quote, verbatim. Do not edit, polish, or rephrase the customer's own words.
-2. Attribution: name, role, and company if given in the source. If not given, write [ATTRIBUTION UNKNOWN — confirm before publishing].
+2. Attribution: name, role, and company if given in the source. If not given, write "ATTRIBUTION UNKNOWN, confirm before publishing".
 3. What specific claim it supports (speed, ease of use, support quality, ROI, a specific feature).
 4. A suggested one-line caption for context if the quote needs it to make sense standalone.
 
 If a quote is long, you may trim it for length, but mark the cut with an ellipsis and never add words that weren't there. Never merge words from two different people into one quote, even if they're making the same point.
+
+Paste the raw feedback below this line:
 ```
 
 ## Real example output
@@ -38,7 +39,7 @@ Raw source included: "honestly this thing paid for itself in the first week lol.
 
 Extracted:
 1. Quote: "This thing paid for itself in the first week. We were spending like 6 hours every Monday reconciling the reports manually and now it's like 10 minutes." *(trimmed filler, no words added)*
-2. Attribution: [ATTRIBUTION UNKNOWN — confirm before publishing, community handle only: dana_ops]
+2. Attribution: ATTRIBUTION UNKNOWN, confirm before publishing (community handle only: dana_ops)
 3. Supports: time savings / ROI claim, with a concrete before/after number (6 hours to 10 minutes).
 4. Suggested caption: "On weekly report reconciliation, before and after switching."
 

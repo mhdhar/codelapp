@@ -19,7 +19,8 @@ The app supports light and dark themes, light mode was clearly the one designed 
 
 ## The pattern
 ```text
-Walk every page/route in [APP NAME] in both light and dark theme and check for theme parity.
+Walk every page/route in this app in both light and dark theme and check for theme parity.
+Find the routes from the router/pages directory so none get skipped.
 Do not just glance at the color scheme — actively check these failure modes on each page,
 in each theme:
 

@@ -29,8 +29,10 @@ CHECKPOINT 3: List the specific files you will touch and what changes in each.
 
 After each checkpoint, stop and ask "Approve to continue, or revise?" Do not proceed to the next checkpoint or write production code until I reply with an explicit yes.
 
-Task: [DESCRIBE THE UI CHANGE]
-Affected area: [PAGE OR COMPONENT NAME]
+Work out the affected pages and components yourself from my task description; that's
+part of Checkpoint 1.
+
+Task (the UI change I want):
 ```
 
 ## Real example output

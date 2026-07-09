@@ -19,11 +19,7 @@ Right before scaffolding any new project or major feature, when you haven't cons
 
 ## The pattern
 ```text
-Classify what I'm about to build into a complexity tier before we scaffold anything.
-
-WHAT I'M BUILDING: [ONE-LINE DESCRIPTION]
-EXPECTED USERS: [E.G. "just me", "a small internal team", "public, unknown scale"]
-LIFESPAN: [E.G. "one-off script", "long-lived internal tool", "product I'll maintain for years"]
+Classify what I'm about to build into a complexity tier before we scaffold anything. What I'm building, who it's for, and how long it lives are filled in at the end of this message.
 
 Tiers:
 - NANO: single file or single page, no backend, no auth, disposable.
@@ -36,13 +32,17 @@ Tiers:
 2. Warn me explicitly if what I described sounds like it's aimed at one tier but the actual scaffolding request implies a higher one (e.g. asking for a NANO script but also asking for user accounts and a database).
 3. Recommend the minimum stack that fits the chosen tier — do not recommend infrastructure the tier doesn't need.
 4. State what would bump it up a tier later, so I know the upgrade trigger in advance.
+
+What I'm building:
+Expected users:
+Lifespan:
 ```
 
 ## Real example output
 ```
-WHAT I'M BUILDING: a script that pulls weekly analytics numbers and posts them to Slack.
-EXPECTED USERS: just me and 2 teammates who read the Slack message.
-LIFESPAN: ongoing, but nobody logs into it, it just runs.
+What I'm building: a script that pulls weekly analytics numbers and posts them to Slack.
+Expected users: just me and 2 teammates who read the Slack message.
+Lifespan: ongoing, but nobody logs into it, it just runs.
 
 1. Tier: MICRO, not NANO — it's a single feature with no UI, but it needs to run on a schedule and hold a Slack webhook credential, which is more than a disposable one-off script.
 

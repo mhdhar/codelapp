@@ -19,11 +19,8 @@ You keep seeing macro trend reports (AI adoption, remote work, demographic shift
 
 ## The pattern
 ```text
-Act as a strategy analyst. My product bet is:
-
-[PRODUCT/BUSINESS DESCRIPTION]
-
-Broad trend area to check: [E.G. "AI ADOPTION," "REMOTE WORK," "AGING POPULATION," "REGULATORY SHIFT IN X"]
+Act as a strategy analyst. My product bet and the broad trend area to
+check are in the two lines at the bottom of this message.
 
 Your goal: produce a short list of ONLY the trends within this broad area
 that materially change whether this bet works, not a general trend overview.
@@ -50,6 +47,9 @@ list with topically-related-but-not-causal trends.
 
 End with: which single trend, if it reversed, would hurt this bet the most,
 and what you'd watch to catch that early.
+
+My product bet:
+Broad trend area to check (e.g. AI adoption, remote work, aging population, a regulatory shift):
 ```
 
 ## Real example output

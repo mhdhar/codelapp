@@ -22,11 +22,12 @@ You've finished a feature or PR built with AI help and want a consistent, repeat
 Grade the current changes against this rubric. Use the diff, not memory of
 what you intended to write.
 
-Rubric:
-1. [CRITERION 1, e.g. "All new functions have error handling for invalid input"]
-2. [CRITERION 2, e.g. "No console.log or debug prints left in"]
-3. [CRITERION 3, e.g. "Tests exist and pass for every new code path"]
-4. [CRITERION 4, e.g. "No hardcoded values that should be config"]
+Default rubric (use this unless I paste my own criteria at the bottom of
+this message, in which case grade against mine instead):
+1. All new functions handle invalid or missing input, not just the happy path.
+2. No console.log, print statements, or debug leftovers in the diff.
+3. Tests exist and pass for every new code path.
+4. No hardcoded values (URLs, timeouts, limits) that should be config.
 
 For each item:
 - Mark PASS or FAIL.
@@ -42,6 +43,8 @@ After grading, output a scorecard like:
 If any item is FAIL, fix only that item, then re-run this entire rubric
 from item 1 on the updated diff. Repeat until every item is PASS. Do not
 skip re-grading items that already passed, a fix can break something else.
+
+My rubric (optional, replaces the default, one criterion per line):
 ```
 
 ## Real example output

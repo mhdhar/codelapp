@@ -19,31 +19,35 @@ Something broke somewhere between a known-good state and now, but nobody knows w
 
 ## The pattern
 ```text
-We have a regression. It works at commit [KNOWN GOOD REF, e.g. a tag or
-commit hash] and is broken at [KNOWN BAD REF, e.g. HEAD or a commit hash].
-
-The command that proves good vs. bad is: [REPRO COMMAND, e.g. "npm test
--- checkout.spec.ts" or "curl -sf localhost:3000/health"]. It should exit
-0 on good and non-zero on bad.
+We have a regression. It is broken at HEAD unless I say otherwise. The
+repro command at the bottom of this message proves good vs. bad: it
+should exit 0 on good and non-zero on bad.
 
 Do this:
 
-1. Confirm the repro command actually fails on the bad ref and passes on
+1. Establish the known-good ref. If I named one below, use it. If I left
+   it blank, find one yourself: step back through history by doubling
+   (HEAD~8, HEAD~16, HEAD~32, ...) running the repro command at each,
+   until it passes.
+2. Confirm the repro command actually fails on the bad ref and passes on
    the good ref before starting bisect. If it doesn't cleanly distinguish
    the two, stop and tell me, don't bisect on an unreliable signal.
-2. Run `git bisect start`, then `git bisect bad [BAD REF]` and
-   `git bisect good [GOOD REF]`.
-3. At each commit git checks out, run the exact repro command (rebuild or
+3. Run `git bisect start`, then `git bisect bad <bad ref>` and
+   `git bisect good <good ref>`.
+4. At each commit git checks out, run the exact repro command (rebuild or
    reinstall dependencies first if the project requires it for that
    commit to run at all) and mark it with `git bisect good` or
    `git bisect bad` based on the real exit code, not a guess.
-4. Continue until git reports the first bad commit.
-5. Show me that commit's full diff (`git show <commit>`) and explain in
+5. Continue until git reports the first bad commit.
+6. Show me that commit's full diff (`git show <commit>`) and explain in
    plain terms what it changed that would cause this specific failure,
    tying the explanation to actual lines in the diff.
-6. Run `git bisect reset` to return the repo to its original state.
-7. Do not propose a fix for the regression yet unless I ask, the goal of
+7. Run `git bisect reset` to return the repo to its original state.
+8. Do not propose a fix for the regression yet unless I ask, the goal of
    this workflow is isolating the commit, not patching it.
+
+Repro command (exit 0 = good, non-zero = bad):
+Known good ref (tag or commit; leave blank and you find one):
 ```
 
 ## Real example output

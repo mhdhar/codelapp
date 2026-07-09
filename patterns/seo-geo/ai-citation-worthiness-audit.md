@@ -19,11 +19,8 @@ Your page ranks and loads fine but never gets quoted in ChatGPT, Perplexity, or 
 
 ## The pattern
 ```text
-Here is the body copy of a page targeting the query "[TARGET_QUERY]":
-
-[PAGE_COPY]
-
-Audit it for AI citation-worthiness:
+Below the line is the body copy of one page from my site. Audit it for
+AI citation-worthiness against the target query I give at the bottom:
 1. Go paragraph by paragraph. Mark each one CITABLE or GENERIC. CITABLE
    means it states a specific number, a named fact, a precise definition,
    or a concrete claim an answer engine could quote verbatim and be right.
@@ -34,14 +31,17 @@ Audit it for AI citation-worthiness:
    detail is missing that would make it citable, based only on what's
    plausible given the rest of the page. Don't invent stats I don't have.
 3. Rewrite the 3 weakest GENERIC paragraphs into citable versions, using
-   real facts already present elsewhere on the page where possible, and
-   marking [NEEDS DATA] anywhere a real number I haven't given you would
-   be required.
+   real facts already present elsewhere on the page where possible. Where
+   a real number I haven't given you would be required, write "NEEDS DATA:"
+   followed by what to fill in. Never invent the number.
 4. Check whether the page has one clear, quotable one-sentence definition
    of the core topic near the top — the kind of sentence an AI Overview
    would lift directly. If not, write one.
 5. Give a citation-worthiness score out of 10 for the page as a whole, and
    the single biggest reason it's losing points.
+
+Target query:
+Paste the page copy below this line:
 ```
 
 ## Real example output
@@ -68,8 +68,8 @@ average of 12 minutes to under 90 seconds per invoice by auto-reconciling
 against purchase orders."
 
 Rewrite of Paragraph 3:
-"[NEEDS DATA]: teams using Acme reduce month-end close by [X days/hours],
-based on [survey of N customers / internal usage data]."
+"NEEDS DATA: teams using Acme reduce month-end close by (fill in: days or
+hours saved), based on (fill in: survey size or internal usage data)."
 
 Top-of-page definition (missing, added): "Invoice automation is the use
 of software to match, validate, and route invoices for approval without

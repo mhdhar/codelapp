@@ -19,13 +19,9 @@ You know the exact steps a user takes to reach "activated" in your product — y
 
 ## The pattern
 ```text
-Write an onboarding email sequence, one email per activation step.
+Write an onboarding email sequence, one email per activation step, from the product and funnel I've filled in below the line at the end of this block.
 
-Product: [PRODUCT NAME AND ONE-LINE DESCRIPTION]
-Activation steps in order: [STEP 1], [STEP 2], [STEP 3]... up to [FINAL ACTIVATION EVENT — the action that defines an activated user]
-Known biggest drop-off: [WHICH STEP LOSES THE MOST USERS, if you know it]
-
-For each step except the final activation event, write one email triggered by "user has not completed [step] within [X time]":
+For each step except the final activation event, write one email triggered when the user has not completed that step within a sensible window (24 hours to a few days; state the window you chose in the trigger line):
 - Subject line under 50 characters, naming the specific step, not "getting started" or "don't forget."
 - Body under 150 words.
 - Exactly one CTA, linking to the precise in-product action for that step, not the homepage.
@@ -34,6 +30,10 @@ For each step except the final activation event, write one email triggered by "u
 Rules: no countdown timers, no "last chance," no "just checking in." Write like someone who's used this product, not a drip-campaign template.
 
 Output as: Email N — Trigger — Subject — Body — CTA.
+
+Product, one-line description:
+Activation steps in order, ending with the event that defines an activated user:
+Biggest drop-off step ("unknown" if you don't know):
 ```
 
 ## Real example output

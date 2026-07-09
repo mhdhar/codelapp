@@ -19,11 +19,8 @@ You have a vague sense of who your product is for ("small business owners," "fre
 
 ## The pattern
 ```text
-Act as a user research analyst. My rough target audience is:
-
-[AUDIENCE DESCRIPTION]
-
-Product: [WHAT THE PRODUCT DOES]
+Act as a user research analyst. My rough target audience and what the
+product does are in the two lines at the bottom of this message.
 
 Break this audience into 2-4 distinct segments (not invented personas with
 names, actual behavioral or situational groupings). For each segment, give:
@@ -45,6 +42,9 @@ grounded evidence for a segment claim, say so plainly.
 
 End with which segment to target first and why, based on ease of reaching
 them versus size of need.
+
+My rough audience:
+What the product does:
 ```
 
 ## Real example output

@@ -19,16 +19,11 @@ You've identified a specific ICP segment and a real, sourced pain point — from
 
 ## The pattern
 ```text
-Write a 3-email cold outreach sequence.
-
-ICP: [ROLE, COMPANY SIZE/TYPE, THE SPECIFIC TOOL OR PROCESS THEY CURRENTLY USE]
-Pain point: [THE ACTUAL FRICTION THEY EXPERIENCE — must be something you observed or heard, not a guess]
-Our offer: [ONE SENTENCE, WHAT PROBLEM WE SOLVE]
-Proof point: [A SPECIFIC RESULT OR NUMBER IF YOU HAVE ONE, otherwise write "none yet"]
+Write a 3-email cold outreach sequence from the ICP, pain point, and offer I've filled in below the line at the end of this block.
 
 Structure:
 Email 1 (Day 0): Open with an observation about their specific situation, not "hope this finds you well." End with one low-friction ask — a question they can answer in one line, not a meeting request.
-Email 2 (Day 3, if no reply): Lead with the proof point. If I gave you "none yet," write [NEED PROOF POINT] instead of inventing a number or client name. Lower the ask further — a yes/no question.
+Email 2 (Day 3, if no reply): Lead with the proof point. If I said "no proof yet," write the line NEED PROOF POINT instead of inventing a number or client name. Lower the ask further — a yes/no question.
 Email 3 (Day 7, if no reply): A breakup email. Give them permission to say not now, leave the door open, no guilt-tripping.
 
 Rules:
@@ -36,6 +31,10 @@ Rules:
 - Each email under 120 words.
 - Subject line under 6 words, no clickbait.
 - If the pain point I gave you is too generic to write from ("companies struggle with growth"), tell me instead of writing generic copy anyway.
+
+ICP (role, company size/type, the tool or process they use today):
+Pain point (something you actually observed or heard, not a guess):
+Our offer in one sentence, plus a proof point with a real number if you have one ("no proof yet" if not):
 ```
 
 ## Real example output

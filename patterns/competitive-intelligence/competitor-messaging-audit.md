@@ -19,7 +19,7 @@ Before you write or revise your own homepage, ad copy, or sales deck, so you can
 
 ## The pattern
 ```text
-Visit the homepages (and ad copy, if provided) for these competitors: [COMPETITOR_URLS]
+Visit the homepages of the competitors I list at the bottom of this prompt.
 
 For each one, extract verbatim:
 1. The headline and subheadline (exact words, not paraphrased)
@@ -31,7 +31,10 @@ For each one, extract verbatim:
 Then compare across all competitors:
 - Which words or phrases show up in 2+ competitors' headlines or bullets? These are category clichés, not differentiators.
 - Which competitor's language is most different from the rest, and how (tone, technicality, target audience)?
-- Compare my draft copy against this set: [YOUR_DRAFT_COPY]. Flag any line of mine that echoes a cliché phrase found above, and suggest a specific alternative that keeps my meaning but drops the shared language.
+- Compare my draft copy, pasted at the bottom, against this set. Flag any line of mine that echoes a cliché phrase found above, and suggest a specific alternative that keeps my meaning but drops the shared language.
+
+Competitor URLs:
+Paste my draft copy below this line:
 ```
 
 ## Real example output

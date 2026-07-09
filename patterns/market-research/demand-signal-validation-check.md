@@ -19,17 +19,12 @@ You have a product idea and want a cheap sanity check on real demand, using sign
 
 ## The pattern
 ```text
-Act as a demand-validation analyst. I'm considering building this:
-
-[PRODUCT IDEA]
-
-For the target user: [WHO]
-
-Here's what I have on my end. I'll paste it, then you help me interpret it:
-
-SEARCH SIGNAL: [PASTE SEARCH VOLUME DATA / TRENDS DESCRIPTION, OR "not checked yet"]
-FORUM/COMMUNITY SIGNAL: [PASTE RELEVANT THREADS OR DISCUSSIONS, OR "not checked yet"]
-EXISTING WORKAROUNDS: [DESCRIBE HOW PEOPLE SOLVE THIS TODAY, OR "not checked yet"]
+Act as a demand-validation analyst. My product idea, target user, and raw
+signal data are below the line at the end of this message. The signal data
+covers three categories: SEARCH SIGNAL (search volume or trends), FORUM/
+COMMUNITY SIGNAL (threads and discussions), and EXISTING WORKAROUNDS (how
+people solve this today). Wherever I wrote "not checked yet," treat that
+category as unknown.
 
 Do the following:
 
@@ -46,8 +41,8 @@ Do the following:
 
 3. GAPS: name the signal categories I did NOT give data for (mark them "not
    checked yet" if I said so) and say exactly what to go look for in each,
-   e.g. "search Reddit for [specific term]" or "check [specific competitor
-   type]'s reviews for complaints about this."
+   e.g. "search Reddit for the exact phrase a frustrated user would type"
+   or "check the nearest paid tool's reviews for complaints about this."
 
 4. FALSE-POSITIVE CHECK: name the most likely way this signal set is
    misleading me (e.g. forum complaints are a vocal minority, or search
@@ -59,6 +54,10 @@ Do the following:
 
 Do not treat an absent signal as either a good or bad sign, mark unchecked
 things as "unknown," not as evidence either way.
+
+Product idea:
+Target user:
+Paste signal data below this line (label each SEARCH SIGNAL, FORUM/COMMUNITY SIGNAL, or EXISTING WORKAROUNDS; write "not checked yet" where you have nothing):
 ```
 
 ## Real example output

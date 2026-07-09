@@ -19,7 +19,8 @@ You're auditing a page or flow that has a zero-data condition — no results, an
 
 ## The pattern
 ```text
-Find every empty state in [PAGE OR FEATURE] — any place the UI renders when there is zero
+Find every empty state in this app (or in the page or feature I name in my next
+message) — any place the UI renders when there is zero
 data: no results from a search, an empty list before the user adds anything, a cleared
 filter, a first-run/onboarding screen with nothing saved yet.
 

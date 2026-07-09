@@ -19,8 +19,7 @@ Before a competitive brief or market-sizing conversation that only lists direct,
 
 ## The pattern
 ```text
-The problem my product solves: [PROBLEM_DESCRIPTION]
-Target buyer: [BUYER_DESCRIPTION]
+The problem my product solves and the target buyer are at the bottom of this prompt.
 
 List every distinct way this buyer could be solving this problem today, in four tiers:
 1. Direct competitors: other named products built specifically to solve this problem
@@ -31,6 +30,9 @@ List every distinct way this buyer could be solving this problem today, in four 
 For each tier, name the specific substitute and, in one line, why a buyer might genuinely prefer it over buying a dedicated product like mine (cost, simplicity, "we're too small for this," trust, existing habit). Do not dismiss any tier as not real competition — the goal is to see the full field, including the substitutes that don't look like competitors.
 
 End with which substitute is most likely my actual biggest competitor for this buyer, and why it's probably not the direct competitor I'd have named first.
+
+The problem my product solves:
+Target buyer:
 ```
 
 ## Real example output

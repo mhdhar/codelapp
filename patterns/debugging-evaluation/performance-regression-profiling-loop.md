@@ -19,14 +19,17 @@ Something got slower and the AI's instinct is to rewrite the first loop or query
 
 ## The pattern
 ```text
-Performance regression: [WHAT GOT SLOWER, e.g. "the /orders endpoint went
-from ~80ms to ~600ms p50"].
+We have a performance regression. I describe what got slower at the
+bottom of this message.
 
 Follow this loop, do not skip the measurement steps:
 
-1. Establish a real baseline. Run [PROFILING/TIMING COMMAND] against the
-   current slow code and paste the actual numbers (timings, profiler
-   output, or query plan). Do not estimate, run it.
+1. Establish a real baseline. Pick a measurement command that fits this
+   repo's stack (an existing benchmark script, a load tool like
+   autocannon for HTTP, hyperfine for CLIs, EXPLAIN ANALYZE for a
+   query), show me the command, then run it against the current slow
+   code and paste the actual numbers (timings, profiler output, or query
+   plan). Do not estimate, run it.
 2. From that output, identify the single largest contributor to the
    total time (the hottest function, the slowest query, the biggest
    allocation). Name it and quote the number next to it. Do not pick a
@@ -42,6 +45,8 @@ Follow this loop, do not skip the measurement steps:
    profile. Do not stack unverified changes on top of each other.
 7. Repeat until the measured number is back at or below the target, then
    report the full before/after comparison.
+
+What got slower (and the target, e.g. "GET /orders, ~600ms p50, was ~80ms"):
 ```
 
 ## Real example output

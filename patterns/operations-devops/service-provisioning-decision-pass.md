@@ -19,8 +19,10 @@ You're starting a new build (or untangling a stalled one) that will eventually t
 
 ## The pattern
 ```text
-Goal: produce a Service Registry for [PROJECT_NAME] — one deliberate
-decision per category below, not services added ad hoc as features come up.
+Goal: produce a Service Registry for this project — one deliberate
+decision per category below, not services added ad hoc as features come
+up. Read the README and repo structure first so your picks fit what this
+product actually is, then decide.
 
 For each category, either name the service and justify it in one sentence,
 or mark "not needed for this build" and say why:

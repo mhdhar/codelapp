@@ -19,11 +19,10 @@ Monthly or quarterly, when Search Console shows a set of pages trending down in 
 
 ## The pattern
 ```text
-Here is Search Console / analytics data for pages on [SITE_URL] over the
-last [TIME_PERIOD], showing URL, clicks, impressions, and average position
-for the current period vs. the prior period of the same length:
-
-[TRAFFIC_DATA]
+Below the line is Search Console / analytics data for pages on my site,
+showing URL, clicks, impressions, and average position for the current
+period vs. the prior period of the same length. Treat the window as the
+last 90 days vs. the prior 90 unless the data says otherwise.
 
 For each page showing a decline (clicks or position down at least 15%):
 1. Classify the likely decay cause using only the data given:
@@ -44,6 +43,8 @@ For each page showing a decline (clicks or position down at least 15%):
 3. For CANNIBALIZED pages, name the specific other URL competing for it.
 4. Output a prioritized refresh list: URL | Decay type | Evidence | Clicks
    lost (absolute number) | Recommended action, sorted by clicks lost.
+
+Paste the traffic data below this line:
 ```
 
 ## Real example output
@@ -75,7 +76,7 @@ Current: 1,100 clicks, 41,000 impressions, avg position 2.8
 Prior: 1,300 clicks, 61,000 impressions, avg position 2.6
 -> SERP CHANGE. Position barely moved but impressions dropped 33% —
 consistent with an AI Overview now answering "how do I get started with
-[product]" directly in the SERP without a click-through.
+the product" directly in the SERP without a click-through.
 Clicks lost: 200.
 Action: Not a content problem. Strengthen the page's citability so it's
 the source the AI Overview pulls from (see citation-worthiness audit).

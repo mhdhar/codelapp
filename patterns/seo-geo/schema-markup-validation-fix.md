@@ -19,13 +19,9 @@ Google's Rich Results Test, the Schema.org validator, or Search Console's Enhanc
 
 ## The pattern
 ```text
-Here is JSON-LD structured data currently live on [PAGE_URL]:
-
-[CURRENT_JSONLD]
-
-Here is the exact error/warning output from the validator:
-
-[VALIDATOR_ERRORS]
+Below the line are two things: the JSON-LD structured data currently live
+on one of my pages, then a line reading "VALIDATOR ERRORS:", then the
+exact error/warning output from the validator.
 
 Fix the schema:
 1. Go through each validator error/warning one at a time. State what it
@@ -33,14 +29,19 @@ Fix the schema:
 2. Fix each one using only information that is plausibly true of this page
    (infer from the existing JSON-LD's other fields and the page context
    given). If a required property is missing and you can't infer a real
-   value, add it as "[NEEDS: description of what's needed]" instead of
-   inventing a fake value. Do not fabricate ratings, prices, or review
-   counts to silence a validator warning.
+   value, set its value to a string starting with "NEEDS:" followed by a
+   description of what's needed, instead of inventing a fake value. Do not
+   fabricate ratings, prices, or review counts to silence a validator
+   warning.
 3. Do not change any property the validator did not flag, even if you'd
    phrase it differently.
 4. Output the corrected JSON-LD as a single script block.
 5. After the block, list which errors are now fully fixed versus which
    still need a real value from me before they'll pass.
+
+Page URL:
+Paste the JSON-LD, then "VALIDATOR ERRORS:", then the validator output,
+below this line:
 ```
 
 ## Real example output
@@ -70,12 +71,12 @@ Validator errors on /products/standing-desk-pro:
     "@type": "Offer",
     "price": "499.00",
     "priceCurrency": "USD",
-    "priceValidUntil": "[NEEDS: a real expiration date for this price, e.g. end of current promo period]"
+    "priceValidUntil": "NEEDS: a real expiration date for this price, e.g. end of current promo period"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.6",
-    "reviewCount": "[NEEDS: total number of reviews backing the 4.6 rating]"
+    "reviewCount": "NEEDS: total number of reviews backing the 4.6 rating"
   }
 }
 </script>

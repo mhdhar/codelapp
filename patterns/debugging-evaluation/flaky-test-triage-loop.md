@@ -19,7 +19,9 @@ A test failed in CI or locally and the instinct is to either dismiss it as "prob
 
 ## The pattern
 ```text
-This test failed: [TEST NAME / COMMAND]
+A test failed. I name it at the bottom of this message. If I give a
+test name rather than a command, work out the exact command to run just
+that test in this repo and show it to me.
 
 Do not change any application code yet. First triage:
 
@@ -44,6 +46,8 @@ Do not change any application code yet. First triage:
    explicitly and treat it as a real bug, not a quarantine candidate.
 7. After the fix, re-run 10 times again and report the new pass rate.
    Only call it resolved at 10/10.
+
+The failing test (name or exact command):
 ```
 
 ## Real example output

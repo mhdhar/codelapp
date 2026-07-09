@@ -19,8 +19,9 @@ You drafted a long document across multiple sessions, or stitched together sever
 
 ## The pattern
 ```text
-I'm going to give you a REFERENCE paragraph that has the voice I want, then
-the FULL DOCUMENT to check against it. Loop through this process:
+Below this prompt I'll paste a REFERENCE paragraph that has the voice I
+want, then the FULL DOCUMENT to check against it. Loop through this
+process:
 
 1. Read the reference paragraph and describe its voice in 3-4 traits
    (sentence length, formality, use of "I" vs "we", contraction use, how
@@ -36,11 +37,12 @@ the FULL DOCUMENT to check against it. Loop through this process:
 5. Repeat steps 3-4 until every section passes. Show me the DRIFT list
    for each round, not just the final clean version.
 
-REFERENCE paragraph:
-[PASTE THE PARAGRAPH WHOSE VOICE IS CORRECT]
+Paste the paragraph whose voice is correct after REFERENCE and the
+whole document after FULL DOCUMENT.
+
+REFERENCE:
 
 FULL DOCUMENT:
-[PASTE THE FULL DOCUMENT]
 ```
 
 ## Real example output

@@ -19,8 +19,10 @@ A landing page isn't ranking or isn't getting cited by AI answer engines, and yo
 
 ## The pattern
 ```text
-Audit the landing page at path [PAGE_PATH] in this repo for SEO and GEO
-readiness. Read the actual file, don't guess.
+Audit a landing page in this repo for SEO and GEO readiness. The page
+path and target keyword are at the bottom. If I leave the path empty,
+find the site's primary landing page in this repo yourself. Read the
+actual file, don't guess.
 
 Check and report on each of these:
 1. Title tag: present, under 60 characters, includes the primary keyword
@@ -30,16 +32,19 @@ Check and report on each of these:
    in the repo
 5. Crawlable links: internal links use real <a href> tags, not JS-only
    onclick handlers
-6. Long-tail targeting: does the visible body copy naturally include
-   [TARGET_KEYWORD] and 2-3 related long-tail variants, or only the short
+6. Long-tail targeting: does the visible body copy naturally include the
+   target keyword and 2-3 related long-tail variants, or only the short
    head term
 7. Answer-ability: does the page contain at least one self-contained
-   paragraph that directly answers "[TARGET_KEYWORD]" in under 3 sentences,
-   the kind an AI answer engine could quote directly
+   paragraph that directly answers the target keyword as a query in under
+   3 sentences, the kind an AI answer engine could quote directly
 
 For each check, mark PASS or FAIL with the specific evidence (actual title
 text, actual H1 text, etc). Then output a prioritized fix list, ordered by
 impact, with the exact line or file to change for each fix.
+
+Page path in this repo:
+Target keyword:
 ```
 
 ## Real example output
