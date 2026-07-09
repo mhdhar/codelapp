@@ -32,8 +32,12 @@ Every pattern is a single markdown file with YAML frontmatter, stored at
 1. `## When to use this` — 2-3 lines, a specific situation.
 2. `## The pattern` — a fenced ` ```text ` block. This is the only thing the
    site's copy button copies. Must be self-contained: pasting only this block
-   into an AI tool must work with no other context. Placeholders use
-   `[BRACKETS]`.
+   into an AI tool must work with no other context, with zero editing inside
+   the prose. No `[BRACKET]` placeholders. If the agent can discover an input
+   itself (the codebase, the default branch, the framework), tell it to. If
+   real user input is needed, defer it: reference "the URL I paste below" and
+   end the block with at most 3 labeled fill-in lines (e.g. `My site URL:`)
+   or a paste marker (`Paste the draft below this line:`).
 3. `## Real example output` — a short, real result.
 4. `## Why it works` — 2-3 lines on the mechanism.
 
