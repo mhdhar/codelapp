@@ -12,7 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
-related: ["clean-session-handoff", "parallel-worktree-risk-audit", "session-handoff-note"]
+related: ["session-handoff-note", "parallel-worktree-risk-audit"]
 ---
 
 ## When to use this

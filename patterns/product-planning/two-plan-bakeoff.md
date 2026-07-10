@@ -12,7 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
-related: ["tradeoff-menu-single-recommendation", "premortem-until-it-stops-dying", "preset-vs-custom-stack-decision"]
+related: ["tradeoff-menu-single-recommendation", "premortem-until-it-stops-dying", "stack-decision-gate"]
 ---
 
 ## When to use this

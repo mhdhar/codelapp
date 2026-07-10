@@ -12,7 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
-related: ["launch-thread-from-shipped-feature", "readme-truth-audit", "engineering-finish-report"]
+related: ["launch-thread-from-shipped-feature", "readme-truth-audit", "post-task-risk-report"]
 ---
 
 ## When to use this

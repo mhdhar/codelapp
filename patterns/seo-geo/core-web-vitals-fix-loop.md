@@ -13,7 +13,7 @@ author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
 aliases: ["cwv", "pagespeed", "lighthouse"]
-related: ["performance-regression-profiling-loop", "landing-page-seo-geo-audit", "root-cause-debugging-loop"]
+related: ["performance-budget-loop", "landing-page-seo-geo-audit", "root-cause-debugging-loop"]
 ---
 
 ## When to use this

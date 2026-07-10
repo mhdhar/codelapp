@@ -13,7 +13,7 @@ author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
 aliases: ["repomix", "context pack"]
-related: ["clean-session-handoff", "project-state-handoff-file", "reference-repo-to-skill"]
+related: ["session-handoff-note", "project-state-handoff-file", "reference-repo-to-skill"]
 ---
 
 ## When to use this
