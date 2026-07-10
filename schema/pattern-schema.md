@@ -20,6 +20,8 @@ Every pattern is a single markdown file with YAML frontmatter, stored at
 | `author_handle` | string | no | Contributor's X handle, without `@`. |
 | `date` | string | yes | ISO date `YYYY-MM-DD`. |
 | `license` | string | yes | `"CC-BY-4.0"`. |
+| `aliases` | string[] | no | Search synonyms a user might type instead of the title's words (e.g. `"PRD"` for a spec pattern). Never rendered. |
+| `related` | string[] | no | Slugs of 2-3 patterns a reader would want next. Rendered as links on the detail page; unknown slugs are skipped with a build warning. |
 
 ## Category slugs (exactly 10)
 

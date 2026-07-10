@@ -39,6 +39,10 @@ To contribute directly via pull request:
 4. Open a PR. `codel-site`'s build validates every file and will fail loudly
    on a broken or duplicate-slug pattern.
 
+By opening a PR you confirm the pattern is your own work and license it
+under [CC BY 4.0](LICENSE-CONTENT.md), the same grant the submission form
+asks for.
+
 ## License
 
 - Pattern content (`patterns/`): [CC BY 4.0](LICENSE-CONTENT.md) — attribute

@@ -6,7 +6,7 @@ description: Fetch and apply copy-paste AI coding patterns (loops, goals, workfl
 # codel patterns
 
 codel.app is a public catalog of AI coding patterns maintained at
-https://github.com/mhdhar/codel-content. Every pattern is a self-contained,
+https://github.com/mhdhar/codelapp. Every pattern is a self-contained,
 copy-paste block: a loop, goal, workflow, or prompt that has actually been
 run and works standalone.
 
