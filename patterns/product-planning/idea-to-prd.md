@@ -12,6 +12,8 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+aliases: ["prd", "spec", "product requirements document"]
+related: ["pre-build-intent-capture", "spec-to-engineering-tickets", "riskiest-assumption-kill-loop"]
 ---
 
 ## When to use this

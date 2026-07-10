@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["broken-internal-link-fix-loop", "sitemap-priority-for-large-sites", "content-decay-audit"]
 ---
 
 ## When to use this
@@ -30,13 +31,13 @@ Analyze internal linking:
    identify a natural "hub" page (the broadest or highest-traffic page on
    that topic) and list which cluster members it currently does NOT link
    to but should.
-3. Flag pages with fewer than 2 incoming internal links — they're at risk
+3. Flag pages with fewer than 2 incoming internal links; they're at risk
    even if not fully orphaned.
 4. For each gap found in steps 1-3, suggest the specific source page,
    target page, and anchor text to use. Anchor text should describe the
    target page's content, not say "click here" or "read more."
 5. Do not suggest a link between two pages with no topical relationship
-   just to fix an orphan — that's a spam pattern. If an orphaned page has
+   just to fix an orphan; that's a spam pattern. If an orphaned page has
    no natural topical home, flag it separately as "needs a new hub"
    instead of forcing a link.
 
@@ -51,20 +52,20 @@ ask me to paste the page and link inventory, then wait for my reply.
 ## Real example output
 ```
 Orphans (0 incoming internal links):
-- /docs/api/rate-limits — no page links here, only reachable via direct
+- /docs/api/rate-limits - no page links here, only reachable via direct
   URL or the sitemap
-- /blog/case-study-northwind — published 3 months ago, never linked from
+- /blog/case-study-northwind - published 3 months ago, never linked from
   /blog or /customers
 
-Cluster: "API integration" — hub = /docs/api/overview (highest traffic
+Cluster: "API integration" - hub = /docs/api/overview (highest traffic
 in cluster: 2,100 sessions/mo)
 Hub is missing links to: /docs/api/rate-limits, /docs/api/webhooks
 
-Cluster: "Customer stories" — hub = /customers
+Cluster: "Customer stories" - hub = /customers
 Hub is missing links to: /blog/case-study-northwind
 
 Under-linked (1 incoming link):
-- /pricing/enterprise — only linked from /pricing, not from /features or
+- /pricing/enterprise - only linked from /pricing, not from /features or
   the main nav
 
 Gap fixes:
@@ -75,10 +76,10 @@ Gap fixes:
 3. Add link from /features/enterprise-security to /pricing/enterprise,
    anchor text "enterprise pricing"
 
-No natural hub found for: /blog/2024-year-in-review — flagged as "needs
+No natural hub found for: /blog/2024-year-in-review - flagged as "needs
 a new hub," doesn't fit an existing cluster, consider linking from a
 future /blog/archive index instead of forcing it into an unrelated page.
 ```
 
 ## Why it works
-Search engines and AI crawlers weight pages partly by how much internal link equity points at them — a page nobody links to reads as unimportant even if the content is strong. Grouping by topic cluster before suggesting links keeps the fixes relevant instead of manufacturing links that look like spam.
+Search engines and AI crawlers weight pages partly by how much internal link equity points at them; a page nobody links to reads as unimportant even if the content is strong. Grouping by topic cluster before suggesting links keeps the fixes relevant instead of manufacturing links that look like spam.

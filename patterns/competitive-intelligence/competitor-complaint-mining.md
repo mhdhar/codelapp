@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["win-loss-signal-synthesis", "voice-of-customer-review-synthesis", "incumbent-switching-cost-teardown"]
 ---
 
 ## When to use this

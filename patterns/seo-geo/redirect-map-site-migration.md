@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["broken-internal-link-fix-loop", "canonical-duplicate-content-resolver", "rollback-readiness-check"]
 ---
 
 ## When to use this
@@ -52,7 +53,7 @@ the new URLs, all in one message. Wait until you have both lists.
 ```
 Checks: pass on iteration 2 (iteration 1 found 3 chains where a target
 was itself in the old list, and 1 A->B->A loop between /pricing and
-/plans — all re-pointed to final destinations).
+/plans; all re-pointed to final destinations).
 
 old_url,new_url,status
 /blog/2023/invoice-tips,/resources/invoice-tips,301

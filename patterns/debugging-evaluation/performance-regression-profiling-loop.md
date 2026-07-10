@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["core-web-vitals-fix-loop", "one-variable-at-a-time", "git-bisect-regression-hunt"]
 ---
 
 ## When to use this

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["proposal-draft-from-brief", "target-user-segment-breakdown", "channel-budget-allocation-decision"]
 ---
 
 ## When to use this

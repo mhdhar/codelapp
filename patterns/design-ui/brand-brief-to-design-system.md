@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["design-token-drift-hunt", "ai-slop-critique-loop", "dark-mode-parity-check"]
 ---
 
 ## When to use this

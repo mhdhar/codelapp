@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["responsive-breakpoint-stress-test", "highest-impact-a11y-fix-loop", "accessible-name-audit-for-custom-controls"]
 ---
 
 ## When to use this

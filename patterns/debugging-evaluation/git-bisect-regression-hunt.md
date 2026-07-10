@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["probe-bisection-through-the-pipeline", "dependency-upgrade-breakage-isolation", "ci-failure-triage-loop"]
 ---
 
 ## When to use this
@@ -68,4 +69,4 @@ Date:   ...
 Step 5: `git show 9c44d10` shows `src/lib/pdf.ts` changed `renderSync(doc)` to `renderStream(doc).pipe(res)`, and removed the `await` that previously blocked until rendering finished. The test asserts on `res.body` immediately after the render call returns, which now resolves before the stream has finished writing, since the switch to streaming made the render call return early by design. That's the regression: the test (and any caller relying on synchronous completion) needed to await the stream's `finish` event, which this commit didn't add.
 
 ## Why it works
-Bisect turns a 38-commit haystack into ~6 checks by halving the search space each time, but it's only as reliable as the pass/fail signal driving it — verifying the repro command actually distinguishes good from bad before starting is what stops a bisect from confidently pointing at the wrong commit. Reading the actual diff of the isolated commit, instead of stopping at "this commit is bad," is what turns the bisect result into an explanation you can act on.
+Bisect turns a 38-commit haystack into ~6 checks by halving the search space each time, but it's only as reliable as the pass/fail signal driving it - verifying the repro command actually distinguishes good from bad before starting is what stops a bisect from confidently pointing at the wrong commit. Reading the actual diff of the isolated commit, instead of stopping at "this commit is bad," is what turns the bisect result into an explanation you can act on.

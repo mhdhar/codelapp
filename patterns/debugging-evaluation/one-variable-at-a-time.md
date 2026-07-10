@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["root-cause-debugging-loop", "performance-budget-loop", "dependency-upgrade-breakage-isolation"]
 ---
 
 ## When to use this

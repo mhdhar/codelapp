@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["pre-registered-demand-test-design", "substitute-products-scan", "riskiest-assumption-kill-loop"]
 ---
 
 ## When to use this

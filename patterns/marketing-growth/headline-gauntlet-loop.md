@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["headline-subject-line-variants", "ab-test-ship-kill-verdict", "rubric-grading-loop"]
 ---
 
 ## When to use this

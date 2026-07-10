@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["generate-llms-txt", "concrete-example-injector", "entity-consistency-audit"]
 ---
 
 ## When to use this
@@ -35,7 +36,7 @@ against a target query:
    a real number I haven't given you would be required, write "NEEDS DATA:"
    followed by what to fill in. Never invent the number.
 4. Check whether the page has one clear, quotable one-sentence definition
-   of the core topic near the top — the kind of sentence an AI Overview
+   of the core topic near the top: the kind of sentence an AI Overview
    would lift directly. If not, write one.
 5. Give a citation-worthiness score out of 10 for the page as a whole, and
    the single biggest reason it's losing points.
@@ -81,4 +82,4 @@ answer engine has no reason to quote over a competitor's page.
 ```
 
 ## Why it works
-Answer engines quote sentences that reduce their own risk of being wrong — specific numbers and precise definitions are easy to attribute and hard to dispute. Splitting a page into CITABLE and GENERIC forces you to see exactly how much of the copy is doing marketing work versus giving an AI engine something safe to repeat.
+Answer engines quote sentences that reduce their own risk of being wrong: specific numbers and precise definitions are easy to attribute and hard to dispute. Splitting a page into CITABLE and GENERIC forces you to see exactly how much of the copy is doing marketing work versus giving an AI engine something safe to repeat.

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["readme-truth-audit", "concrete-example-injector", "battlecard-rot-check"]
 ---
 
 ## When to use this
@@ -44,9 +45,9 @@ have both.
 ```
 
 ## Real example output
-- "Support tickets dropped 40% after the change" — UNSOURCED. Notes say "tickets went down noticeably" with no number. Rewrote to: "Support tickets dropped noticeably after the change."
-- "This is the same approach Stripe uses internally" — UNSOURCED. Not mentioned anywhere in the notes. Flagged (VERIFY: source) and removed the sentence pending a check.
-- "Three of our five biggest customers asked for this" — SOURCED. Notes: "Acme, Bolt, and Fenwick all filed this as a request last quarter."
+- "Support tickets dropped 40% after the change" - UNSOURCED. Notes say "tickets went down noticeably" with no number. Rewrote to: "Support tickets dropped noticeably after the change."
+- "This is the same approach Stripe uses internally" - UNSOURCED. Not mentioned anywhere in the notes. Flagged (VERIFY: source) and removed the sentence pending a check.
+- "Three of our five biggest customers asked for this" - SOURCED. Notes: "Acme, Bolt, and Fenwick all filed this as a request last quarter."
 
 ## Why it works
 Splitting into SOURCED / SOFTENED / UNSOURCED instead of a binary true-or-false check catches the more common failure mode: claims that aren't fabricated outright but got quietly strengthened past what the source actually says. Naming the claim types up front (numbers, quotes, comparisons) stops the model from skimming past a soft claim like "the first company to do this."

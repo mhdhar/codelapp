@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["pricing-packaging-teardown", "win-loss-signal-synthesis", "pricing-willingness-to-pay-scan"]
 ---
 
 ## When to use this
-Your pricing page is live, conversion from that page is flat or you suspect people bounce there, and you want a systematic check against the objections buyers actually raise on sales calls or in lost-deal notes — not a generic "make the copy punchier" pass.
+Your pricing page is live, conversion from that page is flat or you suspect people bounce there, and you want a systematic check against the objections buyers actually raise on sales calls or in lost-deal notes, not a generic "make the copy punchier" pass.
 
 ## The pattern
 ```text
@@ -37,9 +38,9 @@ Rules: do not invent objections beyond what I gave you. Do not rewrite sections 
 ## Real example output
 | Objection | Answered? | Existing line | Suggested fix |
 |---|---|---|---|
-| "Too expensive vs Competitor X" | No | (nothing on page addresses pricing comparison) | Add under the Growth tier: "Most teams switching from Competitor X cut their bill by 30% at the same seat count — no migration fee." |
-| "Not sure my team will use all these seats" | Partially | "Unlimited seats on Growth" | Replace with: "Add teammates as you need them — you're only billed for seats active in the last 30 days, so idle accounts don't cost you." |
-| "What happens if we go over usage" | No | (usage caps listed with no overage policy) | Add a line directly under the usage limit: "Going over your limit doesn't cut you off — we email you first and you choose to upgrade or stay capped." |
+| "Too expensive vs Competitor X" | No | (nothing on page addresses pricing comparison) | Add under the Growth tier: "Most teams switching from Competitor X cut their bill by 30% at the same seat count, with no migration fee." |
+| "Not sure my team will use all these seats" | Partially | "Unlimited seats on Growth" | Replace with: "Add teammates as you need them: you're only billed for seats active in the last 30 days, so idle accounts don't cost you." |
+| "What happens if we go over usage" | No | (usage caps listed with no overage policy) | Add a line directly under the usage limit: "Going over your limit doesn't cut you off. We email you first and you choose to upgrade or stay capped." |
 
 Ranking: the usage-overage objection is costing the most conversions. It came up in 6 of the last 10 lost-deal notes, more than the other two combined, and right now the page gives buyers nothing to reduce that fear before they talk to sales.
 

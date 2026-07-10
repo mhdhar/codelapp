@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["voice-drift-consistency-loop", "ai-slop-critique-loop", "tighten-draft-to-word-limit"]
 ---
 
 ## When to use this

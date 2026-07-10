@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["strip-ai-voice", "audience-register-rewrite", "brand-brief-to-design-system"]
 ---
 
 ## When to use this
@@ -49,11 +50,11 @@ first person singular, no hedging, technical terms defined inline not
 footnoted.
 
 Section 2: PASS
-Section 3: DRIFT — "It should be noted that the implementation may
+Section 3: DRIFT - "It should be noted that the implementation may
 potentially introduce some overhead in certain scenarios." Violates:
 hedging (reference states things directly), no contractions, third-person
 distancing ("It should be noted").
-Section 5: DRIFT — "We believe this represents a significant step forward
+Section 5: DRIFT - "We believe this represents a significant step forward
 for our platform." Violates: uses "we" instead of "I", generic corporate
 phrasing not present in the reference.
 

@@ -7,11 +7,12 @@ tools: ["universal"]
 difficulty: "advanced"
 est_time: "15 min"
 models: ["any"]
-summary: "Decide if this ships an API or MCP surface before you scope it — that decision changes the build."
+summary: "Decide if this ships an API or MCP surface before you scope it; that decision changes the build."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["pre-build-intent-capture", "stack-decision-gate", "complexity-gated-scoping"]
 ---
 
 ## When to use this
@@ -21,7 +22,7 @@ You're about to write a spec or start scoping a project that has any kind of API
 ```text
 Before scoping this project, decide its distribution surface. First understand what the project is: read the README, spec, or repo structure if one exists. If there's no repo yet, ask me for a short project description and wait for it before deciding anything.
 
-1. Will anything outside the primary UI need to call this programmatically in the next 2 releases — another app, a script, or an AI agent/MCP client? Answer yes/no with your reasoning, don't default to "maybe, just in case."
+1. Will anything outside the primary UI need to call this programmatically in the next 2 releases (another app, a script, or an AI agent/MCP client)? Answer yes/no with your reasoning, don't default to "maybe, just in case."
 2. If yes: does an MCP server make sense as the distribution channel (i.e., would an AI agent plausibly want to call this directly), or is a plain REST/webhook API enough? Justify in one sentence.
 3. If yes: list what this adds to scope right now, before a single feature is built:
    - Auth model for machine callers (API keys, OAuth, service tokens) separate from human login
@@ -34,12 +35,12 @@ Output as a short decision memo, under 200 words.
 ```
 
 ## Real example output
-"1. Yes — a bookkeeping SaaS partner has already asked about pulling categorized expense data programmatically, and freelancers using AI tax-prep assistants are a named target user.
-2. MCP server, not just REST. The target caller is an AI agent doing tax prep on the user's behalf, not a human-run script — an MCP tool schema is the more natural fit than raw REST docs.
+"1. Yes: a bookkeeping SaaS partner has already asked about pulling categorized expense data programmatically, and freelancers using AI tax-prep assistants are a named target user.
+2. MCP server, not just REST. The target caller is an AI agent doing tax prep on the user's behalf, not a human-run script; an MCP tool schema is the more natural fit than raw REST docs.
 3. Scope added now: API-key-based auth for machine callers (separate from session auth), a `v1` prefix on every public endpoint from day one, per-key rate limits (100 req/day free tier), and an MCP tool schema alongside the REST docs.
-4. N/A — distribution surface is committed for launch, not deferred.
+4. N/A: distribution surface is committed for launch, not deferred.
 
 Decision: build the MCP server as a companion package from week one, not bolted on later. Adds roughly 3 days to the timeline, avoids an auth and versioning retrofit later."
 
 ## Why it works
-Naming auth, versioning, and rate limiting as scope items at decision time — not implementation time — means they get estimated and prioritized like any other requirement, instead of surfacing as a surprise rewrite the day the first external caller shows up.
+Naming auth, versioning, and rate limiting as scope items at decision time, not implementation time, means they get estimated and prioritized like any other requirement, instead of surfacing as a surprise rewrite the day the first external caller shows up.

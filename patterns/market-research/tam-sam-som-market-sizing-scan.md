@@ -12,6 +12,8 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+aliases: ["market size", "tam sam som"]
+related: ["target-user-segment-breakdown", "pricing-willingness-to-pay-scan", "demand-signal-validation-check"]
 ---
 
 ## When to use this

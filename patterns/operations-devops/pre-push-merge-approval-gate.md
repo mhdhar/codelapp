@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["ui-approval-gate-checkpoints", "pre-deploy-safety-check", "hostile-reviewer-pass"]
 ---
 
 ## When to use this
-You run agent sessions across several branches at once, with local and experimental work in flight. Local edits should stay free-flowing, but anything that leaves your machine — a push, a merge, a PR merge — needs you to say yes first, not an agent's judgment call.
+You run agent sessions across several branches at once, with local and experimental work in flight. Local edits should stay free-flowing, but anything that leaves your machine (a push, a merge, a PR merge) needs you to say yes first, not an agent's judgment call.
 
 ## The pattern
 ```text
@@ -39,7 +40,7 @@ following instead of running it:
 
 This gate applies only to push, merge, and anything that publishes history.
 Local commits, local branch creation, stashing, and running tests are fine
-to do without asking — don't stop for those.
+to do without asking; don't stop for those.
 ```
 
 ## Real example output
@@ -48,7 +49,7 @@ About to run: git push origin feature/rate-limit-headers
 
 Summary: 3 commits, 4 files (src/middleware/rateLimit.ts,
 src/middleware/rateLimit.test.ts, src/config/limits.ts, CHANGELOG.md).
-No experimental code mixed in — the WIP retry-logic commit was left on a
+No experimental code mixed in: the WIP retry-logic commit was left on a
 separate stash, not included here.
 
 git status: working tree clean.

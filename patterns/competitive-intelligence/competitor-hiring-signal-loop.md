@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["competitor-changelog-strategy-read", "competitor-watch-loop", "market-entry-timing-assessment"]
 ---
 
 ## When to use this
@@ -25,7 +26,7 @@ Compare current open roles against last month's snapshot, which I'll paste when 
 
 Report:
 1. New roles: title, team/department if listed, and any specific technology, domain, or customer segment named in the description
-2. Closed/filled roles: roles that were open last time and are no longer listed (can mean filled, or deprioritized — say you can't tell which)
+2. Closed/filled roles: roles that were open last time and are no longer listed (can mean filled, or deprioritized - say you can't tell which)
 3. Roles that changed: same title but the description's scope changed
 
 For each new role, infer in one sentence what product or market bet it most likely supports (e.g. "Senior Engineer, Payments" → likely building or expanding a payments/billing feature). Mark inferences clearly as inferences, not facts. Ignore roles with no product signal (e.g. a generic "Account Executive" listing with no domain specified).
@@ -36,15 +37,15 @@ Start by asking me in one message and wait: (1) the competitor's careers page UR
 ```
 
 ## Real example output
-New roles (2): "Senior Backend Engineer, Fraud & Risk" — description mentions "real-time transaction scoring." Inference: likely building an in-house fraud detection feature rather than relying on a third-party vendor. "Product Manager, Mobile" — description mentions "our first mobile release." Inference: currently web-only; mobile is a near-term roadmap item, not shipped yet.
+New roles (2): "Senior Backend Engineer, Fraud & Risk" - description mentions "real-time transaction scoring." Inference: likely building an in-house fraud detection feature rather than relying on a third-party vendor. "Product Manager, Mobile" - description mentions "our first mobile release." Inference: currently web-only; mobile is a near-term roadmap item, not shipped yet.
 
-Closed since last check (1): "Solutions Engineer, EMEA" no longer listed — can't tell if filled or deprioritized.
+Closed since last check (1): "Solutions Engineer, EMEA" no longer listed - can't tell if filled or deprioritized.
 
 No scope changes on remaining open roles.
 
 Updated snapshot:
-- Senior Backend Engineer, Fraud & Risk (new) — likely fraud/risk feature
-- Product Manager, Mobile (new) — likely first mobile release
+- Senior Backend Engineer, Fraud & Risk (new) - likely fraud/risk feature
+- Product Manager, Mobile (new) - likely first mobile release
 - Staff Engineer, Platform (carried over, no product signal beyond general scaling)
 
 ## Why it works

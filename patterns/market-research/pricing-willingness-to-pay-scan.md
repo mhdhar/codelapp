@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["pricing-packaging-teardown", "pricing-page-objection-audit", "tam-sam-som-market-sizing-scan"]
 ---
 
 ## When to use this

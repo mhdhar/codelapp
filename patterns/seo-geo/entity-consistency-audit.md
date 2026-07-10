@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["generate-llms-txt", "jsonld-from-page-content", "ai-citation-worthiness-audit"]
 ---
 
 ## When to use this

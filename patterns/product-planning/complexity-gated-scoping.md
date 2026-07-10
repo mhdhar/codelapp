@@ -12,13 +12,13 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["complexity-tier-classifier", "complexity-drift-recheck-loop", "smallest-useful-move-scoper"]
 ---
 
 ## When to use this
 You're about to hand an agent a task and you don't yet know if it's a 10-minute tweak or a multi-file redesign. Skip this and you either get a five-line fix for something that needed a migration plan, or a full rewrite for something that needed a one-liner.
 
 ## The pattern
-Step 1, classify:
 ```text
 Before writing any code, classify the complexity of the task I give you.
 
@@ -29,12 +29,9 @@ Pick one tier and justify it in 2-3 sentences:
 
 Then list exactly what you'd touch (files, schemas, APIs) for this tier. Do not write any implementation code yet. Stop and wait for my go-ahead.
 
-Start by asking me to describe the task, then wait for my reply before classifying anything.
-```
+Once I approve, proceed with the plan you outlined, at the tier you classified. Stick to the files and scope you listed; if you discover you need to touch something outside that list, stop and tell me why before continuing.
 
-Step 2, after you review the tier and file list, unblock it:
-```text
-Approved. Proceed with the plan you outlined, at the tier you classified. Stick to the files and scope you listed, if you discover you need to touch something outside that list, stop and tell me why before continuing.
+Start by asking me to describe the task, then wait for my reply before classifying anything.
 ```
 
 ## Real example output

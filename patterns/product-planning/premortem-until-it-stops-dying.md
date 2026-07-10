@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["riskiest-assumption-kill-loop", "skeptical-reader-gauntlet", "two-plan-bakeoff"]
 ---
 
 ## When to use this

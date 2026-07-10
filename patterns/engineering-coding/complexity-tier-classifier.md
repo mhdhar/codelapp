@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["complexity-gated-scoping", "complexity-drift-recheck-loop", "smallest-useful-move-scoper"]
 ---
 
 ## When to use this
@@ -30,7 +31,7 @@ Tiers:
 
 1. Pick the tier that fits, and say which specific inputs (users, lifespan, feature count) drove the choice.
 2. Warn me explicitly if what I described sounds like it's aimed at one tier but the actual scaffolding request implies a higher one (e.g. asking for a NANO script but also asking for user accounts and a database).
-3. Recommend the minimum stack that fits the chosen tier — do not recommend infrastructure the tier doesn't need.
+3. Recommend the minimum stack that fits the chosen tier - do not recommend infrastructure the tier doesn't need.
 4. State what would bump it up a tier later, so I know the upgrade trigger in advance.
 
 Before classifying, ask me in one message and wait: (1) what I'm building, (2) expected users, (3) lifespan. If I skip (2) or (3), assume small and ongoing, and say so.
@@ -42,13 +43,13 @@ Before classifying, ask me in one message and wait: (1) what I'm building, (2) e
 > Expected users: just me and 2 teammates who read the Slack message.
 > Lifespan: ongoing, but nobody logs into it, it just runs.
 
-1. Tier: MICRO, not NANO — it's a single feature with no UI, but it needs to run on a schedule and hold a Slack webhook credential, which is more than a disposable one-off script.
+1. Tier: MICRO, not NANO - it's a single feature with no UI, but it needs to run on a schedule and hold a Slack webhook credential, which is more than a disposable one-off script.
 
-2. No mismatch warning needed — the request matches the tier (no mention of user accounts, multiple features, or a database).
+2. No mismatch warning needed - the request matches the tier (no mention of user accounts, multiple features, or a database).
 
-3. Minimum stack: a single Node script + a cron trigger (Vercel Cron or a GitHub Action on schedule, no server needed to keep running), env var for the Slack webhook URL. No database — pull the numbers fresh each run, nothing to persist.
+3. Minimum stack: a single Node script + a cron trigger (Vercel Cron or a GitHub Action on schedule, no server needed to keep running), env var for the Slack webhook URL. No database - pull the numbers fresh each run, nothing to persist.
 
-4. Upgrade trigger: if this grows to also store historical numbers for trend charts, or gets a dashboard UI beyond the Slack message, that's STANDARD territory — you'd need a real database and probably a small backend at that point.
+4. Upgrade trigger: if this grows to also store historical numbers for trend charts, or gets a dashboard UI beyond the Slack message, that's STANDARD territory - you'd need a real database and probably a small backend at that point.
 ```
 
 ## Why it works

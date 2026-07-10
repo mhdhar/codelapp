@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["pricing-packaging-teardown", "keyword-topic-gap-vs-competitors", "competitor-watch-loop"]
 ---
 
 ## When to use this

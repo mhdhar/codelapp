@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["release-notes-from-git-history", "repurpose-post-into-multi-format-pack", "ugc-amplification-loop"]
 ---
 
 ## When to use this

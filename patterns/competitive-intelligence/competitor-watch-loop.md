@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["battlecard-rot-check", "competitor-changelog-strategy-read", "competitor-feature-scan"]
 ---
 
 ## When to use this

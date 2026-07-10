@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["strip-ai-voice", "opening-hook-rewrite", "meta-descriptions-at-scale"]
 ---
 
 ## When to use this

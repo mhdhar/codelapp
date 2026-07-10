@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["pricing-willingness-to-pay-scan", "pricing-page-objection-audit", "competitor-feature-scan"]
 ---
 
 ## When to use this
@@ -48,7 +49,7 @@ Synthesis:
 - Per-seat pricing is the default lever across all three; none lead with pure usage-based pricing.
 - Competitor B's Starter tier looks like a decoy: priced close to Team but excludes API access, which most buyers need on day one.
 - Competitor A gates SSO to Enterprise, a common friction point for mid-market buyers who need it earlier than that.
-- No competitor offers a usage-based option with no seat minimum — that's an open packaging lane.
+- No competitor offers a usage-based option with no seat minimum - that's an open packaging lane.
 - Two of three require a sales call above the entry tier; only Competitor C stays self-serve up to $199/mo.
 
 ## Why it works

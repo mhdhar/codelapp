@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["core-web-vitals-fix-loop", "one-variable-at-a-time", "task-to-self-verifying-brief"]
 ---
 
 ## When to use this

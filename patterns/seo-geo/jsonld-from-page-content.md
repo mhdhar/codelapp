@@ -12,6 +12,8 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+aliases: ["structured data", "schema.org", "json-ld"]
+related: ["schema-markup-validation-fix", "faq-schema-from-support-content"]
 ---
 
 ## When to use this

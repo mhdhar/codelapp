@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["hostile-reviewer-pass", "concrete-example-injector", "premortem-until-it-stops-dying"]
 ---
 
 ## When to use this
@@ -55,13 +56,13 @@ have it.
 ```
 ROUND 1 (playing: a staff engineer who has seen three "we fixed
 on-call" posts this year)
-- "Our new alerting cut noise by 90%" — severity 3: "Measured how?
+- "Our new alerting cut noise by 90%" - severity 3: "Measured how?
   Over what period? 90% of what baseline?" Patched: "cut paged alerts
   from 41 to 4 per week, measured over 6 weeks."
-- "Engineers love the new rotation" — severity 2: "Two people said
+- "Engineers love the new rotation" - severity 2: "Two people said
   this in Slack, or you surveyed?" Cut, replaced with the survey
   number I supplied: 8 of 11 preferred it.
-- "This works for any team" — severity 3: overclaim. Narrowed to
+- "This works for any team" - severity 3: overclaim. Narrowed to
   "teams under ~20 engineers with a single product surface."
 
 ROUND 2

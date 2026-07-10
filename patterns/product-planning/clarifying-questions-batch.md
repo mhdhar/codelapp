@@ -12,13 +12,13 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["ambiguity-halt-and-ask", "pre-build-intent-capture", "decision-batch-checkpoint"]
 ---
 
 ## When to use this
 You've given an agent a request with real gaps in it (unclear scope, unclear users, unclear constraints), and you'd rather answer everything once than get interrupted five separate times, or worse, have it silently guess and build the wrong thing.
 
 ## The pattern
-Step 1, force the batch:
 ```text
 I have a request for you, but don't start work on it. When I give it to you, first list every question you'd need answered to do it confidently, grouped into:
 - Scope: what's in/out
@@ -28,17 +28,14 @@ I have a request for you, but don't start work on it. When I give it to you, fir
 
 Only include questions you actually need answered, not ones you could reasonably assume. If a section has no real gaps, write "none" under it. Stop after the list, don't proceed until I answer.
 
-Start by asking me to paste the request, then wait for it.
-```
+Once I've answered, proceed with the original request using my answers as fixed constraints. If you hit a new ambiguity mid-work that changes scope, stop and ask rather than assuming; everything else you can decide yourself.
 
-Step 2, after you answer:
-```text
-I've answered your questions above. Proceed with the original request using my answers as fixed constraints. If you hit a new ambiguity mid-work that changes scope, stop and ask rather than assuming, everything else you can decide yourself.
+Start by asking me to paste the request, then wait for it.
 ```
 
 ## Real example output
 "SCOPE: Does the expense tool need multi-currency support at launch, or USD only?
-USERS: none — target user (US freelancers) is already clear from the brief.
+USERS: none; target user (US freelancers) is already clear from the brief.
 CONSTRAINTS: Any existing tax categories to map to (IRS Schedule C categories, or custom)? Hard deadline, or scoped to 'whenever it's solid'?
 SUCCESS DEFINITION: Is success 'user manually confirms categorization is right' or 'categorization accuracy hits X% without user correction'?
 

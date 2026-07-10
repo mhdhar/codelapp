@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["reference-repo-to-skill", "meta-descriptions-at-scale"]
 ---
 
 ## When to use this
@@ -25,7 +26,7 @@ For each skill found, loop:
 1. Read its current description.
 2. Count how many distinct trigger phrases, synonyms, or adjacent-concept words it contains (things a user might actually type that should activate it).
 3. If it has fewer than 5, rewrite it to include at least 5: the core term, common synonyms, related verbs, and a couple of realistic user phrasings ("show me...", "fix the...", "set up...").
-4. Do not change what the skill does — only rewrite the description/trigger text. Keep it accurate; don't add trigger phrases for things the skill doesn't actually handle.
+4. Do not change what the skill does - only rewrite the description/trigger text. Keep it accurate; don't add trigger phrases for things the skill doesn't actually handle.
 5. After each rewrite, show the before/after so I can sanity-check it didn't overreach.
 6. Move to the next skill. Repeat until every skill in the directory has been checked.
 7. At the end, report how many were rewritten vs. already fine.

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["verify-before-claiming-fixed", "self-verifying-build-loop", "no-fix-without-a-failing-test"]
 ---
 
 ## When to use this

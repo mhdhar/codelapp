@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["error-message-forensics-loop", "bug-postmortem-from-fix", "component-states-completeness-check"]
 ---
 
 ## When to use this

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["assumption-ledger-loop", "pre-registered-demand-test-design", "premortem-until-it-stops-dying"]
 ---
 
 ## When to use this

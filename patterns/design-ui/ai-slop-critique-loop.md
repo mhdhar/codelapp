@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["strip-ai-voice", "design-review-against-reference-shots", "brand-brief-to-design-system"]
 ---
 
 ## When to use this

@@ -12,6 +12,8 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+aliases: ["llms.txt", "ai crawler index"]
+related: ["ai-crawler-robots-txt-strategy", "ai-citation-worthiness-audit", "entity-consistency-audit"]
 ---
 
 ## When to use this

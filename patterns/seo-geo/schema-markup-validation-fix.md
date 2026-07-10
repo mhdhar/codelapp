@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["jsonld-from-page-content", "faq-schema-from-support-content", "error-message-forensics-loop"]
 ---
 
 ## When to use this
-Google's Rich Results Test, the Schema.org validator, or Search Console's Enhancements report is flagging errors or warnings on schema markup that's already live. Use this to fix it — for generating new schema from scratch, see jsonld-from-page-content instead.
+Google's Rich Results Test, the Schema.org validator, or Search Console's Enhancements report is flagging errors or warnings on schema markup that's already live. Use this to fix it. For generating new schema from scratch, see jsonld-from-page-content instead.
 
 ## The pattern
 ```text
@@ -47,13 +48,13 @@ before fixing anything.
 ## Real example output
 ```
 Validator errors on /products/standing-desk-pro:
-1. "Missing field 'reviewCount' (in 'aggregateRating')" — AggregateRating
+1. "Missing field 'reviewCount' (in 'aggregateRating')" - AggregateRating
    is present but has 'ratingValue' with no 'reviewCount', which Google
    requires together.
 2. "Invalid value in field 'priceValidUntil' (expected date, got empty
-   string)" — priceValidUntil is present as "" instead of a real date or
+   string)" - priceValidUntil is present as "" instead of a real date or
    omitted entirely.
-3. "The 'image' field should be a URL, not an array of objects" — image
+3. "The 'image' field should be a URL, not an array of objects" - image
    is currently [{ "url": "..." }] instead of a plain string or array of
    URL strings.
 ```
@@ -84,10 +85,10 @@ Validator errors on /products/standing-desk-pro:
 ```
 Fixed: error 3 (image field now a plain array of URL strings, matching
 what was already on the page).
-Still needs your input: error 1 (reviewCount — pull the real count from
-your reviews backend), error 2 (priceValidUntil — set to your actual
+Still needs your input: error 1 (reviewCount: pull the real count from
+your reviews backend), error 2 (priceValidUntil: set to your actual
 promo end date or remove the field if the price has no expiration).
 ```
 
 ## Why it works
-Validator errors are usually a shape problem (wrong type, missing sibling property) or a missing-data problem, and they need different responses — fixing the shape is safe to automate, inventing the missing number is not. Flagging what still needs a real value keeps the output from passing validation with fabricated data that Google can later penalize as misleading.
+Validator errors are usually a shape problem (wrong type, missing sibling property) or a missing-data problem, and they need different responses: fixing the shape is safe to automate, inventing the missing number is not. Flagging what still needs a real value keeps the output from passing validation with fabricated data that Google can later penalize as misleading.

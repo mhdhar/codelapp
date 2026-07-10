@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["complexity-tier-classifier", "estimate-drift-recalibration-loop", "complexity-gated-scoping"]
 ---
 
 ## When to use this
-You gated a task at a fixed complexity tier before starting, but you're several requirements deep into the build and nobody has checked whether it's quietly grown past that tier. This is the loop that runs during execution, not the one-time gate before it — pair it with an upfront complexity gate, this one keeps checking after that gate is behind you.
+You gated a task at a fixed complexity tier before starting, but you're several requirements deep into the build and nobody has checked whether it's quietly grown past that tier. This is the loop that runs during execution, not the one-time gate before it. Pair it with an upfront complexity gate; this one keeps checking after that gate is behind you.
 
 ## The pattern
 ```text
@@ -34,9 +35,9 @@ Do this check for every new requirement, no exceptions, even ones that sound sma
 ## Real example output
 "NEW REQUIREMENT: 'also let admins bulk-edit refund status from a CSV upload.'
 
-RE-CLASSIFICATION: Original tier was MODERATE (refund_status column, 2 files). With CSV bulk upload added: now COMPLEX — introduces file upload handling, a new background job for bulk processing, and a new admin-only permission check that didn't exist before.
+RE-CLASSIFICATION: Original tier was MODERATE (refund_status column, 2 files). With CSV bulk upload added: now COMPLEX: introduces file upload handling, a new background job for bulk processing, and a new admin-only permission check that didn't exist before.
 
-TIER INCREASED. Stopping before implementing. Updated scope would add: an admin bulk-refunds endpoint, a queue worker, and a new admin role check in the auth middleware. Waiting for approval before continuing — this is materially bigger than what was originally scoped."
+TIER INCREASED. Stopping before implementing. Updated scope would add: an admin bulk-refunds endpoint, a queue worker, and a new admin role check in the auth middleware. Waiting for approval before continuing; this is materially bigger than what was originally scoped."
 
 ## Why it works
 Scope creep rarely arrives as one big change, it arrives as a string of small "while we're at it" additions that each look trivial alone. Re-running the same fixed tier classification on the cumulative scope, not just the newest piece, is what catches the drift that a one-time gate at the start can't.

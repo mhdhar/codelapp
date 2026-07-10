@@ -12,13 +12,13 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["self-verifying-build-loop", "spec-to-engineering-tickets", "rubric-grading-loop"]
 ---
 
 ## When to use this
 You typed a task in one line ("fix the flaky login test", "add rate limiting") and you're tempted to just hit enter. Do this first instead, it takes two minutes and means the agent checks its own work instead of pinging you every few steps.
 
 ## The pattern
-Step 1, expand the task:
 ```text
 Expand the one-line task I give you into a brief before doing any work.
 
@@ -29,12 +29,9 @@ Write:
 
 Then execute the task, and loop on your own verify step until every criterion passes. Report the final checklist with pass/fail for each item.
 
-First ask me for the one-line task, then wait. Don't start until you have it.
-```
+If a criterion fails, don't stop to ask for help: fix it, re-run the verify step, and repeat until all criteria pass or you hit the same failure twice in a row. If you hit the same failure twice, stop and report what you tried.
 
-Step 2, if a criterion fails, don't ask for help immediately, just say:
-```text
-Keep looping: fix the failing criterion, re-run the verify step, repeat until all pass or you hit the same failure twice in a row. If you hit it twice, stop and report what you tried.
+First ask me for the one-line task, then wait. Don't start until you have it.
 ```
 
 ## Real example output

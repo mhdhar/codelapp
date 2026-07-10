@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["ban-should-work-now-claims", "adversarial-fix-verification-loop", "no-fix-without-a-failing-test"]
 ---
 
 ## When to use this

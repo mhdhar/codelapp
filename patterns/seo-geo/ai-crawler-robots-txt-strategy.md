@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["generate-llms-txt", "sitemap-priority-for-large-sites", "ai-citation-worthiness-audit"]
 ---
 
 ## When to use this
@@ -55,18 +56,18 @@ defaults above, then wait. If I say there's no robots.txt yet, start fresh.
 ```
 Decisions for docs.brightpath.io (goal: get cited in ChatGPT/Perplexity answers, keep training scrapers out):
 
-- GPTBot: Disallow — trains OpenAI's base models, doesn't power live ChatGPT citations
-- OAI-SearchBot: Allow — powers ChatGPT's live search citations, directly serves goal 1
-- ChatGPT-User: Allow — user-triggered browsing, behaves like a real visitor
-- PerplexityBot: Allow — powers Perplexity's answer citations
-- ClaudeBot: Disallow — training crawler, same reasoning as GPTBot
-- Claude-SearchBot: Allow — powers Claude's live web search citations
-- Google-Extended: Allow — feeds AI Overviews, visibility there outweighs training opt-out
-- CCBot: Disallow — feeds unknown downstream LLM training sets, no citation path back
-- Bytespider: Disallow — aggressive scraping, no citation benefit for this audience
-- Amazonbot: Disallow — not relevant, no shopping/Alexa surface applies here
+- GPTBot: Disallow - trains OpenAI's base models, doesn't power live ChatGPT citations
+- OAI-SearchBot: Allow - powers ChatGPT's live search citations, directly serves goal 1
+- ChatGPT-User: Allow - user-triggered browsing, behaves like a real visitor
+- PerplexityBot: Allow - powers Perplexity's answer citations
+- ClaudeBot: Disallow - training crawler, same reasoning as GPTBot
+- Claude-SearchBot: Allow - powers Claude's live web search citations
+- Google-Extended: Allow - feeds AI Overviews, visibility there outweighs training opt-out
+- CCBot: Disallow - feeds unknown downstream LLM training sets, no citation path back
+- Bytespider: Disallow - aggressive scraping, no citation benefit for this audience
+- Amazonbot: Disallow - not relevant, no shopping/Alexa surface applies here
 ```
-```text
+```
 User-agent: OAI-SearchBot
 Allow: /
 
@@ -107,4 +108,4 @@ Sitemap: https://docs.brightpath.io/sitemap.xml
 ```
 
 ## Why it works
-"AI crawler" isn't one thing — training bots, live-answer bots, and user-triggered browsing bots have different user-agent strings and different consequences for you. Naming each one against a stated goal replaces a single blanket rule with a decision you can actually defend when someone asks why a page isn't showing up in an AI answer.
+"AI crawler" isn't one thing: training bots, live-answer bots, and user-triggered browsing bots have different user-agent strings and different consequences for you. Naming each one against a stated goal replaces a single blanket rule with a decision you can actually defend when someone asks why a page isn't showing up in an AI answer.

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["complexity-tier-classifier", "spec-to-engineering-tickets", "leaf-to-root-build-order"]
 ---
 
 ## When to use this
@@ -23,7 +24,7 @@ The task I'm about to give you is probably too big to do in one clean pass. Scop
 
 Loop:
 1. Break the task as given into an ordered list of slices, each one independently shippable (the codebase is in a working state after each slice, not mid-broken).
-2. Identify the smallest slice that delivers real, visible value on its own — not necessarily the first thing listed, the smallest one that's actually useful by itself.
+2. Identify the smallest slice that delivers real, visible value on its own - not necessarily the first thing listed, the smallest one that's actually useful by itself.
 3. State which slice you're doing now and list every other slice as explicitly deferred, with a one-line reason it's not in scope right now.
 4. Execute only the chosen slice.
 5. When done, ask whether to continue to the next slice or stop here.
@@ -43,7 +44,7 @@ First ask me for the task, then wait. Don't start slicing until you have it.
 
 2. Smallest useful slice: (a), consolidating the auth checks. It's the one causing actual bugs right now (the hook and the middleware disagree on a stale cookie, which is why users sometimes see a flash of "logged out" on page load).
 
-3. Doing (a) now. Deferred: (b) dead code removal — not urgent, no bugs caused by leaving it. (c) rate limiting — real gap but depends on you deciding whether to add a rate-limit library or roll a minimal one. (d) error message consistency — cosmetic, lowest value of the four.
+3. Doing (a) now. Deferred: (b) dead code removal - not urgent, no bugs caused by leaving it. (c) rate limiting - real gap but depends on you deciding whether to add a rate-limit library or roll a minimal one. (d) error message consistency - cosmetic, lowest value of the four.
 
 4. Executed: unified into a single useAuth() hook backed by the JWT payload, removed the raw cookie read in Header.tsx and the redundant middleware check in 2 route files, all three now call useAuth().
 

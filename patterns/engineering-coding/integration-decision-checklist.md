@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["service-provisioning-decision-pass", "stack-decision-gate", "dependency-upgrade-breakage-isolation"]
 ---
 
 ## When to use this
@@ -21,7 +22,7 @@ You're about to install a new library or wire up a new third-party service, and 
 ```text
 I'm considering a new dependency. Run it through a decision checklist before I install anything.
 
-1. Check what's already in the project (package.json / existing services) — is there something already installed that covers 80%+ of this need without adding a new dependency?
+1. Check what's already in the project (package.json / existing services) - is there something already installed that covers 80%+ of this need without adding a new dependency?
 2. If it's a well-known service category (auth, payments, email, file storage, error monitoring, etc.), name the 1-2 most common choices and note if any has first-class agent/CLI tooling that would make it faster to integrate and maintain than a lesser-known alternative.
 3. State the real ongoing cost of adding this: a new API key to manage, a new thing that can break/rate-limit/go down, a new item in the dependency update cycle. Be concrete, not generic.
 4. Give a clear go/no-go recommendation, and if go, the exact install command.
@@ -35,15 +36,15 @@ Start by asking me, in one message, which library or service I'm considering and
 > Library or service: lodash
 > Problem it solves: need a deep object comparison for a diffing feature.
 
-1. Checked package.json — no existing deep-equal utility. Node's built-in util.isDeepStrictEqual exists but isn't imported anywhere yet.
+1. Checked package.json - no existing deep-equal utility. Node's built-in util.isDeepStrictEqual exists but isn't imported anywhere yet.
 
-2. Not really a "well-known service category" case — this is a narrow utility need, not auth/payments/etc.
+2. Not really a "well-known service category" case - this is a narrow utility need, not auth/payments/etc.
 
 3. Real cost of lodash: 70KB+ if not tree-shaken correctly (this project doesn't have tree-shaking configured in its current build), one more dependency to keep patched, and you'd likely only use 1 of its ~300 functions.
 
-4. No-go on lodash for this. Use Node's built-in util.isDeepStrictEqual instead — zero new dependency, zero new attack surface, does exactly what's needed.
+4. No-go on lodash for this. Use Node's built-in util.isDeepStrictEqual instead - zero new dependency, zero new attack surface, does exactly what's needed.
 
-5. Alternative: `import { isDeepStrictEqual } from 'node:util'` — already available, no install step.
+5. Alternative: `import { isDeepStrictEqual } from 'node:util'` - already available, no install step.
 ```
 
 ## Why it works

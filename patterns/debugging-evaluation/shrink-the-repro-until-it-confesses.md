@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["git-bisect-regression-hunt", "no-fix-without-a-failing-test", "probe-bisection-through-the-pipeline"]
 ---
 
 ## When to use this

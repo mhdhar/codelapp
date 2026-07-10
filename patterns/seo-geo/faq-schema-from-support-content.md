@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["jsonld-from-page-content", "schema-markup-validation-fix", "testimonial-extraction-from-raw-feedback"]
 ---
 
 ## When to use this
-You have real customer questions living in a help center export, Zendesk tickets, or a support Slack channel, but no FAQ page yet. Use this to build the page and its schema from raw support content in one pass — for re-schema-ing a page that already has copy, use jsonld-from-page-content instead.
+You have real customer questions living in a help center export, Zendesk tickets, or a support Slack channel, but no FAQ page yet. Use this to build the page and its schema from raw support content in one pass. For re-schema-ing a page that already has copy, use jsonld-from-page-content instead.
 
 ## The pattern
 ```text
@@ -25,7 +26,7 @@ Take the product name from the content itself.
 
 Turn it into a publishable FAQ:
 1. Extract the distinct questions customers actually ask, in their own
-   phrasing where possible — real search intent beats polished corporate
+   phrasing where possible; real search intent beats polished corporate
    phrasing.
 2. Merge near-duplicate questions into one. Don't list "How do I cancel?"
    and "How do I cancel my subscription?" separately.

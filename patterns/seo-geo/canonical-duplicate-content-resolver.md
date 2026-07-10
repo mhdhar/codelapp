@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["redirect-map-site-migration", "content-decay-audit", "sitemap-priority-for-large-sites"]
 ---
 
 ## When to use this
@@ -27,7 +28,7 @@ Run this loop on that list:
 1. Cluster the URLs into groups that target the same search intent. State
    the shared intent for each cluster in one line.
 2. For each cluster with more than one URL, check for genuinely unique
-   content in every URL before deciding it's a true duplicate — different
+   content in every URL before deciding it's a true duplicate: different
    data, different examples, different sub-topic. List what's unique, if
    anything, per URL.
 3. If a cluster is a true duplicate (no meaningfully unique content across
@@ -40,7 +41,7 @@ Run this loop on that list:
 5. For every true-duplicate cluster, output the exact <link rel="canonical">
    tag to add to each non-canonical URL, pointing at the chosen canonical.
 6. Flag any canonical decision where a non-canonical URL has MORE organic
-   traffic than the chosen canonical — that's a signal to re-check the pick
+   traffic than the chosen canonical; that's a signal to re-check the pick
    before applying it.
 
 Do not canonicalize a cluster until step 2 is complete for every URL in it.
@@ -52,21 +53,21 @@ and completeness instead.
 
 ## Real example output
 ```
-Cluster 1 — intent: "compare pricing plans"
+Cluster 1 - intent: "compare pricing plans"
 URLs: /pricing, /plans, /pricing-2024
-Step 2: /pricing (890 words, current tiers, live) — /plans (901 words,
-identical tier copy, same table, no unique content) — /pricing-2024
+Step 2: /pricing (890 words, current tiers, live); /plans (901 words,
+identical tier copy, same table, no unique content); /pricing-2024
 (612 words, stale Q1 2024 prices, no unique content)
 Step 3: True duplicate. Canonical = /pricing (highest traffic: 4,100
 sessions/mo vs. 310 for /plans and 40 for /pricing-2024).
 Step 5: Add <link rel="canonical" href="https://acme.com/pricing"> to
 /plans and /pricing-2024.
-Step 6: No flag — /pricing already has the most traffic.
+Step 6: No flag - /pricing already has the most traffic.
 
-Cluster 2 — intent: "invoice automation overview"
+Cluster 2 - intent: "invoice automation overview"
 URLs: /features/invoice-automation, /solutions/invoicing
 Step 2: /features/invoice-automation (1,200 words, product screenshots,
-setup steps) — /solutions/invoicing (980 words, industry use-case framing
+setup steps); /solutions/invoicing (980 words, industry use-case framing
 for accounting firms, different examples, distinct CTA)
 Step 4: NEEDS DIFFERENTIATION, not a true duplicate. /solutions/invoicing
 should be rewritten to lead with the accounting-firm use case explicitly

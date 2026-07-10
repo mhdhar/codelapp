@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["market-entry-timing-assessment", "regulatory-landscape-scan"]
 ---
 
 ## When to use this

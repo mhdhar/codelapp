@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["idea-to-prd", "clarifying-questions-batch", "distribution-surface-scoping"]
 ---
 
 ## When to use this
@@ -35,7 +36,7 @@ Start by asking me to describe the project idea, then wait for my reply.
 "1. One-line description: A tool that scans receipt photos and auto-categorizes expenses into a spreadsheet-ready format.
 2. Target user: Freelancers doing their own quarterly taxes, not accountants or small-business bookkeepers.
 3. API surface: No, not in the next 2 releases. Revisit if a bookkeeping SaaS asks to integrate.
-4. SaaS shape: Conventional SaaS (auth + Stripe + dashboard). Use an Open SaaS-style preset instead of scaffolding from scratch — saves roughly 2-3 weeks of boilerplate work on auth and billing."
+4. SaaS shape: Conventional SaaS (auth + Stripe + dashboard). Use an Open SaaS-style preset instead of scaffolding from scratch, saving roughly 2-3 weeks of boilerplate work on auth and billing."
 
 ## Why it works
 Answering these four up front kills two failure modes at once: architecture chosen by default instead of by comparison, and an API surface decided by accident three months in after auth and versioning assumptions are already baked in. Naming the SaaS-shape question specifically forces preset-vs-custom to be a real choice instead of a habit.

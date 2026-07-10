@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["opening-hook-rewrite", "strip-ai-voice", "skeptical-reader-gauntlet"]
 ---
 
 ## When to use this

@@ -7,11 +7,12 @@ tools: ["claude-code", "codex-cli"]
 difficulty: "intermediate"
 est_time: "10 min"
 models: ["any"]
-summary: "Before you deploy, confirm you can actually roll back — not just that the deploy itself is clean."
+summary: "Before you deploy, confirm you can actually roll back, not just that the deploy itself is clean."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["pre-deploy-safety-check", "destructive-cleanup-blast-radius-check"]
 ---
 
 ## When to use this
@@ -35,7 +36,7 @@ env var STRIPE_WEBHOOK_SECRET". Then:
    backward-compatible (the old code can still run against the new schema)
    or a breaking change. If breaking, name the specific rollback step
    (a down-migration, a manual SQL fix, or "this cannot be cleanly rolled
-   back, only forward-fixed") — don't assume "revert the commit" is enough.
+   back, only forward-fixed"). Don't assume "revert the commit" is enough.
 3. If this change adds or renames a required config value (env var, feature
    flag, secret): confirm the OLD code path still works if that value is
    absent, or state plainly that rollback requires restoring the old config
@@ -59,7 +60,7 @@ CHANGE: migration adding a NOT NULL `tenant_id` column to `invoices`, backfilled
 
 4. Rollback command: `vercel rollback dpl_8f2a1c`, but it must be preceded by the down-migration or the old code will 500 on every invoice write. In practice: down-migration takes ~30s on this table size, then rollback takes ~1 min.
 
-5. VERDICT: ROLLBACK IS PARTIAL — a plain "vercel rollback" alone breaks invoice creation. Full rollback requires the down-migration first. Documented the two-step order above; proceeding with deploy since the sequence is now known and fast.
+5. VERDICT: ROLLBACK IS PARTIAL: a plain "vercel rollback" alone breaks invoice creation. Full rollback requires the down-migration first. Documented the two-step order above; proceeding with deploy since the sequence is now known and fast.
 ```
 
 ## Why it works

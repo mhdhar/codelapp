@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["content-decay-audit", "positioning-gap-analysis", "internal-linking-gap-analysis"]
 ---
 
 ## When to use this
-You want a content roadmap driven by real gaps, not guesses. Use after pulling your own published topics and a competitor's (from their sitemap, blog index, or a rank-tracking export) — this prompt does the comparison and prioritization, not the data pull.
+You want a content roadmap driven by real gaps, not guesses. Use after pulling your own published topics and a competitor's (from their sitemap, blog index, or a rank-tracking export); this prompt does the comparison and prioritization, not the data pull.
 
 ## The pattern
 ```text
@@ -26,7 +27,7 @@ Find the gap:
 1. List topics the competitor(s) cover that I have no page for at all,
    grouped by theme, not a flat list of 50 items.
 2. For each gap, note how many competitors cover it (if more than one was
-   given) — topics covered by all competitors and not by me are higher
+   given); topics covered by all competitors and not by me are higher
    priority than one competitor's one-off post.
 3. Exclude topics that are off-brand or out of scope for my site given
    what I publish today. Use judgment, don't force every competitor topic
@@ -51,14 +52,14 @@ Competitors: InvoiceHQ, PayTrack (both invoicing SaaS)
 
 Gaps found (grouped):
 Compliance & tax
-- "1099 filing automation" — covered by both competitors, InvoiceHQ has a
+- "1099 filing automation" - covered by both competitors, InvoiceHQ has a
   dedicated pillar page with 3 linked sub-guides
-- "sales tax nexus for invoicing" — covered by PayTrack only, one blog post
+- "sales tax nexus for invoicing" - covered by PayTrack only, one blog post
 
 Integrations
-- "QuickBooks sync guide" — covered by both, InvoiceHQ ranks #3 for
+- "QuickBooks sync guide" - covered by both, InvoiceHQ ranks #3 for
   "invoicing QuickBooks integration"
-- "Stripe vs. manual invoicing" — covered by PayTrack only
+- "Stripe vs. manual invoicing" - covered by PayTrack only
 
 Prioritized table:
 Topic                          | Covered by        | Opportunity | Page type
@@ -67,9 +68,9 @@ QuickBooks sync guide          | InvoiceHQ, PayTrack| High        | How-to
 Sales tax nexus for invoicing  | PayTrack           | Medium      | Guide
 Stripe vs. manual invoicing    | PayTrack           | Medium      | Comparison
 
-Excluded as out of scope: "payroll tax withholding" — InvoiceHQ covers it
+Excluded as out of scope: "payroll tax withholding" - InvoiceHQ covers it
 but we don't offer payroll features, would be off-brand to rank for.
 ```
 
 ## Why it works
-A topic covered by every competitor and missing from your site is a much stronger signal than a single competitor's experimental post — treating them the same wastes writing effort on low-probability bets. Filtering for brand relevance before prioritizing keeps the roadmap from chasing traffic you can't actually convert.
+A topic covered by every competitor and missing from your site is a much stronger signal than a single competitor's experimental post; treating them the same wastes writing effort on low-probability bets. Filtering for brand relevance before prioritizing keeps the roadmap from chasing traffic you can't actually convert.

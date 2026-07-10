@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["end-of-session-git-checklist", "port-and-process-squatter-sweep", "destructive-cleanup-blast-radius-check"]
 ---
 
 ## When to use this
@@ -31,13 +32,13 @@ different root, I'll name that directory in my next message):
      (`git rev-list --left-right --count <branch>...origin/<branch>`).
    - Whether it has any stashes (`git stash list` run inside that worktree).
 2. Classify each worktree as one of:
-   - SAFE TO TOUCH — clean or only local commits, nothing shared depends on it.
-   - CAUTION — uncommitted or stashed work exists; local edits are fine,
+   - SAFE TO TOUCH: clean or only local commits, nothing shared depends on it.
+   - CAUTION: uncommitted or stashed work exists; local edits are fine,
      do not push/merge/delete without asking.
-   - DO NOT TOUCH — mid-operation (unresolved merge/rebase, detached HEAD,
+   - DO NOT TOUCH: mid-operation (unresolved merge/rebase, detached HEAD,
      or a rebase/cherry-pick in progress).
 3. Output a table: worktree path | branch | status | classification | reason.
-4. If any worktree is DO NOT TOUCH, name it first and stop there — don't
+4. If any worktree is DO NOT TOUCH, name it first and stop there; don't
    move on to suggesting actions on the others until I've seen that one.
 5. Do not run any push, merge, branch delete, or `git worktree remove` as
    part of this audit. This is read-only reconnaissance.

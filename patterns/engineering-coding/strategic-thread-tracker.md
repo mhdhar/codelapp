@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["backlog-cull-against-north-star", "decision-log-append", "project-state-handoff-file"]
 ---
 
 ## When to use this
@@ -42,7 +43,7 @@ Placement: (b) useful but non-critical detour. Auth is still incomplete and bloc
    > Finish auth first, dark mode can wait.
 
 4. Waiting: dark mode toggle, Stripe webhook retry handling, settings page polish.
-   Avoid: don't touch the settings page layout right now — the auth work will add a "verify email" banner there, and a layout change now would just get overwritten.
+   Avoid: don't touch the settings page layout right now - the auth work will add a "verify email" banner there, and a layout change now would just get overwritten.
 
 Proceeding with auth instead of the original request, per your answer.
 ```

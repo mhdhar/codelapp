@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["project-state-handoff-file", "repomix-context-handoff", "end-of-session-git-checklist"]
 ---
 
 ## When to use this

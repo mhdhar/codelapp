@@ -12,13 +12,13 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["idea-to-prd", "strategic-thread-tracker", "dependency-ordered-build-sequencing"]
 ---
 
 ## When to use this
 The backlog has grown past what the original spec scoped, a few sprints in, and nobody has checked whether the newer items still serve the goals that justified the project. Run this before planning the next sprint, not after it's already overcommitted.
 
 ## The pattern
-Step 1, classify:
 ```text
 Cull this project's backlog against its original goals.
 
@@ -31,20 +31,17 @@ Then, for each backlog item, classify:
 
 Recommend: keep, cut, or defer for each ORPHAN and CONFLICT item. Don't touch SERVES items.
 
-Find the backlog the same way: check the repo for a tracker file (TODO.md, BACKLOG.md, an issues export). If there isn't one, ask me to paste the current backlog and wait for it before classifying anything.
-```
+Then protect sunk work: of the items marked cut or defer, list separately any that are already in progress or promised to someone. Cutting those has a cost beyond backlog hygiene and needs my call, not an automatic cut.
 
-Step 2, protect sunk work:
-```text
-Of the items marked cut or defer, are any of them already in progress or promised to someone? List those separately, since cutting them has a cost beyond backlog hygiene, and needs a human call, not an automatic cut.
+Find the backlog the same way: check the repo for a tracker file (TODO.md, BACKLOG.md, an issues export). If there isn't one, ask me to paste the current backlog and wait for it before classifying anything.
 ```
 
 ## Real example output
 "SERVES (goal: reduce checkout abandonment by 15%): saved-card pre-selection, inline card switcher, guest-checkout autofill.
-ORPHAN: 'add dark mode to checkout' — reason given was 'a user asked for it once.' No goal maps to it. Recommend: defer, revisit if it shows up in more than one support ticket.
-CONFLICT: 'add 4 new payment provider options' — goals explicitly list a non-goal of 'not building new payment providers.' Recommend: cut, it directly violates a stated non-goal.
+ORPHAN: 'add dark mode to checkout': reason given was 'a user asked for it once.' No goal maps to it. Recommend: defer, revisit if it shows up in more than one support ticket.
+CONFLICT: 'add 4 new payment provider options': goals explicitly list a non-goal of 'not building new payment providers.' Recommend: cut, it directly violates a stated non-goal.
 
-IN PROGRESS / PROMISED: dark mode is already half-built by a contractor and was verbally promised for this release — flagging for your call, not auto-deferring."
+IN PROGRESS / PROMISED: dark mode is already half-built by a contractor and was verbally promised for this release; flagging for your call, not auto-deferring."
 
 ## Why it works
 Naming SERVES/ORPHAN/CONFLICT forces every backlog item to justify itself against a goal that was written down before feature requests started arriving, instead of against whoever asked most recently or loudest. Separating in-progress items from the cut list keeps the exercise from silently killing sunk work without a human decision.

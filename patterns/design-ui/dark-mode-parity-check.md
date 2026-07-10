@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["design-token-drift-hunt", "responsive-breakpoint-stress-test", "highest-impact-a11y-fix-loop"]
 ---
 
 ## When to use this
@@ -21,7 +22,7 @@ The app supports light and dark themes, light mode was clearly the one designed 
 ```text
 Walk every page/route in this app in both light and dark theme and check for theme parity.
 Find the routes from the router/pages directory so none get skipped.
-Do not just glance at the color scheme — actively check these failure modes on each page,
+Do not just glance at the color scheme - actively check these failure modes on each page,
 in each theme:
 
 1. Contrast: any text that's hard to read against its background in dark mode specifically
@@ -47,14 +48,14 @@ dark mode, fix applied. Pages with no failures still get listed as "checked, no 
 ```
 Checked all 5 routes in both themes:
 
-/ (homepage) — checked, no issues.
-/patterns — checked, no issues.
-/patterns/design-ui — DARK MODE FAIL: category badge border invisible.
+/ (homepage) - checked, no issues.
+/patterns - checked, no issues.
+/patterns/design-ui - DARK MODE FAIL: category badge border invisible.
   Cause: CategoryBadge.tsx used border-gray-200 (a light-mode-only Tailwind class) instead
   of the theme-aware border-border token already defined in the project.
   Fix: replaced with border-border, now visible as a subtle line in both themes.
-/submit — checked, no issues (already uses theme tokens throughout).
-/about — DARK MODE FAIL: team photo section has a white background rectangle behind a
+/submit - checked, no issues (already uses theme tokens throughout).
+/about - DARK MODE FAIL: team photo section has a white background rectangle behind a
   logo with transparent PNG, rendering as a glaring white box on the dark page.
   Cause: logo container used bg-white hardcoded instead of no background / bg-surface.
   Fix: removed the hardcoded white background, logo now sits directly on the themed
@@ -65,4 +66,4 @@ hardcoded light-mode-only values instead of theme tokens.
 ```
 
 ## Why it works
-Light mode is almost always built and eyeballed first, so any hardcoded color that happens to look fine against a white background ships invisibly broken and nobody notices until dark mode is checked page by page. Naming the specific failure modes — dead borders, inverted cards, illegible focus rings — gives the model something concrete to hunt for instead of a vague "check dark mode too" that it skims past.
+Light mode is almost always built and eyeballed first, so any hardcoded color that happens to look fine against a white background ships invisibly broken and nobody notices until dark mode is checked page by page. Naming the specific failure modes - dead borders, inverted cards, illegible focus rings - gives the model something concrete to hunt for instead of a vague "check dark mode too" that it skims past.

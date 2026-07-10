@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["internal-linking-gap-analysis", "cta-link-utm-audit-loop", "redirect-map-site-migration"]
 ---
 
 ## When to use this
@@ -66,7 +67,7 @@ Needs your call (2):
 - content/blog/2024-recap.md:15 -> /roadmap (page deleted; candidates:
   /changelog, or remove the link)
 
-npm run test:links — 0 failures.
+npm run test:links - 0 failures.
 ```
 
 ## Why it works

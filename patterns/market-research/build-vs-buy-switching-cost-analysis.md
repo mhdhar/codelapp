@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["incumbent-switching-cost-teardown", "integration-decision-checklist", "substitute-products-scan"]
 ---
 
 ## When to use this

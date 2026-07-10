@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["pre-push-merge-approval-gate", "design-review-against-reference-shots", "decision-batch-checkpoint"]
 ---
 
 ## When to use this

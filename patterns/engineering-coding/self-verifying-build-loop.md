@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["task-to-self-verifying-brief", "ban-should-work-now-claims", "core-engineering-loop"]
 ---
 
 ## When to use this

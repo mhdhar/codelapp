@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["positioning-gap-analysis", "market-entry-timing-assessment", "competitor-messaging-audit"]
 ---
 
 ## When to use this
@@ -33,11 +34,11 @@ Before you do anything, ask me for these in one message and wait: (1) my product
 ```
 
 ## Real example output
-Recommendation: incumbent-framing — position directly against the incumbent as "the faster, self-serve alternative," not as a new category.
+Recommendation: incumbent-framing - position directly against the incumbent as "the faster, self-serve alternative," not as a new category.
 
-Reasoning: (1) The incumbent's category label is a well-searched, understood term — buyers already know what they're shopping for. (2) The product's actual differentiation (self-serve setup, no implementation team required) fits inside that category; it's a "better/faster" claim, not a different mental model. (3) Category-creation here would mean asking buyers to learn a new term for something they already have a name for, with no evidence the market feels the current label is wrong. (4) The product description implies an early-stage team without a dedicated content/education budget — category-creation without that budget usually stalls at "nobody searches for the new term."
+Reasoning: (1) The incumbent's category label is a well-searched, understood term - buyers already know what they're shopping for. (2) The product's actual differentiation (self-serve setup, no implementation team required) fits inside that category; it's a "better/faster" claim, not a different mental model. (3) Category-creation here would mean asking buyers to learn a new term for something they already have a name for, with no evidence the market feels the current label is wrong. (4) The product description implies an early-stage team without a dedicated content/education budget - category-creation without that budget usually stalls at "nobody searches for the new term."
 
-Risk of the path not taken: if the incumbent adds self-serve onboarding, the "faster alternative" claim collapses fast — worth having a second differentiator in reserve before leaning fully into incumbent-framing.
+Risk of the path not taken: if the incumbent adds self-serve onboarding, the "faster alternative" claim collapses fast - worth having a second differentiator in reserve before leaning fully into incumbent-framing.
 
 ## Why it works
-Forcing a single recommendation instead of a pros/cons list is what makes this usable — positioning briefs that hedge both ways don't survive contact with a copywriter. Naming the risk of the rejected path keeps the recommendation honest instead of one-sided cheerleading for whichever option got picked.
+Forcing a single recommendation instead of a pros/cons list is what makes this usable - positioning briefs that hedge both ways don't survive contact with a copywriter. Naming the risk of the rejected path keeps the recommendation honest instead of one-sided cheerleading for whichever option got picked.

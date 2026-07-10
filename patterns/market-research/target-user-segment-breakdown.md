@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["cold-outreach-sequence-from-icp", "tam-sam-som-market-sizing-scan", "voice-of-customer-review-synthesis"]
 ---
 
 ## When to use this

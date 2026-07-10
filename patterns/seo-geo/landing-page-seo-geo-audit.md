@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["ai-citation-worthiness-audit", "core-web-vitals-fix-loop", "headline-gauntlet-loop"]
 ---
 
 ## When to use this

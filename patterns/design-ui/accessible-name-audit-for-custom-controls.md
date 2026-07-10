@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["highest-impact-a11y-fix-loop", "touch-target-thumb-audit", "component-states-completeness-check"]
 ---
 
 ## When to use this
@@ -21,17 +22,17 @@ You built a custom Select, Combobox, Toggle, or Tabs trigger (Base UI, Radix, He
 ```text
 Audit every custom interactive control in this codebase (or the directory I name in my
 next message) for a
-real accessible name — not just visible text near it, but a name a screen reader announces
+real accessible name - not just visible text near it, but a name a screen reader announces
 when the control receives focus.
 
 For each custom control (Select, Combobox, Listbox, Toggle, Switch, Tabs trigger, custom
 Button that wraps a div/span, etc.), check in this order:
 
 1. Does the trigger element itself have visible text content inside it? If yes and that text
-   describes its purpose, it likely already has a name — mark OK.
+   describes its purpose, it likely already has a name - mark OK.
 2. If the visible label lives in a separate <label> or text element (not inside the control),
    check whether it is linked via `aria-labelledby` pointing at that label's `id`, or the
-   control has an explicit `aria-label`. If neither exists, mark FAIL — this is a WCAG 4.1.2
+   control has an explicit `aria-label`. If neither exists, mark FAIL - this is a WCAG 4.1.2
    "button-name" violation: the control is operable but nameless to assistive tech.
 3. If the control shows a placeholder or current value only (e.g. "Select a country"), confirm
    that placeholder text is exposed as the accessible name too, not just rendered as innerText
@@ -59,7 +60,7 @@ AUDIT: /submit form custom controls
 | SubmitButton            | components/submit/SubmitButton.tsx    | PASS | Visible text "Submit pattern" inside the button |
 
 Both FAILs share one root cause: Base UI's <Select.Trigger> renders as a button with no text
-content of its own — the value is projected into a <Select.Value> span, but before a value is
+content of its own - the value is projected into a <Select.Value> span, but before a value is
 chosen that span is empty, and the <Label> sitting above it was never connected. Screen
 readers announced "combobox, empty" with no indication of what the field was for.
 

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["rollback-readiness-check", "env-var-drift-audit", "pre-push-merge-approval-gate"]
 ---
 
 ## When to use this

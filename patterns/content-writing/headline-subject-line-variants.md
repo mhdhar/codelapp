@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["headline-gauntlet-loop", "opening-hook-rewrite", "ab-test-ship-kill-verdict"]
 ---
 
 ## When to use this
@@ -44,11 +45,11 @@ blog post title aimed at search traffic.
 ## Real example output
 Piece summary: "We switched our onboarding from a 5-step wizard to a single form, and activation went from 34% to 51%."
 
-1. Number: "We Cut Onboarding From 5 Steps to 1 and Activation Jumped 50%" — optimized for skimmers scanning a feed. Risk: reads like every other growth case study headline.
-2. Tension: "Your Onboarding Wizard Is Costing You Users, Not Protecting Them" — optimized for readers who already built a multi-step flow and feel defensive about it. Risk: sounds preachy if they didn't build a wizard.
-3. Question: "Why Do Users Quit Halfway Through Signup?" — optimized for someone actively searching for this problem right now. Risk: doesn't hint at the answer, lower click-through from readers who think they already know it.
-4. Transformation: "We Killed Our 5-Step Wizard. Here's What Happened to Activation." — optimized for narrative case-study readers. Risk: buries the actual number until they click.
-5. Plain: "One Form, Not Five Steps: Our Onboarding Rebuild" — optimized for a technical audience that distrusts hook-y titles. Risk: too flat to win a crowded feed.
+1. Number: "We Cut Onboarding From 5 Steps to 1 and Activation Jumped 50%" - optimized for skimmers scanning a feed. Risk: reads like every other growth case study headline.
+2. Tension: "Your Onboarding Wizard Is Costing You Users, Not Protecting Them" - optimized for readers who already built a multi-step flow and feel defensive about it. Risk: sounds preachy if they didn't build a wizard.
+3. Question: "Why Do Users Quit Halfway Through Signup?" - optimized for someone actively searching for this problem right now. Risk: doesn't hint at the answer, lower click-through from readers who think they already know it.
+4. Transformation: "We Killed Our 5-Step Wizard. Here's What Happened to Activation." - optimized for narrative case-study readers. Risk: buries the actual number until they click.
+5. Plain: "One Form, Not Five Steps: Our Onboarding Rebuild" - optimized for a technical audience that distrusts hook-y titles. Risk: too flat to win a crowded feed.
 
 Ranked for blog SEO traffic: #3 first, it matches actual search queries. #1 second, the concrete number performs well as a secondary meta title. I'd ship #3 as the H1 with #1 as the meta title, they do different jobs.
 

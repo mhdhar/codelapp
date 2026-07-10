@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["audience-register-rewrite", "launch-thread-from-shipped-feature", "headline-subject-line-variants"]
 ---
 
 ## When to use this

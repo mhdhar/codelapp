@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["onboarding-sequence-from-activation-steps", "weekly-growth-lever-review", "voice-of-customer-review-synthesis"]
 ---
 
 ## When to use this
@@ -37,10 +38,10 @@ Step 3: Before you deliver the answer, check it. If it hedges or lists multiple 
 
 ## Real example output
 Cohort Jan: P0 100%, P1 62%, P2 51%, P3 47%
-Cohort Feb: P0 100%, P1 58%, P2 44%, P3 —
-Cohort Mar: P0 100%, P1 41%, P2 —, P3 —
+Cohort Feb: P0 100%, P1 58%, P2 44%, P3 -
+Cohort Mar: P0 100%, P1 41%, P2 -, P3 -
 
-Diagnosis: this is not a systemic decay curve. Jan's P0-to-P1 drop was 38 points. Feb's was 42 points. Mar's is 59 points — nearly 20 points worse than Jan at the exact same lifecycle stage, and the trend is getting worse cohort over cohort, not stable. This points to something specific breaking in the first-period experience starting around early February, not a general "people churn eventually" pattern.
+Diagnosis: this is not a systemic decay curve. Jan's P0-to-P1 drop was 38 points. Feb's was 42 points. Mar's is 59 points, nearly 20 points worse than Jan at the exact same lifecycle stage, and the trend is getting worse cohort over cohort, not stable. This points to something specific breaking in the first-period experience starting around early February, not a general "people churn eventually" pattern.
 
 Lever: Period 0-to-1 retention, Feb and Mar cohorts specifically.
 

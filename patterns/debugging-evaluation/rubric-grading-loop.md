@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["headline-gauntlet-loop", "hostile-reviewer-pass", "design-review-against-reference-shots"]
 ---
 
 ## When to use this

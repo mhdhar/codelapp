@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["interview-transcript-to-article", "voice-of-customer-review-synthesis", "win-loss-signal-synthesis"]
 ---
 
 ## When to use this
@@ -65,12 +66,12 @@ Product: project-management tool for freelance designers/developers
 
 ROUND 1 (5 interviews)
 THEMES:
-1. Invoicing/payment chasing is the real pain, not task tracking — STRONG,
+1. Invoicing/payment chasing is the real pain, not task tracking: STRONG,
    4/5
    "I don't need another to-do list, I need someone to chase late payments
    for me" (P2)
    "The task board part I could take or leave, honestly" (P4)
-2. Client-facing status pages would cut down "just checking in" emails —
+2. Client-facing status pages would cut down "just checking in" emails:
    EMERGING, 2/5
    "Half my emails are just 'where are we at,' I wish they could just check
    themselves" (P1)
@@ -78,16 +79,16 @@ WATCH LIST: Toggl integration request (P3), dark mode request (P5)
 
 ROUND 2 (6 more interviews, 11 total)
 UPDATED THEMES:
-1. Invoicing/payment chasing — STRONG, now 8/11, consistent framing across
+1. Invoicing/payment chasing: STRONG, now 8/11, consistent framing across
    both rounds
    New quote: "I use three different tools right now just to get paid" (P9)
-2. Client-facing status pages — upgraded to STRONG, now 5/11
+2. Client-facing status pages: upgraded to STRONG, now 5/11
    New quotes from P7, P8
-3. NEW: Scope creep tracking — EMERGING, 3/11, first appeared this round
+3. NEW: Scope creep tracking: EMERGING, 3/11, first appeared this round
    "I wish I had a paper trail of what was actually agreed vs what they're
    asking for now" (P10)
 CONTRADICTION FLAGGED: P11 said "I actually like having tasks and invoicing
-in separate tools, less risk if one goes down" — doesn't kill theme 1 (still
+in separate tools, less risk if one goes down". This doesn't kill theme 1 (still
 8/11 want it combined) but is a real dissent worth keeping visible, not
 smoothed over.
 WATCH LIST unchanged: Toggl integration (1 mention), dark mode (1 mention)
@@ -95,9 +96,9 @@ WATCH LIST unchanged: Toggl integration (1 mention), dark mode (1 mention)
 [user says "final round"]
 
 FINAL THEME LIST (11 interviews)
-1. Invoicing/payment chasing — STRONG (8/11)
-2. Client-facing status pages — STRONG (5/11)
-3. Scope creep tracking — EMERGING (3/11)
+1. Invoicing/payment chasing: STRONG (8/11)
+2. Client-facing status pages: STRONG (5/11)
+3. Scope creep tracking: EMERGING (3/11)
 Dropped: Toggl integration, dark mode (never exceeded 1 mention)
 
 DECISION SUMMARY: Build invoicing/payment automation first, it's the

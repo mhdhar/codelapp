@@ -12,6 +12,8 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+aliases: ["repomix", "context pack"]
+related: ["clean-session-handoff", "project-state-handoff-file", "reference-repo-to-skill"]
 ---
 
 ## When to use this
@@ -34,14 +36,14 @@ Before we close this session, pack the codebase for the next session.
 ```
 1. Ran `npx repomix`. Output: repomix-output.xml, 312 files packed, 1.4MB (tree-sitter compressed from an estimated 4.8MB raw).
 
-2. Default ignore already excludes node_modules and .next/, but it packed 40 files under /coverage (test coverage HTML reports, irrelevant to code context). Re-ran with `npx repomix --ignore "coverage/**"` — now 289 files, 980KB.
+2. Default ignore already excludes node_modules and .next/, but it packed 40 files under /coverage (test coverage HTML reports, irrelevant to code context). Re-ran with `npx repomix --ignore "coverage/**"` - now 289 files, 980KB.
 
 3. Updated HANDOFF.md:
    Task: migrate legacy /api/v1/* routes to /api/v2 with the new response envelope.
    Status: 6 of 14 routes migrated (orders, users, invoices, payments, refunds, webhooks). Remaining: reports, exports, admin/*, integrations/*.
-   Read repomix-output.xml first for full current code state — this note is the plan, that file is the ground truth.
+   Read repomix-output.xml first for full current code state - this note is the plan, that file is the ground truth.
 
-4. Both files saved at project root. Recommend committing both — repomix-output.xml is 980KB, under the repo's usual diff size, and having it versioned means any session can regenerate a diff against the last known-good pack.
+4. Both files saved at project root. Recommend committing both - repomix-output.xml is 980KB, under the repo's usual diff size, and having it versioned means any session can regenerate a diff against the last known-good pack.
 ```
 
 ## Why it works

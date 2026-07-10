@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["log-diff-divergence-loop", "git-bisect-regression-hunt", "shrink-the-repro-until-it-confesses"]
 ---
 
 ## When to use this

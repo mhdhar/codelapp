@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["competitor-complaint-mining", "interview-notes-to-decision-themes", "testimonial-extraction-from-raw-feedback"]
 ---
 
 ## When to use this
@@ -61,21 +62,21 @@ My idea: a stripped-down team wiki with less setup overhead than Notion
 Reviews: 18 G2/App Store reviews pasted, mix of 2-5 star
 
 COMPLAINT THEMES
-1. "Too much setup before it's useful" — 6 reviews
+1. "Too much setup before it's useful" - 6 reviews
    "took our team two weeks to actually agree on a structure before anyone
    used it for real work" (G2, 4-star)
    "it's powerful but I spent more time building the system than using it"
    (G2, 3-star)
-2. "Slow/laggy with large databases" — 4 reviews
+2. "Slow/laggy with large databases" - 4 reviews
    "pages with big tables take a few seconds to load now" (App Store, 3-star)
    "gets noticeably slower once you have a lot of content" (G2, 4-star)
-3. "Mobile app is clunky for quick edits" — 2 reviews, WATCH, not a full
+3. "Mobile app is clunky for quick edits" - 2 reviews, WATCH, not a full
    theme yet
    "editing on my phone feels like a second-class experience" (App Store,
    2-star)
 
 PRAISE THEMES
-1. "Flexibility once set up" — 7 reviews, the most consistently praised
+1. "Flexibility once set up" - 7 reviews, the most consistently praised
    feature
    "once we had our system it could do literally anything we needed" (G2,
    5-star)

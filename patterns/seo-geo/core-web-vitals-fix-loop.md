@@ -12,10 +12,12 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+aliases: ["cwv", "pagespeed", "lighthouse"]
+related: ["performance-regression-profiling-loop", "landing-page-seo-geo-audit", "root-cause-debugging-loop"]
 ---
 
 ## When to use this
-PageSpeed Insights or CrUX data shows a Core Web Vitals metric (LCP, INP, CLS) failing on a real page, and you're working in the actual codebase. Use this instead of throwing speculative fixes — image compression, random lazy-loading — at a page without confirming what's actually causing the failure.
+PageSpeed Insights or CrUX data shows a Core Web Vitals metric (LCP, INP, CLS) failing on a real page, and you're working in the actual codebase. Use this instead of throwing speculative fixes (image compression, random lazy-loading) at a page without confirming what's actually causing the failure.
 
 ## The pattern
 ```text
@@ -26,7 +28,7 @@ standard thresholds unless I say otherwise: LCP under 2.5s, INP under
 Work in this loop, in the actual codebase, do not guess:
 1. Identify the single largest contributor to the failing metric from the
    diagnostic data (e.g. for LCP: which specific element is the LCP element
-   and what's delaying it — render-blocking CSS, an unoptimized image, a
+   and what's delaying it: render-blocking CSS, an unoptimized image, a
    late font swap, slow server response). Name the exact element and file.
 2. Find that element/component in the codebase and read the actual code
    causing the delay. Show me the relevant lines.
@@ -56,9 +58,9 @@ Iteration 1
 Step 1: LCP element is the hero image (largest-contentful-paint-element
 in the trace points to img.hero-banner). Contributor: image is a 3.2MB
 PNG served at native resolution, no responsive sizing, no priority hint.
-Step 2: components/Hero.tsx:31 — plain <img src="/hero-full.png"> with no
+Step 2: components/Hero.tsx:31 - plain <img src="/hero-full.png"> with no
 next/image, no loading/priority attribute.
-Step 3: Fix — replace with next/image, add priority, serve WebP.
+Step 3: Fix - replace with next/image, add priority, serve WebP.
 Step 4: Applied. Hero.tsx:31 now uses <Image src="/hero-full.webp"
 priority fill sizes="100vw" />.
 Step 5: Rebuild and re-run `npx lighthouse https://staging.acme.com/product/checkout-flow --only-categories=performance`.
@@ -67,8 +69,8 @@ Expected LCP: ~2.6-2.9s (image no longer the bottleneck, font may be next).
 Iteration 2
 Step 1: Re-measured LCP 2.7s. New largest contributor: render-blocking
 @import in globals.css loading Google Fonts before first paint.
-Step 2: app/globals.css:2 — `@import url('https://fonts.googleapis.com/...')`.
-Step 3: Fix — move to next/font with font-display: swap, drop the @import.
+Step 2: app/globals.css:2 - `@import url('https://fonts.googleapis.com/...')`.
+Step 3: Fix - move to next/font with font-display: swap, drop the @import.
 Step 4: Applied.
 Step 5: Re-ran Lighthouse: LCP 2.2s. Under target.
 

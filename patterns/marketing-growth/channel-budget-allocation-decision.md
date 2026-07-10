@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["weekly-growth-lever-review", "ab-test-ship-kill-verdict", "tradeoff-menu-single-recommendation"]
 ---
 
 ## When to use this
-You have a fixed budget for next month or quarter, spend history across 2 or more channels (paid search, paid social, content/SEO, affiliate, whatever you run), and need to decide the split — not a vague "invest more in what's working" recommendation, an actual set of numbers that sum to your budget.
+You have a fixed budget for next month or quarter, spend history across 2 or more channels (paid search, paid social, content/SEO, affiliate, whatever you run), and need to decide the split: not a vague "invest more in what's working" recommendation, but an actual set of numbers that sum to your budget.
 
 ## The pattern
 ```text
@@ -24,7 +25,7 @@ Help me split a fixed budget across my marketing channels using the budget and c
 Your task:
 1. Calculate cost-per-result for every channel. If a channel's result count is too low to be statistically meaningful (fewer than ~30 results, or a channel with a known long lag like SEO), flag it as a data-confidence issue rather than treating it as equal-quality data.
 2. Rank channels by cost-per-result, cheapest first, noting confidence flags next to any that apply.
-3. Propose a specific dollar allocation across all channels that sums exactly to the total budget. Move dollars toward proven-cheap, high-confidence channels and away from expensive or thin-data ones. Do not zero out every channel but one — state your one-line reasoning for keeping any diversification.
+3. Propose a specific dollar allocation across all channels that sums exactly to the total budget. Move dollars toward proven-cheap, high-confidence channels and away from expensive or thin-data ones. Do not zero out every channel but one; state your one-line reasoning for keeping any diversification.
 4. Call out explicitly: which channel gets the biggest cut, which gets the biggest increase, and the dollar amount of each move.
 5. Name the one metric and threshold that would prove this reallocation was right by the end of the period.
 
@@ -40,8 +41,8 @@ Budget: $40,000/month.
 |---|---|---|---|---|
 | Paid search | $15,000 | 450 signups | $33 | High |
 | Paid social | $12,000 | 180 signups | $67 | High |
-| Content/SEO | $8,000 | 310 signups | $26 | Low — 6-month lag, this month reflects work from Q1 |
-| Affiliate | $5,000 | 40 signups | $125 | Medium — small sample |
+| Content/SEO | $8,000 | 310 signups | $26 | Low - 6-month lag, this month reflects work from Q1 |
+| Affiliate | $5,000 | 40 signups | $125 | Medium - small sample |
 
 Reallocation:
 
@@ -52,7 +53,7 @@ Reallocation:
 | Paid social | $8,000 | -$4,000 |
 | Affiliate | $3,000 | -$2,000 |
 
-Reasoning: Paid search is the cheapest high-confidence channel, so it gets the biggest increase. Content/SEO's low cost-per-result is real but lagged, so it gets a moderate increase rather than the biggest one, since this month's number reflects work from before the period. Paid social takes the biggest cut — it's the most expensive high-confidence channel, more than double search's cost-per-result. Affiliate keeps a small floor rather than going to zero, since the sample is too thin to confidently call it dead.
+Reasoning: Paid search is the cheapest high-confidence channel, so it gets the biggest increase. Content/SEO's low cost-per-result is real but lagged, so it gets a moderate increase rather than the biggest one, since this month's number reflects work from before the period. Paid social takes the biggest cut: it's the most expensive high-confidence channel, more than double search's cost-per-result. Affiliate keeps a small floor rather than going to zero, since the sample is too thin to confidently call it dead.
 
 Metric to check: blended cost-per-signup across all four channels, target under $40 by end of next month (down from $44 blended this month).
 

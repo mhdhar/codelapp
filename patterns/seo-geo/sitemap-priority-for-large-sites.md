@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["ai-crawler-robots-txt-strategy", "internal-linking-gap-analysis", "canonical-duplicate-content-resolver"]
 ---
 
 ## When to use this
-Your site has thousands of URLs, sitemap.xml is one flat file with `priority=0.5` on everything, and crawl budget is being wasted on thin or dead pages. Use this before regenerating the sitemap, not after — the segmentation decisions drive the file structure.
+Your site has thousands of URLs, sitemap.xml is one flat file with `priority=0.5` on everything, and crawl budget is being wasted on thin or dead pages. Use this before regenerating the sitemap, not after; the segmentation decisions drive the file structure.
 
 ## The pattern
 ```text
@@ -48,14 +49,14 @@ sample as representative and say so in your output.
 
 ## Real example output
 ```
-brightpath.io — 4,200 URLs sampled. Segments identified:
-- /sitemap-products.xml (1,800 URLs) — priority 0.8, changefreq weekly
+brightpath.io: 4,200 URLs sampled. Segments identified:
+- /sitemap-products.xml (1,800 URLs): priority 0.8, changefreq weekly
   (highest session density: 62% of total organic sessions land here)
-- /sitemap-docs.xml (1,300 URLs) — priority 0.6, changefreq monthly
+- /sitemap-docs.xml (1,300 URLs): priority 0.6, changefreq monthly
   (steady traffic, content changes rarely once published)
-- /sitemap-blog.xml (900 URLs) — priority 0.5, changefreq monthly
+- /sitemap-blog.xml (900 URLs): priority 0.5, changefreq monthly
   (long tail, most posts get <10 sessions/quarter after month 2)
-- /sitemap-legal.xml (12 URLs) — priority 0.2, changefreq yearly
+- /sitemap-legal.xml (12 URLs): priority 0.2, changefreq yearly
 
 Priority scale: 0.8 = top quartile by 90-day sessions, 0.5-0.6 = middle
 half, 0.2-0.3 = bottom decile or evergreen/rarely-changing content.
@@ -87,4 +88,4 @@ sessions and no update since 2023-11.
 ```
 
 ## Why it works
-A flat sitemap with uniform priority tells crawlers nothing — it's the equivalent of not setting priority at all. Segmenting by page type and deriving priority from actual traffic density gives crawlers a real signal about where to spend budget, and pruning dead URLs stops them from re-fetching pages that will never rank.
+A flat sitemap with uniform priority tells crawlers nothing; it's the equivalent of not setting priority at all. Segmenting by page type and deriving priority from actual traffic density gives crawlers a real signal about where to spend budget, and pruning dead URLs stops them from re-fetching pages that will never rank.

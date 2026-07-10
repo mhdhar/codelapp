@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["git-bisect-regression-hunt", "one-variable-at-a-time", "integration-decision-checklist"]
 ---
 
 ## When to use this

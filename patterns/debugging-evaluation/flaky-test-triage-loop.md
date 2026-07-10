@@ -12,6 +12,8 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+aliases: ["flaky tests", "intermittent test failures"]
+related: ["ci-failure-triage-loop", "git-bisect-regression-hunt", "verify-before-claiming-fixed"]
 ---
 
 ## When to use this
@@ -57,7 +59,7 @@ Step 4: Test calls `await applyDiscount(cart)` then immediately asserts on `cart
 
 Step 5: Nondeterminism is a race between the test's assertion and the async webhook callback, timing-dependent, not related to checkout logic itself.
 
-Step 6: This is a test problem, not an app problem — production users never observe partial state because the UI subscribes to the cart store and re-renders when the webhook resolves, whatever the delay. Fixed the test to `await waitForCartUpdate(cart)` before asserting.
+Step 6: This is a test problem, not an app problem - production users never observe partial state because the UI subscribes to the cart store and re-renders when the webhook resolves, whatever the delay. Fixed the test to `await waitForCartUpdate(cart)` before asserting.
 
 Step 7: Re-ran 10x, 10/10 passed.
 

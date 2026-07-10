@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["keyword-topic-gap-vs-competitors", "internal-linking-gap-analysis", "canonical-duplicate-content-resolver"]
 ---
 
 ## When to use this
@@ -26,17 +27,17 @@ the prior 90 unless the data says otherwise.
 
 For each page showing a decline (clicks or position down at least 15%):
 1. Classify the likely decay cause using only the data given:
-   - STALE: impressions flat or down, position down — content likely
+   - STALE: impressions flat or down, position down; content likely
      outdated versus fresher competing results
    - CANNIBALIZED: impressions flat, but clicks/position down while
-     another of my own pages on a similar topic gained — check the list
+     another of my own pages on a similar topic gained; check the list
      for a page covering similar ground
-   - SERP CHANGE: impressions themselves dropped sharply — likely a new
+   - SERP CHANGE: impressions themselves dropped sharply; likely a new
      SERP feature (AI Overview, featured snippet) taking the click, not
      a ranking loss
    - SEASONAL: this pattern matches a prior-year dip for the same period,
      if that's inferable from the data
-   - UNKNOWN: doesn't clearly match the above — say so rather than forcing
+   - UNKNOWN: doesn't clearly match the above; say so rather than forcing
      a category
 2. For STALE pages, name the specific signal of staleness if inferable (a
    date in the title/content, a "last updated" mismatch, outdated stats).
@@ -54,7 +55,7 @@ Page: /blog/best-invoicing-software-2024
 Current: 340 clicks, 12,000 impressions, avg position 8.2
 Prior: 890 clicks, 11,800 impressions, avg position 4.1
 -> STALE. Impressions held steady but position dropped 4 spots. Title and
-H1 both say "2024" and it's now mid-2026 — clear staleness signal, likely
+H1 both say "2024" and it's now mid-2026, a clear staleness signal, likely
 losing to freshly-dated competing roundups.
 Clicks lost: 550.
 Action: Update title/H1 to current year, refresh the comparison table with
@@ -68,14 +69,14 @@ ago, current 410 clicks, avg position 2.1, same core topic.
 -> CANNIBALIZED by /features/automated-payment-reminders. The newer page
 is winning the same query.
 Clicks lost: 270.
-Action: Consolidate — canonicalize /features/invoice-reminders to the
+Action: Consolidate - canonicalize /features/invoice-reminders to the
 newer page, or differentiate it to target a distinct sub-intent instead
 of competing head-on.
 
 Page: /docs/getting-started
 Current: 1,100 clicks, 41,000 impressions, avg position 2.8
 Prior: 1,300 clicks, 61,000 impressions, avg position 2.6
--> SERP CHANGE. Position barely moved but impressions dropped 33% —
+-> SERP CHANGE. Position barely moved but impressions dropped 33%,
 consistent with an AI Overview now answering "how do I get started with
 the product" directly in the SERP without a click-through.
 Clicks lost: 200.
@@ -90,4 +91,4 @@ URL                                    | Type         | Clicks lost
 ```
 
 ## Why it works
-"Traffic is down" has at least four different root causes and each one needs a different fix — rewriting a page that's actually being cannibalized by your own newer page wastes the effort twice. Classifying decay type from the data before touching copy stops you from refreshing a page that was never stale.
+"Traffic is down" has at least four different root causes and each one needs a different fix; rewriting a page that's actually being cannibalized by your own newer page wastes the effort twice. Classifying decay type from the data before touching copy stops you from refreshing a page that was never stale.

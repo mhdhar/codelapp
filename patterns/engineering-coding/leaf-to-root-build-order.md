@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["dependency-ordered-build-sequencing", "smallest-useful-move-scoper", "self-verifying-build-loop"]
 ---
 
 ## When to use this
@@ -21,17 +22,17 @@ You're building a new screen or feature from scratch and the codebase has no exi
 ```text
 Build the feature or screen I give you using this order. Do not skip ahead to later stages before earlier ones are done and reviewed.
 
-STAGE 1 — LEAF COMPONENTS: Identify the smallest, purely presentational pieces this screen needs (e.g. a badge, a stat card, an input with validation state). Build each with no data fetching and no business logic — hardcoded/mock props only. Show me each one before moving on.
+STAGE 1 - LEAF COMPONENTS: Identify the smallest, purely presentational pieces this screen needs (e.g. a badge, a stat card, an input with validation state). Build each with no data fetching and no business logic - hardcoded/mock props only. Show me each one before moving on.
 
-STAGE 2 — COMPOSITE COMPONENTS: Combine leaves into the larger sections of the screen (e.g. a filter bar, a results table). Still mock data, no real fetching.
+STAGE 2 - COMPOSITE COMPONENTS: Combine leaves into the larger sections of the screen (e.g. a filter bar, a results table). Still mock data, no real fetching.
 
-STAGE 3 — PAGE: Assemble the composites into the actual page layout. Still mock data.
+STAGE 3 - PAGE: Assemble the composites into the actual page layout. Still mock data.
 
-STAGE 4 — ROUTING: Wire up the URL/route for the page, including any route params it needs.
+STAGE 4 - ROUTING: Wire up the URL/route for the page, including any route params it needs.
 
-STAGE 5 — STATE: Replace mock data with real local/client state (loading, error, empty states included).
+STAGE 5 - STATE: Replace mock data with real local/client state (loading, error, empty states included).
 
-STAGE 6 — API: Wire STATE to the real backend endpoint(s). Verify against a real request, not mock data, before calling this done.
+STAGE 6 - API: Wire STATE to the real backend endpoint(s). Verify against a real request, not mock data, before calling this done.
 
 After each stage, tell me what you built and wait for a go-ahead before starting the next stage.
 
@@ -40,22 +41,22 @@ First ask me which feature or screen to build, then wait. Don't start Stage 1 un
 
 ## Real example output
 ```
-STAGE 1 — LEAF COMPONENTS: built <StatusBadge status="active|paused|expired" /> and <RenewalCountdown days={14} /> — both pure, hardcoded props, no imports beyond React. Screenshot attached.
+STAGE 1 - LEAF COMPONENTS: built <StatusBadge status="active|paused|expired" /> and <RenewalCountdown days={14} /> - both pure, hardcoded props, no imports beyond React. Screenshot attached.
 > looks good, continue
 
-STAGE 2 — COMPOSITE: built <ContractRow /> combining both leaves plus vendor name/date columns, and <ContractFilterBar /> (status dropdown + date range). Rendered with 5 hardcoded mock contracts.
+STAGE 2 - COMPOSITE: built <ContractRow /> combining both leaves plus vendor name/date columns, and <ContractFilterBar /> (status dropdown + date range). Rendered with 5 hardcoded mock contracts.
 > continue
 
-STAGE 3 — PAGE: assembled <ContractsPage /> — filter bar on top, table of ContractRow below, still mock data.
+STAGE 3 - PAGE: assembled <ContractsPage /> - filter bar on top, table of ContractRow below, still mock data.
 > continue
 
-STAGE 4 — ROUTING: added /contracts route in app/contracts/page.tsx, no params needed (filters are client-side query state).
+STAGE 4 - ROUTING: added /contracts route in app/contracts/page.tsx, no params needed (filters are client-side query state).
 > continue
 
-STAGE 5 — STATE: replaced mock array with useState + loading/error/empty states. Empty state shows "No contracts match these filters."
+STAGE 5 - STATE: replaced mock array with useState + loading/error/empty states. Empty state shows "No contracts match these filters."
 > continue
 
-STAGE 6 — API: wired to GET /api/contracts?status=&from=&to=. Verified against real dev DB — 38 contracts returned unfiltered, filtering by status=expired correctly returned 6. Build done.
+STAGE 6 - API: wired to GET /api/contracts?status=&from=&to=. Verified against real dev DB - 38 contracts returned unfiltered, filtering by status=expired correctly returned 6. Build done.
 ```
 
 ## Why it works

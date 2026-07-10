@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["self-verifying-build-loop", "ambiguity-halt-and-ask", "engineering-finish-report"]
 ---
 
 ## When to use this

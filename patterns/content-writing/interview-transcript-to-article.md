@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["interview-notes-to-decision-themes", "testimonial-extraction-from-raw-feedback", "brain-dump-to-polished-draft"]
 ---
 
 ## When to use this
@@ -47,7 +48,7 @@ no quote was tightened into something they didn't actually say.
 ```
 
 ## Real example output
-Raw: "So, um, I think the — the biggest thing, you know, that people get wrong about, like, scaling a support team is they just... they hire more people before they fix the process, right? And then you just have more people doing the broken thing faster."
+Raw: "So, um, I think the - the biggest thing, you know, that people get wrong about, like, scaling a support team is they just... they hire more people before they fix the process, right? And then you just have more people doing the broken thing faster."
 
 Cleaned Q&A:
 Q: What's the biggest mistake teams make when scaling support?

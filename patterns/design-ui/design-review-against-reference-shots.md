@@ -12,22 +12,23 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["ai-slop-critique-loop", "rubric-grading-loop", "ui-approval-gate-checkpoints"]
 ---
 
 ## When to use this
-You know your UI is "worse" than some reference — a competitor, an inspiration site, an earlier version of your own product — but can't articulate why. Use this when you have real screenshots of both, not just a vibe, and want the specific gap closed rather than a random restyle.
+You know your UI is "worse" than some reference - a competitor, an inspiration site, an earlier version of your own product - but can't articulate why. Use this when you have real screenshots of both, not just a vibe, and want the specific gap closed rather than a random restyle.
 
 ## The pattern
 ```text
 GOAL: Bring my screen up to the visual quality of the reference screenshot, closing the
-specific, nameable gaps between them — not a random restyle.
+specific, nameable gaps between them - not a random restyle.
 
 Inputs: two screenshots. A is my current UI; B is the reference. Both show a similar
 type of screen/component. Find the component(s) in this codebase that render
 screenshot A before you change anything.
 
 SUCCESS CRITERIA (do not stop until all are true):
-1. You've named at least 5 concrete, specific differences between A and B — not vague
+1. You've named at least 5 concrete, specific differences between A and B - not vague
    ("B feels more premium") but specific ("B uses 3 font weights across the hierarchy, A
    uses 1"; "B has 40px of breathing room around the primary action, A has 12px").
 2. For each named difference, you've decided: adopt it, adapt it to fit our existing brand,
@@ -58,9 +59,9 @@ NAMED DIFFERENCES:
 2. B uses a 2px left border in brand color to mark the currently-active nav item; A has no
    active-state indicator in the sidebar.
    -> ADOPT: added active border using our existing --accent token.
-3. B's body text is 14px with 1.6 line-height; A's is 16px with 1.4 — B reads denser but
+3. B's body text is 14px with 1.6 line-height; A's is 16px with 1.4 - B reads denser but
    more scannable for a list of many short items.
-   -> ADAPT: dropped to 15px/1.5, kept 16px on titles — full 14px felt too small against
+   -> ADAPT: dropped to 15px/1.5, kept 16px on titles - full 14px felt too small against
    our existing type scale.
 4. B has no card borders, just spacing and a hover background; A puts a border around
    every card.

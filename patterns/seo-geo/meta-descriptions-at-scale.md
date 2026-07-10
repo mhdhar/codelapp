@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["headline-subject-line-variants", "tighten-draft-to-word-limit", "sitemap-priority-for-large-sites"]
 ---
 
 ## When to use this
@@ -26,7 +27,7 @@ Write one meta description per page:
 - 140-155 characters, hard cap 160
 - Includes the primary topic/keyword from the title naturally, not stuffed
 - States a concrete reason to click: a number, an outcome, or what the
-  reader will be able to do — not generic phrasing like "learn more about X"
+  reader will be able to do, not generic phrasing like "learn more about X"
 - No two descriptions in the output may be near-duplicates of each other,
   even if the source pages are similar (e.g. two pricing-tier pages need
   descriptions that differ by what's actually different about that tier)
@@ -51,4 +52,4 @@ URL                                  | Chars | Meta description
 ```
 
 ## Why it works
-Writing descriptions one page at a time drifts into the same three or four templates by page 20. Forcing every row through the same constraint list — and an explicit non-duplication rule across the whole batch — catches the copy-paste failure mode that a per-page prompt never surfaces.
+Writing descriptions one page at a time drifts into the same three or four templates by page 20. Forcing every row through the same constraint list, plus an explicit non-duplication rule across the whole batch, catches the copy-paste failure mode that a per-page prompt never surfaces.

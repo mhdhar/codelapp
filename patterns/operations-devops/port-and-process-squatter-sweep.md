@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["parallel-worktree-risk-audit", "assumption-audit-before-debugging", "env-var-drift-audit"]
 ---
 
 ## When to use this

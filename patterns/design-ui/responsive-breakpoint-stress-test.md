@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["touch-target-thumb-audit", "dark-mode-parity-check", "empty-state-design-pass"]
 ---
 
 ## When to use this
@@ -21,13 +22,13 @@ A component or page looks fine at the viewport widths you happened to test, but 
 ```text
 Stress-test the component or page I changed most recently (or the one I name in my next
 message) for responsive and content-edge-case breakage. Do not just
-resize the viewport and eyeball it — actively substitute adversarial content into every
+resize the viewport and eyeball it - actively substitute adversarial content into every
 dynamic field and re-check at each breakpoint.
 
 BREAKPOINTS: test at minimum 375px (small mobile), 768px (tablet), 1024px (small desktop),
 and 1920px (large desktop).
 
-CONTENT CASES — for every dynamic text or data field, temporarily substitute:
+CONTENT CASES - for every dynamic text or data field, temporarily substitute:
 1. The longest realistic real value (e.g. a 60-character user name, a long email address)
    and confirm it wraps or truncates instead of overflowing its container or pushing
    siblings out of position.
@@ -51,7 +52,7 @@ Component: PatternCard (used in /patterns grid)
 
 375px:
 - Long title case: "Turn a Rough Brand Brief Into a Design System the Agent Can Apply
-  Consistently" — FAIL: overflows the card, pushes the difficulty badge off the bottom edge.
+  Consistently" - FAIL: overflows the card, pushes the difficulty badge off the bottom edge.
   Cause: title has no line-clamp, card has fixed height 180px.
   Fix: added line-clamp-2 to title, changed card to min-height instead of fixed height.
 - Empty summary: FAIL: card renders with a large blank gap where summary would be.
@@ -68,4 +69,4 @@ Component: PatternCard (used in /patterns grid)
 ```
 
 ## Why it works
-Resizing a viewport with the same three seed rows of demo data hides almost every real-world layout bug, because production content is rarely as short and uniform as placeholder text. Forcing the longest, shortest, and most extreme values through the same breakpoints surfaces the actual failure modes — overflow, collapse, truncation — before a real user's data does it for you in production.
+Resizing a viewport with the same three seed rows of demo data hides almost every real-world layout bug, because production content is rarely as short and uniform as placeholder text. Forcing the longest, shortest, and most extreme values through the same breakpoints surfaces the actual failure modes - overflow, collapse, truncation - before a real user's data does it for you in production.

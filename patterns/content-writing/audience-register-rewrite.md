@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["repurpose-post-into-multi-format-pack", "voice-drift-consistency-loop", "tighten-draft-to-word-limit"]
 ---
 
 ## When to use this

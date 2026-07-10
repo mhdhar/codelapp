@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["market-entry-timing-assessment", "macro-trend-relevance-scan", "premortem-until-it-stops-dying"]
 ---
 
 ## When to use this

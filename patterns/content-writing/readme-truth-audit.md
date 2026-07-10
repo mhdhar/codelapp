@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["fact-claim-audit-against-notes", "release-notes-from-git-history", "env-var-drift-audit"]
 ---
 
 ## When to use this

@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-08"
 license: "CC-BY-4.0"
+related: ["competitor-positioning-matrix-loop", "competitor-messaging-audit", "category-creation-vs-incumbent-framing"]
 ---
 
 ## When to use this

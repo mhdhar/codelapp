@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["root-cause-debugging-loop", "no-fix-without-a-failing-test", "decision-log-append"]
 ---
 
 ## When to use this

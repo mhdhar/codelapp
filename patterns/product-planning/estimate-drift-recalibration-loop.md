@@ -12,6 +12,7 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["spec-to-engineering-tickets", "complexity-drift-recheck-loop", "backlog-cull-against-north-star"]
 ---
 
 ## When to use this

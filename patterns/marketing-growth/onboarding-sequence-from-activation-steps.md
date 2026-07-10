@@ -12,10 +12,11 @@ author: "codel"
 author_handle: ""
 date: "2026-07-09"
 license: "CC-BY-4.0"
+related: ["retention-cohort-lever-review", "empty-state-design-pass", "cold-outreach-sequence-from-icp"]
 ---
 
 ## When to use this
-You know the exact steps a user takes to reach "activated" in your product — your real funnel, not a guess — and need an onboarding email sequence that nudges each specific step, instead of a generic "welcome, here's a video tour" series nobody opens past email one.
+You know the exact steps a user takes to reach "activated" in your product (your real funnel, not a guess) and need an onboarding email sequence that nudges each specific step, instead of a generic "welcome, here's a video tour" series nobody opens past email one.
 
 ## The pattern
 ```text
@@ -29,7 +30,7 @@ For each step except the final activation event, write one email triggered when 
 
 Rules: no countdown timers, no "last chance," no "just checking in." Write like someone who's used this product, not a drip-campaign template.
 
-Output as: Email N — Trigger — Subject — Body — CTA.
+Output as: Email N - Trigger - Subject - Body - CTA.
 
 Before writing anything, ask me for these in one message and wait: (1) the product in one line, (2) the activation steps in order, ending with the event that defines an activated user, (3) the biggest drop-off step (if I skip this, treat it as unknown and drop the P.S. rule).
 ```
@@ -39,18 +40,18 @@ Product: an analytics tool for product teams.
 Activation steps: 1) connect a data source, 2) create first dashboard, 3) invite a teammate, 4) view a saved report after 7 days (activation event).
 Known biggest drop-off: step 1 to 2 (connecting a source but never building a dashboard).
 
-**Email 1 — Trigger: no data source connected within 24 hours**
+**Email 1 - Trigger: no data source connected within 24 hours**
 Subject: your workspace is empty
-Body: Right now there's nothing flowing into your workspace yet. Connecting a source takes about 3 minutes if it's one of the common ones (Postgres, Stripe, Segment) — you don't need engineering for it.
+Body: Right now there's nothing flowing into your workspace yet. Connecting a source takes about 3 minutes if it's one of the common ones (Postgres, Stripe, Segment). You don't need engineering for it.
 CTA: Connect your first data source
 
-**Email 2 — Trigger: source connected, no dashboard within 48 hours**
+**Email 2 - Trigger: source connected, no dashboard within 48 hours**
 Subject: you've got data, now build with it
-Body: Your data's flowing in. The fastest way to see it click is to build one dashboard around a single question you actually need answered this week — not a full reporting suite on day one.
+Body: Your data's flowing in. The fastest way to see it click is to build one dashboard around a single question you actually need answered this week, not a full reporting suite on day one.
 CTA: Build your first dashboard
-P.S. — If you're stuck picking what to track first, start with whatever number you'd check first thing Monday morning. That's usually the right one.
+P.S. If you're stuck picking what to track first, start with whatever number you'd check first thing Monday morning. That's usually the right one.
 
-**Email 3 — Trigger: dashboard created, no teammate invited within 5 days**
+**Email 3 - Trigger: dashboard created, no teammate invited within 5 days**
 Subject: dashboards are better shared
 Body: A dashboard only one person checks tends to get forgotten. Teams that invite at least one teammate in the first week are far more likely to still be using this a month from now.
 CTA: Invite a teammate
