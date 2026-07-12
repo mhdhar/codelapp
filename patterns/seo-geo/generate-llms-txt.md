@@ -21,8 +21,14 @@ You want ChatGPT, Claude, Perplexity, and other answer engines to cite your site
 
 ## The pattern
 ```text
-I'm building an llms.txt file for my site. This is a markdown file that
-gives AI crawlers a clean index of the site's most important pages.
+I'm considering an llms.txt file for a named system that I have confirmed
+supports it. This is an optional interoperability file, not a general SEO or
+AI-visibility tactic. Do not claim it improves Google Search visibility or
+that an AI crawler consumes it unless the target system documents that support.
+
+First ask me which system will consume this file and wait. If I cannot name
+one, explain that the file is optional and stop rather than generating it by
+default.
 
 If you're running inside the site's codebase, build the page list
 yourself from the routes and content files, and take the site URL from
@@ -65,4 +71,4 @@ plus a short description each) and the site URL, then wait for my reply.
 ```
 
 ## Why it works
-Answer engines can't reliably parse JS-heavy nav or infer page importance from a sitemap alone. A hand-curated, plain-text index with one-line summaries gives them exactly the context they need to quote your site correctly instead of hallucinating what a page says.
+For a system that explicitly supports this convention, a hand-curated plain-text index can provide useful context. It is optional and does not replace crawlable navigation, a sitemap, or foundational SEO, and it should not be presented as a guaranteed citation or ranking mechanism.

@@ -22,6 +22,7 @@ You have month-over-month or week-over-week cohort retention data and retention 
 ```text
 Step 1: Ask me to paste my cohort retention table, one row per signup cohort, one column per period since signup:
 Cohort | Period 0 | Period 1 | Period 2 | Period 3 | ...
+If available, also ask for a timeline of releases, pricing, onboarding, or acquisition changes by cohort date.
 Wait for my reply. Don't diagnose until you have it.
 
 Step 2: Diagnose, don't brainstorm:
@@ -30,10 +31,10 @@ Step 2: Diagnose, don't brainstorm:
 3. Identify the single period (e.g. "period 0 to period 1") and cohort range where the steepest, most anomalous drop is.
 4. State that as the one lever, not a list. If the data shows a systemic decay with no anomaly, say so explicitly instead of forcing a fake lever.
 5. Show the numbers that led you there.
-6. Propose exactly one experiment specific enough to start today, tied to what plausibly changed around when the anomaly started (a shipped change, a pricing change, an onboarding edit).
+6. Propose exactly one experiment specific enough to start today. Tie it to a dated release, pricing, onboarding, or acquisition change only when that timeline was supplied; otherwise label the causal link as a hypothesis.
 7. Name the one metric and target that tells us by next review if it worked.
 
-Step 3: Before you deliver the answer, check it. If it hedges or lists multiple levers, redo it against one question: which single period, if fixed, saves the most users? Pick one.
+Step 3: Before you deliver the answer, check it. If it hedges or lists multiple levers, redo it against one question: which single period is the best evidence-backed experiment to test next? If there is no anomaly or not enough data, say so instead of forcing a lever.
 ```
 
 ## Real example output

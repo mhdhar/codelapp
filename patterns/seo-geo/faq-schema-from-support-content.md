@@ -22,7 +22,8 @@ You have real customer questions living in a help center export, Zendesk tickets
 ```text
 I have raw support content for my product: a mix of help center
 articles, support ticket resolutions, and repeated customer questions.
-Take the product name from the content itself.
+Take the product name from the content itself. Do not publish customer names,
+account details, timestamps, internal tooling, or one-off exceptions.
 
 Turn it into a publishable FAQ:
 1. Extract the distinct questions customers actually ask, in their own
@@ -30,10 +31,11 @@ Turn it into a publishable FAQ:
    phrasing.
 2. Merge near-duplicate questions into one. Don't list "How do I cancel?"
    and "How do I cancel my subscription?" separately.
-3. Write a direct, self-contained answer for each: 2-4 sentences, no "it
-   depends" hedging, no "see above" references.
-4. Drop any question you can't answer confidently from the content given.
-   Do not invent an answer.
+3. Write a direct, self-contained answer for each: 2-4 sentences, no "see
+   above" references. Use clear conditional language when the source shows a
+   real exception; do not turn conditional policy into a false universal rule.
+4. Drop any question you can't answer confidently as a public policy from the
+   content given. Do not invent an answer.
 5. Order questions by how frequently the underlying issue appears in the
    source content, most common first.
 6. Output two things: (a) the FAQ as plain markdown ready to publish on a

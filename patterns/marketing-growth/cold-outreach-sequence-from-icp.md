@@ -32,6 +32,9 @@ Rules:
 - Each email under 120 words.
 - Subject line under 6 words, no clickbait.
 - If the pain point I gave you is too generic to write from ("companies struggle with growth"), tell me instead of writing generic copy anyway.
+- Use a named prospect's release dates, tools, or company behavior only when I supplied a
+  verified source for it; otherwise use a role-level observation or write
+  `[PERSONALIZATION: verify a relevant public fact]`.
 
 Start by asking me for these in one message, then wait: (1) the ICP (role, company size/type, the tool or process they use today), (2) the pain point, something I actually observed or heard, not a guess, (3) our offer in one sentence, plus a proof point with a real number, or "no proof yet" if there isn't one.
 ```
@@ -44,7 +47,7 @@ Proof: one team cut release-week overtime hours by 60% using our release-calenda
 **Email 1, Day 0**
 Subject: release week staffing
 
-Saw your last two release notes went out on a Thursday. That's usually when support queues spike hardest for teams on a two-week sprint cycle.
+Release weeks can turn a normal support rotation into a scramble when ticket volume jumps.
 
 Quick question: do you staff release weeks differently than normal weeks right now, or is it the same rotation every time?
 
@@ -53,7 +56,7 @@ Subject: re: release week staffing
 
 One support team we work with was scheduling overtime for every release until they connected their release calendar to their staffing plan. That cut release-week overtime hours by 60% in the first quarter.
 
-Worth 10 minutes to see if the same setup would work for your rotation?
+Would connecting release dates to staffing plans be useful for your team?
 
 **Email 3, Day 7**
 Subject: closing the loop

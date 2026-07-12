@@ -21,12 +21,13 @@ You're about to deploy to production and want a real check, not a guess. Somethi
 ## The pattern
 ```text
 Before I deploy to production, run this pre-deploy check and report pass/fail
-for each step. Stop and tell me if anything fails, do not deploy on a failure.
+for each step. First confirm the exact target environment and the currently
+deployed commit or deployment ID. Stop and tell me if anything fails; this
+check does not authorize a deployment.
 
-1. Confirm the working branch and that `git status` is clean (everything
-   intended for this deploy is committed).
-2. Find the repo's default branch (check `git remote show origin`), then
-   run `git diff` from that branch to HEAD (three-dot) and scan it for
+1. Confirm the working branch and that `git status` contains only intended
+   deploy changes. Do not require unrelated work to be cleaned up.
+2. Diff the confirmed deployed commit or deployment ID to HEAD, then scan it for
    hardcoded API keys, tokens, passwords, or connection strings. List any
    file where you find one.
 3. Run the project's type check and build commands. Report errors verbatim,
@@ -34,16 +35,17 @@ for each step. Stop and tell me if anything fails, do not deploy on a failure.
 4. Run the test suite. Report pass/fail counts.
 5. List the app's critical routes or health check endpoints from the routing
    config. If a dev/preview server is available, hit each one and report the
-   status code.
-6. Give me a final verdict: SAFE TO DEPLOY or DO NOT DEPLOY, with the specific
-   reason if it's a no.
+   status code. Also report any production config, migration, or secret change
+   that needs environment-specific confirmation before deployment.
+6. Give me a final verdict: READY FOR APPROVED DEPLOY or DO NOT DEPLOY, with
+   the specific reason if it's a no.
 ```
 
 ## Real example output
 ```
-Branch: main, git status clean.
+Target: production, deployed commit: 8c24f01. Branch: main; git status contains only intended deploy changes.
 
-git diff origin/main...HEAD: no secrets found. One flagged line reviewed and
+git diff 8c24f01...HEAD: no secrets found. One flagged line reviewed and
 confirmed to be a placeholder (STRIPE_KEY=sk_test_placeholder in .env.example),
 not a real key.
 
@@ -58,7 +60,9 @@ Routes checked against local preview:
   /api/orders/export -> 200
   /pricing -> 200
 
-Verdict: SAFE TO DEPLOY.
+Production config and migration changes: none.
+
+Verdict: READY FOR APPROVED DEPLOY.
 ```
 
 ## Why it works

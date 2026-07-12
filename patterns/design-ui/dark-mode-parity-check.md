@@ -20,14 +20,17 @@ The app supports light and dark themes, light mode was clearly the one designed 
 
 ## The pattern
 ```text
-Walk every page/route in this app in both light and dark theme and check for theme parity.
-Find the routes from the router/pages directory so none get skipped.
-Do not just glance at the color scheme - actively check these failure modes on each page,
-in each theme:
+Build a coverage manifest before testing: find routes from the router/pages directory and
+also identify dynamic, auth-gated, role-specific, empty, and error states where visible.
+Mark any route or state you cannot access as unverified; do not count it as checked.
+
+For each accessible rendered route/state in both light and dark theme, actively check these
+failure modes rather than just glancing at the color scheme:
 
 1. Contrast: any text that's hard to read against its background in dark mode specifically
    (common cause: a color hardcoded as a fixed hex instead of a theme token, so it doesn't
-   flip with the theme).
+   flip with the theme); validate text, focus-ring, and status-color contrast with a rendered
+   contrast checker where one is available.
 2. Dead/invisible elements: borders, dividers, or icons that were visible in light mode but
    disappear or blend into the background in dark mode (common cause: a light gray border
    color that has no dark-mode equivalent).
@@ -39,9 +42,11 @@ in each theme:
 5. Focus rings and status colors (success/error/warning): confirm they're still visibly
    distinct from the background in both themes, not just present.
 
-For every failure, name the exact file and the exact hardcoded value causing it, and replace
-it with the correct theme token. Report a page-by-page list: page name, failures found in
-dark mode, fix applied. Pages with no failures still get listed as "checked, no issues."
+For every verified failure, name the exact file and the value, asset, or configuration causing
+it. Apply the smallest safe token or asset fix when the cause is clear; otherwise report it as
+unresolved. Report a page-by-page list: page/state name, failures found in dark mode, fix
+applied or unresolved reason, and coverage gaps. Pages with no failures still get listed as
+"checked, no issues."
 ```
 
 ## Real example output

@@ -29,15 +29,15 @@ Build the map in this loop:
    and apparent topic. Tag each match HIGH, MEDIUM, or LOW confidence.
 2. Move every LOW match to a "needs human decision" list with your top 2
    candidate targets and one line on why you couldn't decide. Never guess
-   on a LOW.
+   on a LOW or include it in the redirect map until it is decided.
 3. Run these checks on the map:
-   - Every old URL appears exactly once.
+   - Every old URL appears exactly once across the redirect map and the
+     needs-human list.
    - No target is itself an old URL that redirects (that's a chain).
    - No pair of rules sends A to B and B back to A (that's a loop).
    - No target is the homepage unless the old page truly has no
      equivalent. Flag every homepage target as suspect.
-   - No old URL is silently missing from both the map and the
-     needs-human list.
+   - No old URL appears in both the map and the needs-human list.
 4. If any check fails, fix the map and run all of step 3 again. Repeat
    until every check passes in a single pass.
 5. Output: (a) the passing map as CSV with columns old_url,new_url,status

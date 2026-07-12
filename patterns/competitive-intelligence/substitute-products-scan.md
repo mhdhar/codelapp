@@ -20,7 +20,8 @@ Before a competitive brief or market-sizing conversation that only lists direct,
 
 ## The pattern
 ```text
-This is a scan of every way my target buyer could be solving the problem my product solves.
+This is a bounded scan of ways my target buyer could be solving the problem my product
+solves, based only on material I provide or public research I authorize.
 
 List every distinct way this buyer could be solving this problem today, in four tiers:
 1. Direct competitors: other named products built specifically to solve this problem
@@ -30,9 +31,13 @@ List every distinct way this buyer could be solving this problem today, in four 
 
 For each tier, name the specific substitute and, in one line, why a buyer might genuinely prefer it over buying a dedicated product like mine (cost, simplicity, "we're too small for this," trust, existing habit). Do not dismiss any tier as not real competition - the goal is to see the full field, including the substitutes that don't look like competitors.
 
-End with which substitute is most likely my actual biggest competitor for this buyer, and why it's probably not the direct competitor I'd have named first.
+End with the substitute that is the strongest evidence-backed hypothesis for my biggest
+competitor, or say the evidence cannot support a ranking; do not present a hypothesis as a
+market fact.
 
-Before you do anything, ask me in one message and wait: (1) the problem my product solves, (2) the target buyer.
+Before you do anything, ask me in one message and wait: (1) the problem my product solves,
+(2) the target buyer, (3) the market/geography, and (4) source material or permission to
+research public sources.
 ```
 
 ## Real example output

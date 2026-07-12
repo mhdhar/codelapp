@@ -44,8 +44,8 @@ no "it depends" left anywhere.
    - ZONE OF SELF-DECEPTION: the range in between, and what single
      follow-up question decides it (e.g. 5 replies to a "why did you sign
      up" email)
-   Base these on realistic conversion norms for the chosen format, and say
-   which norm you're using. If I could talk myself into calling any result
+   Base these on a supplied historical benchmark or a cited conversion norm for the chosen format, and say
+   which one you're using. If neither is available, label the threshold a provisional assumption rather than evidence. If I could talk myself into calling any result
    a win, the thresholds are too soft, tighten them.
 
 4. CONTAMINATION LIST: 3 ways this test could false-positive (friends
@@ -60,8 +60,10 @@ End with the plan as a checklist I can execute Monday morning, in order,
 with the three committed numbers at the top.
 
 Start by asking me in one message for: (1) my product idea, (2) the
-audience I can realistically reach this week, channel and rough size. Wait
-for my reply before designing anything.
+audience I can realistically reach this week, channel and rough size, and
+(3) any historical conversion benchmark or source I trust. If the reachable
+audience cannot support a meaningful test in seven days, say so instead of
+inventing decisive thresholds. Wait for my reply before designing anything.
 ```
 
 ## Real example output

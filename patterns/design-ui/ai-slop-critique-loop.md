@@ -32,8 +32,10 @@ with a one-line reason, quoting the actual code or value that triggered the fail
    last 3 years? FAIL if yes.
 
 If ANY item fails, revise the actual code to fix it, then re-run this same checklist
-on the revised version. Repeat until all 6 items PASS. Show me the checklist result
-for each round, not just the final one.
+on the revised version. Repeat until all 6 items PASS, or for at most 3 rounds.
+If subjective items still cannot be resolved by round 3, stop and show the remaining
+tradeoffs for my decision. Show me the checklist result for each round, not just the
+final one.
 
 Target: the UI you built or changed most recently in this session. If I want a
 different target, I'll name the file or component in my next message.
@@ -61,8 +63,8 @@ ROUND 2
 5. Layout: PASS: 60/40 asymmetric split, image bleeds off the right edge.
 6. Distinctiveness: PASS: no longer matches a stock template on inspection.
 
-All 6 items pass.
+All 6 items pass in round 2 of 3.
 ```
 
 ## Why it works
-Models default to the statistical average of their training data, which is exactly what "generic" means. A checklist that names the specific failure modes (uniform spacing, default palette, flat hierarchy) gives the model something concrete to detect and fix, instead of the vague instruction "make it look better," which it can't act on reliably.
+Models default to the statistical average of their training data, which is exactly what "generic" means. A checklist that names the specific failure modes (uniform spacing, default palette, flat hierarchy) gives the model something concrete to detect and fix, instead of the vague instruction "make it look better," which it can't act on reliably. The round cap prevents subjective judgments from turning into an endless self-critique.

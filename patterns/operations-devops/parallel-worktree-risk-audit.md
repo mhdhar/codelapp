@@ -28,8 +28,10 @@ different root, I'll name that directory in my next message):
 1. List every worktree with `git worktree list`, and for each one:
    - Current branch name and whether it's tracking a remote.
    - `git status --short` output (uncommitted/untracked files).
-   - How far ahead/behind its upstream it is
-     (`git rev-list --left-right --count <branch>...origin/<branch>`).
+   - How far ahead/behind its upstream it is, when an upstream exists
+     (`git rev-list --left-right --count <branch>...@{upstream}`). If it has
+     no upstream, mark it `NO UPSTREAM` instead of comparing it to an assumed
+     `origin/<branch>`.
    - Whether it has any stashes (`git stash list` run inside that worktree).
 2. Classify each worktree as one of:
    - SAFE TO TOUCH: clean or only local commits, nothing shared depends on it.

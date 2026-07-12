@@ -35,16 +35,16 @@ re-run. Loop until the latest full run passes:
      failure unrelated to the diff.
 3. Act by class:
    - CODE: reproduce locally with the same command CI ran. Fix it, re-run
-     that command locally until it passes, then push. Never push a fix
-     you haven't run locally.
-   - FLAKE: re-run the job once. If it fails again the same way, it was
+     that command locally until it passes, then report the verified local
+     result and wait for my explicit approval before committing or pushing.
+   - FLAKE: with my approval, re-run the job once. If it fails again the same way, it was
      not a flake. Reclassify as CODE and say the first call was wrong.
-   - INFRA: re-run once. If it recurs, quote the exact infra error and
+   - INFRA: with my approval, re-run once. If it recurs, quote the exact infra error and
      stop. Never retry any single failure more than twice.
-4. After each push or re-run, wait for the new result and go back to
+4. After each approved push or re-run, wait for the new result and go back to
    step 1.
 
-Exit only when the run is fully green. Then report a table:
+Exit when the run is fully green, or when an approval is needed. Then report a table:
 run ID | failing job | class | action taken | result.
 If anything hits the retry limit, escalate it to me with the verbatim
 error instead of retrying silently.
@@ -54,9 +54,9 @@ error instead of retrying silently.
 ```
 | Run    | Failing job        | Class | Action                                    | Result |
 |--------|--------------------|-------|-------------------------------------------|--------|
-| #4821  | test (unit)        | CODE  | Repro'd locally: date mock missing tz. Fixed orders.test.ts, local suite green, pushed 9f2c1ea | fixed  |
-| #4822  | test (e2e)         | FLAKE | checkout.spec.ts timeout also failed on main run #4790. Re-ran once | green  |
-| #4822  | build (arm64)      | INFRA | Runner lost connection at cache restore. Re-ran once | green  |
+| #4821  | test (unit)        | CODE  | Repro'd locally: date mock missing tz. Fixed orders.test.ts, local suite green; approved push 9f2c1ea | fixed  |
+| #4822  | test (e2e)         | FLAKE | checkout.spec.ts timeout also failed on main run #4790. Approved re-run once | green  |
+| #4822  | build (arm64)      | INFRA | Runner lost connection at cache restore. Approved re-run once | green  |
 | #4823  | full pipeline      | -     | -                                         | GREEN  |
 
 3 runs, 1 real bug, 1 confirmed flake (linked to existing issue #212),

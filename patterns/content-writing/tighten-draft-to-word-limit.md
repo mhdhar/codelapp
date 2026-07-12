@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "beginner"
 est_time: "10 min"
 models: ["any"]
-summary: "Hit an exact word or character limit by cutting weak sentences first, not shrinking every sentence a little."
+summary: "Meet a hard word or character maximum by cutting weak sentences first, not shrinking every sentence a little."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -20,7 +20,7 @@ You have the right content in the wrong length: a post over the character cap, a
 
 ## The pattern
 ```text
-Cut my draft to exactly the limit I give you, not "close to it."
+Cut my draft to the hard limit I give you. Treat it as a maximum unless I explicitly say the count must be exact.
 
 Process:
 1. Rank every sentence in the draft by how much it would hurt to lose,
@@ -32,8 +32,8 @@ Process:
    and is it still true to the original meaning? If a cut breaks the
    logic (a conclusion now has no setup), restore that sentence and cut
    a different one instead.
-4. Stop as soon as you hit the limit. Do not keep cutting past it, and
-   do not stay padded above it.
+4. Stop as soon as the draft is at or below the maximum. If I asked for
+   an exact count, make only meaning-preserving edits until it matches.
 5. Report the final word or character count, then list what you cut, one
    line each.
 
@@ -44,7 +44,7 @@ characters), then wait. Don't start until you have both.
 ## Real example output
 Original (326 characters, target 190 for a post caption): "When you're hiring your first support engineer, it's tempting to look for someone who already knows your product. That's the wrong instinct. What actually matters is whether they can sit with an angry customer for twenty minutes and get to the real problem instead of the stated one. Product knowledge you can teach in a week."
 
-Result (188 characters): "Don't hire your first support engineer for product knowledge, that's teachable in a week. Hire for the instinct to sit with an angry customer and find the real problem, not the stated one."
+Result (188 characters, under the 190-character maximum): "Don't hire your first support engineer for product knowledge, that's teachable in a week. Hire for the instinct to sit with an angry customer and find the real problem, not the stated one."
 
 Cuts: dropped "That's the wrong instinct" (redundant with the sentence that follows it), merged the opening into a direct instruction instead of two separate sentences.
 

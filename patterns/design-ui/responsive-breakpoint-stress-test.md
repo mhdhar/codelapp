@@ -25,6 +25,10 @@ message) for responsive and content-edge-case breakage. Do not just
 resize the viewport and eyeball it - actively substitute adversarial content into every
 dynamic field and re-check at each breakpoint.
 
+Use local fixtures or disposable test data only; do not alter production data. Test
+right-to-left content only when the app currently supports an RTL locale, not merely
+because it might support one in the future.
+
 BREAKPOINTS: test at minimum 375px (small mobile), 768px (tablet), 1024px (small desktop),
 and 1920px (large desktop).
 
@@ -36,14 +40,14 @@ CONTENT CASES - for every dynamic text or data field, temporarily substitute:
    with nothing there.
 3. A number at the extreme (e.g. "1,204,392" instead of "12") if the field shows counts,
    and confirm it doesn't break a fixed-width badge or button.
-4. Right-to-left text (e.g. an Arabic or Hebrew string) if the app supports or might someday
-   support non-LTR locales, and confirm the layout doesn't visually break even if full RTL
-   isn't implemented yet.
+4. Right-to-left text (e.g. an Arabic or Hebrew string) if the app currently supports
+   a non-LTR locale, and confirm the supported RTL layout does not visually break.
 
 At each of the 4 breakpoints, run through all 4 content cases. Report only actual failures:
 overflow, overlap, truncated-without-ellipsis, or illegible text. For each failure, name the
 exact CSS property causing it (fixed width, missing min-width: 0 on a flex child, no
-text-overflow, etc.) and fix it.
+text-overflow, etc.) or say when the cause needs more investigation. After each fix,
+rerun the failed content case at every breakpoint and report the before/after evidence.
 ```
 
 ## Real example output

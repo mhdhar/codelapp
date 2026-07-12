@@ -22,20 +22,20 @@ Drop this in at the start of a debugging session, before the agent starts editin
 ```text
 Standing rule for this debugging session: one variable at a time.
 
-- Change exactly one thing between runs. One edit, then run the repro,
-  then decide. Never two candidate fixes in the same run.
-- Before each edit, write one line: what you're changing and what you
-  predict the output will do if your theory is right.
-- After the run, compare against the prediction. If the failure didn't
-  improve, revert the edit completely before trying the next idea. No
-  "harmless" leftovers, leftovers change the experiment.
-- If two changes ever go in together and the bug goes away, that is not
-  a success. Split them, revert both, and re-test one at a time until
-  you know which one mattered.
+- Change one testable hypothesis at a time. An atomic change set may include
+  production code, its regression test, and necessary instrumentation, but it
+  must not test two candidate explanations in the same run.
+- Before each change set, write one line: the hypothesis, what you're changing,
+  and what you predict the output will do if the theory is right.
+- After the run, compare against the prediction. If the failure didn't improve,
+  revert changes disproven by the run before trying the next idea. Keep a valid
+  regression test or diagnostic only when the ledger records what evidence it adds.
+- If two changes testing separate hypotheses ever go in together and the bug goes
+  away, split and re-test them; do not split an atomic change set that tests one hypothesis.
 - Keep a running ledger in each message: attempt number, change,
   prediction, result, kept or reverted.
-- End state: the working tree contains only changes that are proven to
-  matter, and the ledger shows why each one is there.
+- End state: the working tree contains only changes proven necessary for the
+  behavior or valid test evidence, and the ledger shows why each one is there.
 
 This rule holds for the rest of the session, not just the next message.
 ```

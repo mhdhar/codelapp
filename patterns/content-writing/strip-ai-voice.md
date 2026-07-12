@@ -25,8 +25,8 @@ remove any factual claim.
 
 Cut:
 - Filler openers like "In today's world" or "It's important to note that"
-- Hedging like "could potentially" or "may help to" when the writer
-  actually means something will happen
+- Hedging like "could potentially" or "may help to" only when it is filler,
+  not when it expresses genuine uncertainty
 - Corporate padding: "leverage," "delve," "robust," "seamless,"
   "unlock," "elevate"
 - Em dashes and en dashes, replace with commas or periods
@@ -37,7 +37,7 @@ Keep:
 - The original point of view and sentence rhythm where it's already good
 - Technical terms that are actually necessary
 
-Return the edited text only, then a one-line list of what you cut.
+Return the edited text followed by exactly one `Cuts:` line listing what you cut.
 
 First ask me to paste the text, then wait. Don't start until you
 have it.

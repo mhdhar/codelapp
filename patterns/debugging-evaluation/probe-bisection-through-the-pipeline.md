@@ -24,13 +24,18 @@ A value comes out wrong at the end of a data flow in this codebase.
 Find the exact step where it goes wrong by bisecting the pipeline with
 log probes.
 
+Before adding a probe, confirm this is a local or otherwise approved
+non-production environment. Never log credentials, tokens, personal data, or
+full sensitive payloads; log a redacted or derived value that still tests the
+hypothesis.
+
 1. Trace the code path yourself, from the entry point to the place
    where the wrong value is observed. List it as an ordered chain of
    steps with file:line for each hop. Show me the chain before
    touching anything.
 2. Pick a probe tag nobody else uses, like PROBE_BISECT. Every probe
-   you add must log that tag plus the step name plus the value under
-   suspicion.
+   you add must log that tag plus the step name plus the redacted or
+   derived value under suspicion.
 3. Insert one probe at the midpoint of the chain. Run the repro once.
    If the value is still correct at the midpoint, the corruption is
    downstream: bisect the second half. If it's already wrong, bisect
@@ -42,9 +47,10 @@ log probes.
    line and the probe values on either side of it. If the step calls
    out to code you can't probe (a library, a network hop), say so and
    name what evidence you'd need next.
-6. Paste the final probe trail from the last run as proof, then delete
-   every probe and verify cleanup by searching the repo for the tag.
-   The search must come back empty before you're done.
+6. Paste the final redacted probe trail from the last run as proof, then
+   delete every probe and verify cleanup by searching the repo for the tag.
+   Do this cleanup even if the repro fails or the investigation stops early;
+   the search must come back empty before you're done.
 
 Do not fix anything in this pass. Locate, prove, clean up, report.
 

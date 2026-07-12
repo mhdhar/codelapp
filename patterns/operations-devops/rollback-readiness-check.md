@@ -24,11 +24,13 @@ Before I deploy this, check whether I can actually roll it back if it goes
 wrong. Do not just check that the deploy is clean, check that undoing it
 is possible and fast.
 
-First, work out what's shipping: diff the current branch against the last
-deployed state (the latest deploy tag, or the default branch if that's
-what production tracks) and state the change in one line at the top of
-your report, e.g. "migration adding a NOT NULL column" or "new required
-env var STRIPE_WEBHOOK_SECRET". Then:
+First, work out what's shipping: identify the real production deployment
+from platform metadata, a verified deployment ID, or a release record. Do not
+assume the latest tag or default branch is deployed. If the deployed state is
+unknown, stop and report that instead of evaluating rollback. Diff the current
+branch against the verified deployed state and state the change in one line at
+the top of your report, e.g. "migration adding a NOT NULL column" or "new
+required env var STRIPE_WEBHOOK_SECRET". Then:
 
 1. Identify the last known-good deployment (tag, commit hash, or platform
    deployment ID) and confirm it still exists and is redeployable.
@@ -43,9 +45,11 @@ env var STRIPE_WEBHOOK_SECRET". Then:
    too, not just the old code.
 4. State the actual rollback command or platform action (e.g. `vercel
    rollback` with the deployment ID from step 1, `kubectl rollout undo`,
-   "revert PR + redeploy") and how long it takes in practice, not in theory.
-5. Give a one-line verdict: SAFE TO DEPLOY (rollback is fast and complete),
-   or ROLLBACK IS PARTIAL (name exactly what wouldn't be undone).
+   "revert PR + redeploy"). Give a measured rollback time only if it was
+   previously exercised; otherwise mark timing UNTESTED.
+5. Give a one-line verdict: ROLLBACK VERIFIED, ROLLBACK PARTIAL (name exactly
+   what would not be undone), or ROLLBACK UNTESTED. This is readiness evidence,
+   not deployment authorization.
 ```
 
 ## Real example output
@@ -60,7 +64,7 @@ CHANGE: migration adding a NOT NULL `tenant_id` column to `invoices`, backfilled
 
 4. Rollback command: `vercel rollback dpl_8f2a1c`, but it must be preceded by the down-migration or the old code will 500 on every invoice write. In practice: down-migration takes ~30s on this table size, then rollback takes ~1 min.
 
-5. VERDICT: ROLLBACK IS PARTIAL: a plain "vercel rollback" alone breaks invoice creation. Full rollback requires the down-migration first. Documented the two-step order above; proceeding with deploy since the sequence is now known and fast.
+5. VERDICT: ROLLBACK PARTIAL: a plain "vercel rollback" alone breaks invoice creation. Full rollback requires the down-migration first. The sequence is documented, but deployment still needs separate approval.
 ```
 
 ## Why it works

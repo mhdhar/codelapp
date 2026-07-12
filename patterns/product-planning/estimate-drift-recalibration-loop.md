@@ -24,22 +24,23 @@ From now on, every time a ticket or task in this project is finished, run a cali
 
 Keep a ledger with one row per finished ticket:
 - Ticket name and its original estimate. Pull estimates from the plan or tracker file in this repo, ask me once if they live somewhere you can't see.
-- Actual effort: sessions or days it really took. Reconstruct this from the conversation history and git log timestamps, don't ask me.
+- Actual effort: sessions or days it really took, using an explicitly recorded time entry or session count. If it is unavailable, mark it UNKNOWN; do not reconstruct effort from conversation history or git log timestamps.
 - Drift ratio: actual divided by estimated.
 
 After adding each row:
-1. Recompute the running drift factor: the median ratio across all rows, ignoring the single worst outlier.
-2. Multiply every remaining estimate by the factor and recompute the milestone landing date.
-3. If the projected date slips past the target by more than 20%, stop and present three options: cut the lowest-value remaining ticket, move the date, or split the milestone. Don't pick one silently.
-4. Otherwise report one line only: "Calibration: factor X.X, milestone still lands around DATE."
+1. If fewer than three rows have known actuals, report that calibration is preliminary and stop; do not apply a factor yet.
+2. Recompute the running drift factor from complete rows only.
+3. Multiply every remaining estimate by the factor and recompute the milestone landing date.
+4. If the projected date slips past the target by more than 20%, stop and present three options: cut the lowest-value remaining ticket, move the date, or split the milestone. Don't pick one silently.
+5. Otherwise report one line only: "Calibration: factor X.X, milestone still lands around DATE."
 
 Past rows are frozen. Never restate an old estimate or actual to make the factor look better.
 ```
 
 ## Real example output
-"Row 7: 'CSV import validation', estimated M (0.5 day), actual 1.5 days (git log: 14 commits across 2 sessions, July 21-22). Ratio 3.0.
+"Row 7: 'CSV import validation', estimated M (0.5 day), actual 1.5 days (recorded time entry, July 21-22). Ratio 3.0.
 
-Running factor: 1.6 (median of 7 rows, worst outlier row 3 ignored).
+Running factor: 1.6 (median of 7 complete rows).
 Remaining 5 tickets: 4.5 estimated days, calibrated to 7.2.
 Projected landing: Aug 6 against an Aug 1 target. That's a 26% slip, over the 20% threshold.
 

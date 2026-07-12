@@ -25,13 +25,13 @@ Visit the pricing pages of the competitors I give you (2-4 max).
 For each one, extract:
 1. Tier structure: name, price, billing period (monthly/annual), and the exact metric each tier scales on (seats, usage, API calls, contacts, etc.)
 2. Packaging levers: which specific features or limits separate each tier from the one above it. Name the actual gate, not just "more features."
-3. Pricing psychology: identify the likely anchor tier (the one designed to look reasonable next to), any decoy tier (overpriced relative to its features, pushing buyers up or down), and any hidden costs (overage fees, setup fees, mandatory add-ons, minimum seats).
+3. Pricing psychology hypotheses: identify any price/feature contrast that could make a tier an anchor or decoy, but do not claim the competitor's intent. Name the observable evidence and any hidden costs (overage fees, setup fees, mandatory add-ons, minimum seats).
 4. Self-serve vs. sales-assisted: which tiers can be bought with a credit card and which require "Contact us."
 
 Then compare across all competitors:
 - Which packaging lever (seats vs. usage vs. feature-gating) is most common in this market?
 - Which competitor gates core functionality most aggressively (e.g. basic security or support behind a high tier)?
-- Where is there room for a packaging model none of them are using?
+- Where is there room for a packaging model not shown on these sampled pages?
 
 Output as a per-competitor table first, then a 5-bullet synthesis. Only use what's stated on the page; mark anything unclear "Not public."
 

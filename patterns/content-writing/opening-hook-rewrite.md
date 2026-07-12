@@ -31,8 +31,10 @@ If that sentence isn't the first sentence:
    actually load-bearing for context, don't just delete it if it's
    needed.
 3. Give me 2 alternate first lines using different hooks: one that opens
-   on a specific detail or number, one that opens on tension or
-   contradiction.
+   on a specific supplied detail or number, one that opens on tension or
+   contradiction already present in the paragraph. If the paragraph has no
+   support for a detail-first hook, write `NEEDS DETAIL:` and name the fact
+   needed instead of inventing one.
 
 If the opening already leads with the point, say so and don't rewrite it.
 
@@ -45,11 +47,11 @@ Original: "In today's fast-moving software landscape, teams are constantly looki
 
 The actual point is sentence 3, buried behind two sentences of throat-clearing.
 
-Rewrite: "We changed one thing about how code review works here, and it cut our average time-to-merge in half."
+Rewrite: "At our company, we changed how code review works, and it had a significant impact."
 
-Alt 1 (detail-first): "Our reviews used to take 3 days on average. Now they take 4 hours."
+Alt 1 (detail-first): "NEEDS DETAIL: add a real before/after review metric or observed outcome."
 
-Alt 2 (tension-first): "Most 'improve code review' advice tells you to review faster. We got faster results by reviewing less."
+Alt 2 (tension-first): "Code review was the overlooked part of our development workflow, so we changed how it works."
 
 ## Why it works
 Naming the specific tell, context-setting sentences before the real claim, gives the model something concrete to hunt for instead of the vague ask "make this hook better," which usually just produces a punchier version of the same throat-clearing. Forcing two different hook mechanisms as alternates stops it from handing back only one option dressed up as a rewrite.

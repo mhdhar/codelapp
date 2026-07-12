@@ -26,13 +26,14 @@ First, pick the verify command: the build, test, or repro command that proves th
 
 Loop:
 1. Write or edit the code for the change.
-2. Run the verify command. Paste the actual output, not a summary.
+2. Run the verify command. Record the command, environment, exit status, and
+   relevant redacted output, not a summary or sensitive full log.
 3. If it fails: identify the root cause from the actual error message (not a guess). State the root cause in one sentence before touching code again.
 4. Fix only what the root cause requires. Do not make unrelated changes.
 5. Re-run the verify command.
 6. Repeat steps 3-5 until the command passes cleanly, or until you've tried 5 times, in which case stop and report what you tried and what's still failing.
 
-Never report the change as done without pasting the final passing output. "Looks correct" is not evidence.
+Never report the change as done without a final redacted passing record for the verify command. "Looks correct" is not evidence.
 
 Before anything else, ask me in one message and wait: the change to implement or fix, plus a verify command if I have one in mind.
 ```
@@ -46,7 +47,7 @@ Attempt 1: npm run build fails.
   Root cause: config.env.API_KEY can be undefined at build time; function signature assumes it's always defined.
   Fix: added a guard that throws a clear error if API_KEY is missing, instead of loosening the type.
 
-Attempt 2: npm run build
+Attempt 2: npm run build (local environment, exit 0)
   > tsc --noEmit
   > vite build
   ✓ 412 modules transformed.

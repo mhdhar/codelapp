@@ -16,17 +16,23 @@ related: ["accessible-name-audit-for-custom-controls", "touch-target-thumb-audit
 ---
 
 ## When to use this
-You want a real accessibility pass on a shipped page or app, not a giant backlog of minor nits nobody will action. Use this when you have both automated tooling (axe-core or equivalent) and the ability to drive the page yourself, and you want one confirmed blocker fixed and proven fixed, not fifty flagged.
+You want a focused accessibility pass on a page or app, not a giant backlog of minor nits nobody will action. Use this when you have automated tooling (axe-core or equivalent), a way to drive the relevant page, and a defined route/state scope. The outcome is one confirmed blocker fixed and re-verified, not an unsupported claim of full-app compliance.
 
 ## The pattern
 ```text
-Run a full accessibility pass on this app against WCAG 2.2 AA. Start the local dev server
-if it isn't already running and audit every route; if I want a single page or a deployed
-URL instead, I'll say so in my next message. Do this in three passes and do not skip any:
+Run a scoped accessibility check aligned with WCAG 2.2 AA. Before scanning, inspect the app and
+write a coverage manifest: routes, auth roles, key states (including empty/error/loading where
+relevant), themes, breakpoints, available browser/assistive tooling, and any excluded coverage.
+Ask in one message for a target scope and safe test accounts or data only where they are missing.
+If I do not name a scope, default to one public route and document every exclusion. Use a local or
+safe test environment; do not access production or mutate real user data.
 
-PASS 1 - Automated: run an axe-core (or equivalent) scan on every page/route and on every
-theme variant (light and dark, or any theming the app has). List every violation with its
-rule id, WCAG success criterion, and every DOM node it fired on.
+After scope is agreed, start the local dev server if needed and do these three passes for every
+route/state/theme in the coverage manifest. Record unavailable checks as unverified; do not skip
+them silently:
+
+PASS 1 - Automated: run an axe-core (or equivalent) scan on every manifested route/state/theme.
+List every violation with its rule id, WCAG success criterion, and every DOM node it fired on.
 
 PASS 2 - Manual keyboard: tab through the entire page using only the keyboard. Note every
 control that: can't be reached by tab, has no visible focus indicator, traps focus, or
@@ -44,18 +50,23 @@ Then:
    the tool output - tools produce false positives.
 3. Rank confirmed findings by harm: does it block a user from completing the task at all
    (critical), or does it degrade the experience but leave a workaround (moderate/minor)?
-4. Fix ONLY the highest-ranked finding. Do not batch-fix everything in one pass.
+4. Fix ONLY the highest-ranked finding. This request authorizes one minimal local code fix for a
+   confirmed finding; do not batch-fix, deploy, or alter production data.
 5. After the fix, re-run PASS 1, 2, and 3 exactly as before, scoped to the area you changed
    at minimum. Confirm: the original violation is gone, the automated scan shows 0 new
    violations, and the manual keyboard/screen-reader check still works end-to-end for that
    control (can still be reached, operated, and understood).
-6. Report the before/after violation count and the specific fix. Only then ask whether to
-   continue to the next-ranked finding.
+6. Report the coverage manifest, before/after violation count, specific fix, and every remaining
+   unverified route/state/tooling gap. Only then ask whether to continue to the next-ranked finding.
 ```
 
 ## Real example output
 ```
-PASS 1 - Automated (axe-core, all routes, light + dark)
+Coverage manifest: public routes only (`/`, `/patterns`, `/patterns/[category]`, `/submit`,
+`/about`), light and dark themes. Authenticated, error, and loading states are excluded because
+safe test accounts and fixtures were not supplied.
+
+PASS 1 - Automated (axe-core, agreed public routes, light + dark)
 Scanned: /, /patterns, /patterns/[category], /submit, /about - light and dark theme (10 scans)
 Result: 1 violation, 2 instances, both on /submit (light and dark identical)
 - rule: button-name (critical) - WCAG 4.1.2 Name, Role, Value
@@ -88,8 +99,9 @@ announces "Category: SEO & GEO". Same sequence confirmed on FormatSelect. Operab
 unchanged, naming now correct.
 PASS 3 rerun: role=combobox, name="Category" / name="Format". Matches visible labels.
 
-No further findings. Nothing else to rank. Shipping.
+No further findings within the agreed coverage. Authenticated, error, and loading states remain
+unverified. Awaiting approval to address the next ranked finding or expand coverage.
 ```
 
 ## Why it works
-Automated scanners catch missing names and roles but not missing operability, and manual keyboard/tree checks catch the opposite - running only one class of check leaves half the WCAG surface unverified. Ranking by harm before fixing stops you from burning the session on minor label-wording nits while a critical blocker ships, and re-running the identical checks (not a new spot check) is the only way to prove the fix didn't silently break what already worked.
+Automated scanners catch missing names and roles but not missing operability, and manual keyboard/tree checks catch the opposite - running only one class of check leaves part of the accessibility surface unverified. Ranking by harm before fixing stops you from burning the session on minor label-wording nits while a critical blocker remains, and re-running the identical checks is strong evidence that the fix did not silently break what already worked.

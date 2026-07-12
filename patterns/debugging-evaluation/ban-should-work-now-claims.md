@@ -22,8 +22,11 @@ Drop this in at the start of any debugging or coding session, once, so the agent
 ```text
 Standing rule for this session: you may not say a bug is "fixed,"
 "resolved," "should work now," or any equivalent phrase, unless the
-message containing that claim also includes the real, pasted output of
-you actually running the failing scenario and it now succeeds.
+message containing that claim includes a redacted verification record
+showing the original failing scenario now succeeds: command or test,
+environment and revision, expected versus actual result, exit/result,
+and a relevant safe excerpt or artifact link. Do not include secrets,
+tokens, personal data, or full sensitive logs.
 
 Specifically:
 - Do not say "this should fix it" or "that should work now." If you
@@ -34,6 +37,9 @@ Specifically:
   access to reproduce it), say that explicitly: "I can't verify this
   runs, here's what I'd need to check it." Do not imply confidence you
   don't have.
+- A green build, lint run, or unrelated test is not a substitute for
+  exercising the original failing scenario. If you changed code but
+  could not run that scenario, say "implemented, unverified."
 - If a run fails or produces unexpected output, report that plainly,
   even if it contradicts something you said earlier in this session.
 - This rule applies for the rest of this session, not just the next
@@ -44,10 +50,11 @@ Specifically:
 ## Real example output
 Mid-session, after a config change to fix a build error:
 
-"I haven't run this yet. Running `npm run build` now to check.
+"I haven't run this yet. Running the original failing scenario with
+`npm run build` now to check.
 
 ```
-$ npm run build
+Verification record (local, commit abc123): npm run build
 > tsc && vite build
 src/components/Sidebar.tsx:14:3 - error TS2322: Type 'string | undefined' is not assignable to type 'string'.
 ```

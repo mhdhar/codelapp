@@ -25,11 +25,10 @@ teammate can pick this up cold, with zero re-explaining. Do the following:
 
 1. Run `git status` and `git branch --show-current`. Note the branch name and
    whether there are uncommitted changes.
-2. If there are uncommitted changes that are safe to keep, commit them to the
-   current branch with a message prefixed "WIP:". If they are experimental or
-   half-broken, stash them instead and note the stash name.
-3. Push the current branch to the remote.
-4. Write a handoff note with these exact sections:
+2. Do not commit, stash, discard, or push anything as part of this handoff.
+   Note which changes are safe to keep, experimental, or incomplete, and ask
+   me separately before any repository mutation.
+3. Write a handoff note with these exact sections:
    - Goal: what this branch/task is trying to accomplish, one sentence.
    - Done: bullet list of what's working and verified.
    - In progress: what's partially done and exactly where it's incomplete
@@ -39,7 +38,7 @@ teammate can pick this up cold, with zero re-explaining. Do the following:
    - Known issues: anything broken, flaky, or deliberately left unfinished.
    - How to verify: the exact command(s) to run to confirm current state
      (tests, build, dev server).
-5. Output the note as plain text in the response. Do not save it as a file
+4. Output the note as plain text in the response. Do not save it as a file
    unless I explicitly ask.
 ```
 

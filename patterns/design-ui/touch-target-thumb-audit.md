@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "beginner"
 est_time: "15 min"
 models: ["any"]
-summary: "Measure every tap target at 375px, fix anything under 44x44, and prove it with a before/after table."
+summary: "Measure tap targets in an agreed mobile route/state scope, fix confirmed misses, and show a before/after table."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -20,17 +20,21 @@ The app was built and tested with a mouse, and now mobile users are missing taps
 
 ## The pattern
 ```text
-GOAL: every interactive element in this app has a hit area of at least 44x44px on
+First ask me for the routes and states to cover, plus whether I want AUDIT ONLY or
+AUDIT + FIX. If no scope is given, audit one public route and list all exclusions.
+
+GOAL: every interactive element in the agreed scope has a hit area of at least 44x44px on
 mobile, measured on the rendered page, not guessed from the CSS.
 
 SUCCESS CRITERIA (all must hold before you report done):
-1. You've inventoried every interactive element type in the app: buttons, links, icon
+1. You've inventoried every interactive element type in the agreed scope: buttons, links, icon
    buttons, checkboxes, radio buttons, tab triggers, close/dismiss buttons, table row
    actions, pagination controls.
-2. At a 375px viewport, you've measured the actual clickable box of each type on real
-   pages (rendered bounding box plus any padding that receives the tap). Measure icon
+2. At a 375px viewport, you've measured the actual clickable box of each type on the agreed
+   routes/states (rendered bounding box plus any padding that receives the tap). Measure icon
    buttons and inline icon links first; they're the usual offenders.
-3. Every element under 44x44 is either fixed or flagged. Fix with padding, min-height/
+3. Every element under 44x44 is either proposed, fixed, or flagged. In AUDIT ONLY mode, do not
+   edit. In AUDIT + FIX mode, fix with padding, min-height/
    min-width, or an expanded pseudo-element hit area, so the visual size stays the same
    and only the tappable box grows. Flag as an accepted exception only with a reason,
    e.g. links inside running body text, where a 44px line-height would be worse.
@@ -38,7 +42,7 @@ SUCCESS CRITERIA (all must hold before you report done):
    land on both. Fix any that touch.
 5. You've re-measured after the fixes and produced a before/after table: element, page,
    size before, size after.
-6. Desktop is visually untouched. Hit-area fixes must be invisible at every breakpoint.
+6. Re-check the agreed desktop and mobile breakpoints. Report any visual change or untested breakpoint.
 ```
 
 ## Real example output

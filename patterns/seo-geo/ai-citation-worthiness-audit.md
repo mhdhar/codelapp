@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "intermediate"
 est_time: "20 min"
 models: ["any"]
-summary: "Find which sentences on a page an AI engine would actually quote, then fix the rest."
+summary: "Assess which sentences are clear, query-relevant, and supportable enough to be useful to answer engines."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -16,33 +16,36 @@ related: ["generate-llms-txt", "concrete-example-injector", "entity-consistency-
 ---
 
 ## When to use this
-Your page ranks and loads fine but never gets quoted in ChatGPT, Perplexity, or an AI Overview answer. Use this to separate specific, citable claims from generic marketing fluff that answer engines skip straight over.
+Your page ranks and loads fine, but you want to make its claims more useful to answer engines. Use this to separate clear, query-relevant, supportable claims from generic marketing copy. This is an editorial readiness check, not a prediction that a particular AI product will cite the page.
 
 ## The pattern
 ```text
-Audit the body copy of one page from my site for AI citation-worthiness
-against a target query:
-1. Go paragraph by paragraph. Mark each one CITABLE or GENERIC. CITABLE
-   means it states a specific number, a named fact, a precise definition,
-   or a concrete claim an answer engine could quote verbatim and be right.
-   GENERIC means it's a vague benefit statement, an adjective stack
-   ("seamless, powerful, industry-leading"), or a claim with no specific
-   detail attached.
-2. For every GENERIC paragraph, say exactly what specific fact, number, or
-   detail is missing that would make it citable, based only on what's
-   plausible given the rest of the page. Don't invent stats I don't have.
-3. Rewrite the 3 weakest GENERIC paragraphs into citable versions, using
-   real facts already present elsewhere on the page where possible. Where
-   a real number I haven't given you would be required, write "NEEDS DATA:"
-   followed by what to fill in. Never invent the number.
-4. Check whether the page has one clear, quotable one-sentence definition
-   of the core topic near the top: the kind of sentence an AI Overview
-   would lift directly. If not, write one.
-5. Give a citation-worthiness score out of 10 for the page as a whole, and
-   the single biggest reason it's losing points.
+Audit the body copy of one page from my site against a target query. This
+is a transparent editorial heuristic, not a forecast of whether any AI
+engine will quote or cite the page:
+1. Go paragraph by paragraph. Mark each one READY, GENERIC, or NEEDS EVIDENCE.
+   READY means it gives a direct, query-relevant answer with a specific claim
+   supported by the page or source material I supplied. GENERIC means it is a
+   vague benefit statement, an adjective stack ("seamless, powerful,
+   industry-leading"), or lacks useful detail. NEEDS EVIDENCE means it has a
+   potentially useful claim but its precision or support cannot be verified.
+2. For every GENERIC or NEEDS EVIDENCE paragraph, say exactly what evidence,
+   fact, or detail would be needed to strengthen it. Do not infer plausible
+   facts or invent statistics.
+3. Rewrite the 3 weakest GENERIC paragraphs using only supportable facts
+   already present on the page or in the supplied sources. Where proof or a
+   number is missing, write "NEEDS DATA:" followed by what to supply.
+4. Check whether the page has one clear, one-sentence definition of the
+   core topic near the top that directly answers the target query. If not,
+   write a candidate based only on the supplied page and sources.
+5. Give an editorial readiness score out of 10 for the page as a whole,
+   based on query fit, answer clarity, specificity, and evidence. State the
+   single biggest reason it is losing points; do not present the score as a
+   citation prediction.
 
-Start by asking me in one message for (1) the target query and (2) the
-page's body copy pasted in. Wait for my reply before doing anything.
+Start by asking me in one message for (1) the target query, (2) the page's
+body copy pasted in, and (3) the source material that supports its factual
+claims, if available. Wait for my reply before doing anything.
 ```
 
 ## Real example output
@@ -55,8 +58,8 @@ saved, error rate, days-to-payment). No specific mechanism named.
 Paragraph 2: "Automated matching reconciles line items against purchase
 orders in under 2 seconds per invoice, catching mismatches before they
 reach approval."
--> CITABLE. Specific mechanism (line-item matching) and a real number
-(under 2 seconds).
+-> NEEDS EVIDENCE. The mechanism and timing are useful, but the timing needs
+supporting data before it can be treated as a reliable claim.
 
 Paragraph 3: "Teams using Acme report significant time savings on
 month-end close."
@@ -64,22 +67,22 @@ month-end close."
 or days, and whether this is a survey stat or a case study.
 
 Rewrite of Paragraph 1:
-"Acme's line-item matching engine cuts invoice review time from an
-average of 12 minutes to under 90 seconds per invoice by auto-reconciling
-against purchase orders."
+"Acme automatically reconciles invoice line items against purchase orders
+before approval. NEEDS DATA: verified review-time or mismatch-reduction result,
+with its source."
 
 Rewrite of Paragraph 3:
 "NEEDS DATA: teams using Acme reduce month-end close by (fill in: days or
 hours saved), based on (fill in: survey size or internal usage data)."
 
-Top-of-page definition (missing, added): "Invoice automation is the use
-of software to match, validate, and route invoices for approval without
-manual line-item review."
+Candidate top-of-page definition (verify against product scope): "Invoice
+automation uses software to match, validate, and route invoices for approval
+without manual line-item review."
 
-Citation-worthiness score: 4/10. Biggest reason: only 1 of 5 paragraphs
-contains a checkable number; the rest read as benefit statements an
-answer engine has no reason to quote over a competitor's page.
+Editorial readiness score: 4/10. Biggest reason: the page has few direct,
+specific claims and the supplied copy includes no evidence for its performance
+statements. This score is a copy-review heuristic, not a citation forecast.
 ```
 
 ## Why it works
-Answer engines quote sentences that reduce their own risk of being wrong: specific numbers and precise definitions are easy to attribute and hard to dispute. Splitting a page into CITABLE and GENERIC forces you to see exactly how much of the copy is doing marketing work versus giving an AI engine something safe to repeat.
+Clear, query-relevant claims with available evidence are more useful than generic benefit language. Separating READY, GENERIC, and NEEDS EVIDENCE makes the missing proof visible before a polished sentence turns into an unsupported claim.

@@ -22,6 +22,11 @@ You're about to launch a product in an industry with regulatory exposure (health
 ```text
 Act as a regulatory research analyst.
 
+This is research, not legal advice. Use primary regulator, statute, or agency
+sources where available. For every claim, provide the direct source URL,
+jurisdiction, and an "as of" date; if those cannot be verified, mark the
+claim for counsel rather than treating it as current.
+
 Produce a regulatory landscape scan with these sections:
 
 1. LICENSING & REGISTRATION
@@ -41,7 +46,7 @@ Produce a regulatory landscape scan with these sections:
    for products like this. Say plainly "this is unsettled" rather than
    guessing at an answer.
 
-For every claim, cite the specific law, agency, or public source by name.
+For every claim, cite the specific law, agency, or public source by name and URL.
 If you're not certain a regulation applies or is current, flag it as
 "verify with counsel" rather than stating it as settled fact. Do not
 invent statute numbers or agency names.

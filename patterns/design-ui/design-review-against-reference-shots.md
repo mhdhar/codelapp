@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "intermediate"
 est_time: "20 min"
 models: ["any"]
-summary: "Give the agent your UI plus a reference screenshot; it doesn't stop until named gaps are closed."
+summary: "Compare your UI with a reference screenshot, name material gaps, and verify any approved changes."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -27,22 +27,21 @@ Inputs: two screenshots. A is my current UI; B is the reference. Both show a sim
 type of screen/component. Find the component(s) in this codebase that render
 screenshot A before you change anything.
 
-SUCCESS CRITERIA (do not stop until all are true):
-1. You've named at least 5 concrete, specific differences between A and B - not vague
+SUCCESS CRITERIA:
+1. You've named up to 5 material, specific differences between A and B - not vague
    ("B feels more premium") but specific ("B uses 3 font weights across the hierarchy, A
    uses 1"; "B has 40px of breathing room around the primary action, A has 12px").
 2. For each named difference, you've decided: adopt it, adapt it to fit our existing brand,
    or explicitly reject it with a one-line reason (e.g. "B's dark background doesn't fit
    our light-only brand, skip").
-3. You've implemented every "adopt" and "adapt" decision in actual code, not a written plan.
+3. Before changing code, present the adopt/adapt decisions and wait for my approval. If I approve implementation, make only those approved changes.
 4. You've taken a new screenshot of the result and can point to each of the 5+ differences
    and state, with evidence, whether it's now closed, partially closed, or intentionally
    not closed (with the reason from step 2).
 5. The result still passes our existing design constraints (uses only our DESIGN_SYSTEM.md
    tokens if we have one, doesn't break any existing responsive breakpoint).
 
-You choose the order and how many iterations it takes. Report back only when all 5 criteria
-are met, with the final screenshot and the closed/rejected list.
+You choose the order and how many iterations it takes. Report the comparison and proposed decisions first. After approved implementation, report the final screenshot and the closed/rejected list; explicitly list anything not verified.
 
 Start by asking me to attach both screenshots (A, then B) in one message, then wait
 until you have them before doing anything else.

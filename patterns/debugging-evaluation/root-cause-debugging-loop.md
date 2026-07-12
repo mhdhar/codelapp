@@ -26,8 +26,9 @@ We have a bug.
 Follow this loop and do not skip steps:
 
 1. Reproduce the bug first. Write or run a test/command that fails in the
-   exact way described. Paste the real failing output. If you cannot
-   reproduce it, stop and tell me what you tried.
+   exact way described. Record the command, environment, exit result, and
+   relevant redacted failure evidence. If you cannot reproduce it, stop and
+   tell me what you tried.
 2. State exactly one hypothesis for the root cause, based only on the
    evidence you've seen so far (code, logs, output). Do not list multiple
    possible causes.
@@ -39,8 +40,8 @@ Follow this loop and do not skip steps:
 5. Only once you have confirmed the root cause with evidence, propose the
    fix and explain why it addresses the confirmed cause, not just the
    symptom.
-6. Re-run the original failing reproduction from step 1 and paste the new
-   output to prove the fix works.
+6. Re-run the original failing reproduction from step 1 and record the exact
+   command, environment, exit result, and relevant redacted passing evidence.
 
 Do not guess. Do not propose a fix before completing step 3.
 
@@ -50,11 +51,11 @@ wait for my reply.
 ```
 
 ## Real example output
-Step 1: Reproduced with `npm test -- checkout.spec.ts`, failing assertion: expected total 42.50, got 45.00.
+Step 1: Reproduced locally with `npm test -- checkout.spec.ts`, exit 1; failing assertion: expected total 42.50, got 45.00.
 Step 2: Hypothesis: tax is applied twice, once in `calculateTotal` and once in the checkout summary component.
 Step 3: Read `calculateTotal` (src/lib/pricing.ts:44), it does not apply tax. Read `CheckoutSummary.tsx:88`, confirmed it adds tax on top of a total that already includes it upstream in `useCart.ts:120`. Evidence confirms hypothesis.
 Step 5: Removed the duplicate tax addition in `CheckoutSummary.tsx:88`.
-Step 6: Re-ran `npm test -- checkout.spec.ts`, all 6 tests pass, total now 42.50.
+Step 6: Re-ran `npm test -- checkout.spec.ts` locally, exit 0; all 6 tests pass, total now 42.50.
 
 ## Why it works
 Forcing one hypothesis at a time with evidence stops the AI from pattern-matching a plausible-looking fix onto the wrong cause. Reproducing first means the "fix" gets checked against the same failure that started the loop, not a new assumption.

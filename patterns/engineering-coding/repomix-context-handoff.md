@@ -23,13 +23,18 @@ You're closing a session on a project the next session, possibly a different age
 ```text
 Before we close this session, pack the codebase for the next session.
 
-1. Run: npx repomix
-2. Confirm it produced an output file (repomix-output.xml or .md) and tell me its size and how many files it packed.
-3. If the repo has a .repomixignore or the default ignore misses something huge and irrelevant (node_modules, build output, lockfiles), tell me and re-run with the exclusion.
-4. Write a short HANDOFF.md (if one doesn't exist) or update the existing one with:
+1. Before running anything, inspect `.repomixignore` and the planned output.
+   Exclude `.env` files, credentials, private keys, customer data, local
+   databases, and other sensitive artifacts. Do not upload the pack anywhere.
+2. Run: npx repomix
+3. Confirm it produced an output file (repomix-output.xml or .md) and tell me its size and how many files it packed.
+4. If the repo has a .repomixignore or the default ignore misses sensitive,
+   huge, or irrelevant files (node_modules, build output, lockfiles), tell me
+   and re-run with the exclusion.
+5. Write a short HANDOFF.md (if one doesn't exist) or update the existing one with:
    - Current task and status
    - Reference to the repomix output file by name, with the instruction "read this first for full code context"
-5. Confirm both files are saved in the project root and tell me whether to commit them.
+6. Confirm both files are saved in the project root and tell me whether to commit them.
 ```
 
 ## Real example output

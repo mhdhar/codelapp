@@ -1,5 +1,5 @@
 ---
-title: "Prioritize and Freshen a Sitemap for a Large Site"
+title: "Segment and Freshen a Sitemap for a Large Site"
 slug: "sitemap-priority-for-large-sites"
 format: "workflow"
 category: "seo-geo"
@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "advanced"
 est_time: "20 min"
 models: ["any"]
-summary: "Turn a flat URL list into a segmented sitemap with accurate priority and lastmod."
+summary: "Turn a flat URL list into a segmented sitemap with accurate canonical URLs and lastmod values."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -16,7 +16,7 @@ related: ["ai-crawler-robots-txt-strategy", "internal-linking-gap-analysis", "ca
 ---
 
 ## When to use this
-Your site has thousands of URLs, sitemap.xml is one flat file with `priority=0.5` on everything, and crawl budget is being wasted on thin or dead pages. Use this before regenerating the sitemap, not after; the segmentation decisions drive the file structure.
+Your site has thousands of URLs and sitemap.xml is one flat file with stale or indiscriminate metadata. Use this before regenerating the sitemap; segmentation and canonical-URL decisions drive a maintainable file structure.
 
 ## The pattern
 ```text
@@ -28,16 +28,17 @@ Do the following:
 1. Group the URLs into logical sitemap segments by page type (e.g.
    /sitemap-products.xml, /sitemap-blog.xml, /sitemap-docs.xml). Tell me
    which segments should exist based on the page types actually present.
-2. Flag URLs to EXCLUDE from the sitemap entirely: zero organic sessions
-   AND no content update in 12+ months, obviously duplicate or paginated
-   URLs (?page=2, ?sort=), and thin pages if that's inferable from the data.
-3. Assign a <priority> value (0.1-1.0) per segment based on organic
-   sessions density, not a flat guess. State the scale you used.
-4. Set <changefreq> per segment based on how often that page type's content
-   actually changes (blog vs. static legal pages vs. product pages).
+2. Flag URLs for sitemap review: obvious duplicates, paginated URLs
+   (?page=2, ?sort=), known noindex pages, or non-canonical URLs. Do not
+   exclude a page merely because it has zero sessions or is old; the supplied
+   data cannot establish whether it should be indexed.
+3. Use <lastmod> only when the supplied date is the page's real, meaningful
+   content update date. Omit it when unknown.
+4. Omit <priority> and <changefreq>; do not invent crawl signals from traffic
+   density or page type.
 5. Output a sitemap index file (sitemap.xml) referencing each segment file,
    plus one fully worked example segment file with 3-5 real URLs from the
-   data, showing correct <lastmod>, <priority>, <changefreq>.
+   data, showing correct absolute <loc> values and <lastmod> only where known.
 
 Use actual <lastmod> dates from the data provided. Do not use today's date
 as a placeholder for pages that haven't changed.
@@ -50,20 +51,15 @@ sample as representative and say so in your output.
 ## Real example output
 ```
 brightpath.io: 4,200 URLs sampled. Segments identified:
-- /sitemap-products.xml (1,800 URLs): priority 0.8, changefreq weekly
-  (highest session density: 62% of total organic sessions land here)
-- /sitemap-docs.xml (1,300 URLs): priority 0.6, changefreq monthly
-  (steady traffic, content changes rarely once published)
-- /sitemap-blog.xml (900 URLs): priority 0.5, changefreq monthly
-  (long tail, most posts get <10 sessions/quarter after month 2)
-- /sitemap-legal.xml (12 URLs): priority 0.2, changefreq yearly
+- /sitemap-products.xml (1,800 URLs): canonical product pages
+- /sitemap-docs.xml (1,300 URLs): canonical documentation pages
+- /sitemap-blog.xml (900 URLs): canonical blog posts
+- /sitemap-legal.xml (12 URLs): canonical legal pages
 
-Priority scale: 0.8 = top quartile by 90-day sessions, 0.5-0.6 = middle
-half, 0.2-0.3 = bottom decile or evergreen/rarely-changing content.
-
-Excluded (188 URLs): 142 paginated product listing pages (?page=N), 31
-internal search result pages indexed by accident, 15 blog posts with 0
-sessions and no update since 2023-11.
+Review list (188 URLs): 142 paginated product listing pages (`?page=N`),
+31 internal search-result pages indexed by accident, and 15 blog posts that
+need a canonical/indexability check. Zero sessions or an old date alone does
+not decide whether a page belongs in the sitemap.
 ```
 ```xml
 <!-- sitemap.xml -->
@@ -81,11 +77,9 @@ sessions and no update since 2023-11.
   <url>
     <loc>https://brightpath.io/products/invoice-automation</loc>
     <lastmod>2026-06-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
 ```
 
 ## Why it works
-A flat sitemap with uniform priority tells crawlers nothing; it's the equivalent of not setting priority at all. Segmenting by page type and deriving priority from actual traffic density gives crawlers a real signal about where to spend budget, and pruning dead URLs stops them from re-fetching pages that will never rank.
+A sitemap should list the canonical, indexable URLs you want in search. Segmenting by page type can make large files manageable, while truthful <lastmod> values help crawlers understand real content changes. Traffic and age alone are not evidence that a URL should be removed.

@@ -26,11 +26,12 @@ Extract:
 1. Pricing tiers: name, price, billing period, what's included at each tier
 2. Core features: list every distinct feature mentioned, grouped by category (e.g. core, integrations, security, support)
 3. Positioning: the exact language they use to describe who the product is for and what problem it solves
-4. Notable gaps: anything a competitor in this space would typically have that's missing or not mentioned
+4. Not publicly mentioned: any relevant capability not stated on the reviewed
+   pages. Treat this as a documentation gap, not proof the product lacks it.
 
 Output as a markdown table with columns: Feature/Tier | Details | Source page (URL).
 
-Only include what's stated on the pages. Do not infer or guess capabilities. If a price or detail isn't public, mark it "Not public."
+Only include what's stated on the pages. Do not infer or guess capabilities. If a price or detail isn't public, mark it "Not public." Start the report with the pages and date reviewed so absence is scoped to that evidence.
 
 Start by asking me for the competitor's URL, then wait for my reply before visiting anything.
 ```

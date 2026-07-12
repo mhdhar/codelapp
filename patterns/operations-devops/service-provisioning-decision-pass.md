@@ -23,7 +23,9 @@ You're starting a new build (or untangling a stalled one) that will eventually t
 Goal: produce a Service Registry for this project: one deliberate
 decision per category below, not services added ad hoc as features come
 up. Read the README and repo structure first so your picks fit what this
-product actually is, then decide.
+product actually is. Before deciding, ask for expected launch usage,
+budget constraints, and data/compliance needs if they are not documented;
+mark them unknown rather than guessing.
 
 For each category, either name the service and justify it in one sentence,
 or mark "not needed for this build" and say why:
@@ -42,8 +44,9 @@ Rules:
   it directly instead of you hand-holding through a dashboard.
 - Do not pick two services that do the same job "to be safe." One choice
   per category.
-- Flag any category where the free tier will not survive expected launch
-  traffic, and say what the paid tier costs.
+- Flag any category where the free tier may not survive expected launch
+  traffic. State paid-tier cost only when current pricing is supplied or
+  verified, otherwise mark it `PRICING TO VERIFY`.
 - Output as a table: category | service chosen | why | install/setup command.
 - Stop after producing the table. Do not start installing anything;
   this is a decision pass, not implementation.

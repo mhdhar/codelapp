@@ -32,14 +32,14 @@ this check instead of the command:
      specific recovery path.
    - Not recoverable (e.g. no backup, force-push overwrites shared history,
      production data with no snapshot): say so plainly.
-3. If NOT RECOVERABLE: stop, state that clearly, and ask for explicit
-   confirmation before running it. Do not proceed on an assumed yes.
-4. If RECOVERABLE: state the recovery path in your report, then proceed.
-5. For anything touching a shared or production surface (a shared branch,
+3. For anything touching a shared or production surface (a shared branch,
    a shared database, anything other people rely on), treat it as NOT
    RECOVERABLE regardless of technical reversibility. The blast radius
    includes other people, not just data. When in doubt about whether
    something is shared, treat it as shared.
+4. Regardless of recoverability, stop, state the recovery path or its
+   absence, and ask for explicit confirmation before running the command.
+   Recovery information informs the decision; it is never authorization.
 ```
 
 ## Real example output
@@ -52,7 +52,8 @@ project with a 7-day window, and this table hasn't been written to in 11
 days; a PITR restore to any point in the last week would bring it back if
 needed. Also confirmed no other table has a foreign key into it.
 
-Proceeding: dropped staging_import_backup. Table removed, no errors.
+Stopping: this is recoverable, but still destructive. Awaiting your explicit
+confirmation before dropping staging_import_backup.
 
 ---
 

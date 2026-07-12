@@ -26,25 +26,31 @@ and non-zero on bad.
 
 Do this:
 
-1. Establish the known-good ref. If I named one, use it. If I didn't,
+1. Run `git status` first. If the worktree is not clean, do not start
+   bisect in it; ask to use a disposable worktree or wait for approval to
+   preserve the existing changes safely. Record the starting branch so
+   `git bisect reset` can return to it.
+2. Establish the known-good ref. If I named one, use it. If I didn't,
    find one yourself: step back through history by doubling
    (HEAD~8, HEAD~16, HEAD~32, ...) running the repro command at each,
    until it passes.
-2. Confirm the repro command actually fails on the bad ref and passes on
+3. Confirm the repro command actually fails on the bad ref and passes on
    the good ref before starting bisect. If it doesn't cleanly distinguish
    the two, stop and tell me, don't bisect on an unreliable signal.
-3. Run `git bisect start`, then `git bisect bad <bad ref>` and
+4. Run `git bisect start`, then `git bisect bad <bad ref>` and
    `git bisect good <good ref>`.
-4. At each commit git checks out, run the exact repro command (rebuild or
+5. At each commit git checks out, run the exact repro command (rebuild or
    reinstall dependencies first if the project requires it for that
    commit to run at all) and mark it with `git bisect good` or
    `git bisect bad` based on the real exit code, not a guess.
-5. Continue until git reports the first bad commit.
-6. Show me that commit's full diff (`git show <commit>`) and explain in
+6. Continue until git reports the first bad commit.
+7. Show me that commit's full diff (`git show <commit>`) and explain in
    plain terms what it changed that would cause this specific failure,
    tying the explanation to actual lines in the diff.
-7. Run `git bisect reset` to return the repo to its original state.
-8. Do not propose a fix for the regression yet unless I ask, the goal of
+8. Run `git bisect reset` before reporting any result, including if a
+   dependency install or repro fails, to return the repo to its recorded
+   starting state.
+9. Do not propose a fix for the regression yet unless I ask, the goal of
    this workflow is isolating the commit, not patching it.
 
 Before step 1, ask me in one message for: (1) the repro command, or a
