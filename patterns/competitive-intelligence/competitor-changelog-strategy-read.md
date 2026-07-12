@@ -20,9 +20,10 @@ A competitor ships constantly and you only ever see one release note at a time, 
 
 ## The pattern
 ```text
-Visit the changelog or release notes page of the competitor I give you. Read the last 6 months of entries, or the last 30 entries, whichever is more. Default to 6 months unless I say otherwise.
+Visit the changelog or release notes page of the competitor I give you. Read the last 6 months of dated entries, or the most recent 30 dated entries if that covers more history. State the actual date range and entry count; if dates or enough entries are unavailable, say so instead of claiming a trend.
 
-Classify every entry into exactly one bucket:
+Classify every entry into one primary bucket, or mark it MULTI with the two relevant buckets
+when one release materially spans both:
 - CORE: deepens the existing product for existing users
 - EXPAND: opens a new use case, market, or user type
 - ENTERPRISE: compliance, permissions, SSO, audit, admin controls
@@ -30,7 +31,7 @@ Classify every entry into exactly one bucket:
 - MAINTENANCE: fixes, performance, infrastructure
 
 Then:
-1. Show the bucket counts, and the trend: compare the first 3 months against the last 3. A shift in mix is the signal (e.g. ENTERPRISE going from 10% to 40% of entries means they're moving upmarket).
+1. Show the bucket counts, and the trend: compare the first and second halves of the actual selected dated set. If the set is too small or dates are missing, say trend unavailable. A shift in mix is a signal to investigate, not proof of strategy.
 2. Name the 2-3 entries that don't fit their current public positioning. Off-positioning releases are usually the first public evidence of a strategy change.
 3. In three sentences, state where they're most likely headed over the next two quarters and which of my customer segments that puts at risk. Mark this as inference, not fact.
 

@@ -32,8 +32,9 @@ Process:
    - SOURCED: quote the exact line in the notes that supports it
    - SOFTENED: the notes support a weaker version of this claim than the
      draft states, show both versions
-   - UNSOURCED: nothing in the notes supports this, it was invented
-3. For every SOFTENED or UNSOURCED claim, rewrite the draft sentence to
+   - NOT SUPPORTED BY THE SUPPLIED SOURCES: the supplied notes do not support
+     this claim; that alone does not establish that it is false or who wrote it
+3. For every SOFTENED or NOT SUPPORTED BY THE SUPPLIED SOURCES claim, rewrite the draft sentence to
    match what the notes actually support, or mark it (VERIFY: source) if
    you genuinely don't know and I need to check it myself.
 4. Output the corrected draft first, then the full claim list from step 2
@@ -45,8 +46,8 @@ have both.
 ```
 
 ## Real example output
-- "Support tickets dropped 40% after the change" - UNSOURCED. Notes say "tickets went down noticeably" with no number. Rewrote to: "Support tickets dropped noticeably after the change."
-- "This is the same approach Stripe uses internally" - UNSOURCED. Not mentioned anywhere in the notes. Flagged (VERIFY: source) and removed the sentence pending a check.
+- "Support tickets dropped 40% after the change" - NOT SUPPORTED BY THE SUPPLIED SOURCES. Notes say "tickets went down noticeably" with no number. Rewrote to: "Support tickets dropped noticeably after the change."
+- "This is the same approach Stripe uses internally" - NOT SUPPORTED BY THE SUPPLIED SOURCES. Not mentioned anywhere in the notes. Flagged (VERIFY: source) and removed the sentence pending a check.
 - "Three of our five biggest customers asked for this" - SOURCED. Notes: "Acme, Bolt, and Fenwick all filed this as a request last quarter."
 
 ## Why it works

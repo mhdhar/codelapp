@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "intermediate"
 est_time: "20 min"
 models: ["any"]
-summary: "Find topics competitors rank for that you don't cover, ranked by real opportunity."
+summary: "Find topics competitors cover that you don't, then rank editorial opportunities with the supplied evidence."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -16,7 +16,7 @@ related: ["content-decay-audit", "positioning-gap-analysis", "internal-linking-g
 ---
 
 ## When to use this
-You want a content roadmap driven by real gaps, not guesses. Use after pulling your own published topics and a competitor's (from their sitemap, blog index, or a rank-tracking export); this prompt does the comparison and prioritization, not the data pull.
+You want a content roadmap driven by visible content gaps, not guesses. Use after pulling your own published topics and a competitor's (from their sitemap, blog index, or a rank-tracking export); this prompt compares the supplied coverage. It does not infer rankings or search demand that were not supplied.
 
 ## The pattern
 ```text
@@ -32,11 +32,11 @@ Find the gap:
 3. Exclude topics that are off-brand or out of scope for my site given
    what I publish today. Use judgment, don't force every competitor topic
    into the list.
-4. For the top 8 gaps, estimate relative opportunity as High/Medium/Low
+4. For the top 8 gaps, estimate relative editorial opportunity as High/Medium/Low
    based on: how central the topic seems to the competitor's content
    strategy (pillar page vs. one-off post), and how directly it relates to
    my existing topic clusters (easier to rank adjacent to what I already
-   cover than to start a brand-new cluster).
+   cover than to start a brand-new cluster). This is not a traffic or ranking forecast unless I supplied ranking or demand data.
 5. Output a prioritized table: Topic | Covered by | Opportunity |
    Suggested page type (pillar/comparison/how-to/glossary).
 
@@ -57,8 +57,8 @@ Compliance & tax
 - "sales tax nexus for invoicing" - covered by PayTrack only, one blog post
 
 Integrations
-- "QuickBooks sync guide" - covered by both, InvoiceHQ ranks #3 for
-  "invoicing QuickBooks integration"
+- "QuickBooks sync guide" - covered by both, with a dedicated guide on
+  each competitor's supplied topic list
 - "Stripe vs. manual invoicing" - covered by PayTrack only
 
 Prioritized table:

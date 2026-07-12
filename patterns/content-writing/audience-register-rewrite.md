@@ -31,8 +31,10 @@ Rules:
   does, not a dumbed-down version of what it is. Cut implementation
   detail the new audience doesn't need to act on this.
 - If moving from non-technical to technical: add the specifics a
-  technical reader needs to trust the claim (numbers, mechanism, method),
-  don't just add jargon for tone.
+  technical reader needs to understand the existing claim (numbers,
+  mechanism, method) when those details are present; do not add facts that
+  are not in the source, and mark missing information as
+  `[NEEDS TECHNICAL DETAIL: ...]` rather than inventing it.
 - Keep the same conclusion and recommendation. Don't soften a clear
   recommendation into a vague one to seem safer for the new audience.
 - Length can change to fit the new audience's attention span. Note the

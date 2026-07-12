@@ -20,12 +20,13 @@ It's release day and nobody remembers what actually shipped. Writing notes from 
 
 ## The pattern
 ```text
-Step 1: Find the range.
-"Find the last release point in this repo: check git tags first, then
-release branches or a CHANGELOG heading. If there's genuinely nothing,
-default to the last 30 days unless I say otherwise. List every commit
-in that range with hash and subject line, and tell me what range you
-chose."
+Step 1: Find the shipped range.
+"Find the last deployed release point in this repo: check deployment metadata
+or release records first, then tags, release branches, or a CHANGELOG heading.
+Do not assume a tag or commit was shipped. If you cannot verify a deployed
+range, label the output DRAFT UNRELEASED NOTES and ask me for the range rather
+than defaulting to the last 30 days. List every commit in the verified range
+with hash and subject line, and tell me what range you chose."
 
 Step 2: Draft grouped by user impact.
 "Group those commits into release notes with these sections: New,
@@ -62,4 +63,4 @@ Range: v1.8.0..HEAD, 47 commits.
 Step 3 flagged one entry: commit f20b115 says "add SSO support" but the diff only adds the config schema, no login flow. Moved from New to Internal.
 
 ## Why it works
-Git history is the one source that can't forget what shipped, and self-discovery of the range means there's nothing to hand the agent before it starts. The diff check in step 3 catches the classic failure: release notes written from commit messages inherit every exaggeration in them. Hash citations make each claim auditable in one click.
+Git history records code changes, not necessarily what reached users. Verifying the deployed range first prevents draft work from being announced as shipped, while the diff check in step 3 catches the classic failure: release notes written from commit messages inherit every exaggeration in them. Hash citations make each claim auditable in one click.

@@ -26,7 +26,8 @@ Write a PRD for the idea I give you.
 Structure it exactly like this:
 
 1. Problem statement: what's broken today, who feels it, why now.
-2. Goals: 3-5 measurable outcomes this feature must achieve.
+2. Goals: 3-5 measurable outcomes this feature must achieve. Use supplied baselines and targets;
+   otherwise write `METRIC TO DEFINE` rather than inventing a percentage or current trend.
 3. Non-goals: things this explicitly does NOT try to solve. Be specific, this section prevents scope creep later.
 4. User stories: as a [user type], I want [action], so that [outcome]. Cover the primary flow and at least one edge case.
 5. Requirements, split into:
@@ -34,9 +35,9 @@ Structure it exactly like this:
    - P1 (should ship, degrades experience if missing)
    - P2 (nice to have, cut first under time pressure)
 
-Keep the whole thing under 500 words. If the idea is too vague to spec confidently, ask me clarifying questions first, don't guess and fill gaps silently.
+Keep the whole thing under 500 words. If the idea is too vague to spec confidently, ask me clarifying questions first, don't guess and fill gaps silently. Label any remaining assumption clearly.
 
-Start by asking me in one message for (1) the idea and (2) the target user, then wait for my reply. If I skip the target user, ask before writing, don't invent one.
+Start by asking me in one message for (1) the idea, (2) the target user, and (3) any success metric, baseline, or constraint already known. Then wait for my reply. If a material input is missing, ask before writing; do not invent it.
 ```
 
 ## Real example output

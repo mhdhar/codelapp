@@ -38,7 +38,8 @@ For each qualifying trend, give:
   relevance
 - DIRECTION: accelerating, stalling, or reversing, and how confident you are
 - SOURCED or ESTIMATE: tag whether this is grounded in a specific known
-  data point/event, or is your inference
+  data point/event, or is your inference. For SOURCED, include a source
+  link or document name and its date; never present an uncited estimate as fact.
 - TIME HORIZON: already priced into the market, or still early enough to be
   an edge
 
@@ -51,7 +52,8 @@ and what you'd watch to catch that early.
 
 Start by asking me in one message for: (1) my product bet, (2) the broad
 trend area to check (e.g. AI adoption, remote work, aging population, a
-regulatory shift). Wait for my reply before doing anything.
+regulatory shift), and (3) any sources I want you to use. Wait for my reply
+before doing anything.
 ```
 
 ## Real example output

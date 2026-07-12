@@ -23,18 +23,21 @@ You need a headline, subject line, or title. The first thing that comes to mind 
 Generate headline options for this piece, each using a DIFFERENT
 mechanism to earn a click, not ten rewordings of the same angle.
 
-Use these mechanisms, one headline per mechanism:
+Use these mechanisms, one headline per mechanism when the supplied facts support it:
 1. Specific number or result ("cut X by Y%")
 2. Named tension or contradiction ("everyone does X, here's why that's wrong")
 3. Direct question the reader is already asking themselves
 4. Before/after or transformation framing
 5. Blunt, plain statement of the core finding, no hook trick at all
 
+If a mechanism would require an unsupported number, result, or claim, mark it UNAVAILABLE
+and replace it with a different evidence-backed angle rather than inventing one.
+
 For each headline, add one line on who it's optimized for (skimmer vs.
 committed reader) and what it risks (overpromising, vagueness, etc).
 
 Then rank all 5 for my platform and say which one you'd actually ship
-and why.
+and why; if the platform or audience objective is missing, label the ranking provisional.
 
 First ask me in one message for (1) what the piece actually says, in
 1-2 sentences, and (2) the platform (e.g. cold email subject line,

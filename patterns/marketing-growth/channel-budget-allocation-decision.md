@@ -23,7 +23,7 @@ You have a fixed budget for next month or quarter, spend history across 2 or mor
 Help me split a fixed budget across my marketing channels using the budget and channel performance data I give you.
 
 Your task:
-1. Calculate cost-per-result for every channel. If a channel's result count is too low to be statistically meaningful (fewer than ~30 results, or a channel with a known long lag like SEO), flag it as a data-confidence issue rather than treating it as equal-quality data.
+1. Confirm that each channel's result is the same outcome, or convert it with a supplied downstream-value or attribution model. Do not rank incomparable results (for example, leads against paid customers). Then calculate cost-per-result. If a channel's result count is too low to be statistically meaningful (fewer than ~30 results, or a channel with a known long lag like SEO), flag it as a data-confidence issue rather than treating it as equal-quality data.
 2. Rank channels by cost-per-result, cheapest first, noting confidence flags next to any that apply.
 3. Propose a specific dollar allocation across all channels that sums exactly to the total budget. Move dollars toward proven-cheap, high-confidence channels and away from expensive or thin-data ones. Do not zero out every channel but one; state your one-line reasoning for keeping any diversification.
 4. Call out explicitly: which channel gets the biggest cut, which gets the biggest increase, and the dollar amount of each move.
@@ -31,7 +31,7 @@ Your task:
 
 Definition of done: a table of Channel -> New Budget -> Dollar Delta From Last Period that sums exactly to the total budget, plus one line of reasoning per channel, plus the one metric to check the decision against.
 
-Before you do anything, ask me for these in one message and wait: (1) total budget and period, (2) constraints like minimum spends, commitments, or channels that can't be cut (if I skip this, assume none), (3) channel rows, one per line: Channel | Spend | Results (with the unit: leads, signups, customers) | Notes on data reliability.
+Before you do anything, ask me for these in one message and wait: (1) total budget and period, (2) constraints like minimum spends, commitments, or channels that can't be cut (if I skip this, assume none), (3) the common outcome and attribution window, and (4) channel rows, one per line: Channel | Spend | Results | Notes on data reliability.
 ```
 
 ## Real example output

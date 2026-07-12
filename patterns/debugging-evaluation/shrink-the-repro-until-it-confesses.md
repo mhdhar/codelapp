@@ -25,11 +25,13 @@ to shrink it.
 
 Success criteria, all three must hold:
 - The reduced version still fails with the same failure signature (same
-  error type and message, not just "it fails").
+  error type and relevant assertion or normalized message, not just "it
+  fails"). Normalize volatile timestamps, IDs, and ports before comparing.
 - Removing any single remaining piece (a line, an input field, a setup
   step) either makes it pass or changes the failure signature. Every
   survivor is proven load-bearing.
-- It fits on one screen (about 20 lines of code or input).
+- It fits on one screen where practical (about 20 lines of code or input).
+  If a longer repro is necessary, say why instead of hiding a required piece.
 
 Method:
 1. Run the repro once, unchanged. Record the exact failure signature.

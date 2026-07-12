@@ -53,16 +53,16 @@ read them yourself. Wait until you have both before starting.
 ```
 
 ## Real example output
-Working log line 14: `[req_88a2] cache.get(key=user:441) -> HIT`
-Broken log line 14: `[req_88a2] cache.get(key=user:441) -> MISS`
+Working log line 14: `[req_88a2] cache.get(key=tenant:acme-us:user:441) -> HIT`
+Broken log line 14: `[req_88a2] cache.get(key=tenant:acme-eu:user:441) -> MISS`
 
 Step 2: First divergence is this cache lookup, both logs match exactly through line 13 (session validation, permission check).
 
-Step 4: Read `src/lib/cache.ts:40`, `cache.get` builds the key as `` `user:${id}` ``. In the broken run, `id` is a number `441`; in the working run it's a string `"441"` from an older client version, both should produce the same key.
+Step 4: Read `src/lib/cache.ts:40`, `cache.get` builds the key as `` `tenant:${tenantId}:user:${id}` ``. The user id is `441` in both runs; the divergent value is `tenantId`.
 
-Step 5: Checked `redis.ts:12`, the client was upgraded to v5 last week (`package.json` diff), and v5's `get` no longer coerces numeric keys to strings before hashing, per the client's changelog. So `user:441` (from string 441) and `user:441` (from number 441) hash to different cache slots under v5 even though they render identically in the log.
+Step 5: Checked `src/lib/tenantResolver.ts:12` and the deploy config captured with each run. The working deploy has `DEFAULT_TENANT=acme-us`; the broken deploy has `DEFAULT_TENANT=acme-eu`. The resolver falls back to that value when the request has no tenant header.
 
-Step 6: Root cause: at the cache.get call in `cache.ts:40`, the Redis client returns MISS instead of HIT because the v5 client hashes numeric-typed keys differently than string-typed keys, and `id` is a number for newer clients, causing a cache miss and the subsequent slow path that broke the request.
+Step 6: Root cause: at the cache.get call in `cache.ts:40`, the broken deploy resolves the request to `acme-eu` instead of `acme-us` because its fallback tenant config changed, causing a cache miss and the subsequent slow path that broke the request.
 
 ## Why it works
-Anchoring on the first point of divergence keeps the investigation from wandering into unrelated log noise after the actual break, and stops "everything after the crash looks wrong" from being treated as ten separate bugs. Tracing the divergent value back to its source, instead of stopping at "cache missed," is what catches a root cause (a type change interacting with a client upgrade) that no single log line states outright.
+Anchoring on the first point of divergence keeps the investigation from wandering into unrelated log noise after the actual break, and stops "everything after the crash looks wrong" from being treated as ten separate bugs. Tracing the divergent value back to its source, instead of stopping at "cache missed," is what catches a root cause (a tenant fallback configuration change) that no single log line states outright.

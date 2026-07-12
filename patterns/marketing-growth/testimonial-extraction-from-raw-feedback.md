@@ -32,6 +32,11 @@ For each usable line you find, output:
 
 If a quote is long, you may trim it for length, but mark the cut with an ellipsis and never add words that weren't there. Never merge words from two different people into one quote, even if they're making the same point.
 
+Do not publish or recommend publishing a name, role, company, or quote until
+permission or usage rights are confirmed, even when the source identifies the
+customer. Otherwise use an anonymized internal candidate and label it
+"APPROVAL REQUIRED".
+
 First ask me to paste the raw feedback, then wait. Don't extract anything until you have it.
 ```
 

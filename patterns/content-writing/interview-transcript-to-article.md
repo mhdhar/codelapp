@@ -43,8 +43,10 @@ specific examples exactly, don't soften or generalize them. Add a
 2-sentence intro that sets up who they are and why this conversation
 matters."
 
-Step 4: Have the interviewee, or yourself against the recording, verify
-no quote was tightened into something they didn't actually say.
+Step 4: Verify no quote was tightened into something the interviewee did
+not actually say. Before public use, confirm the interviewee approved the
+edited quotes and attribution, or mark the draft and every quote
+"APPROVAL REQUIRED" and keep it private.
 ```
 
 ## Real example output

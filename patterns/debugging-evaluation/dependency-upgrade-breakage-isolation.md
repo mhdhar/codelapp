@@ -24,26 +24,31 @@ A bulk dependency upgrade just broke something.
 
 Do this:
 
-1. Read the lockfile diff yourself (git diff on the lockfile) and list
+1. Before changing versions, run `git status` and record every existing
+   change. Do not revert or overwrite a dirty worktree. If version rollback
+   would touch existing work, ask for approval to use a disposable worktree
+   or a safe copy first.
+2. Read the lockfile diff yourself (git diff on the lockfile) and list
    every package whose version changed, old -> new. If the lockfile
    change is already committed, diff against the commit before the
    upgrade.
-2. Turn what I said broke into a single repro command that exits
+3. Turn what I said broke into a single repro command that exits
    non-zero while broken (a test, a build, a curl check). Show me the
-   command. Then revert all the bumps to their old versions and confirm
-   the repro command passes at the old versions. This confirms the
-   regression is actually in this upgrade and not something else.
-3. Reintroduce the version bumps one package at a time, in the order
+   command. In the approved isolated worktree, revert all the bumps to
+   their old versions and confirm the repro command passes at the old
+   versions. This confirms the regression is actually in this upgrade and
+   not something else.
+4. Reintroduce the version bumps one package at a time, in the order
    they appear in the dependency tree (leaf/low-level packages first,
    since a low-level bump can be the real cause of a higher-level
    package's failure). After each single bump, run the repro command.
-4. The moment the repro command fails, stop. That package's version bump
+5. The moment the repro command fails, stop. That package's version bump
    is the culprit. Do not bump any further packages to "confirm."
-5. Look up that package's actual changelog or release notes between the
+6. Look up that package's actual changelog or release notes between the
    old and new version. Quote the specific breaking change that matches
    the observed failure, don't guess which line in the changelog is
    relevant.
-6. Report: which package, which version range, which changelog entry,
+7. Report: which package, which version range, which changelog entry,
    and whether the fix should be pinning the old version, upgrading our
    code to match the new API, or filing an upstream issue.
 

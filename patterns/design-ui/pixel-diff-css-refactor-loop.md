@@ -24,8 +24,10 @@ I want a styling refactor that changes ZERO pixels. Before you touch any code:
 
 1. Baseline: start the dev server if it isn't running. Trace which routes import the
    files you're about to change, and screenshot every one of them at 375px and 1440px,
-   in light and dark theme if the app has both. Save each shot to a scratch folder,
-   named route + viewport + theme.
+   in light and dark theme if the app has both. Use stable local/test data, disable
+   animations, and wait for fonts and images before each capture. If a route cannot be
+   stabilized, mark it untestable instead of comparing nondeterministic screenshots. Save
+   each shot to a scratch folder, named route + viewport + theme.
 2. Do the refactor.
 3. Re-screenshot the exact same routes, viewports, and themes, same filenames plus an
    "after" suffix.
@@ -47,7 +49,8 @@ Before you do anything, ask me in one message and wait: (1) what refactor I want
 
 ## Real example output
 ```
-Baseline: 4 routes import the files under styles/legacy/ (/, /pricing, /docs, /settings).
+Baseline: 4 routes import the files under styles/legacy/ (/, /pricing, /docs, /settings),
+using stable fixture data with animations disabled and fonts/images loaded.
 16 screenshots taken (4 routes x 2 viewports x 2 themes) in .scratch/baseline/.
 
 Refactor: replaced styles/legacy/buttons.css and cards.css with token-based classes in

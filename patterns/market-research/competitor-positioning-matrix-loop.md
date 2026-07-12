@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "intermediate"
 est_time: "25 min"
 models: ["any"]
-summary: "Feed competitor pages in one at a time and build a running positioning matrix that ends in a whitespace claim."
+summary: "Feed competitor pages in one at a time and build a running positioning matrix that ends in testable gap hypotheses."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -51,13 +51,14 @@ Each round, do the following:
 
 After each round I'll paste the next competitor. When I say "map it":
 
-5. Output the final matrix, then name the whitespace: audience/wedge
-   combinations no one in the matrix claims. For each, say whether it's
-   empty because it's genuinely open or because it's probably a bad
-   business, don't treat every gap as an opportunity.
+5. Output the final matrix, then name whitespace hypotheses: audience/wedge
+   combinations no one in the matrix claims. Absence from this matrix does
+   not prove a gap is genuinely open or a bad business. For each hypothesis,
+   state the buyer or market evidence needed to decide whether it is worth
+   pursuing.
 
-6. End with the single positioning line you'd test for my product and which
-   competitor's customers it would pull from first, using the one-line
+6. End with the single positioning hypothesis you'd test for my product and
+   which competitor's customers it may pull from first, using the one-line
    product description I gave you at the start.
 
 Start by asking me in one message for: (1) my product in one line, what it
@@ -84,15 +85,16 @@ feature, not a paid standalone.
 
 [user says "map it"]
 
-WHITESPACE: paid, mobile-first, per-app flat pricing is unclaimed. Likely
-genuinely open rather than a dead zone: Crashlytics proves mobile demand
-exists but its free tier caps how seriously Google serves power users
-(no custom retention, weak alerting per the pasted copy).
+WHITESPACE HYPOTHESIS: paid, mobile-first, per-app flat pricing is unclaimed
+in this four-company matrix. Evidence needed: interviews with mobile teams
+that outgrew bundled/free tooling, plus willingness-to-pay evidence for a
+standalone paid offering. Crashlytics shows a mobile-focused offer exists;
+it does not prove this paid wedge has demand.
 
-POSITIONING LINE TO TEST: "Error tracking built for mobile release cycles,
-flat price per app, not per crash." Pulls first from Crashlytics users who
-outgrew free, not from Sentry loyalists.
+POSITIONING HYPOTHESIS TO TEST: "Error tracking built for mobile release
+cycles, flat price per app, not per crash." Test first with Crashlytics users
+who report outgrowing free, before assuming it will pull them from Sentry.
 ```
 
 ## Why it works
-Feeding one competitor per round keeps each extraction grounded in that competitor's actual copy instead of the model's stale memory of a category. Reprinting the full matrix every round means crowding and whitespace emerge from accumulated evidence, and the "map it" gate stops the model from calling whitespace before the board is full.
+Feeding one competitor per round keeps each extraction grounded in that competitor's actual copy instead of the model's stale memory of a category. Reprinting the full matrix every round means crowding and whitespace hypotheses emerge from accumulated evidence, and the "map it" gate stops the model from calling a gap proven before the board is full.

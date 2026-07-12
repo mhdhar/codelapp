@@ -27,11 +27,13 @@ Generate valid JSON-LD structured data for one page from my site:
   one fits better
 - Extract only facts that are actually present in the content I give you,
   do not invent prices, ratings, dates, or author names that aren't there
-- Include all required and recommended properties for that schema type
-- Output as a single <script type="application/ld+json"> block ready to
-  paste into the page <head>
-- After the code block, list any required properties you could NOT fill in
-  because the source content didn't include them, so I know what to add
+- Include only properties whose values are supported by the content; omit
+  unknown optional properties
+- Output a single <script type="application/ld+json"> block ready to
+  paste into the page <head> only when the source supports a valid block
+- If the most accurate type needs a required value the content does not
+  provide, do not invent it or emit a placeholder block; state the missing
+  fact and ask for it instead
 
 Start by asking me in one message for the page URL and the page's full
 content pasted in, then wait. Don't generate anything until you have both.

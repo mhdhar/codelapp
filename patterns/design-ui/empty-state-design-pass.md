@@ -20,24 +20,26 @@ You're auditing a page or flow that has a zero-data condition - no results, an e
 
 ## The pattern
 ```text
-Find every empty state in this app (or in the page or feature I name in my next
-message) - any place the UI renders when there is zero
-data: no results from a search, an empty list before the user adds anything, a cleared
-filter, a first-run/onboarding screen with nothing saved yet.
+Find every user-visible no-content state in this app (or in the page or feature I name in my
+next message). Classify each as initial zero-data, filtered/search zero-result, loading,
+error, or access-restricted; do not treat loading, errors, or access restrictions as the same
+empty state as zero data.
 
-For each one you find, check whether it currently does all four of these. If it's missing
-any, rewrite the component to add it:
+For initial zero-data and zero-result states, check whether they do all four of these. For
+loading, error, and access-restricted states, check that the message and recovery path match
+their distinct cause. If a treatment is missing, rewrite the component to add it:
 
 1. States what's actually going on, specific to the situation, not a generic "No data"
    or "Nothing here." Distinguish "you have zero items ever" from "your filters matched
    zero of your N items" - these need different copy.
-2. Gives the user one clear next action (a button or link), not just an explanation. If
-   the empty state is a dead end with no way forward, that's the bug.
+2. Gives the user one clear next action (a button or link) when they have a valid action to
+   take. A read-only or permission-restricted state can instead explain the restriction and
+   point to a legitimate support or return path.
 3. Matches the visual weight of the page around it - not a giant illustration on an
    otherwise dense, functional page, and not a bare gray sentence on an otherwise
    polished marketing-style page.
-4. Renders correctly in every state that leads to it: zero-ever, filtered-to-zero, and
-   error-while-loading should not all show the same message if the underlying cause differs.
+4. Renders correctly for its actual cause: zero-ever, filtered-to-zero, loading, error, and
+   access-restricted states should not all show the same message when the cause differs.
 
 List each empty state found, what it currently shows, and the rewritten copy + action.
 ```

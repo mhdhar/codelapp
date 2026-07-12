@@ -27,6 +27,12 @@ my goals are:
 - block bots that only scrape for LLM training data, not for answering
   live queries
 
+Before making a decision, verify each user-agent's current purpose against
+that provider's official crawler documentation and cite the source URL and
+date checked. Do not assume that allowing a crawler guarantees citation,
+ranking, or inclusion in an AI Overview. Separate training, search/indexing,
+grounding, and user-triggered fetch purposes.
+
 For each of these AI-related crawlers, tell me whether to Allow or Disallow
 it, with one line of reasoning tied to my goals above:
 - GPTBot (OpenAI training crawler)
@@ -35,7 +41,8 @@ it, with one line of reasoning tied to my goals above:
 - PerplexityBot (Perplexity search/answers crawler)
 - ClaudeBot (Anthropic training crawler)
 - Claude-SearchBot (Anthropic live web search crawler)
-- Google-Extended (Gemini/AI Overviews training signal, separate from Googlebot)
+- Google-Extended (controls Gemini Apps/Vertex AI model use and grounding;
+  it does not affect Google Search rankings or AI Overviews)
 - CCBot (Common Crawl, feeds many third-party LLM training sets)
 - Bytespider (ByteDance crawler)
 - Amazonbot (Amazon, feeds Alexa/shopping answers)
@@ -44,7 +51,9 @@ it, with one line of reasoning tied to my goals above:
 Then output the complete robots.txt as a single code block: Allow rules
 first, then Disallow rules, with a one-line comment above each rule stating
 the decision's reason. Keep any existing non-AI rules (Googlebot, Bingbot,
-sitemap directive) unchanged.
+sitemap directive) unchanged. For a crawler whose current purpose is unclear
+or whose decision depends on an unstated goal, flag it for a user decision
+instead of guessing.
 
 If you're running inside my site's codebase, read the current robots.txt
 yourself (site root or public/). Otherwise, first ask me in one message to
@@ -62,7 +71,9 @@ Decisions for docs.brightpath.io (goal: get cited in ChatGPT/Perplexity answers,
 - PerplexityBot: Allow - powers Perplexity's answer citations
 - ClaudeBot: Disallow - training crawler, same reasoning as GPTBot
 - Claude-SearchBot: Allow - powers Claude's live web search citations
-- Google-Extended: Allow - feeds AI Overviews, visibility there outweighs training opt-out
+- Google-Extended: USER DECISION - it does not affect Google Search or AI
+  Overviews. Allow only if the goal includes Gemini Apps/Vertex grounding or
+  future Gemini model use; otherwise disallow it to opt out of those uses.
 - CCBot: Disallow - feeds unknown downstream LLM training sets, no citation path back
 - Bytespider: Disallow - aggressive scraping, no citation benefit for this audience
 - Amazonbot: Disallow - not relevant, no shopping/Alexa surface applies here

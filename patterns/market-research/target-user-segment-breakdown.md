@@ -32,19 +32,20 @@ names, actual behavioral or situational groupings). For each segment, give:
 - BUYING TRIGGER: the specific event or realization that makes this segment
   actually go looking for a solution now
 
-Ground every claim in publicly known patterns about this kind of audience
-(industry reports, forum discussions, common survey findings), not
-invented specifics. Where you're inferring rather than citing something
-known, say "likely" or "commonly reported" instead of stating it as fact.
+Ground every claim in source material I provide or public sources you can
+verify and cite, not recalled or invented specifics. Where evidence is
+missing, label the claim HYPOTHESIS rather than presenting it as fact.
 
 Do not fabricate quotes, statistics, or named sources. If you don't have
 grounded evidence for a segment claim, say so plainly.
 
-End with which segment to target first and why, based on ease of reaching
-them versus size of need.
+End with which segment to target first only when the available evidence
+compares reach and need; otherwise give a conditional hypothesis and name
+the data needed to rank the segments.
 
 Start by asking me in one message for: (1) my rough audience, (2) what the
-product does. Wait for my reply before segmenting.
+product does, (3) source material or permission to research public sources.
+Wait for my reply before segmenting.
 ```
 
 ## Real example output
@@ -77,10 +78,10 @@ OBJECTIONS: May already be evaluating full agency management software,
   this tool needs to look like it scales with them
 BUYING TRIGGER: Onboarding first subcontractor or employee
 
-RECOMMENDATION: Target Segment 1 first. Highest volume, lowest switching
-cost since they have no entrenched workflow yet, and the buying trigger
-(a late or disputed payment) is common enough to be a reliable acquisition
-moment, even though average deal size is smaller than Segment 3.
+RECOMMENDATION: HYPOTHESIS, not a validated ranking: test Segment 1 first
+because it may have lower switching cost than established freelancers.
+Verify relative segment size, acquisition reach, willingness to pay, and
+the late-payment trigger before committing to this target.
 ```
 
 ## Why it works

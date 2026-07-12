@@ -20,8 +20,8 @@ The project has a design system (tokens, a Tailwind theme, CSS custom properties
 
 ## The pattern
 ```text
-GOAL: no component in this codebase uses a hardcoded style value where a design token
-exists for it. "Done" is proven by search output, not by eyeball.
+GOAL: no component in the agreed scope uses an unapproved hardcoded style value where a design
+token exists for it. Search output is coverage evidence, not proof that every styling syntax was found.
 
 First, locate the source of truth: the token or theme definition this project actually
 uses (tailwind config, CSS custom properties, a theme.ts, a DESIGN_SYSTEM.md). If there
@@ -29,17 +29,17 @@ is no source of truth at all, stop and tell me. That's a different problem and i
 tokens mid-cleanup would make it worse.
 
 SUCCESS CRITERIA (all must hold before you report done):
-1. You've run a project-wide search over component and style code for raw values: hex
+1. You've run searches appropriate to this project's styling syntax over component and style code for raw values: hex
    colors, rgb()/hsl() literals, raw px font sizes, and arbitrary spacing values.
    Exclude the token definition files themselves, generated files, and vendored code.
 2. Every hit is classified as DRIFT (a token exists for this value, or an obvious
    nearest token does) or LEGITIMATE (truly one-off, like a 1px hairline or a
    third-party embed constraint), with a one-line reason per LEGITIMATE hit.
-3. Every DRIFT hit is replaced with the nearest existing token. If a raw value sits
-   between two tokens, pick the closer one and note the visual delta. Never mint a new
-   token without asking me first.
-4. Re-running the exact searches from step 1 now returns only the LEGITIMATE list, and
-   you show me that final output verbatim.
+3. Every DRIFT hit is replaced with a suitable existing token only after checking its visual and
+   contrast impact. If no existing token is suitable, propose a new token and wait for approval;
+   never mint one during cleanup.
+4. Re-running the exact searches from step 1 now returns only the LEGITIMATE list within the
+   covered syntax and scope, and you show me that final output verbatim.
 5. Nothing visibly broke: open the three pages with the most replacements and confirm
    they still render correctly in both themes if the app has two.
 

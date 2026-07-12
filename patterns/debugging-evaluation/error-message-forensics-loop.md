@@ -25,15 +25,16 @@ usually means.
 
 Before proposing any cause, do this in order and show your work at each step:
 
-1. Quote the exact error message text back to me, word for word. Do not
-   paraphrase or summarize it.
+1. Quote the smallest relevant error message text back to me, redacting any
+   secrets, tokens, personal data, or customer content. Do not paraphrase
+   the technical parts that identify the failure.
 2. List every file:line reference in the stack trace, in the order the
    trace gives them, from where the error was thrown down to where it
    originated in application code. Skip frames only if the trace itself
    marks them as library/framework internals.
 3. Open and read each of those file:line locations, starting from the
-   deepest application-code frame. Quote the actual code at that exact
-   line, not a nearby line or the general function.
+   deepest application-code frame. Quote the relevant code at that exact
+   line, redacting secrets or customer data rather than copying them.
 4. State what the error literally means at that specific line: trace the
    variable, argument, or condition that has to be undefined, wrong-typed,
    or false for this exact error to fire there. Do not describe what this
@@ -46,9 +47,9 @@ guessing which file it might be. Do not name a library, framework, or
 "common cause" for this error type until steps 1-4 are complete on the
 actual trace.
 
-First, ask me to paste the full error / stack trace, unedited, then
-wait. If I give a file path or a command instead, read or run it
-yourself to get the raw output.
+First, ask me to paste a redacted error / stack trace, then wait. If I give a
+file path or a command instead, read or run it yourself and report only the
+relevant redacted output.
 ```
 
 ## Real example output

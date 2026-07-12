@@ -48,7 +48,9 @@ Do not present estimates as sourced facts. If you don't know a number,
 say so and estimate transparently rather than inventing precision.
 
 Start by asking me in one message for: (1) the product idea, (2) the target
-customer. Wait for my reply before sizing anything.
+customer, (3) the geography, (4) currency, and (5) the time horizon for the
+market estimate. If any of 3-5 are missing, state the assumption prominently
+before sizing anything.
 ```
 
 ## Real example output

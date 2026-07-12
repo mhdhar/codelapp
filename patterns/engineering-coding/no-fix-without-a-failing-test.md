@@ -22,7 +22,7 @@ You have a real bug report and the temptation is to let the agent jump straight 
 ```text
 There's a bug. Your goal is a fix proven by a test that failed before the fix and passes after it. Changing product code before you can reproduce the bug is not allowed.
 
-1. Reproduce first: write the smallest test that captures the buggy behavior, using this project's existing test framework and style. Run it and paste the failing output. If you can't make it fail, stop. You haven't found the bug yet, and patching now would be guessing. Keep investigating until it fails for the reported reason.
+1. Reproduce first: write the smallest test that captures the buggy behavior, using this project's existing test framework and style. Run it and paste a redacted verification record. If you can't make it fail, stop implementation: you have not reproduced the bug, and patching now would be guessing. You may continue safe diagnosis, but do not change product code until a deterministic test fails for the reported reason. If a deterministic test is not practical, report that blocker and the manual evidence needed.
 2. Only then fix the code. Make the smallest change that turns the test green.
 3. Run the new test (must pass) and the surrounding suite (must show no regressions). Paste both outputs.
 4. Keep the test in the suite, named for the behavior it protects (e.g. "does not double-charge when a retry fires after success"), not "fixes bug 123".

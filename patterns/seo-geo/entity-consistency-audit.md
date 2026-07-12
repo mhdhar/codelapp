@@ -1,5 +1,5 @@
 ---
-title: "Entity Consistency Audit: Make Every AI Agree Who You Are"
+title: "Entity Consistency Audit: Align the Organization Surfaces You Control"
 slug: "entity-consistency-audit"
 format: "goal"
 category: "seo-geo"
@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "beginner"
 est_time: "15 min"
 models: ["any"]
-summary: "Find every conflicting description of your company across the web and replace them with one canonical record."
+summary: "Find conflicting descriptions across the organization surfaces you provide and propose one canonical record."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -16,7 +16,7 @@ related: ["generate-llms-txt", "jsonld-from-page-content", "ai-citation-worthine
 ---
 
 ## When to use this
-Ask ChatGPT or Perplexity what your company does and you get a stale, wrong, or vague answer. That usually means your own surfaces disagree: the homepage says one thing, the Organization schema another, the LinkedIn bio a third. Use this to converge them before blaming the AI.
+Your company surfaces can disagree: the homepage says one thing, the Organization schema another, the LinkedIn bio a third. Use this to align the surfaces you control before drawing conclusions about how any third party describes the company.
 
 ## The pattern
 ```text
@@ -25,8 +25,8 @@ each labeled with where it lives: homepage hero, about page, footer,
 Organization JSON-LD, llms.txt, and social bios (LinkedIn, X, GitHub,
 Crunchbase, whatever I have).
 
-Goal: one canonical entity record, and the exact edits to make every
-surface match it. Done means all three of these hold:
+Goal: one canonical entity record, and the proposed edits to align every
+surface I supplied. Done means all three of these hold for that supplied scope:
 - the organization name is the identical string on every surface
 - one description under 25 words appears verbatim on the homepage, the
   about page, and in the JSON-LD description field
@@ -45,7 +45,8 @@ Work toward that:
    For the JSON-LD, output the full corrected Organization block with a
    complete sameAs array.
 4. End with the checklist from the "done" definition above, marking what
-   passes right now versus after I apply the edits.
+   passes right now versus after I apply the proposed edits. Do not claim
+   this controls how an AI product or an unprovided third-party page will describe the organization.
 
 First ask me to paste the self-descriptions, each labeled with its source,
 all in one message. Wait until you have them before doing anything.
@@ -80,4 +81,4 @@ after. sameAs complete FAIL now (2 of 4 profiles listed), PASS after.
 ```
 
 ## Why it works
-Answer engines build an entity graph by reconciling your surfaces against each other, and every naming or description conflict splits confidence across duplicate candidate entities. One exact name string and one verbatim description give the graph a single high-confidence node, and sameAs links tell it explicitly which profiles are the same organization instead of leaving it to guess.
+Consistent organization surfaces reduce avoidable ambiguity for visitors and systems that consume them. One exact name string, one clear description, and accurate `sameAs` links make the supplied surfaces easier to reconcile without promising how a third party will represent the organization.

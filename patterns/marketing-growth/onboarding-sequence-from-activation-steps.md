@@ -22,17 +22,17 @@ You know the exact steps a user takes to reach "activated" in your product (your
 ```text
 Write an onboarding email sequence, one email per activation step, from the product and funnel I give you.
 
-For each step except the final activation event, write one email triggered when the user has not completed that step within a sensible window (24 hours to a few days; state the window you chose in the trigger line):
+For each step except the final activation event, write one email triggered when the user has not completed that step within a window supported by the funnel/event data I give you; if no timing data exists, label the proposed cadence `TEST WINDOW` in the trigger line rather than stating it as established:
 - Subject line under 50 characters, naming the specific step, not "getting started" or "don't forget."
 - Body under 150 words.
 - Exactly one CTA, linking to the precise in-product action for that step, not the homepage.
-- If this step is the known highest drop-off point, add a P.S. addressing the most likely blocker in plain language, not a generic "need help? reply here."
+- If this step is the known highest drop-off point and I give you evidence of the blocker, add a P.S. addressing that blocker in plain language; otherwise omit the P.S.
 
-Rules: no countdown timers, no "last chance," no "just checking in." Write like someone who's used this product, not a drip-campaign template.
+Rules: no countdown timers, no "last chance," no "just checking in." Write like someone who's used this product, not a drip-campaign template. Do not invent setup times, retention effects, or other performance claims.
 
 Output as: Email N - Trigger - Subject - Body - CTA.
 
-Before writing anything, ask me for these in one message and wait: (1) the product in one line, (2) the activation steps in order, ending with the event that defines an activated user, (3) the biggest drop-off step (if I skip this, treat it as unknown and drop the P.S. rule).
+Before writing anything, ask me for these in one message and wait: (1) the product in one line, (2) the activation steps in order, ending with the event that defines an activated user, (3) funnel/event timing for each step or "unknown", (4) the biggest drop-off step and evidence of its blocker, if known.
 ```
 
 ## Real example output
@@ -40,20 +40,19 @@ Product: an analytics tool for product teams.
 Activation steps: 1) connect a data source, 2) create first dashboard, 3) invite a teammate, 4) view a saved report after 7 days (activation event).
 Known biggest drop-off: step 1 to 2 (connecting a source but never building a dashboard).
 
-**Email 1 - Trigger: no data source connected within 24 hours**
+**Email 1 - Trigger: TEST WINDOW — no data source connected within 24 hours (validate against funnel data)**
 Subject: your workspace is empty
-Body: Right now there's nothing flowing into your workspace yet. Connecting a source takes about 3 minutes if it's one of the common ones (Postgres, Stripe, Segment). You don't need engineering for it.
+Body: Right now there's nothing flowing into your workspace yet. Connect a source to start seeing your product data in one place.
 CTA: Connect your first data source
 
-**Email 2 - Trigger: source connected, no dashboard within 48 hours**
+**Email 2 - Trigger: TEST WINDOW — source connected, no dashboard within 48 hours (validate against funnel data)**
 Subject: you've got data, now build with it
 Body: Your data's flowing in. The fastest way to see it click is to build one dashboard around a single question you actually need answered this week, not a full reporting suite on day one.
 CTA: Build your first dashboard
-P.S. If you're stuck picking what to track first, start with whatever number you'd check first thing Monday morning. That's usually the right one.
 
-**Email 3 - Trigger: dashboard created, no teammate invited within 5 days**
+**Email 3 - Trigger: TEST WINDOW — dashboard created, no teammate invited within 5 days (validate against funnel data)**
 Subject: dashboards are better shared
-Body: A dashboard only one person checks tends to get forgotten. Teams that invite at least one teammate in the first week are far more likely to still be using this a month from now.
+Body: Invite a teammate so the dashboard can support a shared conversation, not just one person's work.
 CTA: Invite a teammate
 
 ## Why it works

@@ -28,7 +28,7 @@ Review the current uncommitted diff as a hostile senior reviewer who did not wri
    - BLOCKER: would cause a bug, data loss, or security issue in production.
    - SHOULD-FIX: works today but will bite someone later.
    - NIT: style or naming. Mention once, don't pad the list.
-4. Fix every BLOCKER now, then re-run the affected tests and show the output. For SHOULD-FIX items, fix any that take under 10 minutes; list the rest for me to decide.
+4. Do not edit, stage, or commit as part of this review. For every BLOCKER and SHOULD-FIX item, propose the smallest patch and affected test; wait for my explicit approval before implementing any selected fix.
 5. If you find zero BLOCKERs, do not just say "looks good." Name the three riskiest spots you checked and what convinced you each one is safe.
 ```
 
@@ -37,15 +37,15 @@ Review the current uncommitted diff as a hostile senior reviewer who did not wri
 Reviewed diff: 4 files, +182/-31 (Stripe webhook handler for payment events).
 
 BLOCKER (2):
-1. routes/webhooks.ts:47: handler returns 200 before awaiting markInvoicePaid(). If that write fails, Stripe never retries and the invoice stays unpaid forever. Fixed: awaited the write, moved the 200 after it.
-2. routes/webhooks.ts:12: signature check reads req.body after the JSON middleware already parsed it, so raw-body verification always fails open with the prod config. Fixed: mounted express.raw() on this route only.
+1. routes/webhooks.ts:47: handler returns 200 before awaiting markInvoicePaid(). If that write fails, Stripe never retries and the invoice stays unpaid forever. Proposed patch: await the write and move the 200 after it; affected test: failed-write retry behavior.
+2. routes/webhooks.ts:12: signature check reads req.body after the JSON middleware already parsed it, so raw-body verification always fails open with the prod config. Proposed patch: mount express.raw() on this route only; affected test: invalid-signature rejection.
 
 SHOULD-FIX (1):
-- No test for duplicate events (Stripe retries send the same event ID twice). Added one: second delivery is a no-op. Took 6 minutes.
+- No test for duplicate events (Stripe retries send the same event ID twice). Proposed test: second delivery is a no-op.
 
 NIT: handlePaymentIntentSucceeded is 80 lines and could split. Left alone.
 
-Re-ran npm test webhooks after fixes: 11/11 passing.
+No changes made. Awaiting approval to implement any selected fixes.
 ```
 
 ## Why it works

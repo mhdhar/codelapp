@@ -7,7 +7,7 @@ tools: ["universal"]
 difficulty: "intermediate"
 est_time: "15 min"
 models: ["any"]
-summary: "Feed in variant numbers, get a one-word verdict with the math shown and a date if the answer is keep running."
+summary: "Feed in variant numbers, get a verdict with the math shown and a date if the answer is keep running."
 author: "codel"
 author_handle: ""
 date: "2026-07-09"
@@ -20,21 +20,22 @@ An A/B test has been running for a while, the dashboard shows the variant "up 8%
 
 ## The pattern
 ```text
-Give me a verdict on my A/B test. Exactly one of: SHIP, KILL, or KEEP RUNNING. Then make the case.
+Give me a verdict on my A/B test. Exactly one of: SHIP, KILL, KEEP RUNNING, or INVALID TEST. Then make the case.
 
 Your task:
 1. Compute conversion rate for control and variant, absolute and relative lift, and a 95% confidence interval on the difference. Show the arithmetic. Do not just assert "significant".
 2. Sanity-check before trusting the numbers:
-   - Sample ratio mismatch: compare the actual traffic split to the intended split. If it deviates beyond what chance explains, the test rig is broken and no verdict on the data is valid.
+   - Sample ratio mismatch: compare the actual traffic split to the intended split. If it deviates beyond what chance explains, the test is INVALID; do not make a product decision from the data.
    - Runtime: if the test has run less than two full weekly cycles, flag that weekday and weekend visitors may differ.
    - Peeking risk: if I've been checking daily and this is one of many looks, say the nominal confidence is overstated.
 3. Verdict rules:
-   - SHIP: the interval excludes zero in the variant's favor and every sanity check passed.
+   - INVALID TEST: a sample-ratio mismatch or other integrity failure means the data cannot support a product decision. State the repair or rerun needed.
+   - SHIP: the interval excludes zero in the variant's favor and every applicable sanity check passed.
    - KILL: the interval excludes zero against the variant, or the best plausible upside (the top of the interval) is too small to justify keeping the code.
    - KEEP RUNNING: the interval spans zero. Then answer the question that actually matters: given the observed effect size and current daily traffic, how many more days until the test can be decisive, and is that worth waiting for? If the needed sample is months away, say so and recommend KILL for futility.
 4. End with the verdict word and the single number that drove it.
 
-Do not hedge with "it depends". One verdict, stated first.
+Do not hedge with "it depends." One verdict, stated first.
 
 Start by asking me in one message for the test data: intended split, days running so far, and visitors and conversions for each variant. Wait for my reply before computing anything.
 ```

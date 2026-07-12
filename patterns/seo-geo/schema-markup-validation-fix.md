@@ -29,14 +29,16 @@ Fix the schema:
    means in plain language and which property it points to.
 2. Fix each one using only information that is plausibly true of this page
    (infer from the existing JSON-LD's other fields and the page context
-   given). If a required property is missing and you can't infer a real
-   value, set its value to a string starting with "NEEDS:" followed by a
-   description of what's needed, instead of inventing a fake value. Do not
-   fabricate ratings, prices, or review counts to silence a validator
+   given). If a real value is missing, never put a `NEEDS:` placeholder in
+   JSON-LD: omit an optional property, or omit the affected object when a
+   valid value is necessary. List the missing fact outside the code block.
+   Do not fabricate ratings, prices, or review counts to silence a validator
    warning.
 3. Do not change any property the validator did not flag, even if you'd
    phrase it differently.
-4. Output the corrected JSON-LD as a single script block.
+4. Output a single deployable JSON-LD script block containing only valid,
+   supported values; if no deployable block is possible, say so instead of
+   emitting placeholder JSON-LD.
 5. After the block, list which errors are now fully fixed versus which
    still need a real value from me before they'll pass.
 
@@ -71,13 +73,7 @@ Validator errors on /products/standing-desk-pro:
   "offers": {
     "@type": "Offer",
     "price": "499.00",
-    "priceCurrency": "USD",
-    "priceValidUntil": "NEEDS: a real expiration date for this price, e.g. end of current promo period"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "reviewCount": "NEEDS: total number of reviews backing the 4.6 rating"
+    "priceCurrency": "USD"
   }
 }
 </script>
@@ -86,8 +82,8 @@ Validator errors on /products/standing-desk-pro:
 Fixed: error 3 (image field now a plain array of URL strings, matching
 what was already on the page).
 Still needs your input: error 1 (reviewCount: pull the real count from
-your reviews backend), error 2 (priceValidUntil: set to your actual
-promo end date or remove the field if the price has no expiration).
+your reviews backend before restoring aggregateRating). Error 2 is fixed
+by omitting priceValidUntil because no actual price-expiration date was supplied.
 ```
 
 ## Why it works

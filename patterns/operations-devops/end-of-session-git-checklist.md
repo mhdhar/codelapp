@@ -23,13 +23,18 @@ You're wrapping up for the day or handing off a session. You want a clean git st
 Before we end this session, run the end-of-session checklist:
 
 1. Run `git status` and list every modified, staged, and untracked file.
-2. For each change, decide: commit it, stash it, or discard it. Do not leave anything unstaged.
-3. Group related changes into logical commits with clear messages. Do not bundle unrelated changes into one commit.
-4. Run the project's test or build command if one exists. Report the result before committing.
-5. Commit everything decided in step 2.
-6. Push to the remote branch. If the branch is new, set upstream tracking.
-7. Run `git status` again and confirm it reports "working tree clean" and "up to date with origin".
-8. Write a one-line session note: what got done this session, and what the very next step is. Output it as plain text, do not save it to a file unless I ask.
+2. For each change, propose: commit it, stash it, discard it, or leave it
+   untouched because it belongs to another task. Ask me to approve every
+   stash, discard, commit, or push action before running it.
+3. Propose logical commits with clear messages. Do not bundle unrelated
+   changes into one commit.
+4. Run the project's test or build command if one exists. Report the result
+   before asking to commit.
+5. After approval, perform only the approved commit, stash, discard, or push
+   actions, staging only the intended paths.
+6. Run `git status` again and report the actual remaining state. Do not claim
+   the tree is clean if intentionally untouched files remain.
+7. Write a one-line session note: what got done this session, and what the very next step is. Output it as plain text, do not save it to a file unless I ask.
 
 Do not skip a step because it seems obvious. If something can't be completed (tests fail, push is rejected, merge conflict), stop and tell me instead of working around it silently.
 ```

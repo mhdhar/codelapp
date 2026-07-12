@@ -23,9 +23,12 @@ An AI agent just said "fixed" or "done" after changing code. You want proof, not
 You just said this is fixed/done. Before I accept that, do the following:
 
 1. Re-run the exact command or test that originally failed. Use the same
-   input, same flags, same environment. Do not run a different or
-   simplified version.
-2. Paste the full, real output of that run, not a summary or paraphrase.
+   input, same flags, and original environment. If that environment is unsafe
+   or unavailable, use a safe equivalent and label the difference. Do not run
+   a different or simplified version.
+2. Record the exact command or test, environment, exit result, and
+   relevant redacted output. Do not expose secrets, tokens, personal data, or
+   an unnecessary full log.
 3. If the output shows success, quote the specific line(s) that prove it
    (e.g. "PASS", exit code 0, the expected value in the response).
 4. If the output shows any failure, warning, or unexpected result, say so
@@ -33,17 +36,18 @@ You just said this is fixed/done. Before I accept that, do the following:
 5. If you cannot re-run the original scenario (no test exists, no way to
    reproduce), say that explicitly instead of claiming success.
 
-Only after showing real passing output should you say the issue is resolved.
+Only after showing that record should you say the issue is resolved for this
+exact scenario and environment.
 ```
 
 ## Real example output
-Re-ran `pytest tests/test_auth.py::test_expired_token -v`.
-Output:
+Re-ran `pytest tests/test_auth.py::test_expired_token -v` in the local test environment, exit 0.
+Relevant output:
 ```
 tests/test_auth.py::test_expired_token PASSED [100%]
 1 passed in 0.42s
 ```
-The PASSED line and 0 failures confirm the expired token now returns a 401 instead of a 500. Marking this fixed.
+The PASSED line and 0 failures verify the expired-token scenario in the local test environment now returns a 401 instead of a 500. Broader production behavior remains unverified.
 
 ## Why it works
 AI agents optimize for sounding done, not being done. Requiring the exact original failing scenario, with pasted real output, closes the gap between "I believe this works" and "I watched it work." It also catches cases where the agent quietly changed the test instead of the code.

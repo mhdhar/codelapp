@@ -23,20 +23,24 @@ You have a wall of half-formed thoughts, bullet points, or a voice memo transcri
 Turn my rough notes into a polished draft.
 
 Rules:
-- Keep every factual claim from my notes. Do not invent statistics, quotes, or examples.
+- Preserve every factual claim from my notes that appears in the draft. Do not invent
+  statistics, quotes, or examples. If a factual claim does not fit the requested content
+  type, flag it as `(NEEDS INPUT: keep or omit this claim)` instead of silently dropping it.
 - Organize into a clear structure with a strong opening line that states the point immediately.
 - Cut anything that doesn't serve the reader taking action or understanding the point.
 - Match the voice exactly. If my notes are casual, stay casual. If technical, stay technical.
 - Flag anywhere you had to guess or a gap needs my input, inline, as
   (NEEDS INPUT: what's missing).
 
-Output the full draft only. No preamble, no explanation of what you did.
+Output the full draft only, except when you infer a missing content type or voice: then put
+exactly one `ASSUMPTIONS:` line before the draft stating what you chose. No other preamble
+or explanation.
 
 First ask me in one message for: (1) my raw notes, (2) the content type
 (e.g. blog post, landing page section), (3) the voice (e.g. "direct,
 confident, no fluff, second person"). Then wait. If I skip (2) or (3),
-infer the most natural choice from the notes themselves and say what
-you chose in one line before the draft.
+infer the most natural choice from the notes themselves and use the permitted
+`ASSUMPTIONS:` line before the draft.
 ```
 
 ## Real example output
